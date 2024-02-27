@@ -1,0 +1,24 @@
+ndot add en_dotfiles
+ndot commit -m "updated en_dotfiles (complete) - 20211015"
+ndot pull origin master
+ndot push origin master
+ndot pull origin3 master
+ndot push origin3 master
+
+cat /home/gregor.redelonghi/majstaf/majprogs/gthb_PAT_en_20210604.txt
+cat /home/gregor.redelonghi/majstaf/majprogs/gtlb_PAT_en_20210604.txt
+
+
+# if problems:
+ndot status
+ndot commit -a -m "updated en_dotfiles2 (complete) - 20211015"
+rm -fr "/home/gregor.redelonghi/en_metsys_git/en_metsys/rebase-merge"
+ndot pull origin master
+ndot push origin master
+ndot rm -r --cached .
+# to github
+ndot push --force origin master
+
+# to gitlab
+ndot push origin3 master
+

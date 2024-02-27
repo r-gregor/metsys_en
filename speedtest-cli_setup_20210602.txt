@@ -1,0 +1,5 @@
+python3 -m pip install speedtest-cli
+speedtest-cli
+speedtest-cli --share # --> displays html path to image!!
+
+

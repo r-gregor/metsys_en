@@ -1,0 +1,13 @@
+$> gregor.redelonghi@cygwin-en [/home/gregor.redelonghi]
+$> python3
+Python 3.6.1 (default, Mar 21 2017, 21:49:16)
+[GCC 5.4.0] on cygwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import shutil
+TS = shutil.get_terminal_size()
+
+>>> print(TS)
+os.terminal_size(columns=200, lines=53)
+
+>>> print(TS.columns)
+200

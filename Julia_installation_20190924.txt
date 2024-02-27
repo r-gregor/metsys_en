@@ -1,0 +1,46 @@
+Installation of Julio on Cygwin (Win 10):
+
+1 - Download:
+    https://julialang.org/downloads/
+        https://julialang-s3.julialang.org/bin/winnt/x64/1.2/julia-1.2.0-win64.exe
+
+    to: /c/Users/gregor.redelonghi/Downloads
+    
+2 - Unpack:
+    cd /c/Users/gregor.redelonghi/Downloads
+    7Zip unpack to C:\Users\gregor.redelonghi\Downloads\julia-1.2.0-win64.exe
+
+3 - Install:
+    doubleclick on C:\Users\gregor.redelonghi\Downloads\julia-1.2.0-win64.exe
+        dest: /c/Users/gregor.redelonghi/majstaf/myprogs
+        
+        --> result: C:\Users\gregor.redelonghi\myprogs\Julia-1.2.0
+        
+$> tree -d -L 3
+.
+├── bin
+├── etc
+│   └── julia
+├── include
+│   └── julia
+│       └── uv
+├── lib
+│   └── julia
+└── share
+    ├── appdata
+    ├── applications
+    ├── doc
+    │   └── julia
+    ├── icons
+    │   └── hicolor
+    ├── julia
+    │   ├── base
+    │   ├── stdlib
+    │   └── test
+    └── man
+        └── man1
+
+21 directories
+
+$> ln -s /c/Users/gregor.redelonghi/majstaf/myprogs/Julia-1.2.0/bin/julia.exe /usr/local/bin/julia
+

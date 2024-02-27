@@ -1,0 +1,14 @@
+$> gregor.redelonghi@cygwin-en [/home/gregor.redelonghi]
+$> cd /g/PI/OPROJ/ARHIVA_PROJEKTI/Plin/2019
+
+$> gregor.redelonghi@cygwin-en [/g/PI/OPROJ/ARHIVA_PROJEKTI/Plin/2019]
+$> for DDD in $(find $PWD -maxdepth 1 -type d); do echo mkdir -p ${DDD//2019/2020}; done
+mkdir -p /g/PI/OPROJ/ARHIVA_PROJEKTI/Plin/2020
+mkdir -p /g/PI/OPROJ/ARHIVA_PROJEKTI/Plin/2020/N
+mkdir -p /g/PI/OPROJ/ARHIVA_PROJEKTI/Plin/2020/P
+mkdir -p /g/PI/OPROJ/ARHIVA_PROJEKTI/Plin/2020/RP
+mkdir -p /g/PI/OPROJ/ARHIVA_PROJEKTI/Plin/2020/S
+mkdir -p /g/PI/OPROJ/ARHIVA_PROJEKTI/Plin/2020/V
+mkdir -p /g/PI/OPROJ/ARHIVA_PROJEKTI/Plin/2020/VN
+
+...

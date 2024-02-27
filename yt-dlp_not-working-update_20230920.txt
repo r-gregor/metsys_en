@@ -1,0 +1,13 @@
+# 20230920:
+$> ydlF "https://www.youtube.com/watch?v=_HGkhvpCbsk"
+$> ydl -f22 ""https://www.youtube.com/watch?v=_HGkhvpCbsk""
+	... NOT WOTKING!!
+
+Solution:
+
+$> python3 -m pip install --upgrade pip
+$> python3 -m pip install --upgrade yt-dlp
+$> ydlF "https://www.youtube.com/watch?v=_HGkhvpCbsk"
+$> ydl -f22 "https://www.youtube.com/watch?v=_HGkhvpCbsk"
+	... WORKS!!
+

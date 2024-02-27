@@ -1,0 +1,13 @@
+gregor.redelonghi@cygwin-en /c/Users/gregor.redelonghi/majstaf/majprogs/cygwin64
+ $> du -sh --total * |sort -hr | head
+5.6G    total
+3.0G    home
+1.3G    usr
+696M    lib
+663M    bin
+32M     var
+12M     etc
+8.9M    opt
+3.3M    tmp
+696K    sbin
+

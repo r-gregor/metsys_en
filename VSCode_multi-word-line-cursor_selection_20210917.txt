@@ -1,0 +1,14 @@
+Multi-word (and multi-line) cursors/selection in VS Code
+Multi-word:
+
+Windows / OS X:
+
+    Ctrl+Shift+L / ⌘+Shift+L selects all instances of the current highlighted word
+    Ctrl+D / ⌘+D selects the next instance... and the one after that... etc.
+
+Multi-line:
+
+For multi-line selection, Ctrl+Alt+Down / ⌘+Alt+Shift+Down will extend your selection or cursor position to the next line. Ctrl+Right / ⌘+Right will move to the end of each line, no matter how long. To escape the multi-line selection, hit Esc.
+
+See the VS Code keybindings[https://code.visualstudio.com/docs/customization/keybindings] (OS sensitive)
+

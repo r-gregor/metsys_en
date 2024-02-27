@@ -1,0 +1,6 @@
+$> gregor.redelonghi@cygwin-en [/home/gregor.redelonghi]
+$> netstat -an | grep "EST" | grep :80
+  TCP    10.99.11.59:49249      10.91.8.24:80          ESTABLISHED
+  TCP    10.99.11.59:49263      10.91.8.21:80          ESTABLISHED
+  TCP    10.99.11.59:49264      10.91.8.24:80          ESTABLISHED
+  TCP    10.99.11.59:49480      10.91.8.21:80          ESTABLISHED

@@ -1,0 +1,9 @@
+﻿There is a way to switch off auto-wrapping: the DECAWM control 
+sequence, as
+documented at http://vt100.net/docs/vt510-rm/DECAWM
+
+echo $'\e[?7l': autowrap off
+echo $'\e[?7h': autowrap on
+
+Alternatively, you can pipe output through 'less', which does allow horizontal 
+scrolling.

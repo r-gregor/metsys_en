@@ -1,0 +1,9 @@
+dotfajls_dmdb
+dotfajls_djbe
+majrcs_dmdb
+majrcs_djbe
+majbin_dmdb
+majbin_djbe
+metsys_dmdb
+metsys_djbe
+

@@ -1,0 +1,39 @@
+Prevent getting newline into buffer when entering an input from console.
+
+VERSION-1:
+
+	while(1) {
+		char input;
+		printf("Enter a character: ");
+		scanf("%c", &input);
+		// getchar() after scanf to skipp newline and
+		// to prevent the line 'Enter a character' to be printed twice ina a row!!
+		getchar();
+
+		// operate on input!
+
+
+VERSION-2:
+
+	char input;
+	while(1) {
+		printf("Enter a character: ");
+		input = getchar();
+		// second getchar() after the first one
+		// to prevent the line 'Enter a character' to be printed twice ina a row!!
+		getchar();
+
+		// operate on input!
+
+VERSION-3:
+
+nput;
+	while(1) {
+		char input;
+		printf("Enter a character: ");
+		// space befor '%c' to prevent scanf to accept newline character into input buffer
+		// to prevent the line 'Enter a character' to be printed twice ina a row!!
+		scanf(" %c", &input);
+
+		// operate on input!
+

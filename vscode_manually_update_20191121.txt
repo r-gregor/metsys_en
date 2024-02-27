@@ -1,0 +1,19 @@
+updating standalone (zip) version ov VSCODE
+
+From the official[https://code.visualstudio.com/docs/setup/windows#_common-questions] doc it says when
+downloaded through zip file, one has download the release manually for each update and place the unzip version
+inside the Program files (Windows).
+
+According to the special portable[https://code.visualstudio.com/docs/editor/portable] page all the settings,
+plugins, etc. of the standalone version are stored in the data-folder. So assuming you called your
+vscode-folder vscode:
+
+1 - download the new version
+2 - unpack to vscode2 folder adjacent to current vscode
+3 - move data folder from vscode to vscode2
+4 - delete old vscode-folder
+5 - rename vscode2 to vscode
+6 - done
+
+P.S.: Current portable versions notify about new version, but clicking on it leads to download, so above list
+still applies.

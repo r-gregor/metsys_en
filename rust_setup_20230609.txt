@@ -1,0 +1,12 @@
+ $> curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+ $> rustup toolchain install stable-x86_64-pc-windows-gnu
+ $> rustup default stable-x86_64-pc-windows-gnu
+---
+move /c/Users/gregor.redelonghi/.cargo --> /home/gregor.redelonghi/.cargo
+update path in ~/majstaf/majrcs/bashrc_gredelonghi:
+	export PATH="$PATH:/home/gregor.redelonghi/.cargo/bin"
+--
+update PATH in windows system variables:
+	"C:\Users\gregor.redelonghi\majstaf\majprogs\cygwin64\home\gregor.redelonghi\.cargo
+---
+

@@ -1,0 +1,52 @@
+filename: ssh_setup-ssh-tunneling_20210402.txt
+https://linuxhint.com/setup-ssh-tunneling-linux/
+
+How to setup SSH tunneling on Linux
+
+   SSH tunneling commonly known as SSH port forwarding is a technique of routing local network traffic
+   over through encrypted SSH on remote hosts. Routing network traffic via SSH tunnels ensure high level
+   of data encryption and security, especially for unencrypted network protocols such as FTP. This is
+   very useful especially when connected to unsecured networks.
+
+   This tutorial will explain how to set up an SSH tunnel and securely route your traffic via secure
+   tunnels. We will discuss all three methods of SSH port forwarding:
+    1. Local Port forwarding
+    2. Remote Port Forwarding
+    3. Dynamic Port forwarding
+
+Perquisites
+   For this tutorial, you are going to need:
+    1. A local machine
+    2. A remote host such as a VPS
+
+Local Port Forwarding
+   This type of port forwarding allows you to forward a port on the local machine to a specific port on
+   a remote machine which is then forwarded to the destination address.
+
+   Local port forwarding allows the local machine to listen on a given port and tunnel any traffic to
+   the specific port to the port specified on the remote server. Once the remote server receives the
+   traffic, it is forwarded to the set destination address.
+
+   To create a local port forward, we use the -L flag for the SSH command:
+
+   The general syntax is:
+   $> ssh -L [LOCAL_IP:]LOCAL_PORT:DESTINATION:DESTINATION_PORT [USER@]SSH_SERVER
+
+   If you do not specify LOCAL_IP, the local SSH client will automatically bind to localhost. You also
+   need to specify ports larger than 1024 as they are not restricted to root users only.
+
+   Assume you have a service running on the machine my.service on port 5000 and can only be accessed on
+   machine access.machine. If you want to connect to the service from your local machine, you need to
+   forward your connection as:
+   ssh -L 5555:my.service:5000 user@access.machine
+
+   Once you execute the command, you will need to provide the SSH password for the specified user. For
+   ease of use, you can set a password-less login using SSH keys.
+
+   You can now access the service from your local machine using the port specified (5555) where the
+   access.machine acts as intermediate.
+   127.0.0.1:5555
+
+
+---
+

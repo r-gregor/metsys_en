@@ -1,0 +1,6 @@
+add these lines to "settings.json" to enable emmet abbreviations (html. css, ...) to VSCode (if needed):
+File->Preferences->Settings->Extensions->Edit in settings.json:
+		"emmet.triggerExpansionOnTab": true,
+		"files.associations": {"*.html": "html"},
+... and it will work!
+

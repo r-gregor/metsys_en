@@ -1,0 +1,11 @@
+# Changes for retaining coloured output when piping to less pager:
+
+# changes in bashrc_
+# set tab to 4 spaces (-x4)
+# keep coloured output (-Xr)
+export LESS="-QR -x4 -Xr"
+
+# changes in aliases_
+# --color=always (not auto!)
+alias grepc='GREP_COLOR="1;31" LANG=C grep --color=always'
+

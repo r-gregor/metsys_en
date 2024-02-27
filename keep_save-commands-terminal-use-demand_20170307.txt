@@ -1,0 +1,181 @@
+filename: keep_save-commands-terminal-use-demand_20170307.txt
+https://www.ostechnix.com/save-commands-terminal-use-demand/
+
+How To Save Commands In Terminal And Use Them On Demand
+   March 4, 2017
+
+   Let us say you’re searching for a specific command to solve a specific issue on your Linux system.
+   After a bit of Google search, you find it on a website or a blog, and you execute the command. Voila!
+   The problem is solved. You’re happy now and continue your work with great satisfaction. After a few
+   weeks or months, you encountered with the same issue on another Linux system. You remember solving
+   the same issue few week ago, but you completely forgot the full command. Oops! You run reverse search
+   on your Terminal by running ‘CTRL+R’ from the Terminal, and you search through your browser history.
+   But your mind is completely blank and you couldn’t recall the exact command. This is what I have
+   faced numerous times. Every time, I spend a lot of time web to search for commands. Not any more!
+   Meet ‘Keep’, a personal shell command keeper.
+
+   ‘Keep’ utility allows you to keep the most frequently used and most important commands in your
+   Terminal and you can use them later without having to search on websites or man pages. Also, you
+   don’t need to memorize the lengthy commands. Keep utility will save your important and frequently
+   used commands in Terminal itself. You can retrieve and execute them at any time. More importantly,
+   you can sync the saved commands across multiple systems and also save all commands on a remote
+   system. Seems useful, isn’t it?
+
+   To put this simply, ‘Keep’ utility
+     * Can keep all your commands in the Terminal itself with brief description.
+     * Allows you to search the saved commands using powerful patterns.
+     * Allows you to sync saved commands on multiple systems on the network.
+     * Allows you to save commands on any remote server on the network.
+
+   In this brief guide, I will show you how to install and use ‘Keep’ in Unix-like systems.
+
+Install ‘Keep’ On Linux
+   The easiest and official way to install ‘Keep’ is by using PIP. Pip is the package manager that
+   allows you to install applications written using Python programming language.
+
+   Pip can be installed on Arch Linux and its derivatives as shown below:
+sudo pacman -S python-pip
+
+   On Debian, Ubuntu, Linux Mint:
+sudo apt-get install python-pip
+
+   On RHEL, Fedora, CentOS:
+
+   Enable EPEL repository first.
+sudo yum install epel-release
+
+   Or,
+sudo dnf install epel-release
+
+   Then, install pip using command:
+sudo yum install python-pip
+
+   Or,
+sudo dnf install python-pip
+
+   On SUSE/openSUSE:
+sudo zypper install python-pip
+
+   Once pip installed, run the following command to install ‘Keep’. The following command is same for
+   all Linux distributions!
+sudo pip install keep
+
+Save Commands In Terminal And Use Them On Demand Using ‘Keep’ Utility
+
+   ‘Keep’ usage is very simple. The typical syntax of ‘keep’ utility is:
+keep [OPTIONS] COMMAND [ARGS]...
+
+   It’s time to see some practical examples. Look at the following command.
+find -iname '*.txt' -exec cp {} /home/sk/Downloads/ \;
+
+   This command will find and copy all files that ends with extension .txt. and save them in
+   /home/sk/Downloads/ directory. I have very poor memory. After a few  weeks or months, I couldn’t
+   remember this command. I bet some of you can’t remember this kind of lengthy commands after some
+   time.
+
+   So, what I am going to do is just save this command in my Terminal using ‘keep’ utility.
+
+   First, we need to initialize the ‘keep’ environment.
+
+   To do so, run:
+keep init
+
+   The above command will ask you to enter your Email. It is the unique username to you.  You can input
+   anything unique to you. You can choose to not register this time and later start the process by using
+   keep register command. You can use Keep CLI without registering if you do not intend to use the
+   server for storing or fetching your commands. It generates a 255 bit password for you. It is then
+   stored inside your ~/.keep/.credentials file.
+
+   Sample output would be:
+   [INS: :INS]
+Initializing environment in ~/.keep directory
+...OK
+Proceed to register? [Y/n]: y
+Your credentials will be saved in the ~/.keep directory.
+Email: admin@ostechnix.com
+Repeat for confirmation: admin@ostechnix.com
+Verifying with existing users...
+Generated password for admin@ostechnix.com
+Registering new user ...
+User successfully registered !
+hBxfwuw4HxoVDRONAVtz9mG6fTP1ck1vdkoGgoPk0Bx7ijEoHJX9imCUgTOidpGX4ZpSz0xBoAA1Dwoi6r2KHPR2rn9BWRRaLPHic6N8EAx05x
+LMHPZHUENg1etMdJRwGlRekWTt8xNsOv7c97wOwDtzON8tIlyphxt6gLhX8T4Hpo5r7T0jvJNG1CuAWxpXcPb1Q7HogVFjG1k0mjsmMWRI8Tgn
+pNLs
+Credentials file saved at ~/.keep/.credentials.json
+
+   Save a new command
+   To save a new command, just run:
+keep new
+
+   Enter the full command you’d like to save and hit ENTER. Then, provide the description of the command
+   and press ENTER key.
+
+   Sample output:
+Command: find -iname '*.txt' -exec cp {} /home/sk/Downloads/ \;
+Description : find and copy all files that ends with extension .txt
+
+   Now, the command has been saved. Similarly, you can save any number of commands using ‘keep new’
+   command.
+
+   View the saved commands
+   To view all saved commands, just run:
+keep list
+
+   This command will display the list of saved commands with description.
+
+   Sample output:
+Command Description
+-------------------------------------------------------- -----------------------------------------------------
+$ find -iname '*.txt' -exec cp {} /home/sk/Downloads/ \; find and copy all files that ends with extension .txt
+
+   Search for the saved commands
+   You can search any saved commands with its description. You don’t have to specify the complete
+   description. Look at the following example.
+
+   keep grep “find and copy”
+
+   You will see saved commands matching to the search term. I got the following command for the above
+   command.
+$ find -iname '*.txt' -exec cp {} /home/sk/Downloads/ \; :: find and copy all files that ends with extension .
+txt
+
+   Execute the saved commands
+   To execute the saved commands at any time, simply run with saved command’s description as shown
+   below:
+keep run "find and copy"
+
+   You will be asked whether to execute or not the command. Just press ‘Y’ to run the command:
+Execute
+
+find -iname '*.txt' -exec cp {} /home/sk/Downloads/ \;
+
+? [Y/n]: y
+
+   Sync Saved commands with another system
+   If you have got another system, install ‘keep’ on it as I described in the “Install Keep” section.
+   Then, run “keep init” (without quotes, of course) command and skip registration. Copy your
+   ~/.keep/.credentials file over to the target computer in the same location. Finally, run the
+   following command to retrieve all the saved commands.
+keep pull
+
+   To store the commands on the remote server, use ‘keep push’ command.
+
+   Delete saved commands
+
+   To delete a saved command, simply run:
+keep rm
+
+   Enter the command to remove and hit ENTER. The specified command will deleted from the Keep cache.
+Command to remove: find -iname '*.txt' -exec cp {} /home/sk/Downloads/ \;
+Command successfully removed!
+
+   For more details, see:
+keep --help
+
+Conclusion
+
+   ‘Keep’ utility is really useful when it comes to dealing with numerous commands everyday. It is quite
+   difficult to remember all commands. In such cases, Keep utility might be useful.
+
+   And, that’s all. Hope this helps. If you find this guide useful, please share it on your social
+   networks and support OSTechNix.

@@ -1,0 +1,10 @@
+Can I install Cygwin without administrator rights?
+
+Yes. The default installation requests administrator rights because this allows to set up the Cygwin
+environment so that all users can start a Cygwin shell out of the box. However, if you don't have
+administrator rights for your machine, and the admins don't want to install it for you, you can install Cygwin
+just for yourself by downloading the Cygwin Setup program, and then start it from the command line or via the
+"Run..." dialog from the start menu using the --no-admin option, for instance:
+
+> setup-x86_64.exe --no-admin
+

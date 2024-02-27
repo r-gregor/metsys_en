@@ -1,0 +1,44 @@
+# # TEST 20190211 ------------------------------
+# set -g default-terminal "screen-256color"
+
+# # set inactive/active window styles
+# set -g window-style 'fg=colour247,bg=colour240'
+# set -g window-active-style 'fg=colour250,bg=colour237'
+
+# set inactive/active window styles
+set -g window-style 'fg=colour247,bg=colour236'
+set -g window-active-style 'fg=colour250,bg=colour235'
+
+set -g pane-border-fg colour247
+set -g pane-border-bg colour235
+
+set -g pane-active-border-fg colour166
+set -g pane-active-border-bg colour235
+
+set -g status-bg colour166
+set -g status-fg colour7
+# # TEST 20190211 ------------------------------
+
+bind -n 'M-Left' select-pane -L
+bind -n 'M-Down' select-pane -D
+bind -n 'M-Up' select-pane -U
+bind -n 'M-Right' select-pane -R
+
+new -s START
+rename-window W1
+send-keys "/usr/local/bin/zze" Enter
+
+new-window -t START:1
+rename-window W2
+split-window -v
+split-window -h
+select-pane -t 0
+split-window -h
+select-pane -t 0
+
+new-window -t START:2
+rename-window w3
+split-window -v
+select-pane -t 0
+select-window -t W1
+

@@ -1,0 +1,12 @@
+1 - download *.zip from "https://github.com/dylanaraps/neofetch"
+2 - unzip into ~/sorsi/neofetch-master
+3 - cd ~/sorsi/neofetch-master
+4 - make install (installs into /usr/bin/neofetch)
+5 - create function in /home/forallusers/funclist
+        # 20201012
+        # neofetch start
+        function nf () {
+                clear
+                neofetch
+        }
+6 - done!

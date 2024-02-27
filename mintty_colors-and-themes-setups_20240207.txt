@@ -1,0 +1,21 @@
+filename: mintty_colors-and-themes-setups_20240207.txt
+
+Path to mintty themes:
+	/usr/share/mintty/themes/
+		dracula
+		flat-ui
+		gruvbox
+		helmholtz
+		html
+		kohlrausch
+		luminous
+		mintty
+		monokai-dimmed
+		nord
+		rosipov
+		vga
+		windows10
+		xterm
+
+To change color enter RGB value: colorname=r,g,b
+

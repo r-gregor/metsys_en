@@ -1,0 +1,8 @@
+$> cat /proc/partitions
+major	minor	#blocks		name	win-mounts
+8	0	312571224 	sda
+8	1	102400		sda1
+8	2	312466432	sda2	C:\
+8	16	15248832	sdb
+8	17	15247360	sdb1	D:\
+                    

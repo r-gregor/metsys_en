@@ -1,0 +1,9 @@
+TTY_color_settings_20190211.txt
+
+A - temno-siva
+backround[R,G,B]; foreground[R,G,B] = bg[41,49,52]; fg[224,226,228]
+
+
+B - sivo-modra
+backround[R,G,B]; foreground[R,G,B] = bg[36,46,56]; fg[191,191,191]
+

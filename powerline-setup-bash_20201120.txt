@@ -1,0 +1,18 @@
+git clone https://github.com/powerline/powerline.git
+cd powerline/
+python3 setup.py install
+pip show powerline-status
+cd /usr/local/lib/python3.8/site-packages/
+cd powerline_status-2.8.1.dev9999_git.b_f401ee3106b027efabdbbd7b920868cefd8277c4_-py3.8.egg/powerline/bindings/bash/
+cd ~
+cp .bashrc .bashrc.backup.20201120.txt
+vim .bashrc
+    ### add at the end:
+    powerline-daemon -q
+    POWERLINE_BASH_CONTINUATION=1
+    POWERLINE_BASH_SELECT=1
+    . /usr/local/lib/python3.8/site-packages/powerline_status-2.8.1.dev9999_git.b_f401ee3106b027efabdbbd7b920868cefd8277c4_-py3.8.egg/powerline/bindings/bash/powerline.sh
+sorce .bashrc
+### no powerline fonts !!
+
+### WORKS in SMDER !!

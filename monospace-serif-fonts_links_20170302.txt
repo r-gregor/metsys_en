@@ -1,0 +1,24 @@
+﻿$> p3sn2 "FONTS (20170302)" "
+> https://www.granneman.com/webdev/coding/css/fonts-and-formatting/basic-typography/
+> http://www.fontscape.com/explore?7ST
+> http://luc.devroye.org/fonts-71105.html
+> https://en.wikipedia.org/wiki/Samples_of_monospaced_typefaces
+> http://www.hanselman.com/blog/InSearchOfThePerfectMonospacedProgrammersFontInconsolata.aspx
+> https://www.typewolf.com/top-10-monospaced-fonts
+> https://www.gnu.org/software/freefont/
+> https://en.wikipedia.org/wiki/Monospaced_font
+> https://www.lucasoft.info/labs/free-resources/16/polaris-monospaced-free-font
+> http://www.fontspace.com/
+> http://levien.com/type/myfonts/inconsolata.html
+> https://blog.typekit.com/2012/09/24/source-code-pro/
+>
+> https://blog.golang.org/go-fonts
+> http://eosrei.net/articles/2016/02/changing-default-fallback-subsitution-fonts-linux
+> http://omarrr.com/top-7-open-source-monospace-fonts-for-developers/
+> http://www.1001fonts.com/monospaced-fonts.html
+> http://www.1001fonts.com/bptypewrite-font.html
+> https://www.fontsquirrel.com/fonts/list/classification/monospaced
+> https://www.fontshop.com/people/fontshop-team/fontlists/monospaced-serif
+>
+> LP,
+>

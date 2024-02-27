@@ -1,0 +1,18 @@
+﻿EN 20161111:
+
+1 --> mv _lynx-multi-dump-list.dat _multi-dump-list.dat
+2 --> replace 
+
+$> gregor.redelonghi@cygwin-en [/home/gregor.redelonghi/bin]
+$> EKSP='_lynx-multi'; for FFF in $(grep -l $EKSP ./* 2>/dev/null); do sed -i 's/_lynx-multi/_multi/g' $FFF; done
+
+
+
+check: files list ...
+$> gregor.redelonghi@cygwin-en [/home/gregor.redelonghi/bin]
+$> grep '_multi' ./* 2>/dev/null
+./lynx-multi-dump_fromlist-en_20141218.sh:gr_seznam="$HOME/bin/_multi-dump-list.dat"
+./w3m-multi-dump_fromlist-en_20160928.sh:gr_seznam="$HOME/bin/_multi-dump-list.dat"
+./w3m-multi-dump_fromlist-en_20160928.sh.txt:gr_seznam="$HOME/bin/_multi-dump-list.dat"
+
+

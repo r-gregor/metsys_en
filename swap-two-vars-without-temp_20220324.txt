@@ -1,0 +1,23 @@
+swap-two-vars-without-temp_20220324.txt
+
+gregor.redelonghi@cygwin-en ~
+$> p3
+Python 3.8.10 (default, May 20 2021, 11:41:59)
+[GCC 10.2.0] on cygwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> x = 15
+>>> y = 10
+
+>>> def show():
+...     print(f"x={x}, y={y}")
+...
+
+>>> show()
+x=15, y=10
+
+>>> x=x+y
+>>> y=x-y
+>>> x=x-y
+
+>>> show()
+x=10, y=15

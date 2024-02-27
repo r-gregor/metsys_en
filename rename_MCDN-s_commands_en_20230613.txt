@@ -1,0 +1,11 @@
+for FFF in $(find * -maxdepth 0 -type d -regex "cn..._.*"); do echo $FFF | sed 's/cn/cn_/'; done
+for FFF in $(find * -maxdepth 0 -type d -regex "cn..._.*"); do echo "mv $FFF $(echo $FFF | sed 's/cn/cn_/')"; done
+for FFF in $(find * -maxdepth 0 -type d -regex "cn..._.*"); do mv $FFF $(echo $FFF | sed 's/cn/cn_/'); done
+mv FUNCTIONS_cn/ cn_FUNCTIONS_cn
+mv METSYS_cn/ cn_METSYS
+mv SCRIPTS_cn/ cn_SCRIPTS
+mv OLD_MAKEFILES_cn/ cn_OLD_MAKEFILES
+mv OSTALO_cn/ cn_OSTALO
+mv TEST_FILES_cn/ cn_TEST_FILES
+mv SHF_libraries cn_SHF_libraries
+---

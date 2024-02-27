@@ -1,0 +1,12 @@
+# pdfjoin rotate multiple pdf-s west 20230605:
+
+gregor.redelonghi@cygwin-en /c/Users/gregor.redelonghi/2023/_2023_1_PROJEKTI/VN_N-30805_06-2023_PO_Ilovica-in-Izanska-c-sever-2del_AGL12/nacrt/risbe
+$> for FJL in _OBRNJENO/*; do echo pdfjoin A="${FJL}" cat A1west output $(basename $FJL); done
+pdfjoin A=_OBRNJENO/A-1_PO_AGL12_PZI_pregledna.pdf cat A1west output A-1_PO_AGL12_PZI_pregledna.pdf
+pdfjoin A=_OBRNJENO/A-2_PO_AGL12_PZI_situacija-1.pdf cat A1west output A-2_PO_AGL12_PZI_situacija-1.pdf
+pdfjoin A=_OBRNJENO/A-3_PO_AGL12_PZI_situacija-2.pdf cat A1west output A-3_PO_AGL12_PZI_situacija-2.pdf
+pdfjoin A=_OBRNJENO/A-4_PO_AGL12_PZI_situacija-3.pdf cat A1west output A-4_PO_AGL12_PZI_situacija-3.pdf
+pdfjoin A=_OBRNJENO/A-5_PO_AGL12_PZI_situacija-4.pdf cat A1west output A-5_PO_AGL12_PZI_situacija-4.pdf
+pdfjoin A=_OBRNJENO/A-6_PO_AGL12_PZI_situacija-5.pdf cat A1west output A-6_PO_AGL12_PZI_situacija-5.pdf
+pdfjoin A=_OBRNJENO/A-7_PO_AGL12_PZI_situacija-6.pdf cat A1west output A-7_PO_AGL12_PZI_situacija-6.pdf
+

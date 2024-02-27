@@ -1,0 +1,15 @@
+filename: dotfiles-first-push-to-new-forallusers_en-repo_20201110.txt
+# -- create new forallusers_en repo on https://www.github.com/r-gregor --
+
+# All done from $HOME
+$> mkdir $HOME/forallusers_en
+$> echo "alias forallusers_en='/usr/bin/git --git-dir=$HOME/forallusers_en --work-tree=/home/forallusers/'" >> /home/forallusers/aliases_forall
+$> sbr (source .bashrc)
+$> git init --bare $HOME/forallusers_en/
+$> forallusers_en config --local status.showUntrackedFiles no
+$> forallusers_en add aliases_forall aliases_forall.20120123 barve bashrc_forall bashrc_forall.original.20111116 funclist llast.scr peesena preglej.barve startfuncs xcol_bash.sh xcol_bash.sh.ORIGINAL
+$> forallusers_en commit -m "First forallusers files"
+$> forallusers_en remote add origin https://github.com/r-gregor/forallusers_en.git
+# forallusers_en remote set-url origin https://github.com/r-gregor/forallusers_en.git
+# if prevous attempt fails (vrong remote add origin setup)
+$> forallusers_en push -u origin master

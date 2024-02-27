@@ -1,0 +1,7 @@
+# add to dot_tmuc_conf
+# ALT+arrow to switch panes in window
+
+bind -n 'M-Left' select-pane -L
+bind -n 'M-Down' select-pane -D
+bind -n 'M-Up' select-pane -U
+bind -n 'M-Right' select-pane -R

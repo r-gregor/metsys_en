@@ -1,0 +1,30 @@
+gregor.redelonghi@cygwin-en ~/majstaf/majbin/send_mail
+$> listulb | grepc send
+  runp....................................run-sendhome1-and-sendp3-1
+  run-sendhome1-and-sendp3-1............../home/gregor.redelonghi/majstaf/majbin/send_mail/run-sendhome1-and-sendp3-1
+ [s1......................................send-1link-en                ] **
+ [s2......................................send-2args-en                ] **
+ [s3....................................../usr/local/bin/send-3args-en ] **
+ [send-1link-en.........................../home/gregor.redelonghi/majstaf/majbin/send_mail/send-1link-en ] **
+ [send-2args-en.........................../home/gregor.redelonghi/majstaf/majbin/send_mail/send-2args-en ] **
+ [send-3args-en.........................../home/gregor.redelonghi/majstaf/majbin/send_mail/send-3args-en ] **
+ [sendf1................................../home/gregor.redelonghi/majstaf/majbin/send_mail/sendf1        ] **
+ [sendf2................................../home/gregor.redelonghi/majstaf/majbin/send_mail/sendf2        ] **
+
+gregor.redelonghi@cygwin-en ~/majstaf/majbin/send_mail
+$> \ls -1 /c/Users/gregor.redelonghi/majstaf/drpbx-en/ODPRTO/MCDN_d/coding/send_mail/
+  __pycache__
+  _ostalo
+  20171003.py
+  backup_20201001
+  send_config_d.py
+  send_config_d.pyc
+  send_config_d.sh
+ [send-2args-d.py   ] **
+ [send-3args-d.py   ] **
+ [sendf1-d.py       ] **
+ [sendf2-mailx-d.sh ] **
+  send-mym-d.py
+  send-url-d.py
+
+?? send-1link-d ??

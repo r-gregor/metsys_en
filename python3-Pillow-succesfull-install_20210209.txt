@@ -1,0 +1,53 @@
+python3 -m pip install Pillow
+Error: The headers or library files could not be found for jpeg ...
+
+Solution:
+--> https://pillow.readthedocs.io/en/latest/installation.html
+	==> command to install pillow: "python3 -m pip install --upgrade Pillow"
+--> https://stackoverflow.com/questions/44043906/the-headers-or-library-files-could-not-be-found-for-jpeg-installing-pillow-on
+	==> sudo apt-get install libjpeg-dev zlib1g-dev --> apt-cyg install libjpeg-dev zlib1g-dev
+
+---
+gregor.redelonghi@cygwin-en ~ $> apt-cyg install libjpeg-devel
+Installing libjpeg-devel
+--2021-02-09 10:15:57--  http://mirror.easyname.at/cygwin//x86_64/release/libjpeg-turbo/libjpeg-devel/libjpeg-devel-1.5.3-1.tar.xz
+Connecting to 10.91.8.21:80... connected.
+Proxy request sent, awaiting response... 200 OK
+Length: 27404 (27K) [application/x-xz]
+Saving to: ‘libjpeg-devel-1.5.3-1.tar.xz’
+
+libjpeg-devel-1.5.3-1.tar.xz             100%[=================================================================================>]  26.76K  --.-KB/s    in 0.002s
+
+2021-02-09 10:15:57 (10.8 MB/s) - ‘libjpeg-devel-1.5.3-1.tar.xz’ saved [27404/27404]
+
+libjpeg-devel-1.5.3-1.tar.xz: OK
+Unpacking...
+Package libjpeg-devel requires the following packages, installing:
+libjpeg8 pkg-config
+Package libjpeg8 is already installed, skipping
+Package pkg-config is already installed, skipping
+Package libjpeg-devel installed
+gregor.redelonghi@cygwin-en ~ $> cygcheck -p zlib1g
+Found 0 matches for zlib1g
+
+gregor.redelonghi@cygwin-en ~ $> cygcheck -p zlib-devel
+Found 3 matches for zlib-devel
+zlib-devel-1.2.11-1 - zlib-devel: gzip de/compression library (development)
+zlib-devel-1.2.8-2 - zlib-devel: gzip de/compression library (development) (installed binaries and support files)
+zlib-devel-1.2.8-3 - zlib-devel: gzip de/compression library (development) (installed binaries and support files)
+
+gregor.redelonghi@cygwin-en ~ $> apt-cyg install zlib-devel
+Package zlib-devel is already installed, skipping
+
+gregor.redelonghi@cygwin-en ~ $> python3 -m pip install --upgrade Pillow
+Collecting Pillow
+  Using cached Pillow-8.1.0.tar.gz (44.9 MB)
+Building wheels for collected packages: Pillow
+  Building wheel for Pillow (setup.py) ... done
+  Created wheel for Pillow: filename=Pillow-8.1.0-cp38-cp38-cygwin_3_1_5_x86_64.whl size=1582118 sha256=7b4e94cfd70367149fbfc5ea10573b26be64a6bb5fff34678c1697140da211be
+  Stored in directory: /home/gregor.redelonghi/.cache/pip/wheels/4e/db/04/9dcbaf9865568850d9bbdeb9b6b697e70f804d18e7e8aac050
+Successfully built Pillow
+Installing collected packages: Pillow
+Successfully installed Pillow-8.1.0
+
+gregor.redelonghi@cygwin-en ~ $>

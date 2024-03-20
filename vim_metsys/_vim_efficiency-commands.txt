@@ -1,5 +1,5 @@
 filename: vim_efficiency-commands.txt
-20240212_en
+20240320_en
 ---
 
 - g/pattern/action:
@@ -102,6 +102,10 @@ filename: vim_efficiency-commands.txt
 
 - rcCtrl-O lets us temporarily exit Insert mode, perform one Normal mode command, and then return to
   Insert mode
+
+- perform normal command on multiple selections:
+	while in select mode type
+		:norm <command>
 
 - ...
 

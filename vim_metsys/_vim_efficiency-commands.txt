@@ -107,6 +107,10 @@ filename: vim_efficiency-commands.txt
 	while in select mode type
 		:norm <command>
 
+- change the direction of selection
+	while in visual selection mode (shift-v, or ctrl+v) press 'o'
+	to change position and direction of cursor (so you can expand or shrink selection block in both directions)
+
 - ...
 
 

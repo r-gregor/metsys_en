@@ -1,0 +1,6 @@
+# pdfjoin insert at N pages backwards from end 20230621:
+# insert _POPISI.pdf at fourth position backwards from end page in _CN.pdf
+# (just ptrfix page position with 'r')
+
+$> pdfjoin A=_CN.pdf B=popisi/pdf/_POPISI.pdf cat A1-r4 B Ar3-end output __CN.pdf
+

@@ -1,0 +1,36 @@
+- '<space>' command – Hiding Commands from Linux History
+
+- '<Alt> + .' and '<Esc> + .' to Recall Last Command Arguments
+
+- Formatting Mounted Filesystems with mount and column
+	The command 'mount | column -t' displays a list of all mounted filesystems in a neatly formatted table.
+
+- edit cli command in editor with 'Ctrl+x+e' command
+
+- 'curl ifconfig.me'
+	The curl ifconfig.me command is used to retrieve your public IP address from the ifconfig.me service, which is a quick and convenient way to check your public IP without needing to visit a website.
+	
+- '> file.txt' command
+	This command flush the contents of a file without the need of removing and creating the same file again.
+	
+- strace Command
+	The strace is a debugging tool which is used primarily for troubleshooting purpose in Linux. It might not be installed by default in your system and you may need to apt or yum the required package.
+	Trace a command execution using strace command:
+	$> strace pwd
+
+- Display Date on the Terminal
+	The below command is a combination of several commands, better say it a script. For a person working at shell or terminal, without GUI seeing current system date is tedious job. You have to type 'date' command to check today’s date.
+	Just execute the below command on you prompt and see the date and time on the above right corner of terminal.
+	$> while sleep 1;do tput sc;tput cup 0 $(($(tput cols)-29));date;tput rc;done
+
+- 'bind -p' command
+	The ‘bind -p‘ command will show all the shortcuts available for BASH shell.
+
+- 'nc -zv localhost 80'
+	Check if port 80 is open or not. We can replace ‘80‘ with any other port number to check if it is opened or closed.
+
+- 'curl ipinfo.io'
+	The below command will output the ‘Geographical Location‘ of the IP address, provided.
+
+- ...
+

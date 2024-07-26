@@ -4,3 +4,4 @@
 
 $> pdfjoin A=_CN.pdf B=popisi/pdf/_POPISI.pdf cat A1-r4 B Ar3-end output __CN.pdf
 
+$> pdfjoin A=__TEKSTI.pdf B=../../popisi/popisi_2022_plin_SD_NT.pdf cat A1-r2 B Ar1-end output __TEKSTI-S-POPISI.pdf

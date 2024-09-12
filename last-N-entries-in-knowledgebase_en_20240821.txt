@@ -1,0 +1,8 @@
+in: /home/gregor.redelonghi/majstaf_en/engit/knowledgedb
+$> for DDD in $(ls -1d *); do printf "*** \n$DDD ***\n"; rsort-by-tmstmp_c $DDD | head -n 5; done
+$> for DDD in $(ls -1d *); do printf "*** $DDD ***\n"; rsort-by-tmstmp_c $DDD | head -n 5; done
+$> for DDD in $(ls -1d *); do printf "*** $DDD ***\n"; rsort-by-tmstmp_c $DDD | head -n 5; done | grep "2024-08"
+$> for DDD in $(ls -1d *); do printf "*** $DDD ***\n"; rsort-by-tmstmp_c $DDD | head -n 5; done | grep "2024-08" | sort -k2
+$> for DDD in $(ls -1d *); do printf "*** $DDD ***\n"; rsort-by-tmstmp_c $DDD | head -n 5; done | grep "2024-08" | sort -r -k2
+$> for DDD in $(ls -1d *); do printf "*** $DDD ***\n"; rsort-by-tmstmp_c $DDD | head -n 5; done |less
+

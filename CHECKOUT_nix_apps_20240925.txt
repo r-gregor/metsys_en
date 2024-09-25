@@ -1,0 +1,19 @@
+Mainly from: https://github.com/toolleeo/cli-apps?tab=readme-ov-file
+
+01 - sxiv:      simple X Image Viewer; lightweight and scriptable image viewer written in C
+02 - feh:       light-weight, configurable and versatile image viewer. It is aimed at command line users
+03 - vifm:      file manager with curses interface, which provides Vim-like environment
+04 - nitrogen:  fast and lightweight (GTK2) desktop background browser and setter for X Window
+05 - fzf:       general-purpose command-line fuzzy finder
+06 - rofi:      window switcher, application launcher and dmenu replacement
+07 - twf:       standalone tree view file explorer
+08 - NcursesFM: file manager written in C, with ncurses library
+09 - fnt:       apt for fonts, the missing font manager for macOS/Linux
+10 - xrandr:    official configuration utility to the RandR (Resize and Rotate) X Window System extension
+11 - Tint2:     extremely light panel (compatible with Openbox and...?) (Note: CLI command may be tint or tint2, depending on the distro.)
+12 - mycli:     MySQL client with autocompletion and syntax highlighting
+13 - pgcli:     Postgres client with autocompletion and syntax highlighting
+14 - ripgrep:   line-oriented search tool that recursively searches your current directory for a regex pattern
+15 - Dunst:     lightweight replacement for the notification daemons
+16 - Conky:     light-weight system monitor for X, that displays any kind of information on desktop
+17 - 

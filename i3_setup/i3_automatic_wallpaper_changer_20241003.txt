@@ -1,0 +1,92 @@
+filename: i3_automatic_wallpaper_changer_20241003.txt
+https://www.reddit.com/r/i3wm/comments/w7u6x9/automatic_wallpaper_changer/?rdt=50296
+
+Automatic wallpaper changer for i3 wm?
+
+Question:
+   I had used [https://github.com/varietywalls/variety]variety wallpaper changer and it works on all de, but
+   doesn't work in i3. Any similar application for wm? It automatically downloads from Google earth, Bing
+   picture of day, etc and then sets it up as wallpaper.
+
+Answer:
+   Modify the i3 section of ~/.config/variety/scripts/get_wallpaper file and comment out everything except the
+   line starting with feh; after saving, this should fix the problem.
+
+   Note: I should add that I don't use a login manager and the above works for me
+
+Other answers:
+
+***
+Simply keep a directory of favorite wallpapers and use feh as follows:
+
+exec --no-startup-id feh --randomize --bg-fill /home/madhur/Pictures/wallpapers/
+
+***
+Same but set it to a keybinding as well:
+
+# change wallpapers
+bindsym $mod+$alt+b exec --no-startup-id feh ~/Pictures/Wallpapers/* --recursive --randomize --bg-fill
+
+***
+Bash scrip that takes a random pic from some subreddit like r/EarthPorn, r/spaceporn and set it as
+a wallpaper:
+
+<code>
+WIDTH_MIN=1920
+# List of subreddit to search
+sublist=("earthporn" "waterporn" "skyporn" "spaceporn" "seaporn")
+
+# Select a random one
+selectedElement=${sublist[ $RANDOM % ${#sublist[@]} ]}
+
+#get the 100 latests posts
+json_result=$(curl -s -A "reddit scraper" "https://www.reddit.com/r/$selectedElement.json?limit=100")
+
+#filter by width (just so we can get some good quality photos)
+json_result_filtered=$(echo $json_result | jq -c ".data.children |=
+map(select(.data.preview.images[0].source.width > $WIDTH_MIN))")
+
+#len of filtered results
+len=$(echo $json_result_filtered | jq -c '.data.children | length')
+#random
+num=$(($RANDOM % $len + 1))
+
+#get image of the random idx
+image=$(echo $json_result_filtered | jq -c ".data.children[$num].data.url_overridden_by_dest" | sed 's/"//g' )
+
+#download the image and set as wallpaper
+curl $image -o /tmp/img.jpg
+
+feh --bg-fill /tmp/img.jpg
+</code>
+
+
+***
+Setup with directory '~/wallpapers' and 'crontab':
+
+* * * * * DISPLAY=:0 feh --bg-scale $(find ~/wallpaper/ -type f | shuf -n1)
+
+
+***
+Script to fetch the day's wallpaper from bing. Just run this script on startup:
+
+<code>
+#!/bin/sh
+
+url=$(curl "https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US" \
+		| jq --raw-output '.images[0].url' \
+		| sed 's/&.*//g' \
+		| xargs printf 'https://bing.com%s')
+
+wget -O /tmp/wall.jpg "${url}"
+
+feh --bg-fill /tmp/wall.jpg
+</code>
+
+***
+
+
+
+
+---
+

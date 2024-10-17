@@ -1,0 +1,16 @@
+$> echo "Gregor Redelonghi, Valvasorjeva ulica 5, 1000 Ljubljana" | base64 > encoded
+$> echo "gredelonghi@gmail.com, 00386 40 88 55 60" | base64 > enc2
+$> cat encoded enc2 | base64 -d
+$> cat encoded enc2 | base64 -d | sed ':a;N;$!ba;s/\n/, /g'
+
+---
+Example:
+$> cat encoded enc2 | base64 -d
+Gregor Redelonghi, Valvasorjeva ulica 5, 1000 Ljubljana
+gredelonghi@gmail.com, 00386 40 88 55 60
+
+$> cat encoded enc2 | base64 -d | sed ':a;N;$!ba;s/\n/, /g'
+Gregor Redelonghi, Valvasorjeva ulica 5, 1000 Ljubljana, gredelonghi@gmail.com, 00386 40 88 55 60
+
+---
+

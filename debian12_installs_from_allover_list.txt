@@ -16,7 +16,8 @@ pavucontrol
 pamixer
 pulsemixer
 network-manager
-network-manager-gnome
+# network-manager-gnome ??
+nm-applet
 libnotify-bin
 libnotify-dev
 thunar

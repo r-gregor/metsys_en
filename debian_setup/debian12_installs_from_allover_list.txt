@@ -60,6 +60,7 @@ firefox-esr
 w3m
 lynxd
 ranger
+mc
 
 # ==========================================================================================================
 # list of packafes from bookworm scripts:

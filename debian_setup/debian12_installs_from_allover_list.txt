@@ -59,6 +59,7 @@ fonts-terminus
 firefox-esr
 w3m
 lynxd
+ranger
 
 # ==========================================================================================================
 # list of packafes from bookworm scripts:

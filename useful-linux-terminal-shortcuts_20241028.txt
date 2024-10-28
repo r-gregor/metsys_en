@@ -1,0 +1,243 @@
+filename: useful-linux-terminal-shortcuts_20241028.txt
+https://www.ubuntupit.com/useful-linux-terminal-shortcuts-that-every-power-linux-user-must-know/
+
+Useful Linux Terminal Shortcuts That Every Power Linux User Must Know
+Updated: October 22, 2024
+
+   Using the terminal is something inevitable for every Linux user. It is quite like a chatbox that
+   allows you to talk to your machine. Using the terminal efficiently can reduce your workload a lot. To
+   use the terminal with ease, every user must know a lot of the Linux terminal shortcuts. Utilizing the
+   Linux terminal shortcuts is the key difference between a power Linux user and a regular user.
+
+   Just master the command line shortcuts; you will have such a comfortable feel with the terminal that
+   you have never felt before. Stick to this post till the end to get a crystal clear concept about
+   Linux terminal shortcuts.
+
+Linux Terminal Shortcuts You Must Know
+   There are many shells available online. For Linux, the Bash is the most popular one. In this post, I
+   am going to familiarize you guys with Bash shortcuts assuming that your computer has Bash as the
+   command processor.
+
+   In other shells, maybe there are some differences in the shortcuts that you have to discover by
+   yourself. For No more idle talks! Let us jump into the main portion of today's post.
+
+1. Ctrl+Alt+T
+   Searching for the terminal from the application menu is not something recommended. It kills your time
+   and is monotonous as well.
+
+   Using the Ctrl+Alt+T combination opens a whole new terminal for you. It seems magical, isn't it? No
+   mouse click, no tedious search. Just three magical taps for a terminal.
+
+2. Tab
+   The tab is the most used terminal shortcut in any Linux distro. While writing any command, sometimes
+   you will see a suggestion provided by the terminal with a lighter color. By hitting the tab at that
+   moment, you can have the whole suggested command written on the screen without actually writing it.
+   Pretty cool, huh?
+
+   There are other uses of the tab as well. Let us say you have written "sudo" on the terminal and then
+   hit the tab key. What is going to happen? It will show all the possible command line syntax you can
+   write with "sudo". This is like a magic key you have embedded on your keyboard. Use it well.
+   [INS: :INS]
+
+3. Ctrl+L
+   Sometimes we write tons of commands, and the screen becomes really messy. It does not look pretty or
+   clean. How to clean the screen? Writing "clear" and then hitting the ENTER lets you clear the screen
+   in a twinkling of eyes.
+
+   But, to do this, you have to press 6 keys consecutively. C-L-E-A-R-ENTER. If you are a lazy guy, just
+   like me, you can avoid writing so many characters. Just press the Ctrl and then L simultaneously. It
+   will wipe the screen and will give you a nice and clear terminal to work with. Only 2 hits instead of
+   6. Isn't it cool?
+
+4. Ctrl+P
+   Okay. You have cleared the screen for your handiness. But suddenly, you have to see a command that
+   you had written before. But you have wiped the whole screen already. How to see your previously
+   written commands?
+
+   Pressing Ctrl alongside with P lets you see your previously written commands. If you hit the two
+   buttons repeatedly, then you can go back to your previous commands one by one. This shortcut helps
+   you to bring back the commands that are lost from the screen after cleaning it.
+
+   In some terminals, you can get this advantage with the Pg Up key from your keyboard.
+
+5. Ctrl+N
+   This Linux terminal shortcut does the exact opposite thing that you have already done with Ctrl+P.
+   For instance, let us say you have gone through some previously written commands already. Now you want
+   to go forward, not in the backward direction. Ctrl+N will take you in the forward direction. It will
+   display the "next" command on the screen that you have passed before by using Ctrl+N.
+
+   You can tilt yourself back and forth in the command history using these two, the Ctrl+P and Ctrl+N
+   commands.
+
+6. Ctrl+A
+   In everyday typing applications, the Ctrl+A does the work of selecting "All". You can select
+   everything written on the screen using Ctrl+A. But in the case of Bash, it does not do the same
+   thing.
+
+   Let us say that you have written quite a long command, and for an obvious reason, you have to go to
+   the starting point of the command. Using the Ctrl+A will bring you to the beginning of any command
+   you are writing. You do not have to roam with the arrow key through the whole command you have typed
+   to reach the beginning.
+
+7. Ctrl+E
+   Just like the Ctrl+P and Ctrl+N pair, the Ctrl+A also comes in a pair and has a companion. The Ctrl+E
+   does the exact opposite thing that you have done with the Ctrl+E.
+
+   You reached the beginning of a command that you have typed by using the Ctrl+A. Now for any reason,
+   you have to go to the ending of the command. You do not have to navigate with the arrow key to do so.
+   Use the Ctrl+E, and it will bring you to the end of the line. This pair is here to reduce your
+   workload by a huge amount.
+
+8. Ctrl+U
+   Suppose you are writing a bunch of commands, and suddenly you have typed a command that was not
+   supposed to be written there. You have to erase this command. Pressing the backspace for quite a long
+   time will erase the line for you. But it is tedious.
+
+   The Ctrl+U erases a command that you are typing now. It erases from the beginning of the line to the
+   present cursor position. Saves a lot of time, doesn't it?
+
+9. Ctrl+K
+   Again. Another pair. The Ctrl+K is a brother of the Ctrl+K. You erased from the beginning of a
+   command to the present cursor position with Ctrl+U. But let us say you are somewhere in the middle of
+   a command you have already written, and you do not want the rest of the written part that lies after
+   your cursor.
+
+   The Ctrl+K erases from the present cursor position to the end of the line for you. It does the exact
+   opposite thing that we have done with the Ctrl+U.
+
+10. Ctrl+W
+   We have learned to erase from the present cursor position to the beginning of a line or to the ending
+   of a line. But what if we want to erase from the current cursor position to the beginning of the word
+   we are writing? The Ctrl+W comes in the scenario as the savior.
+   [INS: :INS]
+
+   Using Ctrl+W will erase from the current cursor position to the beginning of the preceding word. If
+   you want to erase any particular word you have written, then just place the cursor next to the word
+   and use Ctrl+W. The desired word will be vanished.
+
+11. Ctrl+Y
+   Let us say you have used the Ctrl+U or the Ctrl+K or the Ctrl+W in a wrong place and want to get back
+   what you have erased. Using the Ctrl+Y will undo what you have erased as your last action.
+
+   Also, you can paste anywhere that portion of a line that you have erased with either of the three
+   commands we have stated above. Put your cursor at your desired place, and by using the Ctrl+Y, you
+   can paste the erased part there. Among the frequently used shortcuts of the Linux terminal, this is
+   another one.
+
+12. Ctrl+C
+   You have written any command in the terminal and hit enter. The execution is taking place, and
+   suddenly you have realized that you do not have to execute this process right now. You have to cancel
+   it. How to terminate the process that is running in the foreground?
+
+   Using the Ctrl+C combination allows you to cancel any process that is executing on the terminal
+   screen. A pretty nice way to stop a process immediately.
+
+13. Ctrl+Z
+   Imagine the exact same scenario as the previous one. You have written a command and pressed enter.
+   The process has started to execute. Now you have remembered that you have to do other works as well.
+   Waiting for the presently running process to come to an end will waste your valuable time.
+
+   Using the Ctrl+Z shortcut combination will send the running process in the background. Your terminal
+   is free now. Do whatever you want to do. This terminal shortcut will help you a lot.
+
+14. Ctrl+R
+   The Ctrl+R combination allows you to do a search in the command history. Use Ctrl+R and then begin
+   typing in the terminal. The very last command that you have written (that is not visible on the
+   screen. If that was visible, then certainly you would not use the history to see it) and have a match
+   with the line you are writing right now will be shown.
+   [INS: :INS]
+
+   By pressing Ctrl+R repeatedly will show more commands that match with your currently typed part.
+   Choose the command that you want to execute and hit enter. If you press ESC, you will be taken out of
+   the search history with the last search result on the history log.
+
+15. Ctrl+D
+   This is something like the exit command. It will log you out of the present terminal. It will close
+   an SSH connection, and any application running directly from the terminal will be closed immediately.
+
+16. Ctrl+J (Bonus: Ctrl+M)
+   Probably the most used key in a keyboard is the ENTER key. It is pressed more than any other key. It
+   is quite normal to have a damaged ENTER key. But wait a minute! Without the ENTER, life is impossible
+   in Linux. How to deal with it?
+
+   The Ctrl+J (and Ctrl+M as well) does the exact same thing that an ENTER does. This is an alternative
+   you can use in any necessary. So far, we have seen the shortcuts with Ctrl. But there are other Linux
+   terminal shortcuts as well that will help you a lot. Let us see them also.
+
+17. Alt+F
+   Previously we have seen how to proceed to the end of a line from the current cursor position. Let us
+   say we do not have to go to the end; instead, we have to go one word forward. The Alt+F combination
+   allows you to move in such a way.
+
+18. Alt+B
+   It is not a surprise that if you have a way to move one word forward, then there must be a way to
+   move one word backward. The Alt+B is the brother of Alt+F. It allows you to retreat by one word from
+   the current cursor position.
+
+19. Ctrl+T
+   Suppose you have written two characters in a string in reverse order. You had to write "su" but you
+   have written "us". You were in a hurry, and such types of typos are quite common. To make a
+   transition from su to us requires four keystrokes. Two backspaces and then writing the correct pair
+   of letters. What if you can do the same operation with a lesser number of strokes?
+
+   Before using Ctrl+T:
+us
+
+   After using the shortcut combination,
+su
+
+   Using the Ctrl+T exchanges the current cursor position character with the character preceding it. It
+   reduces two strokes, saves your time, and elongates your keyboard life.
+
+20. Ctrl+[
+   As we discussed earlier, you can have a damaged ENTER key. Just like that, you also can have a
+   damaged Esc key. The Esc is not a less important key for any Linux user. No need to worry. The Ctrl+[
+   combination is a nice substitute for the Esc key. It completes the same job.
+
+21. Ctrl+XX
+   We have seen how to go to the starting point of a line by using keyboard shortcuts. The Ctrl+XX is an
+   enhanced version of that. It allows you to toggle between the starting of a command line and the
+   current cursor location. You can keep toggling by pressing the Ctrl+XX repeatedly.
+
+22. Alt+U
+   The Alt+U combination allows you to convert all the alphabets typed from the current cursor position
+   to the end into uppercase alphabets. If there are uppercase letters written in between the limit,
+   those will remain unchanged. And if there are lowercase letters typed, those will be converted.
+
+23. Alt+L
+   So, we have a command to convert letters from lowercase to uppercase. Is there a way to do vice
+   versa? Certainly, there are! The Alt+U and the Alt+L are the desired pair. Using the Alt+L turns all
+   the letters written from the current cursor position to the end of the line into lowercase. The
+   lowercase letters will remain unchanged. The only changes will be brought to the uppercase letters.
+
+24. Alt+T (Bonus: Esc+T)
+   The Ctrl+T swapped two alphabets that were visible on the screen. But how to exchange two words that
+   are written in the wrong order? No worries! There is a way to do that as well. The Alt+T (you can use
+   Esc+T as well. it Does the same job for you) shortcut combination allows you to swap between two
+   words that are typed just now.
+
+   You have typed
+su sudo
+
+   By pressing Alt+T (or Esc+T), it will be converted into
+sudo su
+
+25. !!
+   Well, at first glance, it does not look like a shortcut, but it actually is a shortcut in Bash. It
+   repeats the last written command. You do not have to traverse through the history, or you do not have
+   to write the command again. Just write "!!" (without the quotation marks, obviously) and hit ENTER.
+   Your work will be done.
+
+Last Words
+   So far, we have seen a lot of Linux terminal shortcuts that you should know to move from the level of
+   an average user to a pro-level user. I tried to cover all the necessary shortcuts that enable us to
+   accomplish our job with handiness.
+
+   If I skip anything, or if there are other shortcuts that are necessary for a power user, let us know.
+   Leave a comment in the comment section below. Share this post with your friends to spread the
+   knowledge. Remember, the more you know, the more you grow.
+
+
+
+---
+

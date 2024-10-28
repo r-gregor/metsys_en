@@ -1,0 +1,37 @@
+poppler: PDF manipulation utilities
+    2020-05-14 14:39       14867 /usr/bin/pdfattach.exe
+    2020-05-14 14:39       18451 /usr/bin/pdfdetach.exe
+    2020-05-14 14:39       16403 /usr/bin/pdffonts.exe
+    2020-05-14 14:39       36883 /usr/bin/pdfimages.exe
+    2020-05-14 14:39       45075 /usr/bin/pdfinfo.exe
+    2020-05-14 14:39       15379 /usr/bin/pdfseparate.exe
+    2020-05-14 14:39       19987 /usr/bin/pdfsig.exe
+    2020-05-14 14:39      112659 /usr/bin/pdftocairo.exe
+    2020-05-14 14:39       81427 /usr/bin/pdftohtml.exe
+    2020-05-14 14:40       24083 /usr/bin/pdftoppm.exe
+    2020-05-14 14:40       21523 /usr/bin/pdftops.exe
+    2020-05-14 14:40       31763 /usr/bin/pdftotext.exe
+    2020-05-14 14:40       27155 /usr/bin/pdfunite.exe
+    2020-05-14 14:39           0 /usr/share/doc/
+    2020-05-14 14:39           0 /usr/share/doc/poppler/
+    2020-05-14 14:39         145 /usr/share/doc/poppler/AUTHORS
+    2020-05-14 14:39     2726459 /usr/share/doc/poppler/ChangeLog
+    2020-05-14 14:39       17987 /usr/share/doc/poppler/COPYING
+    2020-05-14 14:39      128803 /usr/share/doc/poppler/NEWS
+    2020-05-14 14:39        4702 /usr/share/doc/poppler/README.md
+    2020-05-14 14:39           0 /usr/share/man/
+    2020-05-14 14:39           0 /usr/share/man/man1/
+    0220-04-27 21:26         571 /usr/share/man/man1/pdfattach.1.gz
+    2020-04-27 21:26        1004 /usr/share/man/man1/pdfdetach.1.gz
+    2020-04-27 21:26        1047 /usr/share/man/man1/pdffonts.1.gz
+    2020-04-27 21:26        2402 /usr/share/man/man1/pdfimages.1.gz
+    2020-04-27 21:26        1473 /usr/share/man/man1/pdfinfo.1.gz
+    2020-04-27 21:26         744 /usr/share/man/man1/pdfseparate.1.gz
+    2020-04-27 21:26         948 /usr/share/man/man1/pdfsig.1.gz
+    2020-04-27 21:26        3928 /usr/share/man/man1/pdftocairo.1.gz
+    2020-04-27 21:26        1300 /usr/share/man/man1/pdftohtml.1.gz
+    2020-04-27 21:26        2066 /usr/share/man/man1/pdftoppm.1.gz
+    2020-04-27 21:26        2617 /usr/share/man/man1/pdftops.1.gz
+    2020-04-27 21:26        1531 /usr/share/man/man1/pdftotext.1.gz
+    2020-04-27 21:26         586 /usr/share/man/man1/pdfunite.1.gz
+

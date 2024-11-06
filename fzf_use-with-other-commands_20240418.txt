@@ -1,0 +1,8 @@
+<star><star> --> **
+To use fzf width cd command:
+$> cd **<tab>
+
+To use fzf with open editor command:
+$> vim **<tab>
+
+

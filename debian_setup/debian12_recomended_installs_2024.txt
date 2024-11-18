@@ -1,5 +1,5 @@
 ### Initial, after minimal debian12 install
-### 20241111 (en)
+### 20241118 (en)
 
 sudo apt update && sudo apt upgrade
 
@@ -11,7 +11,8 @@ sudo systemctl restart zramswap.service
 sudo apt install -y build-essential cmake cmake-extras curl gettext libnotify-bin light meson ninja-build libxcb-util
 
 ### Desktops
-sudo apt install -y xorg xserver-xorg xinit xbacklight xbindkeys xvkbd xinput policykit-1-gnome network-manager network-manager-gnome
+sudo apt install -y xorg xserver-xorg xinit xbacklight xbindkeys xvkbd xinput policykit-1-gnome
+network-manager network-manager-gnomea net-tools
 sudo apt install xfce4 xfce4-goodies i3 polybar
 
 ### Goodies

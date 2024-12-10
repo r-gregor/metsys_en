@@ -1,5 +1,5 @@
-filename: vim_efficiency-commands.txt
-20240823
+filename: _vim_efficiency-commands.txt
+20241210
 ---
 
 - g/pattern/action:
@@ -149,6 +149,17 @@ filename: vim_efficiency-commands.txt
 		g/pattern/m$
 	reverse the document move every line to a line 0
 		g/^/m0
+
+- copy/move lines when in command mode:
+	t - in command mode: copy
+	m - in command mode: move
+		:-6t.<CR>       copy line 6 lines up from curent position and paste it under current position
+		:-6t.<CR>       copy line 6 lines down from curent position and paste it under current position
+		:-6,-3t.<CR>    copy range and paste it under current position
+	
+	help:
+		:h :t
+		:h :m
 
 - ...
 

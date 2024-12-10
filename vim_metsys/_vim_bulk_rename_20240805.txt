@@ -24,7 +24,7 @@ old_name_07.txt
 old_name_08.txt
 old_name_09.txt
 ---------------------
-:%s/.*/mv -v "&" "&"
+:%s/.*/mv -v "&" "&"/
 
 03: in vim: -> replace pattern
 mv -v "old_name_01.txt" "old_name_01.txt"

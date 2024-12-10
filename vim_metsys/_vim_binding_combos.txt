@@ -1,4 +1,4 @@
-filename: vim_binding_combos.txt
+filename: _vim_binding_combos.txt
 20240206_en:
 ---
 help:

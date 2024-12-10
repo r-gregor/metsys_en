@@ -161,5 +161,15 @@ filename: _vim_efficiency-commands.txt
 		:h :t
 		:h :m
 
+- quickfix feature
+	:vim /<spc1>\|spc2\| .../ **/*.c -- (spc - search pattern from current file)
+		**  - recursively
+		*.c - file types
+			puts files into qickfix list
+			:cn, :cp - go tu a next/previous file with <spc>
+			:cope - open files list in new buffer to select them
+				:h quickfix
+				:h :cp, :cn, :copen, ...
+
 - ...
 

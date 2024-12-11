@@ -151,8 +151,8 @@ filename: _vim_efficiency-commands.txt
 		g/^/m0
 
 - copy/move lines when in command mode:
-	t - in command mode: copy
-	m - in command mode: move
+	t - in command mode: copy line
+	m - in command mode: move line
 		:-6t.<CR>       copy line 6 lines up from curent position and paste it under current position
 		:-6t.<CR>       copy line 6 lines down from curent position and paste it under current position
 		:-6,-3t.<CR>    copy range and paste it under current position
@@ -161,7 +161,7 @@ filename: _vim_efficiency-commands.txt
 		:h :t
 		:h :m
 
-- quickfix feature
+- quickfix feature:
 	:vim /<spc1>\|spc2\| .../ **/*.c -- (spc - search pattern from current file)
 		**  - recursively
 		*.c - file types
@@ -171,5 +171,9 @@ filename: _vim_efficiency-commands.txt
 				:h quickfix
 				:h :cp, :cn, :copen, ...
 
+- open current buffer in new tab:
+	:tab sb
+
 - ...
+
 

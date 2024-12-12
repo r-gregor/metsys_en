@@ -1,6 +1,7 @@
 ### Initial, after minimal debian12 install
 ### 20241118 -- v1 (en)
 ### 20241119 -- v2 (en)
+### 20241212 -- v3 (en)
 
 ### SYSTEM ##############################################################################################
 sudo apt update && sudo apt upgrade
@@ -46,7 +47,7 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 sudo apt install -y sudo apt install -y exa ffmpeg gimp mkvtoolnix-gui redshift brightnessct scrot eog \
 evince pdfarranger figlet cpu-x udns-utils whois curl tree neofetch dmenu rofi fzf xfce4-power-manager \
 sxiv inkscape mpv vlc audacity kdenlive obs-studio rhythmbox ncmpcpp gparted gnome-disk-utility numlockx \
-galculator btop htop bat redshift mousepad l3afpad
+galculator btop htop bat redshift mousepad l3afpad gpick
 
 
 ### Web browsers ######################################################################################

@@ -1,0 +1,10 @@
+# 20241216
+# filename: sort_testing_dirs_by_files_num_20241216.txt
+
+$> for DDD in $(ls ~/majstaf_en/coding2/testing/); do echo "$DDD $(ls -1 ~/majstaf_en/coding2/testing/$DDD | wc -l)"; done | sort -nr -k2 | column -t
+java_testing     181
+python_testing   177
+c_testing        155
+go_testing       42
+rust_testing     10
+ncurses_testing  3

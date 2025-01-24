@@ -177,6 +177,7 @@ filename: _vim_efficiency-commands.txt
 - insert into normal mode in :term vindow:
 	vhen in :term window press ctrl+w shift+n (N) to enter normal mode
 		press shift+a (A) to leave normeal mode and return to :term
+		press ctrl+w "" (2-times double quote) to paste whatever was yanked in normal vim window
 
 - 
 

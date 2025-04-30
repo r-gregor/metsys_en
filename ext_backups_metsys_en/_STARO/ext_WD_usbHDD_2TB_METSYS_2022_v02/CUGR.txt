@@ -1,0 +1,15 @@
++ majstaf
++ majstaf/BRISI/
++ gredelonghi_acad_support/
++ majstaf/en_staf/
++ Pictures/
++ majstaf/r.gregor.en/
++ majstaf/en_staf/WIN10wallpapers/
++ majstaf/BRISI/***
++ gredelonghi_acad_support/***
++ majstaf/en_staf/***
++ OneDrive/***
++ Pictures/***
++ majstaf/r.gregor.en/***
++ /majstaf/en_staf/WIN10wallpapers/***
+- *

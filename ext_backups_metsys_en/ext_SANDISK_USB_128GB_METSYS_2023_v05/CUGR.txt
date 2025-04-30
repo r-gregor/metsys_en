@@ -1,0 +1,11 @@
++ en_staf
++ PS_stuf
++ PWS_en
++ r.gregor.en
++ winshortcuts
++ en_staf/***
++ PS_stuf/***
++ PWS_en/***
++ r.gregor.en/***
++ winshortcuts/***
+- *

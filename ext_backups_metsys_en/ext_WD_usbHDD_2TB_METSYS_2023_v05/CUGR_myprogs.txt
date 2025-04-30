@@ -1,0 +1,3 @@
++ majstaf/majprogs/
++ majstaf/majprogs/***
+- *

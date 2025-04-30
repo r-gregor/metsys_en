@@ -1,0 +1,7 @@
+20221124/01:
+	- changed dirname bekaps_en to n_bekaps
+	- updated exports to new dirname n_bekaps in *.sh
+
+---
+
+

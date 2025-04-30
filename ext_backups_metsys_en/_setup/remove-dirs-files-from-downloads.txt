@@ -1,0 +1,4 @@
+# remove all files and dirs
+curdir="bekap_c_gregor.redelonghi_Downloads"
+cd ${curdir}; find . |  grep -v "MEGA\|_NEBRISI" | xargs -IFF rm -rv "FF"
+

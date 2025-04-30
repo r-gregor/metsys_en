@@ -1,0 +1,13 @@
++ bekap_en_all
++ en_staf
++ PS_stuf
++ PWS_en
++ r.gregor.en
++ winshortcuts
++ bekap_en_all/***
++ en_staf/***
++ PS_stuf/***
++ PWS_en/***
++ r.gregor.en/***
++ winshortcuts/***
+- *

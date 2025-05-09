@@ -11,8 +11,8 @@ gr_DANES="$(date +%Y%m%d)"
 gr_CURRT="$(date +%Y%m%d_%H%M%S)"
 gr_0="$(realpath $0)"
 
-gr_RSDRO='rsync -rltDn --update --info=name0,stats2,progress0 --modify-window=2'       # DRY-RUN options
-gr_RSO='rsync -rltD --update --info=name0,stats2,progress0 --modify-window=2'           # RUN backup ptions
+gr_RSDRO='rsync -rltDWn --update --info=name0,stats2,progress0 --modify-window=2'       # DRY-RUN options
+gr_RSO='rsync -rltDW --update --info=name0,stats2,progress0 --modify-window=2'           # RUN backup ptions
 gr_FILT='/usr/bin/grep "files\|total"'
 
 # --- EXPORTS ---

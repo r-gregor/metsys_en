@@ -29,7 +29,7 @@ gr_CURRT="$(date +%Y%m%d_%H%M%S)"
 gr_CURDRV=$(cd $(dirname ${BASH_SOURCE[0]}) && cd ../ && pwd)
 gr_0="$(realpath $0)"
 
-gr_RSO='rsync -rltD --update --info=name0,stats2,progress0 --modify-window=2'           # RUN backup ptions
+gr_RSO='rsync -rltDW --update --info=name0,stats2,progress0 --modify-window=2'           # RUN backup ptions
 gr_FILT='/usr/bin/grep "files\|total"'
 
 export gr_DRIVE=${gr_CURDRV}

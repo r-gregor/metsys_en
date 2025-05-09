@@ -55,8 +55,8 @@ dT1=$(date +"%s")
 (tms; echo "Backing up ${SRCDIR} to ${DESTDIR}/ ...")
 (tms; echo "Syncing ...  ")
 # ORIGINAL:
-# rsync -rltD --exclude "home"  --progress /c/Users/gregor.redelonghi/majstaf_en/majprogs_en/cygwin64 /d/ext_WD_usbHDD_2TB/CYGWINBCKP/
-rsync -rltD --exclude "home"  --progress "${SRCDIR}" "${DESTDIR}/"
+# rsync -rltDW --exclude "home"  --progress /c/Users/gregor.redelonghi/majstaf_en/majprogs_en/cygwin64 /d/ext_WD_usbHDD_2TB/CYGWINBCKP/
+rsync -rltDW --exclude "home"  --progress "${SRCDIR}" "${DESTDIR}/"
 (tms; crtc $crtn)
 
 

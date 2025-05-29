@@ -1,0 +1,49 @@
+to local
+
+RSYNC
+real    0m52.141s
+user    0m1.998s
+sys     0m9.139s
+
+RCLONE
+real    0m13.114s
+user    0m0.015s
+sys     0m0.030s
+
+===================================================================================
+to /d/
+
+RSYNC
+real    2m13.582s
+user    0m1.218s
+sys     0m24.639s
+---
+real    1m50.576s
+user    0m1.154s
+sys     0m22.873s
+---
+-u:
+real    0m26.613s
+user    0m0.092s
+sys     0m0.593s
+
+
+
+RCLONE
+real    1m59.947s
+user    0m0.015s
+sys     0m0.062s
+---
+real    0m43.754s
+user    0m0.000s
+sys     0m0.031s
+---
+--ignore-checksum
+real    0m38.046s
+user    0m0.000s
+sys     0m0.015s
+--ignore-checksum + -u:
+real    0m7.366s
+user    0m0.015s
+sys     0m0.076s
+

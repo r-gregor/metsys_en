@@ -1,0 +1,53 @@
+ 2475  2025-06-18 08:41:07 rclone config
+ 2477  2025-06-18 08:41:50 rclone remote
+ 2478  2025-06-18 08:42:08 rclone help
+ 2479  2025-06-18 08:42:11 rclone help |less
+ 2480  2025-06-18 08:43:03 rclone listremotes
+ 2481  2025-06-18 08:43:06 rclone help |less
+ 2482  2025-06-18 08:43:20 rclone lsd
+ 2483  2025-06-18 08:43:33 rclone ls meganz
+ 2484  2025-06-18 08:43:41 rclone ls meganz:
+ 2485  2025-06-18 08:43:49 rclone help |less
+ 2486  2025-06-18 08:44:26 rclone ncdu mrganz
+ 2487  2025-06-18 08:44:38 rclone listremotes
+ 2488  2025-06-18 08:44:43 rclone ncdu mrganz:
+ 2489  2025-06-18 08:44:48 rclone help |less
+ 2490  2025-06-18 08:45:23 rclone ls --help
+ 2491  2025-06-18 08:45:44 rclone ls meganz:
+ 2492  2025-06-18 08:46:24 rclone listremotes
+ 2493  2025-06-18 08:46:32 rclone ls dropbox:
+ 2494  2025-06-18 08:56:09 rclone config
+ 2501  2025-06-18 08:59:15 rclone lsd mega_en:
+ 2502  2025-06-18 09:00:03 rclone copy Tehnicne-zahteve_2025 mega_en:ENERGETIKA
+ 2503  2025-06-18 09:06:44 rclone copy Tehnicne-zahteve_2025 mega_en:ENERGETIKA/Tehnicne-zahteve_2025
+ 2505  2025-06-18 09:45:27 rclone config
+ 2506  2025-06-18 09:47:53 rclone copy Tehnicne-zahteve_2025 mega_gren:ENERGETIKA/Tehnicne-zahteve_2025
+ 2507  2025-06-18 10:30:42 rclone copy _2025_1_PROJEKTI mega_gren:ENERGETIKA/_2025_1_PROJEKTI
+ 2508  2025-06-18 11:18:10 rclone sync --progress _2025_1_PROJEKTI mega_gren:ENERGETIKA/_2025_1_PROJEKTI
+ 2509  2025-06-18 11:23:17 rclone copy /c/Users/gregor.redelonghi/Downloads mega_gren:ENERGETIKA/Downloads
+ 2510  2025-06-18 11:23:50 rclone copy $(cygpath -w "/c/Users/gregor.redelonghi/Downloads") mega_gren:ENERGETIKA/Downloads
+ 2511  2025-06-18 11:25:03 rclone lsd mega_gren:
+ 2512  2025-06-18 11:25:12 rclone lsd mega_gren:ENERGETIKA
+ 2513  2025-06-18 11:25:32 rclone ncdu help
+ 2514  2025-06-18 11:25:54 rclone ncdu gren:ENERGETIKA
+ 2515  2025-06-18 11:26:05 rclone ncdu mega_gren:ENERGETIKA
+ 2516  2025-06-18 11:26:44 rclone ncdu mega_gren:
+ 2517  2025-06-18 11:27:09 rclone lsd mega_gren:ENERGETIKA
+ 2518  2025-06-18 11:27:21 rclone ncdu mega_gren:ENERGETIKA
+ 2519  2025-06-18 11:27:39 rclone ncdu mega_gren:
+ 2521  2025-06-18 11:28:42 rclone ls mega_gren:ENERGETIKA
+ 2522  2025-06-18 11:28:58 rclone ncdu mega_gren: | sort -nr | less
+ 2523  2025-06-18 11:29:09 rclone ncdu mega_gren: | sort -nr
+ 2524  2025-06-18 11:29:20 rclone ls mega_gren: | sort -nr
+ 2525  2025-06-18 11:29:27 rclone ls mega_gren: | sort -nr | head
+ 2526  2025-06-18 11:29:43 rclone ls mega_gren: | sort -nr | less
+ 2528  2025-06-18 11:31:32 man rclone
+ 2529  2025-06-18 11:31:39 rclone help
+ 2530  2025-06-18 11:31:49 rclone sync help
+ 2531  2025-06-18 11:32:29 rclone sync --help
+ 2534  2025-06-18 13:50:18 history | grep rclone
+ 2536  2025-06-18 14:03:18 history | grep rclone > majstaf/metsys/rclone-commands-20250618-2.txt 
+ 2535  2025-06-18 14:13:30 rclone copy --update $(cygpath -w "/c/Users/gregor.redelonghi/2025/_2025_1_PROJEKTI") mega_gren:ENERGETIKA/_2025_1_PROJEKTI
+ ---
+
+

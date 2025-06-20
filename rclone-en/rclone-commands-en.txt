@@ -26,7 +26,7 @@ rclone copy --update $(cygpath -w "/c/Users/gregor.redelonghi/2025/Tehnicne-zaht
 rclone sync --update $(cygpath -w "/c/Users/gregor.redelonghi/2025/_2025_1_PROJEKTI") mega_gren:ENERGETIKA/_2025_1_PROJEKTI --progress
 --- 20250620 ---
 rclone sync $(cygpath -w "/h/2025/_2025_podloge") mega_gren:ENERGETIKA/h_2025_podloge
-rclone copyto zip-unzip-commands-en.txt mega_gren/ENERGETIKA
-rclone copyto rclone-en/rclone-commands-en.txt mega_gren/ENERGETIKA
+rclone copy zip-unzip-commands-en.txt mega_gren:ENERGETIKA
+rclone copy rclone-en/rclone-commands-en.txt mega_gren:ENERGETIKA
 ---
 

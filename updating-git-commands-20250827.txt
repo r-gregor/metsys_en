@@ -1,0 +1,33 @@
+1 - add files to $HOME/tmp:
+	HST={EN,MDB,JBE}
+	touch ~/.tmp/${HST}GIT_STATUS_REPORTS
+	touch ~/.tmp/${HST}GIT_TPUSH_REPORTS
+	touch ~/.tmp/TESTING_STATUS_REPORTS
+	touch ~/.tmp/TESTING_TPUSH_REPORTS
+
+2 - update ~/.bashrc:
+	export ENGIT_STATUS_REPORTS="${HOME}/.tmp/ENGIT_STATUS_REPORTS"
+	export ENGIT_TPUSH_REPORTS="${HOME}/.tmp/ENGIT_TPUSH_REPORTS"
+	export TESTING_STATUS_REPORTS="${HOME}/.tmp/TESTING_STATUS_REPORTS"
+	export TESTING_TPUSH_REPORTS="${HOME}/.tmp/TESTING_TPUSH_REPORTS"
+
+3 - edit git-commands:
+	HST={en,mdb,jbe}
+	edit ~/majstaf/majbin/git-commands/${HST}gt-status ...
+		add '> $ENGIT_STATUS_REPORTS'
+		change 'echo "*** ${report[$j]} ***"' to 'echo "*** ${report[$j]} ***" | tee -a $ENGIT_STATUS_REPORTS'
+	
+	edit ~/majstaf/majbin/git-commands/${HST}gt-testpush ...
+		add '> $ENGIT_TPUSH_REPORTS'
+		change 'echo "*** ${report[$j]} ***"' to 'echo "*** ${report[$j]} ***" | tee -a $ENGIT_TPUSH_REPORTS'
+		
+	edit ~/majstaf/majbin/git-commands/testing-status ...
+		add '> $TESTING_STATUS_REPORTS'
+		change 'echo "*** ${report[$j]} ***"' to 'echo "*** ${report[$j]} ***" | tee -a $TESTING_STATUS_REPORTS'
+	
+	edit ~/majstaf/majbin/git-commands/testing-testpush ...
+		add '> $TESTING_TPUSH_REPORTS'
+		change 'echo "*** ${report[$j]} ***"' to 'echo "*** ${report[$j]} ***" | tee -a $TESTING_TPUSH_REPORTS'
+
+4 - add ${HST}gt-check-reports to git-commands/
+

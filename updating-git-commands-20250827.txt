@@ -29,5 +29,8 @@
 		add '> $TESTING_TPUSH_REPORTS'
 		change 'echo "*** ${report[$j]} ***"' to 'echo "*** ${report[$j]} ***" | tee -a $TESTING_TPUSH_REPORTS'
 
-4 - add ${HST}gt-check-reports to git-commands/
+4 - add ${HST}gt-check-reports to git-commands/ # get from majbin_en/git-commans on github
+5 - add ${HST}gt-empty-reports to git-commands/ # get from majbin_en/git-commans on github
+
+
 

@@ -30,7 +30,7 @@ filename: _vim_efficiency-commands.txt
 
 - go to a file under the cursor
 	gf      --> to file under the cursor
-	ctrl+o  --> to go back to prevoious file
+	ctrl+o  --> to go back to previous file
 
 ~/majstaf_en/majbin_en/gocleanmodcache
 

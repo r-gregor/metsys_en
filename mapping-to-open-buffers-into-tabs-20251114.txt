@@ -1,0 +1,5 @@
+
+" 20251114
+" open all buffers into separate tabs
+map ,bt :bufdo tab split<CR><CR>
+

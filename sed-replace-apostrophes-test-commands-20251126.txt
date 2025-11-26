@@ -1,0 +1,43 @@
+printf 'Hello\0World' | cat -v
+printf 'Hello\0World' | xxd
+---
+sed 's:\( .\+\)'\(.\+ \):\1APOS\2:g'  _GIT/git-tips-and-tricks-multif-20250310.txt
+sed "s:\( .\+\)'\(.\+ \):\1APOS\2:g"  _GIT/git-tips-and-tricks-multif-20250310.txt
+sed "s:\( .\+\)'\(.\+ \):\1\´\2:g"  _GIT/git-tips-and-tricks-multif-20250310.txt
+sed "s:\( .\+\)'\(.\+ \):\1\.\2:g"  _GIT/git-tips-and-tricks-multif-20250310.txt
+sed "s:\( .\+\)'\(.\+ \):\1\´\2:g"  _GIT/git-tips-and-tricks-multif-20250310.txt >> $DANES/testf-1.txt
+sed "s:\( .\+\)'\(.\+ \):\1\`\2:g"  _GIT/git-tips-and-tricks-multif-20250310.txt >> $DANES/testf-2.txt
+---
+sed "s:\( .\+\)'\(.\+ \):\1\´\2:g"  _GIT/git-tips-and-tricks-multif-20250310.txt
+sed "s:\ (.\+\)'\(.\+\) :\1\´\2:g"  _GIT/git-tips-and-tricks-multif-20250310.txt
+sed "s: \(.\+\)'\(.\+\) :\1\´\2:g"  _GIT/git-tips-and-tricks-multif-20250310.txt
+sed "s: \(.\+\)'\(.\+\) :\1\´\2:g"  _GIT/git-tips-and-tricks-multif-20250310.txt > $DANES/testf-1.txt
+vim $DANES/testf-1.txt
+sed "s:\(.\+\)'\(.\+\):\1\´\2:g"  _GIT/git-tips-and-tricks-multif-20250310.txt > $DANES/testf-1.txt
+vim $DANES/testf-1.txt
+sed "s:\(\b.*\b\)'\(\b.*\b\):\1\´\2:g"  _GIT/git-tips-and-tricks-multif-20250310.txt
+sed "s:\(\b.*\b\)'\(\b.*\b\):\1\´\2:g"  _GIT/git-tips-and-tricks-multif-20250310.txt > $DANES/testf-1.txt
+vim $DANES/testf-1.txt
+sed -e "s:\(\b.*\b\)'\(\b.*\b\):\1\´\2:g" -e "s:\(\b.*\b\)' :\1´ :g"  _GIT/git-tips-and-tricks-multif-20250310.txt
+sed -e "s:\(\b.*\b\)'\(\b.*\b\):\1\´\2:g" -e "s:\(\b.*\b\)' :\1´ :g"  _GIT/git-tips-and-tricks-multif-20250310.txt > $DANES/testf-1.txt 
+vim $DANES/testf-1.txt
+sed -e "s:\(\b.*\b\)'\(\b.*\b\):\1\´\2:g" -e "s:\(\b.*\b\)' :\1\´ :g"  _GIT/git-tips-and-tricks-multif-20250310.txt > $DANES/testf-1.txt 
+vim $DANES/testf-1.txt
+sed -e "s:\(\b.*\b\)'\(\b.*\b\):\1\´\2:g" _GIT/git-tips-and-tricks-multif-20250310.txt > $DANES/testf-1.txt 
+vim $DANES/testf-1.txt
+---
+sed "s/\(\w\)'\(\w\)/\1\´\2/g" _GIT/git-tips-and-tricks-multif-20250310.txt
+sed "s/\(\w\)'\(\w\)/\1\´\2/g" _GIT/git-tips-and-tricks-multif-20250310.txt > $DANES/testf-1.txt 
+vim $DANES/testf-1.txt
+sed -e "s/\(\w\)'\(\w\)/\1\´\2/g" -e "s/\( \w\)' /\1\´ /g" _GIT/git-tips-and-tricks-multif-20250310.txt
+sed -e "s/\(\w\)'\(\w\)/\1\´\2/g" -e "s/\( \w\)' /\1\´ /g" _GIT/git-tips-and-tricks-multif-20250310.txt > $DANES/testf-1.txt 
+vim $DANES/testf-1.txt
+cat _GIT/git-tips-and-tricks-multif-20250310.txt | sed "s/\(\w\)'\(\w\)/\1\´\2/g" | sed "s/\( \w\)' /\1\´ /g"
+cat _GIT/git-tips-and-tricks-multif-20250310.txt | sed "s/\(\w\)'\(\w\)/\1\´\2/g" | sed "s/\( \w\)' /\1\´ /g" > $DANES/testf-1.txt 
+vim $DANES/testf-1.txt
+cat _GIT/git-tips-and-tricks-multif-20250310.txt | sed "s/\(\w\)'\(\w\)/\1\´\2/g" | sed "s/ \(\w\)' / \1\´ /g" > $DANES/testf-1.txt 
+vim $DANES/testf-1.txt
+cat _GIT/git-tips-and-tricks-multif-20250310.txt | sed "s/\(\w\)'\(\w\)/\1\´\2/g" | sed "s/ \(\w\)'/ \1\´/g" > $DANES/testf-1.txt 
+vim $DANES/testf-1.txt
+cat _GIT/git-tips-and-tricks-multif-20250310.txt | sed "s/\(\w\)'\(\w\)/\1\´\2/g" | sed "s/\(\w\+\)' / \1\´ /g" > $DANES/testf-1.txt 
+vim $DANES/testf-1.txt

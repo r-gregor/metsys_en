@@ -1,0 +1,8 @@
+Special brace expansion example from: https://tldp.org/LDP/abs/html/special-chars.html
+
+$> echo "{These,words,are,quoted}"
+{These,words,are,quoted}
+
+$> echo \"{These,words,are,quoted}\"
+"These" "words" "are" "quoted"
+

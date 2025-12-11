@@ -1,0 +1,7 @@
+To speed things up, you create a simple alias
+that automatically sends the last command again
+but with the sudo prefix.
+Here's how you can define it:
+
+alias pls='sudo $(fc -ln -1)'
+

@@ -1,0 +1,5 @@
+This will open all bookmarks in a new tab:
+ * Type 'about:config' into the address bar, press Enter and accept any warning,
+ * then copy and paste the following into the search box: 'browser.tabs.LoadBookmarksInTabs'
+ * Now on the search result, click the 'Toggle button' at the right-hand end to change from 'False' to 'True'.
+

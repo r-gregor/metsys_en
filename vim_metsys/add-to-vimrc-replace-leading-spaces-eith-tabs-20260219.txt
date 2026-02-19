@@ -1,0 +1,6 @@
+
+" 20260219 replace leading 4spaces to tabs
+nnoremap <space>t :%s/\(^\s*\)\@<=    /\t/g<CR><BAR>:noh<CR>
+vnoremap <space>t :s/\(^\s*\)\@<=    /\t/g<CR><BAR>:noh<CR>
+
+

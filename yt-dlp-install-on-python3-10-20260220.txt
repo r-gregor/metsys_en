@@ -1,0 +1,66 @@
+$> [/dev/pty5][gregor.redelonghi] ~                                                                                                                         [2026-02-20] [09:23:48]
+$> python3.10 -m pip install -U "yt-dlp[default]"
+Collecting yt-dlp[default]
+  Downloading yt_dlp-2026.2.4-py3-none-any.whl (3.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 5.1 MB/s eta 0:00:00
+Collecting pycryptodomex
+  Downloading pycryptodomex-3.23.0-cp37-abi3-win_amd64.whl (1.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 7.2 MB/s eta 0:00:00
+Collecting mutagen
+  Downloading mutagen-1.47.0-py3-none-any.whl (194 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 194.4/194.4 kB ? eta 0:00:00
+Collecting requests<3,>=2.32.2
+  Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 3.4 MB/s eta 0:00:00
+Collecting urllib3<3,>=2.0.2
+  Downloading urllib3-2.6.3-py3-none-any.whl (131 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 131.6/131.6 kB 8.1 MB/s eta 0:00:00
+Collecting brotli
+  Downloading brotli-1.2.0-cp310-cp310-win_amd64.whl (369 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 369.0/369.0 kB 7.6 MB/s eta 0:00:00
+Collecting yt-dlp-ejs==0.4.0
+  Downloading yt_dlp_ejs-0.4.0-py3-none-any.whl (53 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.6/53.6 kB 2.7 MB/s eta 0:00:00
+Collecting certifi
+  Downloading certifi-2026.1.4-py3-none-any.whl (152 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 152.9/152.9 kB 4.6 MB/s eta 0:00:00
+Collecting websockets>=13.0
+  Downloading websockets-16.0-cp310-cp310-win_amd64.whl (178 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 178.7/178.7 kB 5.3 MB/s eta 0:00:00
+Collecting charset_normalizer<4,>=2
+  Downloading charset_normalizer-3.4.4-cp310-cp310-win_amd64.whl (107 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.2/107.2 kB 6.5 MB/s eta 0:00:00
+Collecting idna<4,>=2.5
+  Downloading idna-3.11-py3-none-any.whl (71 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 3.8 MB/s eta 0:00:00
+Installing collected packages: brotli, yt-dlp-ejs, yt-dlp, websockets, urllib3, pycryptodomex, mutagen, idna, charset_normalizer, certifi, requests
+  WARNING: The script yt-dlp.exe is installed in 'C:\Users\gregor.redelonghi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The script websockets.exe is installed in 'C:\Users\gregor.redelonghi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The scripts mid3cp.exe, mid3iconv.exe, mid3v2.exe, moggsplit.exe, mutagen-inspect.exe and mutagen-pony.exe are installed in 'C:\Users\gregor.redelonghi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The script normalizer.exe is installed in 'C:\Users\gregor.redelonghi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed brotli-1.2.0 certifi-2026.1.4 charset_normalizer-3.4.4 idna-3.11 mutagen-1.47.0 pycryptodomex-3.23.0 requests-2.32.5 urllib3-2.6.3 websockets-16.0 yt-dlp-2026.2.4 yt-dlp-ejs-0.4.0
+
+[notice] A new release of pip is available: 23.0.1 -> 26.0.1
+[notice] To update, run: C:\Users\gregor.redelonghi\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\python.exe -m pip install --upgrade pip
+
+
+---
+$> [/dev/pty5][gregor.redelonghi] ~                                                                                                                         [2026-02-20] [09:25:57]
+$> python3.10 -m pip install --upgrade pip
+Requirement already satisfied: pip in c:\program files\windowsapps\pythonsoftwarefoundation.python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\site-packages (23.0.1)
+Collecting pip
+  Downloading pip-26.0.1-py3-none-any.whl (1.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 5.4 MB/s eta 0:00:00
+Installing collected packages: pip
+  WARNING: The scripts pip.exe, pip3.10.exe and pip3.exe are installed in 'C:\Users\gregor.redelonghi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed pip-26.0.1
+
+[notice] A new release of pip is available: 23.0.1 -> 26.0.1
+[notice] To update, run: C:\Users\gregor.redelonghi\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\python.exe -m pip install --upgrade pip
+
+

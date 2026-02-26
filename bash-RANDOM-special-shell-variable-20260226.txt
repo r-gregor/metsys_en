@@ -12,7 +12,8 @@ done
 ...
 
 # Example:
-$> N=5; while [ $N -ge 1 ]; do echo "$N: filename-$RANDOM.txt"; ((N=N-1)); done
+# $> N=5; while [ $N -ge 1 ]; do echo "$N: filename-$RANDOM.txt"; ((N=N-1)); done
+$> N=5; while [ $N -ge 1 ]; do echo "$N: filename-$RANDOM.txt"; ((N--)); done
 5: filename-30829.txt
 4: filename-4082.txt
 3: filename-1352.txt

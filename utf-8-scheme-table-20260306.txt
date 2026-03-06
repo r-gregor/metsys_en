@@ -1,0 +1,38 @@
+filename: utf-8-scheme-table-20260306.txt
+from:     UTF-8: The Internet's current favorite text encoding scheme
+          https://www.youtube.com/watch?v=_INBtw5a5_A
+
+UTF-8 encoding scheme table:
+-------------------------------------------------------
+code pts     B1          B2         B3         B4
+-------------------------------------------------------
+007F         0xxxxxxx
+07FF         110xxxxx    10xxxxxx
+FFFF         1110xxxx    10xxxxxx   10xxxxxx
+10FFFF       11110xxx    10xxxxxx   10xxxxxx   10xxxxxx
+-------------------------------------------------------
+
+Code example for 'tears of joy emoji': 0x1F602
+hex: 0     1     F     6     0     2
+bin: 0  0001  1111  0110  0000  0010
+poz: 1   2 3     4     5   6 7     8
+
+----------------------------------------------
+      B1          B2         B3         B4
+----------------------------------------------
+11110000    10011111   10011000   10000010
+    || |     | |   |    |   | |    | |0010 (8)
+    || |     | |   |    |   | |    |00 (7)
+    || |     | |   |    |   | |   10
+    || |     | |   |    |   |00 (6)
+    || |     | |   |    |0100 (5)
+    || |     | |   |   10
+    || |     | |1111 (4)
+    || |     |01 (3)
+    || |    10
+    ||00 (2)
+    |0 (1)
+11110
+
+---
+

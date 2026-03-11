@@ -1,0 +1,5 @@
+# 20260311:
+# replace single quote inside words with apostrophe command:
+:%s/\([[:alpha:]]\)'\([[:alpha:]]\)/\1´\2/g
+nnoremap <space>9 :%s/\([[:alpha:]]\)'\([[:alpha:]]\)/\1´\2/g<CR><BAR>:noh<CR>
+

@@ -1,0 +1,91 @@
+filename: xargs_schsht-20260311.txt
+https://linuxize.com/cheatsheet/xargs/
+
+xargs Cheatsheet
+Mar 8, 2026
+
+Quick reference for building commands from standard input with xargs in Linux
+The 'xargs' command builds and runs commands from standard input. This cheatsheet covers common 'xargs'
+patterns for batching arguments, handling spaces safely, previewing commands, and combining 'xargs' with tools
+like 'find'.
+
+-------------------------------------------------------------------------------------------------------------
+Basic Syntax
+Core xargs command forms.
+-------------------------------------------------------------------------------------------------------------
+xargs command                         Read stdin and pass items to a command
+printf '%s\n' a b c | xargs command   Pass newline-separated items to a command
+cat list.txt | xargs command          Read arguments from a file through stdin
+xargs                                 Use /bin/echo as the default command
+xargs --help                          Show available options
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Limit Arguments
+Control how many items xargs passes at a time.
+-------------------------------------------------------------------------------------------------------------
+printf '%s\n' a b c | xargs -n 1 echo     Pass one argument per command run
+printf '%s\n' a b c d | xargs -n 2 echo   Pass two arguments per command run
+printf '%s\n' a b c | xargs -L 1 echo     Read one input line per command run
+printf '%s\n' a b c | xargs -P 4 echo     Run up to four commands in parallel
+printf '%s\n' a b c | xargs -n 100 rm     Batch large argument lists
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Replace Input
+Use placeholders when each input item must appear in a specific position.
+-------------------------------------------------------------------------------------------------------------
+printf '%s\n' file1 file2 | xargs -I {} touch {}                 Replace {} with each input item
+printf '%s\n' file1 file2 | xargs -I % sh -c 'echo %; ls -l %'   Run multiple commands per item
+printf '%s\n' img1 img2 | xargs -I {} mv {} {}.bak               Reuse the same item twice
+printf '%s\n' user1 user2 | xargs -I {} id {}                    Insert input into a fixed command pattern
+printf '%s\n' src1 src2 | xargs -I {} cp {} /backup/             Copy each input item to a directory
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Safe File Handling
+Use null-delimited input when paths may contain spaces or special characters.
+-------------------------------------------------------------------------------------------------------------
+find . -type f -print0 | xargs -0 rm -f                    Remove found files safely
+find . -name '*.log' -print0 | xargs -0 ls -lh             List matching files safely
+find . -type f -print0 | xargs -0 -n 1 basename            Process one safe path at a time
+printf '%s\0' 'file one' 'file two' | xargs -0 -n 1 echo   Feed null-delimited names directly
+find /var/www -type f -print0 | xargs -0 chmod 644         Apply permissions to many files safely
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Preview and Confirm
+Check generated commands before running them.
+-------------------------------------------------------------------------------------------------------------
+printf '%s\n' a b c | xargs -t touch            Print each command before execution
+printf '%s\n' a b c | xargs -p rm               Prompt before running the command
+find . -type f -print0 | xargs -0 -t rm -f      Preview destructive file removals
+find . -type f -print0 | xargs -0 echo rm -f    Dry run by replacing rm with echo
+printf '%s\n' a b c | xargs -r echo             Do nothing if stdin is empty
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Read from Files
+Load items from a file instead of a pipeline.
+-------------------------------------------------------------------------------------------------------------
+xargs -a list.txt echo                    Read arguments from list.txt
+xargs -a ips.txt -L 1 ping -c 1           Read one IP per line and ping it
+xargs -a packages.txt sudo apt install    Install packages listed in a file
+xargs -a dirs.txt mkdir -p                Create directories from a file
+xargs -a users.txt -n 1 id                Check users listed in a file
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Troubleshooting
+Quick checks for common xargs issues.
+-------------------------------------------------------------------------------------------------------------
+Filenames split at spaces               Use find -print0 | xargs -0
+Too many arguments at once              Add -n N to batch input
+Command order looks wrong               Add -t to print generated commands
+Empty input still runs command          Use -r to skip empty stdin
+Need item in the middle of a command    Use -I {} with a placeholder
+-------------------------------------------------------------------------------------------------------------
+
+
+---
+

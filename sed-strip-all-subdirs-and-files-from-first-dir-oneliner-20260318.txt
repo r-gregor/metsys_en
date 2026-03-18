@@ -1,0 +1,7 @@
+# sed-strip-all-subdirs-and-files-from-first-dir-oneliner-20260318.txt
+
+$> grep -rl dirent * | sed 's:\([^/]*\)\/.*:\1:' |sort | uniq |grep -v OSTALO
+                              ---------
+                                  |
+                                  + -- everithyng up to first '/' --> \1
+

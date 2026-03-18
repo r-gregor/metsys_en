@@ -1,0 +1,15 @@
+grep -irl curl * | grep -v "OSTALO\|TEST"
+grep -irl curl * | grep -v "OSTALO\|TEST" |xargs -ro vim
+grep -ilw curl * | xargs -ro vim
+grep -rl dirent * | sed 's:\([^/]*\)\/.*:\1:' |sort | uniq
+grep -rl dirent * | sed 's:\([^/]*\)\/.*:\1:' |sort | uniq |grep -v OSTALO
+grep -rl dirent * | sed 's:\([^/]*\)\/.*:\1:' |sort | uniq |grep -v OSTALO |xargs -ro vim
+grep -rl strtok * | sed 's:\([^/]*\)\/.*:\1:' |sort | uniq
+grep -rl strtok * | sed 's:\([^/]*\)\/.*:\1:' |sort | uniq |grep -v OSTALO
+grep -rl strtok * | sed 's:\([^/]*\)\/.*:\1:' |sort | uniq |grep -v OSTALO |xargs -ro vim
+for FFF in $(find * -type f -iname "*.c"); do grep strtok $FFF; done
+for FFF in $(find * -type f -iname "*.c"); do grep -l strtok $FFF; done
+for FFF in $(find * -type f -iname "*.c" | grep -vE "v[0-9]{1,2}"); do grep -l strtok $FFF; done
+for FFF in $(find * -type f -iname "*.c" | grep -vE "v[0-9]{1,2}"); do grep -l strtok $FFF; done | xargs -ro vim
+history | grep "grep" | grep "2026-03-18" >> $DANES/grep-commands-20260318.txt
+---

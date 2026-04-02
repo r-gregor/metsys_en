@@ -1,0 +1,240 @@
+filename: vim-chtsht-20260402.txt
+https://linuxize.com/cheatsheet/vim/
+
+Vim Cheatsheet
+Jan 12, 2026
+
+Quick reference for Vim text editor commands
+
+Vim is a powerful modal text editor that comes pre-installed on most Linux systems. This cheatsheet covers
+essential commands for navigating, editing, searching, and managing files in Vim. Master these commands to
+dramatically increase your editing speed.
+
+-------------------------------------------------------------------------------------------------------------
+Modes
+Switch between Vim´s different editing modes.
+-------------------------------------------------------------------------------------------------------------
+i         Insert mode (before cursor)
+I         Insert at line beginning
+a         Insert mode (after cursor)
+A         Insert at line end
+o         New line below
+O         New line above
+Esc       Return to Normal mode
+v         Visual mode
+V         Visual line mode
+Ctrl+v    Visual block mode
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Save & Quit
+Save files and exit the editor.
+-------------------------------------------------------------------------------------------------------------
+:w              Save file
+:w filename     Save as filename
+:q              Quit
+:q!             Quit without saving
+:wq             Save and quit
+:x              Save and quit
+ZZ              Save and quit
+ZQ              Quit without saving
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Navigation
+Move around the file efficiently.
+-------------------------------------------------------------------------------------------------------------
+h         Move left
+j         Move down
+k         Move up
+l         Move right
+w         Next word
+b         Previous word
+e         End of word
+0         Line beginning
+$         Line end
+^         First non-blank char
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Jump Around
+Navigate to specific locations quickly.
+-------------------------------------------------------------------------------------------------------------
+gg        Go to first line
+G         Go to last line
+5G        Go to line 5
+:5        Go to line 5
+Ctrl+f    Page down
+Ctrl+b    Page up
+Ctrl+d    Half page down
+Ctrl+u    Half page up
+%         Jump to matching bracket
+H         Top of screen
+M         Middle of screen
+L         Bottom of screen
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Delete
+Remove text from the file.
+-------------------------------------------------------------------------------------------------------------
+x         Delete character
+X         Delete char before cursor
+dd        Delete line
+D         Delete to line end
+dw        Delete word
+d$        Delete to line end
+d0        Delete to line start
+dG        Delete to file end
+dgg       Delete to file start
+5dd       Delete 5 lines
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Copy & Paste
+Yank (copy) and put (paste) text.
+-------------------------------------------------------------------------------------------------------------
+yy        Yank (copy) line
+yw        Yank word
+y$        Yank to line end
+5yy       Yank 5 lines
+p         Paste after cursor
+P         Paste before cursor
+"*y       Yank to system clipboard
+"*p       Paste from clipboard
+"+y       Yank to clipboard (X11)
+"+p       Paste from clipboard (X11)
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Undo & Redo
+Reverse and repeat changes.
+-------------------------------------------------------------------------------------------------------------
+u         Undo
+U         Undo line changes
+Ctrl+r    Redo
+.         Repeat last command
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Search
+Find text in the file.
+-------------------------------------------------------------------------------------------------------------
+/pattern  Search forward
+?pattern  Search backward
+n         Next match
+N         Previous match
+*         Search word under cursor
+#         Search backward for word
+:noh      Clear search highlight
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Find & Replace
+Search and replace text patterns.
+-------------------------------------------------------------------------------------------------------------
+:s/old/new/        Replace first on line
+:s/old/new/g       Replace all on line
+:%s/old/new/g      Replace all in file
+:%s/old/new/gc     Replace with confirm
+:5,10s/old/new/g   Replace in lines 5-10
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Visual Mode
+Select and manipulate text blocks.
+-------------------------------------------------------------------------------------------------------------
+v         Start visual mode
+V         Select lines
+Ctrl+v    Select block
+y         Yank selection
+d         Delete selection
+>         Indent selection
+<         Unindent selection
+~         Toggle case
+u         Lowercase
+U         Uppercase
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Indentation
+Adjust text indentation.
+-------------------------------------------------------------------------------------------------------------
+>>                Indent line
+<<                Unindent line
+5>>               Indent 5 lines
+=                 Auto-indent
+gg=G              Auto-indent entire file
+:set tabstop=4    Set tab width
+:set expandtab    Use spaces for tabs
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Line Numbers
+Display and navigate with line numbers.
+-------------------------------------------------------------------------------------------------------------
+:set number            Show line numbers
+:set nu                Show line numbers
+:set nonumber          Hide line numbers
+:set relativenumber    Relative line numbers
+:set rnu               Relative line numbers
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Multiple Files
+Work with multiple files and buffers.
+-------------------------------------------------------------------------------------------------------------
+:e filename     Open file
+:bn             Next buffer
+:bp             Previous buffer
+:bd             Close buffer
+:ls             List buffers
+:sp filename    Horizontal split
+:vsp filename   Vertical split
+Ctrl+w w        Switch window
+Ctrl+w q        Close window
+:tabnew         New tab
+gt              Next tab
+gT              Previous tab
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Marks
+Set and jump to bookmarks.
+-------------------------------------------------------------------------------------------------------------
+ma        Set mark 'a'
+'a        Jump to mark 'a'
+`a        Jump to exact position
+:marks    List all marks
+''        Jump to last position
+`.        Jump to last edit
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Macros
+Record and replay command sequences.
+-------------------------------------------------------------------------------------------------------------
+qa        Start recording to 'a'
+q         Stop recording
+@a        Play macro 'a'
+@@        Replay last macro
+5@a       Play macro 5 times
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Settings
+Configure Vim behavior.
+-------------------------------------------------------------------------------------------------------------
+:set ignorecase    Case insensitive search
+:set smartcase     Smart case search
+:set hlsearch      Highlight search
+:set incsearch     Incremental search
+:set wrap          Wrap long lines
+:set nowrap        Disable line wrapping
+:syntax on         Enable syntax colors
+:set paste         Paste mode (no indent)
+-------------------------------------------------------------------------------------------------------------
+
+
+---
+

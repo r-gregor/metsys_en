@@ -1,0 +1,171 @@
+filename: vim-case-preserving-substitute-20260402.txt
+https://stackoverflow.com/questions/782511/case-preserving-substitute-in-vim
+
+Case preserving substitute in Vim
+
+   Can we do case-insensitive substitution and preserve existing case in Vim?
+
+   What I mean is: searching for BadJob and replacing with GoodJob would do the following replacements:
+'badjob' -> 'goodjob'
+'BadJob' -> 'GoodJob'
+'badJob' -> 'goodJob'
+'BADJOB' -> 'GOODJOB'
+
+***
+   What about:
+:%s/\Cbadjob/goodjob/
+:%s/\CBadJob/GoodJob/
+:%s/\CbadJob/goodJob/
+:%s/\CBADJOB/GOODJOB/
+
+   See: [**1]https://stackoverflow.com/a/2287449/5599687
+
+***
+   sure u can
+
+   :s/\cbad/\= strpart(submatch(0), 0 ,1) == toupper(strpart(submatch(0), 0, 1)) ? "GOOD" : "good"/
+
+***
+   You can just paste and adapt this:
+   [(Of course, if you do this from time to time, you will want a plugin instead of this monstrosity.
+   But for some who are in a hurry and only need it once, this is a quick hack for your pasting
+   pleasure:)]
+
+   :%s/\cbad\zejob/= ( submatch(0)[0] is# toupper(submatch(0)[0]) ? 'G' : 'g' ) . ( submatch(0)[1] is# toupper(submatch(0)[1]) ? 'OOD' : 'ood' )
+
+   Apart from the search pattern, you have to edit the four 'strings' in the replacement code: Edit the
+   parts in bold:
+
+     :%s/\cbad\zejob/=
+           ^^^   ^^^
+     ( submatch(0)[0] is# toupper(submatch(0)[0]) ? 'G' : 'g' ) .
+     ( submatch(0)[1] is# toupper(submatch(0)[1]) ? 'OOD' : 'ood' )
+
+   Don´t use this 'orange' version for pasting, since its linebreak characters will also break the
+   command.
+
+   '\ze' is vim regex syntactic sugar for marking a positive lookahead: The pattern after '\ze' is
+   checked for, but not substituted.
+
+
+   *`is#`*?? Let me explain... (If interested.)
+
+   # (also in ==# and [82]others) enforces case sensitivity. Otherwise, with :set ignorecase (which I
+   use, because that is required for the useful [83]:set smartcase), vim will consider 'a' == 'A'!!
+
+   Crazy as it is, we really should account for it: Because it is user-settings-dependent, == should
+   NEVAR be used! (Except where that would actually be what you want.) I will even follow the
+   recommendation to use ==# when comparing integers:
+   [84]http://learnvimscriptthehardway.stevelosh.com/chapters/22.html#code-defensively
+
+   [85]is# instead of ==# is another way of coding defensively: It improves type safety:
+   [86]http://google.github.io/styleguide/vimscriptguide.xml?showone=Type_checking#Type_checking
+   It should be used when comparing against a string literal.
+
+   'single-quoted' instead of "double quoted" [87]strings are another good practice:
+   [88]http://google.github.io/styleguide/vimscriptguide.xml?showone=Strings#Strings
+
+***
+   If you´re only matching an exact (case-independent) string with a few possible capitalizations,
+   another possibility is:
+:s/abc/\={'abc':'xyz','Abc':'Xyz'}[submatch(0)]/i
+
+***
+   All the problem is you have set: ignorecase in your .vimrc probably
+
+   You can program Vim to do sensitive/insensitive operation during both search and replace!
+"Ctrl-h activating:
+nnoremap <ctrl-h>  <Esc>:set noignorecase<CR><CR>:s%//<Right><Right><Right>
+
+" Insensitive:
+inoremap / <Esc>:set ignorecase<CR><CR>/<Right>
+nnoremap / <Esc>:set ignorecase<CR><CR>/<Right>
+
+" Case SENSITIVE search: (using key \ to search):
+nnoremap \ <Esc>:set noignorecase<CR><CR>/<Right>
+
+***
+   Of course, you can do this:
+
+   First declare some variables containing cases and replacements:
+   let a = ['badjob', 'BadJob', 'badJob', 'BADJOB']
+   let b = ['goodjob', 'GoodJob', 'goodJob', 'GOODJOB']
+
+   Second, apply a for loop as follow:
+   for i in range(0,3) | exec '%s/' . a[i] . '/' . b[i] . '/g' | endfor
+
+   Note that range function starts at 0.
+
+
+---
+[**1]
+https://stackoverflow.com/questions/2287440/how-to-do-case-insensitive-search-in-vim/2287449#2287449
+
+How to do case insensitive search in Vim
+
+   I´d like to search for an upper case word, for example COPYRIGHT in a file. I tried performing a
+   search like:
+/copyright/i    # Doesn´t work
+
+   but it doesn´t work. I know that in Perl, if I give the i flag into a regex it will turn the regex
+   into a case-insensitive regex. It seems that Vim has its own way to indicate a case-insensitive
+   regex.
+
+*** [5+]
+   You can use the \c escape sequence anywhere in the pattern. For example:
+
+   /\ccopyright or /copyright\c or even /copyri\cght
+
+***
+   As well as the suggestions for \c and ignorecase, I find the smartcase very useful. If you search for
+   something containing uppercase characters, it will do a case sensitive search; if you search for
+   something purely lowercase, it will do a case insensitive search. You can use \c and \C to override
+   this:
+:set ignorecase
+:set smartcase
+/copyright      " Case insensitive
+/Copyright      " Case sensitive
+/copyright\C    " Case sensitive
+/Copyright\c    " Case insensitive
+
+   See:
+:help /\c
+:help /\C
+:help 'smartcase'
+
+***
+   You can set the ic option in Vim before the search:
+:set ic
+
+   To go back to case-sensitive searches use:
+:set noic
+
+***
+   You can use in your vimrc those commands:
+     * set ignorecase - All your searches will be case insensitive
+     * set smartcase - Your search will be case sensitive if it contains an uppercase letter
+
+   You need to set ignorecase if you want to use what smartcase provides.
+
+   I wrote recently [http://web-techno.net/vim-search/]an article about Vim search commands (both built in
+   command and the best plugins to search efficiently).
+
+***
+   To switch between case sensitive and insensitive search I use this mapping in my .vimrc
+
+   nmap <F9> :set ignorecase! ignorecase?
+
+***
+The good old vim[grep] command..
+
+:vimgrep /example\c/ &
+
+     * \c for case insensitive
+     * \C for case sensitive
+     * % is to search in the current buffer
+
+...
+
+
+---
+

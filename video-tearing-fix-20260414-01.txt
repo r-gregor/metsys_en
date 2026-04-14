@@ -1,0 +1,37 @@
+Another video tesring tip
+
+Antix linux causing cpu issues and video lag?  l like Antix and it light on my laptop but CPU become full and
+when l play video on YouTube , the pictures are shaking it not smooth please help Andy Lobb Please provide
+some basic information about your laptop. How old it is, what CPU it has, and how much RAM as a minimum.
+
+
+***
+High CPU usage and "shaking" or stuttering video on antiX occur because low-end hardware often
+lacks the power to decode modern YouTube video formats (VP9 or AV1) in software:
+
+1. Force a Lighter Video Format (Highest Impact)
+Modern YouTube videos are heavy. You can force YouTube to use an older, lighter format (H.264) that your
+computer's hardware can likely handle more easily.  Install the "h264ify" or "enhanced-h264ify" extension in
+your browser (Firefox or Chrome/Chromium).  In the extension settings, check the boxes to block VP8, VP9, and
+AV1. This offloads work from your CPU to your graphics chip (GPU).
+
+2. Enable Hardware Acceleration
+Browsers on Linux often have hardware acceleration disabled by default, which maxes out the CPU.  In Firefox:
+Go to about:config, search for gfx.webrender.all, and set it to true.  In Chromium/Chrome: Go to Settings >
+System and ensure "Use graphics acceleration when available" is toggled ON.
+
+3. Use a Lightweight Video Player (Alternative to Browsers)
+Browsers are resource-heavy. You can watch YouTube videos directly through a lightweight media player.
+SMPlayer with YouTube Support: antiX often comes with SMPlayer. Open it, go to Options > YouTube Browser (or
+press F11), and search for videos there. It uses much less CPU than a web browser.  MPV Player: You can play a
+video directly by typing mpv [URL] in the terminal.
+
+4. Adjust System & Video Settings
+Lower Resolution: If 1080p is shaking, switch the YouTube gear icon setting to 720p or 480p.  Check
+Compositor: In antiX, if you have a compositor like Compton or Picom running, it might cause screen tearing or
+"shaking." Try disabling it temporarily through the antiX Control Center to see if playback improves.  Check
+Adblockers: Recent YouTube updates have caused high CPU usage when certain adblockers are active. Try
+disabling your adblocker or switching to uBlock Origin, which is generally better for performance.
+
+---
+

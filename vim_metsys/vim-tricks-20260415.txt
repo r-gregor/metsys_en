@@ -1,0 +1,307 @@
+filename: vim-tricks-20260415.txt
+https://ostechnix.com/archinstall-4-0-textual-tui-release/
+
+20 Vim Tricks That Will Change How You Edit
+April 1, 2026
+
+Vim is a powerful, keyboard-driven text editor built into virtually every Linux, Unix, and macOS
+system. Most users learn enough to open, edit, save files and then stop. The following 20 Vim tricks
+below target the next level: edits that used to take ten keystrokes now take two, and operations that
+required a script now run inline.
+
+Vim efficiency stacks across three layers:
+ 1 - Navigation (H/M/L, CTRL-^, f+;),
+ 2 - Editing (:norm, gi, gv, expression register),
+ 3 - and Registers ("_d, macro repair, Ctrl-r paste).
+
+The latest Vim 9.2 version adds fuzzy insert-mode completion via completeopt, a linematch diff algorithm,
+and XDG config paths.
+
+Now, let us learn some useful Vim tricks that will change how you edit.
+
+20 Vim Tricks: Quick-Reference Table
+-------------------------------------------------------------------------------------------------------------
+#  Command                 What It Does                                                 Category
+-------------------------------------------------------------------------------------------------------------
+1  H / M / L               Jump cursor to top / middle / bottom of screen               Navigation
+2  CTRL-^                  Toggle between current and last buffer                       Navigation
+3  f{char} then ;          Jump to next occurrence of char on line; repeat              Navigation
+4  :%norm A;               Append ; to every line in file                               Editing at Scale
+5  gi                      Return to last insert point in current buffer                Editing at Scale
+6  gv                      Reselect last Visual selection                               Editing at Scale
+7  Ctrl-a / Ctrl-x         Increment / decrement number under cursor                    Editing at Scale
+8  g Ctrl-a                Turn a Visual Block column into an incrementing sequence     Editing at Scale
+9  "_d                     Delete without overwriting the yank register                 Registers
+10  Ctrl-r {reg}           Paste from register without leaving Insert mode              Registers
+11  Ctrl-r =               Open expression register (inline calculator)                 Registers
+12  "ap --> edit --> "ay   Paste, edit, and re-yank a broken macro                      Registers
+13  q:                     Open searchable command history window                       History & Search
+14  q/                     Open searchable search history window                        History & Search
+15  Ctrl-x Ctrl-f          File path auto-completion in Insert mode                     History & Search
+16  completeopt+=fuzzy     Smarter insert-mode word completion (9.2+)                   Vim 9.2
+17  linematch diff         Aligns similar lines more accurately in diff mode (9.2+)     Vim 9.2
+18  XDG config path        Move config to ~/.config/vim/vimrc (9.2+)                    Vim 9.2
+19  :Tutor                 Interactive, version-aware tutorial plugin (9.2+)            Vim 9.2
+20  ZZ / ZQ / :%y          Save-quit / abandon-quit / yank whole file                   Micro-tips
+-------------------------------------------------------------------------------------------------------------
+
+Navigation: Stop Reaching for the Mouse
+These three tricks cover the majority of cursor movement in a typical editing session. Once they become
+reflex, mouse-free navigation feels natural within a week.
+Jump to Screen Positions: H, M, L
+
+H, M, and L move your cursor to the High (top), Middle, and Low (bottom) of the currently visible screen
+- not the file. No scrolling required.
+
+Prefix with a count to land on a specific row from that edge:
+4H    " move to 4th line from the top of the screen
+2L    " move to 2nd line from the bottom of the screen
+
+Toggle Between Buffers with CTRL-^
+When working across two files, you do not need to type a filename to switch. CTRL-^ (the canonical Vim
+name; also reachable as Ctrl-6 on US keyboards) toggles between the current buffer and the alternate
+buffer, whichever file you had open previously.
+    Note: Ctrl-6 is a keyboard-layout-dependent alias. On many international keyboards and some terminal
+    emulators, it does not fire. CTRL-^ is the reliable binding. If neither works, map a fallback:
+    nnoremap <Leader>b <C-^>
+
+:e config.yaml  " open a second file
+<C-^>           " jump back to the first file instantly
+<C-^>           " jump forward again
+
+Character Jumps with f and ;
+f{char} moves the cursor forward to the next occurrence of {char} on the current line. Press ; to repeat
+the jump, or , to reverse it. Use uppercase F{char} to search backwards.
+
+fa    " jump to next 'a' on this line
+;     " jump to the 'a' after that
+,     " go back one
+
+Editing at Scale: More in Fewer Keystrokes
+The :norm command alone has saved me hours on bulk config-file normalisation over SSH, where no IDE is
+available and find-and-replace falls short.
+
+Mass Edits with :norm
+The :normal command (shortened to :norm) runs any Normal mode sequence on every line in a range. Combine
+it with % to target the entire file.
+
+:%norm A;      " append a semicolon to every line
+:%norm I//     " prepend // (comment) to every line
+:5,20norm A,   " append a comma to lines 5-20 only
+
+    Note: Always preview your range with :5,20p before running :norm on it. The command modifies lines
+    instantly - there is no undo prompt.
+
+Return to Last Edit with gi
+gi jumps back to the exact position of your last insert in the current buffer and immediately re-enters
+Insert mode. It is the fastest way to resume typing after checking a reference elsewhere in the same file.
+
+gi    " go to last insert point and start typing
+
+    Note: gi is buffer-local. If you want to jump to the last insert position across all buffers, use
+    the jumplist (Ctrl-o) instead.
+
+Reselect Visual Area with gv
+Pressed a wrong key and lost your Visual selection? gv restores the last selection exactly - same start,
+same end, same mode (character, line, or block).
+
+gv    " restore last Visual selection
+
+Increment and Sequence Numbers
+Ctrl-a adds 1 to the number under the cursor. Ctrl-x subtracts 1. Prefix with a count:
+
+10<C-a>    " add 10 to the number under the cursor
+3<C-x>     " subtract 3
+
+Here,
+
+    10<C-a> means - type 10 and press Ctrl+a.
+    3<C-x>  means - type 3 and press Ctrl+x.
+
+To generate an auto-incrementing sequence, first enter Visual Block mode with Ctrl-v, select a column
+of zeros, then press g Ctrl-a:
+
+" Before (Visual Block selected with Ctrl-v):
+0
+0
+0
+
+" After g<C-a>:
+1
+2
+3
+
+Registers and Clipboard: Vim´s Hidden Superpower
+Registers are the feature most Vim users ignore the longest and regret the most. Understanding even
+three of them changes the way you edit permanently.
+
+The Black-Hole Register: "_d
+Every standard delete (d, c, x) overwrites your last yank. Use "_d to send deleted text to the black-hole
+register - it is discarded and your yank register is untouched.
+
+"_dd    " delete current line; yank register unchanged
+"_dw    " delete word; yank register unchanged
+
+Paste in Insert Mode with Ctrl-r
+While in Insert mode, Ctrl-r followed by a register name pastes its contents without switching to
+Normal mode.
+
+<C-r>"      " paste from the unnamed (default) register
+<C-r>a      " paste from register 'a'
+<C-r>+      " paste from the system clipboard
+
+The Expression Register (Inline Calculator)
+In Insert mode, Ctrl-r = opens the expression register prompt. Type any arithmetic expression and press
+Enter - the result is inserted at the cursor. No external calculator needed.
+
+<C-r>=7*24<CR>             " inserts 168
+<C-r>=len("hello")<CR>     " inserts 5
+
+Fixing Macros via Register Editing
+Macros are just text stored in named registers. If a macro recorded in register a has an error, you do
+not need to re-record from scratch:
+
+"ap       " 1. paste the macro text into the buffer
+          " (edit the text manually)
+0"ay$     " 2. yank the corrected line back into register 'a'
+
+The macro is now fixed and ready to replay with @a.
+
+History, Search, and Completion
+Command History Window: q:
+q: opens a full-window, editable list of every Ex command you have typed. Navigate it like any buffer,
+edit a previous command, and press Enter to run it.
+
+    Note: Most users discover q: accidentally by mistyping :q. It is worth learning deliberately - complex
+    :substitute or :global commands are much easier to refine here than by retyping them from scratch.
+
+Close the window with Ctrl-c or :q from inside it.
+
+Search History Window: q/
+q/ does the same for search patterns - essential when refining a complex regex you wrote earlier.
+
+q/    " open forward-search history
+q?    " open backward-search history
+
+File Path Completion: Ctrl-x Ctrl-f
+While typing a file path in Insert mode, Ctrl-x Ctrl-f triggers filesystem-aware completion. Vim reads
+your current directory and offers matches.
+
+/etc/nginx/<C-x><C-f>     " lists files inside /etc/nginx/
+
+Vim 9.2: What´s New and Worth Using
+Version check:
+Run :version and confirm the first line reads VIM - Vi IMproved 9.2 before using the tips in this section.
+
+All four features below require Vim 9.2+. Wayland support is currently experimental, so do not rely on
+it in production environments.
+
+Fuzzy Matching in Insert-Mode Completion
+Vim 9.2 adds fuzzy matching to insert-mode completion (Ctrl-n / Ctrl-p). It no longer requires a strict
+prefix - partial and out-of-order character matches are ranked and surfaced. Enable it by adding fuzzy
+to completeopt:
+
+set completeopt+=fuzzy      " correct option for insert-mode fuzzy completion
+
+    Common mistake: set wildoptions=fuzzy is a different option. It enables fuzzy matching only in the
+    command-line wildmenu (the Tab key at the : prompt). It has no effect on Ctrl-n / Ctrl-p completion.
+
+Source: github.com/vim/vim - patch 9.1.0463, runtime/doc/options.txt [Section: completeopt]
+
+Linematch Diff Algorithm
+Vim 9.2 introduced the linematch option for diff mode. Standard diff highlights entire changed blocks;
+linematch additionally aligns the most similar lines within a block for more precise per-character
+highlighting.
+
+set diffopt+=linematch:60    " 60 is the recommended match threshold
+
+Source: github.com/vim/vim - issue #18185: "The recommended value for linematch is 60."
+
+XDG Config Path Migration
+Vim 9.2 respects the XDG Base Directory Specification. Move your configuration out of the home directory
+root:
+
+$> mkdir -p ~/.config/vim
+$> mv ~/.vimrc ~/.config/vim/vimrc
+$> mv ~/.vim    ~/.config/vim
+
+Vim will find ~/.config/vim/vimrc automatically. No additional configuration required. It falls back to
+~/.vimrc if the XDG path is absent.
+
+Interactive :Tutor Plugin
+The :Tutor command launches an in-editor, version-aware tutorial that supplements and modernises the
+classic vimtutor shell command.
+
+It covers Vim 9.2 features and adapts its content to what you have not yet completed. Both :Tutor and
+vimtutor remain available in 9.2.
+
+:Tutor      " launch the interactive tutorial
+
+Micro-tips: ZZ, ZQ, and :%y
+----------------------------------------------------------------------------------------
+Command   Action
+----------------------------------------------------------------------------------------
+ZZ        Write file and quit (equivalent to :wq)
+ZQ        Quit without writing (equivalent to :q!)
+:%y       Yank the entire file into the yank register (:%y+ targets the system clipboard)
+----------------------------------------------------------------------------------------
+
+When to Use These Tricks and When Not To
+Use them when you catch yourself repeating the same manual edit more than twice, navigating large log
+files over SSH, or performing bulk formatting on source code.
+
+Skip them when the task is a one-off, small, and unique. A targeted ciw followed by retyping is faster
+than constructing a :norm pipeline for a single word. Complexity has a cost.
+
+Frequently Asked Questions (FAQ)
+Q: What is the difference between :norm and a macro?
+A: A macro replays a recorded sequence once per invocation. :norm applies a Normal mode sequence to every
+line in a range in a single command. No recording step needed. Use :norm for line-by-line bulk operations;
+use macros for multi-step sequences that span several lines or require branching logic.
+
+Q: Why does CTRL-^ (or Ctrl-6) not work in my terminal?
+A: Ctrl-6 is a keyboard-layout-dependent alias for CTRL-^. On many non-US or international keyboards,
+Ctrl+6 does not produce the ^ character Vim expects. Try CTRL-^ directly. If your terminal intercepts
+that, add a custom mapping:
+
+nnoremap <Leader>b <C-^>
+
+Q: Where should my vimrc live in Vim 9.2?
+A: Vim 9.2 checks ~/.config/vim/vimrc first (XDG path), then falls back to ~/.vimrc. Either works;
+the XDG path keeps your home directory cleaner.
+
+Q: I set wildoptions=fuzzy but insert-mode completion is still not fuzzy. Why?
+A: wildoptions=fuzzy controls command-line wildmenu (Tab at the : prompt) only. For insert-mode Ctrl-n /
+Ctrl-p fuzzy matching, add fuzzy to completeopt:
+
+set completeopt+=fuzzy
+
+Q: gi took me to an unexpected position, not where I last typed.
+A: gi is buffer-local. It returns to the last insert position in the current buffer. If you want to
+navigate to the last insert position across all open buffers, use the jumplist with Ctrl-o instead.
+
+Q: Is Vim 9.2 compatible with my existing plugins?
+A: Most Vimscript plugins written for Vim 8.x are compatible. Plugins that rely on undocumented internals
+may need updates. Test with a minimal vimrc (start Vim with vim -u NONE) before migrating your full
+configuration.
+
+Q: How do I close the q: command history window?
+A: Press Ctrl-c to dismiss it and return to your previous position, or type :q inside the history window
+to close it like any other buffer.
+
+Q: linematch is not available. I get an error when setting diffopt.
+A: linematch requires Vim 8.2 or later. Confirm your version with :version. On Vim 9.2 the feature is
+fully stable. On earlier versions, omit the linematch flag:
+
+set diffopt+=internal,algorithm:patience " safe fallback for Vim < 8.2
+
+Conclusion
+Vim is a skill that rewards consistency over intensity. You should use these advanced tricks when you
+notice yourself performing a task more than three times manually.
+
+Do not feel obligated to learn every command at once. Instead, pick one trick, like the expression
+register or the :norm command, and use it until it becomes second nature.
+
+
+---
+

@@ -1,0 +1,356 @@
+filename: debian13-howto-install-firewalld-20260420.txt
+https://idroot.us/install-firewalld-debian-13/
+
+How To Install FirewallD on Debian 13
+April 17, 2026
+
+   Install FirewallD on Debian 13
+   Every Debian 13 server exposed to the internet needs a firewall. Without one, all ports are open by
+   default, and any exposed service becomes an easy target. FirewallD solves this problem by giving you
+   a zone-based, service-aware firewall manager that sits on top of nftables and lets you apply live
+   rule changes without ever restarting the daemon.
+
+   This guide shows you exactly how to install FirewallD on Debian 13 (Trixie), verify it is running,
+   and configure it from scratch. You will work through zones, services, ports, rich rules, port
+   forwarding, and masquerading using real terminal commands at every step. By the end, your Debian 13
+   server will have a production-ready firewall policy you understand completely.
+
+What Is FirewallD and Why Use It on Debian 13?
+   FirewallD is an open-source, dynamic firewall daemon for Linux. It manages nftables rules through a
+   D-Bus interface, which means you can add, remove, or update firewall rules in real time without
+   restarting any service or dropping active connections.
+
+   Debian 13 (Trixie) ships FirewallD version 2.3.x in its default APT repositories. This is a major
+   step up from Debian 12 (Bookworm) which ships 1.3.x, and Debian 11 (Bullseye) which ships 0.9.x.
+
+   Here is why experienced sysadmins choose FirewallD over UFW or raw nftables on a Debian 13 server:
+     * Zone-based mental model - separates trust levels cleanly so you never accidentally expose an
+       internal service to the public network
+     * Service-aware commands - open HTTP with --add-service=http instead of manually looking up port
+       numbers
+     * Runtime vs. permanent split - test rules live, then save them when they work. No accidental
+       lockouts.
+     * Consistent workflows - if you manage Red Hat, CentOS, or AlmaLinux servers as well, FirewallD
+       commands are identical
+     * Rich rules - give you IP filtering, rate limiting, and logging in a single readable rule
+
+   One critical point before you start: FirewallD is not installed by default on Debian 13. You have to
+   install it manually before it will do anything.
+
+Prerequisites
+   Before you run a single command, confirm these items are in place:
+     * Operating system: Debian 13 (Trixie), bare-metal, VM, or VPS
+     * User access: Root or a user with sudo privileges (polkit requires sudo for SSH sessions)
+     * Remote access: SSH connection open on port 22 - keep this terminal active the entire time
+     * UFW status: UFW must be stopped and disabled before FirewallD installation. Both tools manage
+       nftables simultaneously and conflict with each other
+     * Network: Active internet connection so APT can pull the FirewallD package
+     * Experience level: Basic comfort with terminal commands and APT
+
+   If UFW is currently active on your server, disable it now:
+$> sudo systemctl stop ufw
+$> sudo ufw disable
+
+   To fully remove it and eliminate the conflict:
+$> sudo apt remove -y ufw
+
+Step 1: Update the System Package Index
+   Always refresh the APT package index before installing any new package. This ensures Debian 13 pulls
+   the current stable version of FirewallD (2.3.x) instead of a stale cached entry.
+$> sudo apt update
+
+   While you are at it, apply any pending security patches before you start hardening the server:
+$> sudo apt upgrade -y
+
+   This step is especially important on fresh VPS deployments. Many cloud providers ship Debian 13
+   images with a package index that is days or weeks old, which can cause APT to resolve outdated
+   dependencies. Do not skip it.
+
+Step 2: Install FirewallD on Debian 13
+   FirewallD lives in Debian 13's default APT repositories. You do not need any third-party PPA or
+   external repo. Install it with a single command:
+$> sudo apt install firewalld -y
+
+   The -y flag auto-accepts the APT install prompt so the installation runs without interruption.
+
+   During installation, APT creates two systemd symlinks automatically:
+Created symlink '/etc/systemd/system/dbus-org.fedoraproject.FirewallD1.service'
+  -> '/usr/lib/systemd/system/firewalld.service'.
+Created symlink '/etc/systemd/system/multi-user.target.wants/firewalld.service'
+  -> '/usr/lib/systemd/system/firewalld.service'.
+
+   On Debian 13, the package enables and starts firewalld.service automatically during installation. You
+   do not need a separate systemctl enable --now firewalld step.
+
+   The default firewall backend on Debian 13 is nftables, which is the modern, recommended backend for
+   all current Linux kernels. Confirm this after installation:
+$> sudo grep FirewallBackend /etc/firewalld/firewalld.conf
+
+   Expected output:
+FirewallBackend=nftables
+
+Step 3: Verify FirewallD Is Running
+   Before touching any rules, confirm that FirewallD installed correctly, the daemon is active, and the
+   command-line tool responds.
+
+   Run these four verification commands in sequence:
+$> command -v firewall-cmd
+$> sudo firewall-cmd --version
+$> systemctl is-enabled firewalld
+$> sudo firewall-cmd --state
+
+   Expected output on Debian 13:
+/usr/bin/firewall-cmd
+2.3.1
+enabled
+running
+
+   For a full systemd status check:
+$> sudo systemctl status firewalld --no-pager
+
+   You should see Active: active (running) in the output.
+
+   Important polkit warning: If you run firewall-cmd without sudo over an SSH session, Debian returns an
+   authorization error even when FirewallD is installed and running correctly. This is a polkit behavior
+   in headless shell sessions, not a bug. Always use sudo for every firewall-cmd operation in a remote
+   shell.
+
+Step 4: Understand FirewallD Zones on Debian 13
+   Zones are the foundation of FirewallD. Each zone is a named trust profile that groups network
+   interfaces and rules together. Every interface on your server belongs to exactly one zone, and that
+   zone decides what traffic is allowed or blocked.
+
+   List all available zones:
+$> sudo firewall-cmd --get-zones
+
+   Output:
+block dmz drop external home internal nm-shared public trusted work
+
+   Check the default zone:
+$> sudo firewall-cmd --get-default-zone
+
+   On a fresh Debian 13 install, this returns public. Check which zone is currently active and which
+   interface it covers:
+$> sudo firewall-cmd --get-active-zones
+
+   Typical output on a single-NIC server:
+public
+  interfaces: eth0
+
+   Here is a full reference for all zones and when to use each one:
+   ---------------------------------------------------------------------------------------
+   Zone        Default Behavior                     Typical Use Case
+   ---------------------------------------------------------------------------------------
+   drop        Drops all incoming silently          Maximum security, stealth mode
+   block       Rejects with icmp-host-prohibited    Similar to drop, sends rejection reply
+   public      Allows selected services only        Internet-facing servers (default)
+   external    Public + masquerading enabled        NAT gateways, router interfaces
+   dmz         SSH only                             Limited-access DMZ servers
+   work        SSH + dhcpv6-client                  Corporate or office networks
+   home        SSH + mdns + samba-client            Home networks
+   internal    Same defaults as home                Internal or backend networks
+   trusted     All traffic allowed                  Fully trusted subnets - use carefully
+   ---------------------------------------------------------------------------------------
+
+   Sysadmin tip: Always confirm ssh is listed as an allowed service in your active zone before you close
+   the terminal. If it is missing, restore it immediately:
+$> sudo firewall-cmd --zone=public --add-service=ssh --permanent
+$> sudo firewall-cmd --reload
+
+Step 5: Manage Services and Open Ports
+   This is where your firewall policy actually takes shape. FirewallD gives you two methods for allowing
+   traffic: service definitions and raw port rules.
+
+Allow a Service
+   Service definitions are the preferred approach for standard daemons. They map a human-readable name
+   to the correct ports and protocols automatically.
+
+   List all built-in service definitions:
+$> sudo firewall-cmd --get-services
+
+   Allow HTTP and HTTPS permanently in the public zone:
+$> sudo firewall-cmd --zone=public --add-service=http --permanent
+$> sudo firewall-cmd --zone=public --add-service=https --permanent
+$> sudo firewall-cmd --reload
+
+   Verify the services are active:
+$> sudo firewall-cmd --zone=public --list-services
+
+   Expected output:
+$> dhcpv6-client http https ssh
+
+Open a Raw Port
+   Use direct port rules when no built-in service definition matches your application.
+
+   Open TCP port 8080:
+$> sudo firewall-cmd --zone=public --add-port=8080/tcp --permanent
+$> sudo firewall-cmd --reload
+
+   Open a port range for passive FTP or media streaming:
+$> sudo firewall-cmd --zone=public --add-port=30000-31000/tcp --permanent
+$> sudo firewall-cmd --reload
+
+   Verify open ports:
+$> sudo firewall-cmd --zone=public --list-ports
+
+Remove a Service or Port
+   Cleaning up stale rules is just as important as opening new ones. Remove them the same way you added
+   them, switching --add to --remove:
+$> sudo firewall-cmd --zone=public --remove-service=http --permanent
+$> sudo firewall-cmd --zone=public --remove-port=8080/tcp --permanent
+$> sudo firewall-cmd --reload
+
+Runtime vs. Permanent Rules
+   This distinction trips up most FirewallD newcomers:
+     * Runtime rule:   Takes effect immediately, but disappears after a reboot or FirewallD restart
+     * Permanent rule: Written to /etc/firewalld/, survives reboots after a reload
+
+   The safest workflow is to test a rule as runtime first, confirm the service still works, and then
+   commit it permanently:
+$> sudo firewall-cmd --runtime-to-permanent
+$> sudo firewall-cmd --reload
+
+Step 6: Use Rich Rules for Advanced Traffic Control
+   Rich rules give you fine-grained control that basic service and port rules cannot provide. They
+   support source IP filtering, rate limiting, logging, and accept or drop actions in a single readable
+   statement.
+
+Allow Traffic from a Specific IP or Subnet
+   Restrict SSH access to a management subnet only:
+$> sudo firewall-cmd --zone=public --add-rich-rule='rule family="ipv4" source address="10.0.1.0/24" \
+	service name="ssh" accept' --permanent
+$> sudo firewall-cmd --reload
+
+Block a Specific IP Address
+   Drop all traffic from a known malicious IP:
+$> sudo firewall-cmd --zone=public --add-rich-rule='rule family="ipv4" source address="192.168.1.100" \
+	drop' --permanent
+$> sudo firewall-cmd --reload
+
+Rate Limit SSH Connections
+   Blunt brute-force attacks by limiting SSH to 3 connections per minute per source IP:
+$> sudo firewall-cmd --zone=public --add-rich-rule='rule service name="ssh" accept limit value="3/m"' \
+	--permanent
+$> sudo firewall-cmd --reload
+
+Log and Drop Blocked Traffic
+   Log and drop all external MySQL (port 3306) connection attempts with a syslog prefix for easy
+   filtering:
+$> sudo firewall-cmd --zone=public --add-rich-rule='rule family="ipv4" port port="3306" protocol="tcp" \
+	log prefix="mysql-blocked:" level="warning" drop' --permanent
+$> sudo firewall-cmd --reload
+
+   View all current rich rules in your active zone:
+$> sudo firewall-cmd --zone=public --list-rich-rules
+
+Step 7: Configure Port Forwarding
+   Port forwarding redirects incoming traffic from one port to another port or a different server
+   entirely. This is a common setup for exposing internal services through a gateway.
+
+Forward a Local Port
+   Forward TCP port 8080 to local port 80, useful when an application must listen on a non-privileged
+   port:
+$> sudo firewall-cmd --zone=public --add-forward-port=port=8080:proto=tcp:toport=80 --permanent
+$> sudo firewall-cmd --reload
+
+Forward to a Remote Server
+   Forward incoming port 443 traffic to an internal web server at 10.0.1.50:
+$> sudo firewall-cmd --zone=public --add-forward-port=port=443:proto=tcp:toport=443:toaddr=10.0.1.50 --permanent
+$> sudo firewall-cmd --reload
+
+   For cross-host forwarding to work, you must enable kernel-level IP forwarding:
+$> echo "net.ipv4.ip_forward = 1" | sudo tee /etc/sysctl.d/99-ip-forward.conf
+$> sudo sysctl -p /etc/sysctl.d/99-ip-forward.conf
+
+   Verify it is active:
+$> sysctl net.ipv4.ip_forward
+
+   Expected output:
+net.ipv4.ip_forward = 1
+
+Step 8: Enable Masquerading (Source NAT)
+   Masquerading rewrites the source IP address on outgoing packets to match your gateway´s external IP.
+   This is source NAT, and it is the core requirement when you use Debian 13 as a Linux gateway to route
+   internal LAN traffic to the internet.
+
+   Enable masquerading on the external zone:
+$> sudo firewall-cmd --zone=external --add-masquerade --permanent
+$> sudo firewall-cmd --reload
+
+   Verify it is enabled:
+$> sudo firewall-cmd --zone=external --query-masquerade
+
+   Expected output:
+yes
+
+   Masquerading requires IP forwarding (Step 7) to be active at the same time. With both in place,
+   internal hosts behind eth1 can route traffic to the internet through your Debian 13 gateway. Run a
+   final check to confirm both sides of the gateway are configured:
+$> sysctl net.ipv4.ip_forward
+$> sudo firewall-cmd --zone=external --list-all
+$> sudo firewall-cmd --zone=internal --list-all
+
+Troubleshooting Common FirewallD Issues
+   Even with a clean install, a few problems come up regularly on Debian 13 servers. Here are the five
+   most common ones and exactly how to fix them.
+
+1. firewall-cmd: command not found
+   Cause: The FirewallD package is not installed, or the binary path is missing.
+
+   Fix:
+$> sudo apt install firewalld -y
+$> command -v firewall-cmd
+
+   If the package is already listed by dpkg but the command still fails, check whether
+   /usr/bin/firewall-cmd exists and re-run the install to repair it.
+
+2. Authorization Failed / Polkit Error
+   Cause: You ran firewall-cmd without sudo in a remote SSH session. Polkit cannot authorize the action
+   without an agent present.
+
+   Fix: Always prepend sudo:
+$> sudo firewall-cmd --state
+
+   Expected output: running
+
+3. Rules Disappear After Reboot
+   Cause: Rules were added without the --permanent flag. They existed as runtime-only changes and were
+   lost when the daemon restarted.
+
+   Fix: Commit the current live rules to permanent storage, then reload:
+$> sudo firewall-cmd --runtime-to-permanent
+$> sudo firewall-cmd --reload
+
+   Going forward, always add --permanent to any rule you want to survive a reboot.
+
+4. FirewallD and UFW Conflict
+   Cause: Both daemons are running simultaneously and fighting over nftables rule ownership.
+
+   Symptom: Unpredictable behavior, rules that apply but then vanish, or network connectivity issues
+   after reboots.
+
+   Fix: Stop and remove UFW completely:
+$> sudo systemctl stop ufw
+$> sudo ufw disable
+$> sudo apt remove -y ufw
+$> sudo systemctl restart firewalld
+
+5. FirewallD Fails to Start After Boot
+   Cause: A common issue on Debian 13 VPS instances is a cloud-init conflict at boot time. Cloud-init
+   and FirewallD can both attempt to configure network interfaces during startup, creating a race
+   condition.
+
+   Fix: Restart the daemon manually, then check its status:
+$> sudo systemctl restart firewalld
+$> sudo systemctl status firewalld --no-pager
+
+   If the conflict is persistent, mask cloud-init´s network module:
+$> sudo systemctl mask cloud-init-network.service
+
+   Congratulations! You have successfully installed FirewallD. Thanks for using this tutorial to
+   install and configure FirewallD on Debian 13 "Trixie" Linux system. For additional help or useful
+   information, we recommend you check the Fedora website.
+
+
+---
+

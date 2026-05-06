@@ -1,0 +1,173 @@
+filename: bash-command-line-tricks-20260506.txt
+https://www.howtogeek.com/command-line-tricks-that-instantly-make-you-better-at-the-linux-terminal/
+
+These 7 Bash tricks will change how you use the terminal
+Apr 29, 2026
+
+   Do you spend most of your time in the terminal, or are you trying to learn? Bash is very mature, and
+   it packs a lot of hidden features. Today, I have seven command-line tricks that will save you time
+   typing and editing.
+
+   Most of these tricks leverage Bash´s history expansion. You´re probably familiar with its most
+   basic syntax-!!-which re-executes the previous command, but there´s more to the story here, and
+   history expansion goes a bit deeper. We can use expansions to select a command, modify it, and then
+   re-execute.
+
+   Bash´s history expansions comprise three segments, and what you saw ("!!") constitutes the first
+   segment, called the event designator. There are two more segments called the "word
+   designator" and (optional) "modifier." We put them together like this:
+event-designator[:word-designator[:modifiers]]
+
+   A real-world example is easier to read:
+!!:2:p  # You can use multiple modifiers, like :p:h.
+    1. Event designator (e.g., the second "!" in "!!"): Defines which command in your history to
+       target.
+    2. Word designator (e.g., "2"): Defines which words (command arguments) to target. Words are
+       generally separated by spaces or surrounded by quotes. Word zero is the command name.
+    3. Modifier (e.g., "p"): Optionally defines what to do with the chosen word.
+
+   Broadly speaking, select a command, specify a word, and then optionally modify it. "!!:2:p" selects
+   the previous command ("!!"), the second argument ("2"), and prints it ("p".)
+
+   The first "!" activates Bash´s history expansion, and the expression that follows (e.g., another "!")
+   is the event designator. This value dictates which command you select. The only exception to a "!"
+   prefix is "^," which activates a string replacement (covered later.)
+
+   The official documentation provides lists that describe all the possible combinations. It´s
+   challenging to see the value to begin with, but once you find a few useful tricks and understand how
+   to form them, you´ll intuitively use them without thinking. Below, I have a few tricks I´ve found
+   useful over the years.
+
+1 - Reuse all arguments
+Different commands can sometimes use the same arguments
+   There are scenarios where you need to apply identical arguments to multiple commands. Take the
+   following example:
+$> touch foo bar
+$> chmod 644 foo bar
+
+   It would be nice if we could reuse the arguments-"foo" and "bar"-and we can:
+$> touch foo bar
+$> chmod 644 !!:*
+
+   It says, "Select the previous command ("!!") and reuse all its arguments ("*")". It´s the same as
+   executing chmod 644 foo bar.
+
+   However, Bash allows us to shorten it even further by omitting a "!:" for symbol-based word
+   designators ("*", "^", "$", and "%"). For example:
+$> touch foo bar
+$> chmod 644 !*
+
+   "!*" is the same as "!!:*."
+
+2 - Reuse the nth argument
+Some arguments are too difficult to retype
+   Similar to the previous expansion, we can select specific arguments from a command:
+$> touch foo bar
+$> chmod 644 !!:2  # Select the second word of the previous command.
+
+   It´s the same as:
+$> chmod 644 bar
+
+   To elaborate on event designators a little, let´s choose a different command:
+
+   The event designator (e.g., the second "!" in "!!") is how we choose a command.
+$> touch foo bar
+$> ls
+$> chmod 644 !-2:2  # Select the command two places behind ("-2"), and choose the second ("2") word ("bar").
+
+   "!" activates history expansion, and "-2" chooses the command two places behind in your history. In
+   comparison, "!!" is shorthand for "!-1" (previous command).
+
+   Event designators are flexible, and you´ve probably used them before when re-executing a command from
+   your history, e.g., !100.
+
+3 - Reuse the command name
+It´s useful once committed to the brainstem
+   Typing out the command name is easy, so you may wonder if this trick is worth the effort. Well,
+   typing out "!:0" is even easier, and once you´ve built a habit of doing so, you do it without
+   thinking (like !!):
+$> touch foo bar
+$> !:0 baz
+
+   This is the same as touch baz.
+     * "!": Activates history expansion.
+     * "0": Select only the command name.
+
+   Excluding the event designator (the character after the first "!") implies the previous command.
+
+   You can select any command by specifying a number as the event designator:
+$> !100:0 baz
+
+   However, in that case, it´s probably easier to type the command instead.
+
+4 - Fix a typo
+Because manually replacing mistakes is a pain
+   It would be silly of me to ask if you´ve ever mistyped a command-of course you have. However, you´ve
+   probably strained your fingers and mental energy fixing them-struggling to move the cursor to the
+   correct place and amending the commands. There is an easier solution: a string replacement.
+$> ehco foo bar
+$> ^ehco^echo
+
+   It´s a simple string replacement, and you can change any part of the command:
+$> echo "Any part of the cmd."
+$> ^cmd^command
+
+   A terminal window shows an echo command being re-run with one word replaced by another using a string
+   replacement expansion.
+
+   If you´re familiar with sed, the previous expansion is the same as the following:
+$> echo "Any part of the cmd."
+$> !!:s/cmd/command/
+
+5 - Reuse the first or last argument
+It´s more convenient than specifying argument numbers
+   We´ve seen how to reuse all arguments from a history entry (e.g., "!*"), but we can specifically pick
+   the first or last argument.
+
+   Pick the first argument:
+$> touch foo bar
+$> chmod 644 !^
+
+   That´s the same as executing chmod 644 foo, and "!^" is equivalent to !!:1 (previous command; first
+   argument.)
+
+   Pick the last argument:
+$> touch foo bar
+$> chmod 644 !$
+
+   That´s the same as chmod 644 bar.
+
+   "$" is particularly useful if you don´t know the number of arguments.
+
+   If you know regex, you´ll be familiar with "^" and "$" already, which mean the start and end of a
+   line. That´s a handy way to memorize them.
+
+5 - Expand before submission
+Check the command before executing it
+   All of these expansions can be a little confusing unless you ground them by viewing real (expanded)
+   commands-that way, you can see what they actually do.
+
+   To do that, type out your expansion and hit Ctrl+Alt+E:
+$> touch foo bar
+$> chmod 644 !$ <Ctrl+Alt+E>
+
+   That will expand the expression into literal values without executing the command. Now you can see
+   what it does before executing it.
+
+Move to the start or end of the command line
+Moving around is difficult, and shortcuts make it easy
+   Moving around the command line isn´t obvious to beginners, but Bash provides several shortcuts to
+   assist you. Two of them will move you to the start or end of the line, with Ctrl+A or Ctrl+E,
+   respectively.
+
+   Alternatively, if you know Vim, you can enable vi mode by putting the following in your .bashrc
+   file:
+$> set -o vi
+
+   That´s all I´ve got today. Remember to check out the official documentation for history expansion,
+   because it has lists that describe each segment, and you can easily squeeze a lot more out of these
+   tips.
+
+
+---
+

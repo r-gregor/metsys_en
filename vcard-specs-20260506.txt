@@ -1,0 +1,766 @@
+filename: bash-script-to-replaced-desktop-utilities-20260506.txt
+https://www.howtogeek.com/this-one-bash-script-replaced-half-my-desktop-utilities/
+
+This one Bash script replaced half my desktop utilities
+Apr 25, 2026, 9:15 AM EDT
+
+   I´ve tried countless utilities to manage my tasks, organize my notes, and keep track of contacts. But
+   there´s something about my workflow-or brain-that just keeps me from sticking with them, and I´m
+   destined to forever be on the lookout for the next tool to try.
+
+   As a programmer and self-declared Linux nerd, I should know better. So I built the following script,
+   which you are free to use and adapt as you see fit. In this article, I´ll share some of the
+   techniques I used and what I learned during the process.
+
+About the script
+An easy-to-use toolkit with room to grow
+
+   [**1][https://github.com/bobbykjack/prod/]The script that I´ll describe here, prod, features some simple
+   command-line tools that approximate the following:
+     * A note taker
+     * A task list manager
+     * A pomodoro timer
+     * A calendar scheduler
+     * An address book
+
+   The script is less than 300 lines, so it´s doing the above in the simplest way possible, but it´s
+   extensible. I´ll continue to add features as I see fit.
+
+   Everything uses standard, built-in tools that (almost) every version of Linux and macOS should have
+   access to. Everything is written in pure shell script, without any dependencies on other languages,
+   even if they´re readily available, like Python or Perl.
+
+   I´ve used
+   [https://www.howtogeek.com/i-thought-my-shell-scripts-were-sound-until-shellcheck-told-me-otherwise/]the
+   excellent ShellCheck code verifier to ensure the script´s syntax is as correct as can be.
+
+   To use the script, [https://github.com/bobbykjack/prod/blob/main/prod.sh]simply download it and place it in
+   your PATH, ensuring it´s executable. The script is named prod.sh and accepts subcommands like who, notes,
+   and pomo. I symlink it as prod in my path, and the script shows usage by default: [...img...]
+
+Taking and searching notes
+Using plain text files, the filesystem, and common commands
+   I have two main requirements for note-taking:
+     * A quick and easy way to write new notes and edit existing notes
+     * A simple search
+
+   These can be achieved with plain text files, commands like grep and find, and the user´s preferred
+   editor. First, I´ve chosen to organize notes with a simple hierarchy, so this command will create or
+   edit a note:
+$> prod notes tech/wifi/home
+
+   This will create the text/wifi subdirectories if they do not already exist (using mkdir -p), and open
+   a file named home.
+
+   I´m using grep with a regexp to validate the user input:
+NOTE_PATH_PATTERN="^[a-z]+(\/[a-z]+)*$"
+
+if echo $NOTE_PATH | grep -Eq "$NOTE_PATH_PATTERN"; then
+    ...
+
+   Note that there are alternatives to grep, like Bash´s native support for regex matching:
+if [[ "$NOTE_PATH" =~ $NOTE_PATH_PATTERN ]]; then
+
+   The EDITOR variable stores a command to [43]represent your default text editor, so the script opens a
+   note file using the following code:
+command $EDITOR $DIR/$FILE
+
+   Meanwhile, the script can search through note files with the -f (find) option; it uses recursive grep
+   to do so.
+
+   One of my favorite bits of this code is the highlighting of each search term. When it outputs each
+   matching note file, it replaces any occurrences of the search term:
+cat $FILE | sed 's/'"$SEARCH"'/\x1b[4m&\x1b[0m/g' # The complicated replacement expression uses shell escape
+                                                  # sequences to underline the term.
+
+Manage a TODO list
+Stored in Markdown, it plays nicely with others
+
+   A TODO list is simply a set of tasks I need to complete. I think Markdown is the best format for a
+   simple task list:
+1. task one
+2. another task
+3. etc.
+
+   If I ever need to view the full list, this is a nice format to work with. I can even use [44]a simple
+   pandoc command to view a PDF of my current tasks:
+$> prod todo | pandoc -t pdf -o /tmp/eg.pdf && open /tmp/eg.pdf
+
+   The number of each task acts as a unique identifier, so I can remove a specific task using prod todo
+   -r 2, for example, to remove the task with that id. Under the hood, this is a simple task for sed:
+sed -i '' '/^'"$2"'. /d' $TODO_FILE
+
+   This command uses the stream editor to delete lines beginning with the given id. It uses the -i
+   option to edit files in-place.
+
+A calendar scheduler
+The standard cal program helps make this look good
+   The calendar tool takes up more code in this script than any other, mainly because it handles user
+   input, which it parses and validates. Calendar events involve highly structured data, so I´ve taken
+   the opportunity to present a straightforward set of prompts to fetch it.
+
+   You can read from stdin and store the value in a variable using this code:
+read -rp "Event: " EVENT
+
+   My script has a helper function, read_valid, which also takes a regular expression pattern to
+   validate against. Using this, it guarantees that dates and times are well formatted. It also uses a
+   specific function, read_future_date, to ensure new appointments are in the future:
+
+while (! echo "$VALUE" | grep -E "$PATTERN" >/dev/null); do
+	read -rp "$LABEL: " VALUE
+done
+
+   Note that I redirect grep´s output to /dev/null to discard it, since all I need to know is whether
+   the search matches or not. An alternative is to use the -q (--quiet) option.
+
+   Displaying events is, right now, limited to just the next one, which you can do with a simple prod
+   when -l. I use the cal command for a visual of the specific day; you can override the default
+   behavior to highlight a specific date using -d/-H:
+command cal -H "$NEXT_APPT_DATE" -d "$NEXT_APPT_MONTH"
+
+   The when subcommand with the -l option to show the next event which is displayed underneath a
+   calendar-style table of dates, with one selected.
+
+Keeping track of contacts
+The vCard format is vital
+   My preferred format for contact information is
+   [https://www.howtogeek.com/697067/how-to-use-the-vcard-feature-in-outlook/]vCard. This plain text [**2]format is
+   well-supported by email clients, and it stores names, addresses, phone numbers, and email addresses.
+
+   Any time I need to keep someone´s contact info, I dump a vCard in a local directory that my prod tool
+   can access. All files are in the root of that directory, so a for loop with a glob pattern is all you
+   need to read them all:
+for FILE in "$CONTACT_DIR"/*.vcf; do
+
+   I don´t need much support beyond this, so a simple feature to dump all the data is enough:
+   The who subcommand showing a list of contact details.
+
+   This output is a very basic DSV (delimiter-separated values) format, suitable for processing with
+   other tools like sed, grep, sort, etc.
+
+   The who function makes extensive use of an echo-grep-cut pattern to extract relevant data, e.g.:
+...
+elif [ -z "$TEL" ] && echo "$LINE" | grep "^TEL;" > /dev/null; then
+    TEL=$(echo "$LINE" | grep -Eo ':.+' | cut -c 2-)
+fi
+
+   This example simply extracts the characters after the leading "TEL;...:" which begins the telephone
+   record line.
+     ________________________________________________________________________________________________
+
+A little scripting can go a long way
+
+   Don´t misunderstand this article. The point isn´t that you should delete all your apps immediately,
+   casting aside tools that are already working for you. It´s more about considering your options
+   carefully.
+
+   You can achieve a lot with basic text files and built-in commands. More than anything, this exercise
+   has inspired me to take more time and write my own scripts.
+
+     * Programming
+     * Linux & macOS Terminal
+
+   Follow
+   Followed
+   (BUTTON)
+   Like
+   Share
+   [48]Facebook [49]X [50]WhatsApp [51]Threads [52]Bluesky [53]LinkedIn [54]Reddit [55]Flipboard
+   [56]Copy link [57]Email
+
+   Readers like you help support How-To Geek. When you make a purchase using links on our site, we may
+   earn an affiliate commission. [58]Read More.
+
+   (BUTTON) Close
+
+     * Desktop
+     * Mobile
+
+   Illustration of a Windows laptop with a folder showing an error icon and PowerShell above it.
+
+[59]This is the Windows storage feature I wish I started using years ago
+
+   Angled view of the terminal open on the MALIBAL Aon S1.
+
+[60]I run a full Linux desktop in Docker just because I can
+
+   MacBook Neo with Kindle app on screen.
+
+[61]Intel and Samsung in talks to make Apple chips-how will it affect your next PC?
+
+   [62]See More
+
+   App drawer in the Kvaesitso launcher on a Unihertz Titan 2 Elite.
+
+[63]De-Googling Android is simpler than you think-no special phone required
+
+   Holding the Galaxy S21 Ultra
+
+[64]Why the Galaxy S21 Ultra was the last Samsung phone I actually wanted to keep
+
+   Using an old Android device as a dashcam.
+
+[65]I finally set up my old phone as a dedicated dashcam, and it works better than a $200 Garmin
+
+   [66]See More
+
+   (BUTTON) Trending Now
+   Laptop screen showing a project hub page in Excel.
+
+[67]Stop using Excel like a spreadsheet-build an app instead
+
+   Firefox, VLC, and LibreOffice icons standing on a podium under the words 'OPEN SOURCE'.
+
+[68]4 open-source Windows apps that are better than their paid rivals
+
+   Close-up of the Claude Code welcome screen on an iPad connected to a Mac.
+
+[69]I let Claude control my computer-and it filled my Amazon basket
+
+   Thread
+   Sign in to your How-To Geek account
+
+   We want to hear from you. Share your perspective in the comments below, and please keep the
+   conversation respectful.
+   Be the first to post
+   (BUTTON) (BUTTON) (BUTTON) (BUTTON) (BUTTON) (BUTTON) (BUTTON) Images
+   Attachment(s)
+   (BUTTON) (BUTTON)
+
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   ____________________________________________________________
+   Please respect our [70]community guidelines. No links, inappropriate language, or spam.
+
+   Your comment has not been saved
+   [71]Send confirmation email
+
+   This space is open for discussion.
+
+   Be the first to share your thoughts.
+
+     * [72]Terms
+     * [73]Privacy
+     * [74]Feedback
+
+   Recommended
+   Google´s Verified Email makes it easier to sign in to apps.
+
+[75]Android´s new instant email verification gets rid of annoying OTP codes entirely
+
+   A laptop with the Microsoft Excel app.
+
+[76]9 time-saving Excel shortcuts that most cheat sheets miss
+
+   A Samsung Galaxy S21 FE lying on a table displaying a collection of app icons.
+
+[77]9 open-source apps I install on every Samsung Galaxy phone
+
+   Android Lock Screen WIdgets
+
+[78]4 useful Android widgets that actually deserve space on your home screen
+
+   [79]How-To Geek logo
+     * [80]Join Our Team
+     * [81]Our Audience
+     * [82]About Us
+     * [83]Press & Events
+     * [84]Media Coverage
+     * [85]Contact Us
+
+     * Follow Us
+     *
+     *
+     *
+     *
+     *
+     *
+
+   Valnet Logo
+     *
+     * [86]Advertising
+     * [87]Careers
+     * [88]Terms
+     * [89]Privacy
+     * [90]Policies
+
+   [91]How-To Geek is part of the [92]Valnet Publishing Group
+
+   Copyright © 2026 Valnet Inc.
+
+References
+
+   Visible links:
+   1. https://www.howtogeek.com/feed/
+   2. https://www.howtogeek.com/
+   3. https://www.howtogeek.com/news/
+   4. https://www.howtogeek.com/deals/
+   5. https://www.howtogeek.com/pc-hardware/
+   6. https://www.howtogeek.com/networking/
+   7. https://www.howtogeek.com/storage-and-nas/
+   8. https://www.howtogeek.com/components/
+   9. https://www.howtogeek.com/peripherals/
+  10. https://www.howtogeek.com/operating-systems/
+  11. https://www.howtogeek.com/category/linux/
+  12. https://www.howtogeek.com/category/windows/
+  13. https://www.howtogeek.com/software/
+  14. https://www.howtogeek.com/category/programming/
+  15. https://www.howtogeek.com/applications/
+  16. https://www.howtogeek.com/category/mobile/
+  17. https://www.howtogeek.com/category/android/
+  18. https://www.howtogeek.com/category/ios/
+  19. https://www.howtogeek.com/category/cellular-carriers/
+  20. https://www.howtogeek.com/new-tech/
+  21. https://www.howtogeek.com/category/hobbies/
+  22. https://www.howtogeek.com/category/smart-home/
+  23. https://www.howtogeek.com/tag/homelab/
+  24. https://www.howtogeek.com/sbc/
+  25. https://www.howtogeek.com/category/cutting-edge/
+  26. https://www.howtogeek.com/streaming/
+  27. https://www.howtogeek.com/streaming-content/
+  28. https://www.howtogeek.com/streaming-platforms/
+  29. https://www.howtogeek.com/audio-video/
+  30. https://www.howtogeek.com/category/automotive/
+  31. https://www.howtogeek.com/category/product-reviews/
+  32. https://www.howtogeek.com/buying-guides/
+  33. https://www.howtogeek.com/this-one-bash-script-replaced-half-my-desktop-utilities/
+  34. https://www.howtogeek.com/page/newsletter/
+  35. https://www.howtogeek.com/
+  36. https://www.howtogeek.com/author/bobby-jack/
+  37. https://www.howtogeek.com/author/bobby-jack/
+  38. https://switchplayer.net/
+  39. https://www.superjumpmagazine.com/
+  40. https://github.com/bobbykjack/prod/
+  41. https://www.howtogeek.com/i-thought-my-shell-scripts-were-sound-until-shellcheck-told-me-otherwise/
+  42. https://github.com/bobbykjack/prod/blob/main/prod.sh
+  43. https://www.howtogeek.com/change-the-default-text-editor-on-linux/
+  44. https://www.howtogeek.com/you-should-try-this-open-source-document-converter/
+  45. https://www.howtogeek.com/697067/how-to-use-the-vcard-feature-in-outlook/
+  46. https://www.valnetinc.com/en/terms-of-use
+  47. https://www.valnetinc.com/en/privacy-policy
+  48. https://www.facebook.com/sharer/sharer.php?u=https://www.howtogeek.com/this-one-bash-script-replaced-half-my-desktop-utilities//&src=sdkpreparse
+  49. https://twitter.com/intent/tweet?text=This one Bash script replaced half my desktop utilities&url=https://www.howtogeek.com/this-one-bash-script-replaced-half-my-desktop-utilities/
+  50. https://web.whatsapp.com/send?text=https://www.howtogeek.com/this-one-bash-script-replaced-half-my-desktop-utilities/
+  51. https://www.threads.net/intent/post?text=This one Bash script replaced half my desktop utilities https://www.howtogeek.com/this-one-bash-script-replaced-half-my-desktop-utilities/
+  52. https://bsky.app/intent/compose?text=https://www.howtogeek.com/this-one-bash-script-replaced-half-my-desktop-utilities/
+  53. https://www.linkedin.com/shareArticle?mini=true&url=https://www.howtogeek.com/this-one-bash-script-replaced-half-my-desktop-utilities/&title=This one Bash script replaced half my desktop utilities&source=www.howtogeek.com&summary=A handful of useful productivity tools wrapped up in a simple shell script.
+  54. https://www.reddit.com/submit?url=https://www.howtogeek.com/this-one-bash-script-replaced-half-my-desktop-utilities/
+  55. http://share.flipboard.com/bookmarklet/popout?v=2&title=This one Bash script replaced half my desktop utilities&url=https://www.howtogeek.com/this-one-bash-script-replaced-half-my-desktop-utilities/&utm_campaign=tools&utm_medium=article-share&utm_source=www.howtogeek.com
+  56. javascript:;
+  57. mailto:?Subject=This one Bash script replaced half my desktop utilities&Body=Check this out!
+https://www.howtogeek.com/this-one-bash-script-replaced-half-my-desktop-utilities/
+  58. https://www.valnetinc.com/en/terms-of-use
+  59. https://www.howtogeek.com/this-is-the-windows-storage-feature-i-wish-i-started-using-years-ago/
+  60. https://www.howtogeek.com/i-run-a-linux-desktop-in-docker-because-i-can/
+  61. https://www.howtogeek.com/apple-in-talks-to-have-intel-and-samsung-make-chips/
+  62. https://www.howtogeek.com/category/desktop/
+  63. https://www.howtogeek.com/de-googling-android-is-simpler-than-you-thinkno-special-phone-required/
+  64. https://www.howtogeek.com/why-the-galaxy-s21-ultra-was-the-last-samsung-phone-i-actually-wanted-to-keep/
+  65. https://www.howtogeek.com/i-finally-set-up-my-old-phone-as-a-dedicated-dashcam-and-it-works-better-than-a-garmin/
+  66. https://www.howtogeek.com/category/mobile/
+  67. https://www.howtogeek.com/microsoft-excel-stop-using-like-spreadsheet-build-app-instead/
+  68. https://www.howtogeek.com/open-source-windows-apps-better-paid-rivals/
+  69. https://www.howtogeek.com/i-let-claude-control-my-computer/
+  70. https://www.valnetinc.com/en/terms-of-use#community-guidelines
+  71. javascript:void(0)
+  72. https://www.valnetinc.com/en/terms-of-use
+  73. https://www.howtogeek.com/page/our-privacy-policy/
+  74. https://www.howtogeek.com/contact
+  75. https://www.howtogeek.com/androids-new-instant-email-verification-gets-rid-of-annoying-otp-codes-entirely/
+  76. https://www.howtogeek.com/microsoft-excel-shortcuts-cheat-sheets-miss/
+  77. https://www.howtogeek.com/open-source-apps-i-install-on-every-samsung-galaxy-phone/
+  78. https://www.howtogeek.com/useful-android-widgets-to-pin-homescreen/
+  79. https://www.howtogeek.com/
+  80. https://www.howtogeek.com/work-with-us/
+  81. https://www.howtogeek.com/page/advertise/
+  82. https://www.howtogeek.com/page/about/
+  83. https://www.howtogeek.com/page/press-events/
+  84. https://www.howtogeek.com/page/media/
+  85. https://www.howtogeek.com/contact/
+  86. https://www.valnetinc.com/en/advertising
+  87. https://www.valnetinc.com/en/careers
+  88. https://www.valnetinc.com/en/terms-of-use
+  89. https://www.valnetinc.com/en/privacy-policy
+  90. https://www.valnetinc.com/en/editorial-integrity
+  91. https://www.howtogeek.com/
+  92. https://www.valnetinc.com/en/
+
+   Hidden links:
+  94. https://www.youtube.com/pocketnow?sub_confirmation=1
+  95. https://www.facebook.com/howtogeek/
+  96. https://www.instagram.com/howtogeekofficial/
+  97. https://twitter.com/howtogeek
+  98. https://www.tiktok.com/@howtogeekofficial
+  99. https://www.linkedin.com/company/howtogeek/
+ 100. https://www.pinterest.com/howtogeekofficial/
+ 101. https://news.google.com/publications/CAAqKAgKIiJDQklTRXdnTWFnOEtEV2h2ZDNSdloyVmxheTVqYjIwb0FBUAE
+ 102. https://www.howtogeek.com/feed/
+ 103. https://www.howtogeek.com/page/newsletter/
+ 104. https://www.howtogeek.com/this-one-bash-script-replaced-half-my-desktop-utilities/#threads
+ 105. https://www.howtogeek.com/deals/
+ 106. https://www.howtogeek.com/tag/storage/
+ 107. https://www.howtogeek.com/category/streaming/
+ 108. https://www.howtogeek.com/category/linux/
+ 109. https://www.howtogeek.com/tag/open-source/
+ 110. https://www.howtogeek.com/tag/microsoft-excel/
+ 111. https://www.howtogeek.com/category/android/
+ 112. https://www.howtogeek.com/category/windows/
+ 113. https://www.google.com/preferences/source?q=howtogeek.com
+ 114. https://www.howtogeek.com/this-one-bash-script-replaced-half-my-desktop-utilities/#threads
+ 115. https://www.howtogeek.com/category/programming/
+ 116. https://www.howtogeek.com/tag/terminal/
+ 117. https://www.howtogeek.com/this-is-the-windows-storage-feature-i-wish-i-started-using-years-ago/
+ 118. https://www.howtogeek.com/i-run-a-linux-desktop-in-docker-because-i-can/
+ 119. https://www.howtogeek.com/apple-in-talks-to-have-intel-and-samsung-make-chips/
+ 120. https://www.howtogeek.com/de-googling-android-is-simpler-than-you-thinkno-special-phone-required/
+ 121. https://www.howtogeek.com/why-the-galaxy-s21-ultra-was-the-last-samsung-phone-i-actually-wanted-to-keep/
+ 122. https://www.howtogeek.com/i-finally-set-up-my-old-phone-as-a-dedicated-dashcam-and-it-works-better-than-a-garmin/
+ 123. https://www.howtogeek.com/microsoft-excel-stop-using-like-spreadsheet-build-app-instead/
+ 124. https://www.howtogeek.com/open-source-windows-apps-better-paid-rivals/
+ 125. https://www.howtogeek.com/i-let-claude-control-my-computer/
+ 126. https://www.howtogeek.com/androids-new-instant-email-verification-gets-rid-of-annoying-otp-codes-entirely/
+ 127. https://www.howtogeek.com/microsoft-excel-shortcuts-cheat-sheets-miss/
+ 128. https://www.howtogeek.com/open-source-apps-i-install-on-every-samsung-galaxy-phone/
+ 129. https://www.howtogeek.com/useful-android-widgets-to-pin-homescreen/
+ 130. https://www.youtube.com/pocketnow?sub_confirmation=1
+ 131. https://www.facebook.com/howtogeek/
+ 132. https://www.instagram.com/howtogeekofficial/
+ 133. https://twitter.com/howtogeek
+ 134. https://www.tiktok.com/@howtogeekofficial
+ 135. https://www.linkedin.com/company/howtogeek/
+
+
+
+---
+[**1]https://github.com/bobbykjack/prod/
+
+[prod.sh]
+
+#!/bin/bash
+
+# prod.sh
+# a suite of simple productivity tools for the command line
+# includes a task manager, pomodoro timer, calendar, contacts?
+
+usage() {
+	echo "Usage: $(basename "$0") command"
+	echo ""
+	echo "Commands:"
+	echo "    notes note/path        edit a note"
+	echo "    notes -f search-word   note-taking"
+	echo ""
+	echo "    pomo [focus [break]]   pomodoro timer in seconds"
+	echo ""
+	echo "    todo [-l]              manage tasks"
+	echo "                           use '-l' to list current tasks"
+	echo ""
+	echo "    when [-l]              manage appointments"
+	echo "                           use '-l' to list current appointments"
+	echo ""
+	echo "    who                    contacts"
+}
+
+DATA_DIR="$HOME"/.config/prod
+CONTACT_DIR="$DATA_DIR"/contacts
+APPT_FILE="$DATA_DIR"/appointments
+TODO_FILE="$DATA_DIR"/todo.txt
+NOTES_DIR="$DATA_DIR"/notes
+
+mkfile_if_not_exist() {
+	if [ ! -f "$1" ]; then
+		touch "$1"
+	fi
+}
+
+
+############################################################
+# notes, a basic note-taker. editing and search.
+############################################################
+
+notes() {
+	if [ "$1" = "" ]; then
+		find "$NOTES_DIR" -type f | sed 's|'"$NOTES_DIR"'/||'
+	elif [ "$1" = "-f" ]; then
+		if [ "$2" = "" ]; then
+			echo "usage...";
+		else
+			(
+				SEARCH="$2"
+
+				grep -lr "$SEARCH" "$NOTES_DIR" | while IFS='' read -r FILE; do
+					echo "$FILE" | cut -c"$((${#NOTES_DIR}+1))"-
+					cat "$FILE" | sed 's/'"$SEARCH"'/\x1b[4m&\x1b[0m/g'
+					echo
+				done
+			) | $PAGER
+		fi
+	else
+		NOTE_PATH=$1
+		NOTE_PATH_PATTERN="^[a-z]+(\/[a-z]+)*$"
+
+		# note path should be in the format foo/bar/hum
+		if echo "$NOTE_PATH" | grep -Eq "$NOTE_PATH_PATTERN"; then
+			DIR=$(dirname $NOTES_DIR/"$NOTE_PATH")
+			FILE=$(basename "$NOTE_PATH")
+			mkdir -p "$DIR"
+			command $EDITOR "$DIR"/"$FILE"
+		else
+			echo 'note path looks bad - use only lowercase letters and /'
+		fi
+	fi
+}
+
+
+############################################################
+# pomo, a basic pomodoro timer
+#
+# adapted from
+# https://cocalc.com/github/ruanyf/simple-bash-scripts/blob\
+# /master/scripts/pomodoro.sh
+############################################################
+
+pomo() {
+	FOCUS_SECONDS="${1:-25}*60"
+	BREAK_SECONDS="${2:-wseconds/300}*60"
+
+	while true; do
+		date1=$(($(date +%s) + FOCUS_SECONDS))
+
+		while [ "$date1" -ge "$(date +%s)" ]; do
+			echo -ne "$(date -u -j -f %s $((date1 - $(date +%s))) +%H:%M:%S)\r"
+		done
+
+		osascript -e 'display notification "Time to walk and rest!" with title "Break"'
+		read -n1 -rsp $'Press any key to continue or Ctrl+C to exit...\n'
+		date2=$(($(date +%s) + BREAK_SECONDS))
+
+		while [ "$date2" -gt "$(date +%s)" ]; do
+			echo -ne "$(date -u -j -f %s $((date2 - $(date +%s))) +%H:%M:%S)\r"
+		done
+
+		osascript -e 'display notification "Time to get back to work" with title "Work"'
+		read -n1 -rsp $'Press any key to continue or Ctrl+C to exit...\n'
+	done
+}
+
+
+############################################################
+# todo, a basic task manager
+############################################################
+
+todo() {
+	NUM="$#"
+	FIRST="$1"
+
+	mkfile_if_not_exist "$TODO_FILE"
+
+	NUM_TODOS=$(wc -l $TODO_FILE | awk '{print $1}')
+	ID_TODOS_LAST=$(grep -v '^\s*$' $TODO_FILE | tail -1 | cut -d'.' -f1)
+	ID_TODOS_NEXT=$((ID_TODOS_LAST+1))
+
+
+	# TIP: pipe this to pandoc to get HTML
+	# $0 todo -l | pandoc
+	[ "$NUM" = 0 ] || [ "$FIRST" = "-l" ] &&
+		cat $TODO_FILE && exit
+
+	[ "$FIRST" = "-n" ] &&
+		echo "$NUM_TODOS" && exit
+
+	if [ "$FIRST" = "-r" ] && [ "$NUM" -gt 1 ]
+	then
+		sed -i '' '/^'"$2"'\. /d' $TODO_FILE
+		exit
+	fi
+
+	[ -n "$FIRST" ] &&
+		echo "$ID_TODOS_NEXT". "$@" >> $TODO_FILE && echo "added" && exit
+}
+
+
+############################################################
+# when, a basic calendar
+############################################################
+
+when() {
+	mkfile_if_not_exist "$APPT_FILE"
+
+	if [ "$1" = "-l" ]; then
+		when_list
+	else
+		when_new
+	fi
+}
+
+# Read from user input until a valid value is entered.
+read_valid() {
+	LABEL="$1"
+	PATTERN="$2"
+	VALUE=""
+
+	while (! echo "$VALUE" | grep -E "$PATTERN" >/dev/null)
+	do
+		read -rp "$LABEL: " VALUE
+	done
+
+	echo "$VALUE"
+}
+
+# Read a date until we get a valid one from today or later
+read_future_date() {
+	while [[ "$DATE" < "$TODAY" ]]
+	do
+		DATE=$(read_valid "Date" "$DATE_REGEXP")
+	done
+
+	echo "$DATE"
+}
+
+# Show next appointment
+when_new() {
+	DATE_REGEXP='^[[:digit:]]{4}-[[:digit:]]{2}-[[:digit:]]{2}$'
+	TIME_REGEXP='^[[:digit:]]{4}$'
+	TODAY=$(date '+%Y-%m-%d')
+
+	read -rp "Event: " EVENT
+
+	DATE=$(read_future_date)
+	TIME_FROM=$(read_valid "From" "$TIME_REGEXP")
+	TIME_TO=$(read_valid "To" "$TIME_REGEXP")
+
+	echo "$DATE:$TIME_FROM:$TIME_TO:$EVENT" >> "$APPT_FILE"
+}
+
+# Show next appointment
+when_list() {
+	NEXT_APPT=$(sort <"$APPT_FILE" | grep '.' | head -1)
+
+	if [ -z "$NEXT_APPT" ]; then
+		echo "No appointments"
+	else
+		NEXT_APPT_DATE=$(echo "$NEXT_APPT" | cut -d':' -f1)
+		NEXT_APPT_FROM=$(echo "$NEXT_APPT" | cut -d':' -f2)
+		NEXT_APPT_TO=$(echo "$NEXT_APPT" | cut -d':' -f3)
+		NEXT_APPT_TEXT=$(echo "$NEXT_APPT" | cut -d':' -f4)
+
+		NEXT_APPT_MONTH=$(echo "$NEXT_APPT_DATE" | cut -c1-7)
+
+		command cal -H "$NEXT_APPT_DATE" -d "$NEXT_APPT_MONTH"
+		echo
+		echo "$NEXT_APPT_FROM"-"$NEXT_APPT_TO" "$NEXT_APPT_TEXT"
+		echo
+	fi
+}
+
+
+############################################################
+# who, a basic contact manager
+############################################################
+
+# lines can be folded if they begin with a single space
+# character
+
+who() {
+	# loop through all vcf files in /tmp/contacts
+
+	for FILE in "$CONTACT_DIR"/*.vcf; do
+		EMAIL=""
+		FN=""
+		TEL=""
+
+		while IFS='' read -r LINE; do
+			if [ -z "$FN" ] && echo "$LINE" | grep "^FN:" > /dev/null; then
+				FN=$(echo "$LINE" | cut -c 4-)
+			elif [ -z "$EMAIL" ] && echo "$LINE" | grep "^EMAIL;" > /dev/null; then
+				EMAIL=$(echo "$LINE" | grep -Eo ':.+' | cut -c 2-)
+			elif [ -z "$TEL" ] && echo "$LINE" | grep "^TEL;" > /dev/null; then
+				TEL=$(echo "$LINE" | grep -Eo ':.+' | cut -c 2-)
+			fi
+		done < "$FILE"
+
+		echo "$FN":"$EMAIL":"$TEL"
+	done
+}
+
+
+# Main command line interface for the above tools.
+
+PROD_ACTION="$1"
+shift
+
+[[ "$PROD_ACTION" != "todo" \
+	&& "$PROD_ACTION" != "pomo" \
+	&& "$PROD_ACTION" != "when" \
+	&& "$PROD_ACTION" != "who" \
+	&& "$PROD_ACTION" != "notes" ]] &&
+	usage && exit
+
+[ "$PROD_ACTION" = "notes" ] &&
+	notes "$@" && exit
+
+[ "$PROD_ACTION" = "pomo" ] &&
+	pomo "$@" && exit
+
+[ "$PROD_ACTION" = "todo" ] &&
+	todo "$@" && exit
+
+[ "$PROD_ACTION" = "when" ] &&
+	when "$@" && exit
+
+[ "$PROD_ACTION" = "who" ] &&
+	who "$@" && exit
+
+
+---
+[**2]
+A vCard, or Virtual Contact File (.vcf), is a standardized, text-based format for exchanging electronic
+business card information. It includes names, phone numbers, email addresses, and URLs, and is widely
+supported by Apple, Android, Outlook, and Google Contacts.
+
+Features:
+  - A vCard begins with BEGIN:VCARD and ends with END:VCARD.
+  - Key Characteristics of vCard FormatFile Extension: Usually .vcf.
+  - Structure: A text-based, structured format often with a VERSION (2.1, 3.0, or 4.0).
+  - Encoding: UTF-8 is the standard charset, typically required for proper character display.
+  - Lines: Each piece of information is on a new line (delimited by CRLF).
+
+Basic vCard:
+[Example (vCard 3.0)]
+
+BEGIN:VCARD
+VERSION:3.0
+FN:John Doe
+N:Doe;John;;;
+ORG:Company Name
+TITLE:Job Title
+TEL;TYPE=WORK,VOICE:(555) 123-4567
+EMAIL;TYPE=PREF,INTERNET:john.doe@example.com
+URL:www.example.com
+END:VCARD
+
+
+Common vCard Fields:
+  - BEGIN/END:VCARD: Initiates and terminates the record.
+  - VERSION: Specifies the vCard version (e.g., 2.1, 3.0, 4.0).
+  - FN: Formatted Name (full name).
+  - N: Name components (Family Name; Given Name; Additional Names; Prefix; Suffix).
+  - ORG: Organization or Company Name.
+  - TEL: Telephone number, often with TYPE parameters (e.g., WORK, CELL, FAX).
+  - EMAIL: Email address.
+  - URL: Website address.
+  - ADR: Postal address.
+
+How to Create or Use a vCard:
+  - Email Signature: A vCard can be attached to email signatures for easy adding of contacts.
+  - Creation: You can create a .vcf file using a text editor like Notepad (Windows) or TextEdit (Mac) by
+    saving the text above with a .vcf extension.
+  - Import/Export: Most email and contact programs allow you to import or export vCards directly.
+  - QR Code: vCards can be embedded into QR codes to be scanned.
+
+
+---
+
+

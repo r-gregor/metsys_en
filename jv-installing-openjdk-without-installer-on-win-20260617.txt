@@ -1,0 +1,51 @@
+filename: jv-installing-openjdk-without-installer-on-win-20260617.txt
+
+Installing OpenJDK without an installer is just a matter of downloading the compressed archive (ZIP),
+extracting it, and setting your environment variables. This process does not require administrator privileges
+to run.
+
+Step 1: Download the ZIP file
+    1. Go to a trusted OpenJDK distributor to get the .zip archive for Windows. Popular
+       options include:
+       - [https://jdk.java.net/]Oracle OpenJDK (look for the "Windows/x64 Compressed Archive" link)
+       - [https://adoptium.net/]Adoptium (Temurin) (select "Windows" and the .zip package)
+       - [https://www.azul.com/downloads/?package=jdk#zulu]Azul Zulu (select Windows, x64/ARM, and download
+         the .zip format)
+       - ADDITIONAL: https://learn.microsoft.com/en-us/java/openjdk/download: openjdk 25.0.3 LTS (20260617)
+    2. Save the ZIP file to your preferred directory (e.g., your Downloads folder).
+
+Step 2: Extract the Files
+    1. Right-click the downloaded ZIP file and select Extract All... (or use your preferred extraction tool
+    like 7-Zip).
+
+    2. Choose the destination folder where you want OpenJDK to permanently live.
+    - Tip: If you have admin rights, you can extract it to C:\Program Files\Java\.
+    - If you lack admin rights, extract it to a personal user folder, such as C:\Users\YourUsername\Java\ or
+      C:\tools\.
+
+Step 3: Set up Environment Variables
+To allow Windows to run Java commands from any folder in your Command Prompt, you need to configure your
+environment variables.
+    1. Click the Start menu, type Environment Variables, and press Enter.
+    2. Click the Environment Variables... button at the bottom right.
+    3. Under User variables (or System variables if you have admin rights), click New...:
+    - Variable name: JAVA_HOME
+    - Variable value: The exact file path to your extracted JDK folder (e.g.,
+      C:\Users\YourUsername\Java\jdk-21)
+    4. In the same window, look for the Path variable in the list, select it, and click Edit....
+    5. Click New, type %JAVA_HOME%\bin, and press Enter.
+    6. Click OK on all three open windows to save and close.
+
+Step 4: Verify the Installation
+    1. Open a new Command Prompt or PowerShell window.
+    2. Type the following commands to ensure everything works:
+        java -version
+        javac -version
+        Use code with caution.
+    3. You should see the Java version printed back to you.
+
+
+---
+
+
+

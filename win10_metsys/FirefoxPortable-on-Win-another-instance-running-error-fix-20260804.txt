@@ -1,0 +1,12 @@
+FirefoxPortable on Win another instance running error fix:
+
+1 - create file FirefoxPortable.ini in the sme directory as *.exe
+    (eg. /c/Users/gregor.redelonghi/majstaf_en/majprogs_en/FireFox_63.0.1/)
+2 - paste in: AllowMultipleInstances=true
+3 - save and exit.
+
+It is supposedly the same as running the executable with flag: '../FirefoxPortable.exe -no-remote'
+
+
+---
+

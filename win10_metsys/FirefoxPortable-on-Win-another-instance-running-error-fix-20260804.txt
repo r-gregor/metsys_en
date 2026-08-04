@@ -6,6 +6,8 @@ FirefoxPortable on Win another instance running error fix:
 3 - change AllowMultipleInstances=true (from false)
 3 - save and exit.
 
+NOTE: everything explained in: ../FireFox_63.0.1/Other/Source/Readme.txt
+
 
 ---
 contents of a file 'FirefoxPortable.ini':

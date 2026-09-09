@@ -1,0 +1,14 @@
+%s/Space/space/g
+%s/<cr>/<CR>/g
+%s/<esc>/<ESC>/g
+%s/<bar>/<BAR>/g
+%s/<tab>/<TAB>/g
+%s/<space>/<SPACE>/g
+%s/<leader>/<LEADER>/g
+%s/<silent>/<SILENT>/g
+%s/<C-t>/>C-T>/g
+%s/<C-t>/<C-T>/g
+%s/<C-f>/<C-F>/g
+%s/<C-x>/<C-X>/g
+%s/<C-o>/<C-O>/g
+%s/<C-r>/<C-R>/g

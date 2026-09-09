@@ -1,0 +1,4 @@
+cat dot-vimrc-en-mapped-commands-20260908.txt | sed 's/.*remap *//' | sed 's/ \+.*//' >> en_mappings
+cat dot-vimrc-mdb-mapped-commands-20260908.txt | sed 's/.*remap *//' | sed 's/ \+.*//' >> mdb_mappings
+---
+

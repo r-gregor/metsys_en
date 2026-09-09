@@ -1,8 +1,9 @@
 #! /usr/bin/env bash
-# fname: check-if-ptrn-from-fjl1-in-fjl2.sh
+# fname: check-if-ptrn-from-fjl1-in-fjl2-v3.sh
 # 20260908 v1
 # 20260908 v2 put compare logic into compare_patterns() and compare_patterns_reverse() functions
 #             and do the comparison in both ways: FJL1 to FJL and FJL2 to FJL1
+# 20260909 v3 updated compare_patterns_reverse() function
 # last 20260908
 # ---
 
@@ -31,23 +32,11 @@ compare_patterns() {
 }
 
 compare_patterns_reverse() {
-	while read PTRN1; do
-		while read PTRN2; do
-			found=0
-			# if [[ $PTRN1 =~ $PTRN2 ]]; then
-			if [[ "${PTRN1}" == "${PTRN2}" ]]; then
-				found=1
-				break
-			else
-				continue
-			fi
-		done < "${FJL1}"
-		if [ $found -eq 0 ]; then
-			# echo "$PTRN1 NOT found!"
-			(( mismaches_found++ ))
-			printf "[INFO] %s from '%s' NOT found in '%s'\n" "${PTRN1}" "${FJL2}" "${FJL1}"
-		fi
-	done < "${FJL2}"
+	FJLTMP="${FJL1}"
+	FJL1="${FJL2}"
+	FJL2="${FJLTMP}"
+	unset FJLTMP
+	compare_patterns
 }
 
 # MAIN

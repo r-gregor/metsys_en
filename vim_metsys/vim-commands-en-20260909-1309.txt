@@ -1,0 +1,14 @@
+%s/<C-f>/<C-F>/g
+%s/<C-x>/<C-X>/g
+%s/<C-o>/<C-O>/g
+%s/<C-r>/<C-R>/g
+%s/<cr>/<CR>/g
+%s/\(\w\))\(\w\)/\1´\2/g
+%s/<C-u>/<C-U>/g
+%s/<bar>/<BAR>/g
+'<,'>! tr '[:upper:]' '[:lower:]'
+%s/<C-u>/C-U>/g
+help :history
+command! GR :norm igregor redelonghi<cr><esc>
+command! Rp :norm :%s/nali/mali2/|:norm ggVG~<cr>
+

@@ -1,0 +1,7 @@
+cd majstaf/sorsi/
+git clone https://github.com/yorukot/superfile.git --depth=1
+cd superfile/
+go build -o bin/spf.exe
+bin/spf
+---
+

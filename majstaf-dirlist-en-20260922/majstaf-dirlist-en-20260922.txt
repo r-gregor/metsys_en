@@ -1,0 +1,180 @@
+filename: majstaf-dirlist-en-20260922.txt
+---
+inside vim commands:
+r !tree -d ~/majstaf
+r !find ~/majstaf/ -type d -maxdepth 3
+r !tree -L 2 -d ~/majstaf
+r !tree -L 3 -d ~/majstaf
+r !find ~/majstaf/* -type d -maxdepth 2
+r !find ~/majstaf/* -type d -maxdepth 1
+r !find ~/majstaf/* -maxdepth 2 -type d
+r !find ~/majstaf/* -maxdepth 1 -type d
+r !find ~/majstaf/* -maxdepth 0 -type d
+
+
+---
+/home/gregor.redelonghi/majstaf/_NERAZPOREJENO
+/home/gregor.redelonghi/majstaf/coding2
+/home/gregor.redelonghi/majstaf/coding2/testing
+/home/gregor.redelonghi/majstaf/coding2/testing/c_testing
+/home/gregor.redelonghi/majstaf/coding2/testing/go_testing
+/home/gregor.redelonghi/majstaf/coding2/testing/java_testing
+/home/gregor.redelonghi/majstaf/coding2/testing/ncurses_testing
+/home/gregor.redelonghi/majstaf/coding2/testing/python_testing
+/home/gregor.redelonghi/majstaf/coding2/testing/rust_testing
+/home/gregor.redelonghi/majstaf/coding2/testing/zig_testing
+/home/gregor.redelonghi/majstaf/dev
+/home/gregor.redelonghi/majstaf/engit
+/home/gregor.redelonghi/majstaf/engit/dotfiles_en
+/home/gregor.redelonghi/majstaf/engit/knowledgedb
+/home/gregor.redelonghi/majstaf/engit/majbin_en
+/home/gregor.redelonghi/majstaf/engit/majrcs_en
+/home/gregor.redelonghi/majstaf/engit/metsys_en
+/home/gregor.redelonghi/majstaf/engit/prenos
+/home/gregor.redelonghi/majstaf/engit/seznami_en
+/home/gregor.redelonghi/majstaf/engit/vlpprs_en
+/home/gregor.redelonghi/majstaf/majbin
+/home/gregor.redelonghi/majstaf/majbookmarks
+/home/gregor.redelonghi/majstaf/majbooks
+/home/gregor.redelonghi/majstaf/majdata
+/home/gregor.redelonghi/majstaf/majdocumentation
+/home/gregor.redelonghi/majstaf/majmuska
+/home/gregor.redelonghi/majstaf/majprogs
+/home/gregor.redelonghi/majstaf/majrcs
+/home/gregor.redelonghi/majstaf/majscripts
+/home/gregor.redelonghi/majstaf/majsupport
+/home/gregor.redelonghi/majstaf/majtesting
+/home/gregor.redelonghi/majstaf/majtoolbox
+/home/gregor.redelonghi/majstaf/majtoolbox/bash_toolbox
+/home/gregor.redelonghi/majstaf/majtoolbox/c_toolbox
+/home/gregor.redelonghi/majstaf/majtoolbox/cpp_toolbox
+/home/gregor.redelonghi/majstaf/majtoolbox/go_toolbox
+/home/gregor.redelonghi/majstaf/majtoolbox/java_toolbox
+/home/gregor.redelonghi/majstaf/majtoolbox/ncurses_toolbox
+/home/gregor.redelonghi/majstaf/majtoolbox/python_toolbox
+/home/gregor.redelonghi/majstaf/majtoolbox/rust_toolbox
+/home/gregor.redelonghi/majstaf/majtoolbox/zig_toolbox
+/home/gregor.redelonghi/majstaf/majvideos
+/home/gregor.redelonghi/majstaf/metsys
+/home/gregor.redelonghi/majstaf/seznami
+/home/gregor.redelonghi/majstaf/sorsi
+
+
+---
+/home/gregor.redelonghi/majstaf/_NERAZPOREJENO
+    `-- __DANES__
+/home/gregor.redelonghi/majstaf/coding2
+    `-- testing
+        |-- c_testing
+        |-- go_testing
+        |-- java_testing
+        |-- ncurses_testing
+        |-- python_testing
+        |-- rust_testing
+        `-- zig_testing
+/home/gregor.redelonghi/majstaf/dev
+/home/gregor.redelonghi/majstaf/engit
+    |-- dotfiles_en
+    |-- knowledgedb
+    |   |-- _APPS
+    |   |-- _AWK_SED_GREP_XARGS_CUT_TR
+    |   |-- _BASH
+    |   |-- _C_and_Cpp
+    |   |-- _CODING
+    |   |-- _CS_and_other_PL
+    |   |-- _Cygwin
+    |   |-- _DEBIAN
+    |   |-- _DOCKER
+    |   |-- _FZF
+    |   |-- _GIT
+    |   |-- _GO
+    |   |-- _HTML_CSS_JS
+    |   |-- _JAVA
+    |   |-- _LINUX_SYSTEM
+    |   |-- _PDF
+    |   |-- _PYTHON
+    |   |-- _QEMU_KVM
+    |   |-- _RCLONE
+    |   |-- _RPi
+    |   |-- _RSYNC
+    |   |-- _RUST
+    |   |-- _TERM_CLI
+    |   |-- _TMUX_and_SCREEN
+    |   |-- _TWMs
+    |   |-- _TXT
+    |   |-- _VIM
+    |   |-- _WINDOWS
+    |   `-- _ZIG
+    |-- majbin_en
+    |-- majrcs_en
+    |-- metsys_en
+    |-- prenos
+    |   |-- _CHECK-OUT
+    |   |-- seznami_potovalni
+    |   |-- update_en
+    |   |-- update_jbe
+    |   `-- update_mdb
+    |-- seznami_en
+    |   |-- bookmarks-en
+    |   |-- onetab-en-files
+    |   `-- seznami_potovalni
+    `-- vlpprs_en
+/home/gregor.redelonghi/majstaf/majbin
+/home/gregor.redelonghi/majstaf/majbookmarks
+/home/gregor.redelonghi/majstaf/majbooks
+    |-- c_books
+    `-- cli_text_processing_coreutils
+/home/gregor.redelonghi/majstaf/majdata
+/home/gregor.redelonghi/majstaf/majdocumentation
+    |-- c_docs
+    |-- cpp_docs
+    |-- go_docs
+    |-- java_docs
+    |-- ncurses_docs
+    |-- python_docs
+    `-- rust_docs
+/home/gregor.redelonghi/majstaf/majmuska
+/home/gregor.redelonghi/majstaf/majprogs
+/home/gregor.redelonghi/majstaf/majrcs
+/home/gregor.redelonghi/majstaf/majscripts
+/home/gregor.redelonghi/majstaf/majsupport
+/home/gregor.redelonghi/majstaf/majtesting
+/home/gregor.redelonghi/majstaf/majtoolbox
+    |-- bash_toolbox
+    |-- c_toolbox
+    |-- cpp_toolbox
+    |-- go_toolbox
+    |-- java_toolbox
+    |-- ncurses_toolbox
+    |-- python_toolbox
+    |-- rust_toolbox
+    `-- zig_toolbox
+/home/gregor.redelonghi/majstaf/majvideos
+/home/gregor.redelonghi/majstaf/metsys
+    |-- bash_colors_and_formatting
+    |-- Brother_DCP-L3520CDW
+    |-- cheatsheets_en
+    |-- coding-scripts-20250903
+    |-- cygwin_metsys
+    |-- debian_setup
+    |-- ext_backups_metsys_en
+    |-- figlet_fonts
+    |-- get-playlist-titles
+    |-- i3_setup
+    |-- mc_cheat-sheet-s
+    |-- mintty-color-schemes
+    |-- mintyfresh_LMDE6-install-script_20241120
+    |-- pdfjoin-commands
+    |-- rclone-en
+    |-- tmx_cheat-sheat-s
+    |-- urxvt-setup-20251112
+    |-- vim_metsys
+    `-- win10_metsys
+/home/gregor.redelonghi/majstaf/seznami
+    |-- onetab-en-files
+    `-- seznami_potovalni
+/home/gregor.redelonghi/majstaf/sorsi
+
+
+---
+

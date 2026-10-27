@@ -1,0 +1,7 @@
+1 - download screenFetch-master.zip from https://github.com/KittyKatt/screenFetch
+        installation: https://github.com/KittyKatt/screenFetch/wiki/Installation
+2 - unzip into /home/gregor.redelonghi/sorsi/screenFetch-master/
+3 - chmod 755 /home/gregor.redelonghi/sorsi/screenFetch-master/screenfetch-dev
+4 - mv /home/gregor.redelonghi/sorsi/screenFetch-master/screenfetch-dev /home/gregor.redelonghi/majprogs/
+5 - ln /home/gregor.redelonghi/majprogs/screenfetch-dev /usr/local/bin/
+6 - done

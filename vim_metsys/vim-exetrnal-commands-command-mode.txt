@@ -1,0 +1,17 @@
+---
+20240320
+r ! date +\%Y\%m\%d
+r ! echo \$(date +\%Y\%m\%d_\%H\%m)_en
+r ! date +\%Y\%m\%d_\%H\%m)
+r ! date +\%Y\%m\%d_\%H\%m
+r ! date +\%Y\%m\%d_\%H\%m echo "_en"
+r ! date +\%Y\%m\%d_\%H\%m && echo "_en"
+r ! echo "date +\%Y\%m\%d_\%H\%M"
+r ! echo `date +\%Y\%m\%d_\%H\%M`
+r ! echo -n `date +\%Y\%m\%d_\%H\%M` && echo _en
+r ! echo -n $(date +\%Y\%m\%d_\%H\%M) && echo -e "_en\n"
+r ! echo -n `date +\%Y\%m\%d_\%H\%M` && echo -e "_en\n"
+r ! echo -n `date +\%Y\%m\%d_\%H\%M` && echo "_en"
+---
+
+

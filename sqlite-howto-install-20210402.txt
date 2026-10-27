@@ -1,0 +1,84 @@
+filename: sqlite_howto-install_20210402.txt
+https://www.tecmint.com/install-sqlite-in-ubuntu/
+
+How to Install SQLite and SQLite Browser in Ubuntu
+March 30, 2021
+
+   SQLite is a lightweight, small and self-contained RDBMS in a C library. Popular databases like
+   MySql, PostgreSQL, etc. works in the client-server model and they have a dedicated process running
+   and controlling all the aspects of database operation.
+
+   But SQLite has no process running and has no client-server model. SQLite DB is simply an file with
+   .sqlite3/.sqlite/.db extension. Every programming language has a library to support SQLite.
+
+   You can find SQLite being used in
+     * Web browsers (Chrome, Safari, Firefox).
+     * MP3 players, set-top boxes, and electronic gadgets.
+     * Internet of Things (IoT).
+     * Android, Mac, Windows, iOS, and iPhone devices.
+
+   There are lot more areas where SQLite is used. Every smartphone in the world has hundreds of SQLite
+   database files and there are over one trillion databases in active use. That's quite huge in numbers.
+
+Install SQLite in Ubuntu
+   Setting up SQLite is simple compared to other popular databases like MySql, Postgresql, etc. First,
+   update apt-cache by running the following command.
+$> sudo apt update
+
+   Now check if there are any SQLite packages available in the apt repository by running the following
+   command.
+$> sudo apt-cache search sqlite
+
+   To install the package run the following command.
+$> sudo apt install sqlite3
+
+   You can validate the installation by starting the sqlite session by running the following command.
+$> sqlite3
+
+Create SQLite Database and Table
+   The database is simply stored as a file in your local file system. You can create a database when
+   launching the sqlite session by mentioning the database name as an argument. If the database is
+   available it will open the database if not it creates a new database.
+
+   If we are not passing the database name as an argument then a temporary in-memory database is created
+   which will be deleted once the session is terminated. Here I don't have any database so I will create
+   a new DB by mentioning the DB name as an argument. Once you are connected to the session you can run
+   the .databases command to see which file is attached to the database.
+$> sqlite3 /home/tecmint/test     # creating test db in /home/tecmint
+sqlite> .databases            # To see which database session is connected
+
+   Now let's create a sample table by executing the following queries.
+# create table
+
+sqlite> CREATE TABLE employee(
+             Name String,
+             age Int);
+
+# Insert records
+
+sqlite> insert into employee(Name, age)
+            VALUES ('Tom',25),
+            ('Mark',40),
+            ('Steve',35);
+
+   You can run the .tables command to list tables in the database.
+sqlite> .tables                       # List tables in database
+sqlite> .headers on                   # Turn on column for printing
+sqlite> SELECT * FROM employee;       # Selecting record from table
+
+Installing SQLite Browser in Ubuntu
+   Now that we have seen how to install and setup sqlite3 we will also install sqlite browser, a simple
+   GUI tool to manage your sqlite databases.
+$> sudo apt install sqlitebrowser -y
+
+   You can launch the application from the start menu or from the terminal. To start from the terminal
+   run the following command.
+$> sqlitebrowser &
+
+Uninstall SQLite and SQLite Browser
+   Run the following command to remove both SQLite and SQLite browser.
+$> sudo apt --purge remove sqlite3 sqlitebrowser
+
+
+---
+

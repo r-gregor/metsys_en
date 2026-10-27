@@ -1,0 +1,50 @@
+# piping_find_without_IFS_changing_20242426.txt
+
+# method - 1
+$> for FFF in $(find ./Seivom/ -type d -name "*"); do echo $(basename $FFF); done
+Seivom
+Movie
+04
+(2000)
+Movie
+32
+(2020)
+Movie
+34
+(2003)
+Movie
+63
+(2020)
+Movie
+73
+(2003)
+Movie
+82
+(2014)
+Movie
+85
+(2014)
+---
+# method - 2
+$> find Seivom/ -type d -name "*" | xargs -I{} echo $(basename {})
+Seivom/
+Seivom/Movie 04 (2000)
+Seivom/Movie 32 (2020)
+Seivom/Movie 34 (2003)
+Seivom/Movie 63 (2020)
+Seivom/Movie 73 (2003)
+Seivom/Movie 82 (2014)
+Seivom/Movie 85 (2014)
+---
+# method - 3
+$> find Seivom/ -type d -name "*" | while read FJL; do echo $(basename "$FJL"); done
+Seivom
+Movie 04 (2000)
+Movie 32 (2020)
+Movie 34 (2003)
+Movie 63 (2020)
+Movie 73 (2003)
+Movie 82 (2014)
+Movie 85 (2014)
+---
+

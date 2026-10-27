@@ -1,0 +1,41 @@
+Cmder-setup_20200514.txt
+
+Download [Full] cmder.zip from: https://cmder.net/
+
+A - initial setup
+-----------------
+1 - extract cmder.zip to: C:\Users\gregor.redelonghi\myprogs\cmder
+2 - add C:\Users\gregor.redelonghi\myprogs\cmder\Cmder.exe to %USER% PATH variable (okoljske spremenljivke za uporabnika)
+3 - re-login
+4 - make new shortcut:
+    Ime:            Cmder
+    Vrsta cilja:    Program
+    Cilj:           [C:\Users\gregor.redelonghi\myprogs\cmder\Cmder.exe]
+    Izhodišče:      [C:\Users\gregor.redelonghi\myprogs\cmder]
+
+
+
+B - Cmder settings
+------------------
+1 - WIN+Alt+T --> Settings[xml] display window
+2 - "+" --> to add task
+3 - Name: [ Cygwin ]
+    [ X ] Default task for new Console
+    Start command (big text area):
+    [ cmd /c "C:\Users\gregor.redelonghi\myprogs\cygwin64\bin\bash --login -i" -new_console ]
+
+4 - move Cygwin task [Up] button to top (num 1)
+5 - Save settings
+6 - [ export ] settings to: "C:\Users\gregor.redelonghi\myprogs\cygwin64\home\gregor.redelonghi\metsys_en\Cmder_ConEmu_settings_20200514.xml
+
+
+C - update zze.sh:
+1 - Add to zze.sh:
+    cr/CR -->
+        
+D - create function to start from console:
+    add func to /home/forallusers/startfuncs:
+        function cr() {
+        # --> cr	start Cmder.exe
+            cygstart /c/users/gregor.redelonghi/majstaf/myprogs/cmder/Cmder.exe
+        }

@@ -1,0 +1,105 @@
+#! /bin/bash
+
+# 00-backups-wrapper
+# 20250430
+# *********************************************************************************************************
+
+# --- LOCAL VARS ---
+gr_CURDRV=$(cd $(dirname ${BASH_SOURCE[0]}) && cd ../ && pwd)
+
+gr_run_c=${gr_CURDRV}/en_METSYS/cqrsync-backups.sh
+gr_run_d=${gr_CURDRV}/en_METSYS/dqrsync-backups.sh
+gr_run_a=${gr_CURDRV}/en_METSYS/qrsync-backups.sh
+gr_run_h=${gr_CURDRV}/en_METSYS/hqrsync-backups.sh
+gr_run_p=${gr_CURDRV}/en_METSYS/pqrsync-backups.sh
+tcount="${gr_CURDRV}/en_METSYS/tcount"
+echo "0" > ${tcount}
+
+# --- FUNCTIONS ---
+function tms() {
+	echo -n "[ $(date +%Y%m%d_%H%M%S) ] "
+}
+
+crtn=3
+function crtc() {
+	for ((i=1; i<=$1; i++)); do
+		echo -n "-"
+	done
+	echo
+}
+
+function crtc2() {
+	for ((i=1; i<=$1; i++)); do
+		echo -n "="
+	done
+	echo
+}
+
+function tms() {
+	echo -n "[ $(date +%Y%m%d_%H%M%S) ] "
+}
+
+# --- MAIN ---
+read -r -d '' gr_msg <<EOF
+
+	Usage: $0 -option[s]:
+		options:
+		-a	run all backups
+		-c	run backups on C:\ (/c/..) - user, home, cygwin, ...
+		-d	run backups on drpbx-en/{ODPRTO, SKUPNI}
+		-h	run backups on H:\ (/h/..)
+		-p	run backups on /c/Users/gregor.redelonghi/majstaf/majprogs
+EOF
+
+(tms; echo "*** Starting NEW backup session ***")
+
+if [ $# -eq 0 ]; then
+	echo "$gr_msg"
+	exit 1
+fi
+
+while getopts ":cdahp" gr_OPT; do
+	case $gr_OPT in
+		a)
+			# Option -a: run all backups
+			(tms; echo "Starting $gr_run_a ...")
+			$gr_run_a
+			break
+			;;
+		c)
+			# option -c: run cqrsync-backups.sh
+			(tms; echo "Starting $gr_run_c ...")
+			$gr_run_c
+			;;
+		d)
+			# option -d: run dqrsync-backups.sh
+			(tms; echo "Starting $gr_run_d ...")
+			$gr_run_d
+			;;
+		h)
+			# option -h: run hqrsync-backups.sh
+			(tms; echo "Starting $gr_run_h ...")
+			$gr_run_h
+			;;
+		p)
+			# option -p: run pqrsync-backups.sh
+			(tms; echo "Starting $gr_run_p ...")
+			$gr_run_p
+			;;
+		\?)
+			echo "Invalid option: -$OPTARG" >&2
+			exit 1
+			;;
+		\?)
+			echo "Option -$OPTARG requires an argument." >&2
+			exit 1
+			;;
+	esac
+done
+
+
+(tms; echo "Total time: $(cat ${tcount}) seconds")
+echo "0" > ${tcount}
+crtc $crtn
+
+

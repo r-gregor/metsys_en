@@ -1,0 +1,52 @@
+A - update ~/.ssh/config file to be used with ssh passwordless auth:
+$> cat ~/.ssh/config
+Host github.com
+	User git
+	Hostname ssh.github.com
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/en-github_rsa
+	Port 443
+    ProxyCommand nc -X connect -x 10.91.8.21:80 %h %p
+    ServerAliveInterval 20
+
+Host gitlab.com
+	User git
+	Hostname altssh.gitlab.com
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/en-gitlab_rsa
+	Port 443
+    ProxyCommand nc -X connect -x 10.91.8.21:80 %h %p
+    ServerAliveInterval 20
+#--------------------------------------------------------------------------
+B - test the connection:
+$> ssh -vT git@github.com
+$> ssh -vT git@gitlab.com
+
+#--------------------------------------------------------------------------
+C - get ssh-accessed remotes:
+$> ndot remote -v
+en-github-metsys        git@github.com:r-gregor/en_metsys.git (fetch)
+en-github-metsys        git@github.com:r-gregor/en_metsys.git (push)
+en-gitlab-metsys        git@gitlab.com:r-gregor/en_metsys.git (fetch)
+en-gitlab-metsys        git@gitlab.com:r-gregor/en_metsys.git (push)
+origin  https://github.com/r-gregor/en_metsys (fetch)
+origin  https://github.com/r-gregor/en_metsys (push)
+origin3 https://gitlab.com/r-gregor/en_metsys.git (fetch)
+origin3 https://gitlab.com/r-gregor/en_metsys.git (push)
+
+#--------------------------------------------------------------------------
+D - ndot (git) commands to update .vimrc:
+$> vim ~/.vimrc
+$> cp -i ~/.vimrc en_metsys_git/en_metsys_source/en_dotfiles/
+$> ndot add en_dotfiles/.vimrc
+$> ndot commit -m "Update .vimrc --> try 20211103 1240"
+$> ndot push en-github-metsys master
+$> ndot push en-gitlab-metsys master
+$> ndot pull en-gitlab-metsys master
+$> ndot push en-gitlab-metsys master
+
+# ndot command is aliased:
+# 	alias ndot='/usr/bin/git \
+# 	--git-dir=/home/gregor.redelonghi/en_metsys_git/en_metsys \
+# 	--work-tree=/home/gregor.redelonghi/en_metsys_git/en_metsys_source'
+

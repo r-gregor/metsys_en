@@ -1,0 +1,2 @@
+gregor.redelonghi@cygwin-en /c/Users/gregor.redelonghi/2021
+$> find * -maxdepth 0 -type d | sed 's/2021/2022/' | xargs -I{} mkdir -v ../2022/{}

@@ -1,0 +1,5 @@
+fzf multiple selections: fzf -m, fzf --multi
+
+$> ls | fzf -m | xargs ls -l
+	select/de-select with [TAB]/[Shift+TAB]
+

@@ -1,0 +1,38 @@
+filename: vim-inserting-date-and-time-using-insert-mode-mapping-20260807.txt
+https://jasonmurray.org/posts/2020/dtsvim/
+
+Inserting date and time in vim using insert-mode mapping
+Jul 3, 2020
+
+   Using a text file and vim, I keep a log file of daily events happening in my life and at work. Before
+   every new event, I insert the current date and time. By using insert-mode key mappings, the date and
+   time is automatically generated and inserted.
+
+   Add the following line to the ~/.vimrc file:
+inoremap idt <C-R>=strftime("%c")<CR>
+
+   Open vim enter insert mode, and type: idt
+Wed Jul  1 22:09:31 2020 - The date and time was inserted by pressing idt while in insert mode
+~
+...
+~
+~
+-- INSERT --
+
+---
+To insert from command mode type:
+
+:put =strftime('%y%m%d')
+
+and it will print it in (but also a newline!)
+
+---
+entry in ~/.vimrc:
+ab sbng #! /usr/bin/env bash<cr># fname: <c-r>%<cr># <c-r>=strftime('%Y%m%d')<cr> v1<cr># ---<cr>
+"                                                    <--        NOVO          -->
+...
+inoremap ,dts <c-r>=strftime('%Y%m%d')<cr>
+
+
+---
+

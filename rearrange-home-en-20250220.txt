@@ -1,0 +1,32 @@
+# filename: rearrange-home-en_20250220.txt
+
+1 - remove softlinked DIR-s and replace them with exported VAR-s:
+
+	[ ~/majstaf_en/majrcs_en/bashrc_gredelonghi_en ]
+	# 20250220
+	export E_MAJSTAF="/home/gregor.redelonghi/majstaf_en"
+	export C_UGR="/c/Users/gregor.redelonghi"
+	export GRDLNGH=${C_UGR}
+	export E_GT="${E_MAJSTAF}/engit"
+	export C_UGRMS="${C_UGR}/majstaf_en"
+	export DOWNLOADS="$C_UGR/Downloads"
+	export BRISI="${C_UGRMS}/BRISI"
+	export E_SCR="${C_UGRMS}/scripts_majbin_en"
+	export E_SPPRT="${C_UGRMS}/support"
+	export DANES="${E_MAJSTAF}/_NERAZPOREJENO/__DANES__"
+	export E_CTEST="${E_MAJSTAF}/coding2/testing/c_testing"
+	export E_MJBIN="${E_MAJSTAF}/majbin_en"
+	export E_MJRCS="${E_MAJSTAF}/majrcs_en"
+	export E_MTSYS="${E_MAJSTAF}/metsys_en"
+	export KNOWLEDGEBASE="${E_GT}/knowledgedb"
+	export G_ARHIVA="/g/PI/OPROJ/ARHIVA_PROJEKTI"
+
+2 - ls -l ~:
+
+	total 12
+	lrwxrwxrwx  1 gregor.redelonghi Domain Users 26 Nov 30  2023 _GREGOR.REDELONGHI -> /c/Users/gregor.redelonghi
+	drwxrwxr-x+ 1 gregor.redelonghi Domain Users  0 Jan 15 14:18 0a_povezave
+	drwxrwxr-x+ 1 gregor.redelonghi Domain Users  0 Feb 20 09:02 majstaf_en
+
+---
+

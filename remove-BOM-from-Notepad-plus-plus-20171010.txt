@@ -1,0 +1,36 @@
+What is a byte-order mark (BOM)?
+
+At the beginning of a page that uses a Unicode character encoding you may find some bytes that represent the
+Unicode code point U+FEFF BYTE ORDER MARK (abbreviated as BOM).
+
+The name BYTE ORDER MARK is an alias for the original character name ZERO WIDTH NO-BREAK SPACE (ZWNBSP).
+With the introduction of U+2060 WORD JOINER, there's no longer a need to ever use U+FEFF for its ZWNSP effect,
+so from that point on, and with the availability of a formal alias, the name ZERO WIDTH NO-BREAK SPACE is no
+longer helpful, and we will use the alias here.
+The BOM, when correctly used, is invisible.
+
+Before UTF-8 was introduced in early 1993, the expected way for transferring Unicode text was using 16-bit code
+units using an encoding called UCS-2 which was later extended to UTF-16. 16-bit code units can be expressed as
+bytes in two ways: the most significant byte first (big-endian) or the least significant byte first
+(little-endian). To communicate which byte order was in use, U+FEFF (the byte-order mark) was used at the start
+of the stream as a magic number that is not logically part of the text the stream represents.
+
+The picture below shows the bytes used in a sequence of two-byte characters. Each 2-digit hexadecimal number
+represents a byte in the stream of text. You can see that the order of the two bytes that represent a single
+character is reversed for big endian vs. little endian storage. The byte-order mark indicates which order is
+used, so that applications can immediately decode the content.
+
+--------------------------------------------------------------------------------------------------------------
+Remove BOM with Notepad++
+
+To remove the BOM (byte order mark) from a file, most often an xml, in Notepad++ just go to:
+Encoding > Encode in UTF-8
+and then save the file.
+
+
+Remove BOM with Notepad++ V7
+
+Old Notepad++ versions (6.9.2 and below)
+The interface looks slightly different and you have a modified workflow:
+Encoding > Encode in UTF-8 without BOM
+and then save the file.

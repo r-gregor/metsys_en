@@ -1,0 +1,26 @@
+In vscode to get to Theme setup settings: <ctrl> + , <ctrl> + T
+
+Get Theme plugins:
+One Dark Pro
+Atom One Dark Theme
+Sublime Mterial Theme
+Rainglow (5+)
+One Dark Theme
+Atom One Dark Syntax Theme
+Super One Dark Theme (5+)
+
+Preffered Themes:
+Dark ++
+Dark +
+One Dark Pro
+Super One Dark
+Rainbow Contrast (rainglow)
+Tonic Contrast (rainglow)
+Tweed Contrast (rainglow)
+Jewel Contrast (rainglow) (5+)
+...
+Tickle Contrast (rainglow)
+Tetra Contrast (rainglow)
+Jewel Contrast (rainglow)
+Grunge Contrast (rainglow)
+...

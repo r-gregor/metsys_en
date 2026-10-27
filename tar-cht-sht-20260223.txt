@@ -1,0 +1,139 @@
+filename: tar-cht-sht-20260223.txt
+https://linuxize.com/cheatsheet/tar/
+
+Quick reference for creating, listing, extracting, and compressing tar archives in Linux
+Feb 13, 2026
+
+Tar bundles files and directories into archive files, and it is commonly used with gzip, bzip2, or xz
+compression. This cheatsheet covers practical tar command patterns for backup, restore, and archive
+inspection.
+
+-------------------------------------------------------------------------------------------------------------
+Basic Syntax
+Core tar command forms.
+-------------------------------------------------------------------------------------------------------------
+tar -cf archive.tar files/              Create archive
+tar -xf archive.tar                     Extract archive
+tar -tf archive.tar                     List archive contents
+tar -rf archive.tar file.txt            Append file to archive (uncompressed only)
+tar --delete -f archive.tar file.txt    Remove file from archive (uncompressed only)
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Create Archives
+Common archive creation patterns.
+-------------------------------------------------------------------------------------------------------------
+tar -cf backup.tar /etc /var/www                Archive multiple paths
+tar -cf project.tar project/                    Archive a directory
+tar -cvf project.tar project/                   Verbose create
+tar -cf archive.tar --files-from=filelist.txt   Create from file list
+tar -cf archive.tar --exclude="*.log" app/      Exclude pattern while creating
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Extract Archives
+Extract all files or selected paths.
+-------------------------------------------------------------------------------------------------------------
+tar -xf archive.tar                         Extract in current directory
+tar -xvf archive.tar                        Verbose extraction
+tar -xf archive.tar -C /tmp/restore         Extract to target directory
+tar -xf archive.tar path/in/archive.txt     Extract one file
+tar -xf archive.tar "dir/*"                 Extract matching path pattern
+tar -xf archive.tar --strip-components=1    Strip leading directory from paths
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+List and Inspect
+Check what is inside an archive.
+-------------------------------------------------------------------------------------------------------------
+tar -tf archive.tar                 List files
+tar -tvf archive.tar                Detailed list with metadata
+tar -tf archive.tar | head          Preview first entries
+tar -tf archive.tar | grep nginx    Find matching archive paths
+tar --compare -f archive.tar        Compare archive with filesystem
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Compression Formats
+Use gzip, bzip2, and xz with tar.
+-------------------------------------------------------------------------------------------------------------
+tar -czf backup.tar.gz /data      Create .tar.gz
+tar -xzf backup.tar.gz            Extract .tar.gz
+tar -cjf backup.tar.bz2 /data     Create .tar.bz2
+tar -xjf backup.tar.bz2           Extract .tar.bz2
+tar -cJf backup.tar.xz /data      Create .tar.xz
+tar -xJf backup.tar.xz            Extract .tar.xz
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Preserve Metadata
+Keep permissions, ownership, and timestamps.
+-------------------------------------------------------------------------------------------------------------
+tar -cpf system.tar /etc /var                       Archive system paths preserving permissions
+tar -xpf rootfs.tar                                 Extract and preserve permissions
+tar --numeric-owner -cpf backup.tar /srv            Store numeric UID/GID
+tar --same-owner -xpf backup.tar                    Keep original ownership on extract
+tar --atime-preserve=system -cf backup.tar /data    Preserve file access times
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Incremental Backups
+Create snapshot-based incremental archives.
+-------------------------------------------------------------------------------------------------------------
+tar --listed-incremental=snapshot.snar -cf full.tar /home    Create initial full backup
+tar --listed-incremental=snapshot.snar -cf inc-1.tar /home   Create next incremental backup
+tar -tf inc-1.tar                                            List incremental archive entries
+tar -xf full.tar -C /restore                                 Restore full backup
+tar -xf inc-1.tar -C /restore                                Apply incremental backup
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Exclude Patterns
+Skip files and directories during archive creation.
+-------------------------------------------------------------------------------------------------------------
+tar -cf app.tar app/ --exclude="*.tmp"             Exclude by extension
+tar -cf app.tar app/ --exclude="cache/*"           Exclude path pattern
+tar -cf app.tar app/ --exclude-vcs                 Exclude VCS dirs (.git, etc.)
+tar -cf app.tar app/ --exclude-from=exclude.txt    Exclude using a patterns file
+tar -czf logs.tar.gz /var/log --exclude="*.gz"     Archive logs without already-compressed files
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Safety and Verification
+Run safer extraction and validation commands.
+-------------------------------------------------------------------------------------------------------------
+tar -tvf archive.tar                               Inspect archive before extracting
+tar -xf archive.tar --keep-old-files               Do not overwrite existing files
+tar -xf archive.tar --skip-old-files               Skip files that already exist
+tar -xf archive.tar --warning=no-unknown-keyword   Suppress noisy keyword warnings
+tar -tzf backup.tar.gz > /dev/null                 Quick integrity check for .tar.gz
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Remote Transfer
+Pipe tar over SSH for direct server-to-server transfers.
+-------------------------------------------------------------------------------------------------------------
+tar -czf - /data | ssh user@host "cat > backup.tar.gz"         Archive and send to remote host
+ssh user@host "tar -czf - /data" | tar -xzf - -C /local/path   Pull and extract from remote host
+tar -cf - /data | ssh user@host "tar -xf - -C /restore"        Stream archive directly to remote
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Common Options
+Useful flags and what they do.
+-------------------------------------------------------------------------------------------------------------
+-c     Create archive
+-x     Extract archive
+-t     List archive contents
+-f     Use archive file
+-v     Verbose output
+-z     Gzip compression
+-j     Bzip2 compression
+-J     XZ compression
+-C     Change to directory before operation
+-p     Preserve permissions
+-------------------------------------------------------------------------------------------------------------
+
+
+---
+

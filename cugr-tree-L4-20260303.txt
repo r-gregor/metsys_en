@@ -1,0 +1,1809 @@
+/c/Users/gregor.redelonghi/
+|-- _dot_kargo
+|   |-- bin
+|   `-- registry
+|       |-- cache
+|       |   `-- index.crates.io-6f17d22bba15001f
+|       |-- index
+|       |   `-- index.crates.io-6f17d22bba15001f
+|       `-- src
+|           `-- index.crates.io-6f17d22bba15001f
+|-- 2026
+|   |-- _2026_1_PROJEKTI
+|   |   |-- __AC-Dolgi-most-2025-06
+|   |   |-- __Novartis-LEK_plin
+|   |   |   `-- 20240731_Plestenjak
+|   |   |-- __NOVI-VN-ji
+|   |   |-- __RAZNO
+|   |   |   `-- RV-Rudnik_NAVODILA_20231128
+|   |   |-- __Scopolijeva
+|   |   |-- __SUMI-SLOVENSKA-DRAMA__
+|   |   |   `-- P-2350_40739_UKINITEV_SUMI_PZI
+|   |   |-- _AGL-16481-LJUBLJANA-2019-GRIC
+|   |   |   |-- grafika
+|   |   |   `-- podatki
+|   |   |-- _AGL-16481-LJUBLJANA-2019-SP-ZADOBROVA
+|   |   |   |-- grafika
+|   |   |   `-- podatki
+|   |   |-- _CNG-Ljubljanske-brigade_povecava
+|   |   |   `-- _podatki
+|   |   |-- _NPP_Vrhovceva-c-36-Log-pri-Brezovici
+|   |   |   |-- grafika
+|   |   |   |-- podatki
+|   |   |   `-- teksti
+|   |   |-- _prestavitev-HPP-Gabrsckova-107_PZI
+|   |   |   |-- nacrt
+|   |   |   `-- podatki
+|   |   |-- _STRAKL_HPP-ji
+|   |   |   |-- _ostalo
+|   |   |   |-- 20180629_Polje_c-XX-11f_PP_popis
+|   |   |   |-- 20181212_Studenec-5_PP_PZI
+|   |   |   |-- 20181221_P-23762_polje-c-XXXII-27_PP_PZI
+|   |   |   |-- 20190207_Kopaliska-u_4_PP
+|   |   |   |-- 20190211_Vrhovci-c-XXI-13_PP
+|   |   |   |-- 20190311_Colnarjeva-10_PP_popis
+|   |   |   |-- 20200618_Ul-Manice-Komanove-6
+|   |   |   |-- 20200618_Zadobrovska-c-115
+|   |   |   |-- 20200624_Vodnikova-c-15
+|   |   |   |-- 20200811_Polje-cesta-XVI-14
+|   |   |   |-- 20200910_Polje-c-XXXII-21-in-23
+|   |   |   |-- 20210326_Iska-loka-29A
+|   |   |   |-- 20210511_Na-lazih-12
+|   |   |   |-- 20210512_Pot-na-Drenikov-vrh-1
+|   |   |   |-- 20210513_Vrhovci-c-X-7
+|   |   |   |-- 20211002_Pot-v-Hribec-28
+|   |   |   |-- 20211005_Jurckova-c-105A
+|   |   |   |-- 20211005_Novo-Polje-c-XI-NH
+|   |   |   |-- 20220302_Slovenceva-137
+|   |   |   |-- 20220330_Sadinja-vas-5_UNP-na-ZP
+|   |   |   `-- 20220607_Podsmreka_12
+|   |   |-- _ureditev-GJI-PCL_faza-2
+|   |   |   |-- nacrt
+|   |   |   `-- podatki
+|   |   |-- _VN_CNG_Dolgi-most_NADSTRESNICA
+|   |   |   |-- 0_2_1 NG
+|   |   |   |-- 1 NA
+|   |   |   |-- 3_1 NEI
+|   |   |   |-- 3_2 NSTV
+|   |   |   |-- EOO
+|   |   |   `-- popisi
+|   |   |-- _VN_P-33311_CNG-Dolgi-most
+|   |   |   |-- CNG-Dolgi-most_VN_podatki
+|   |   |   |-- CNG-Dolgi-most_VN_risbe
+|   |   |   `-- CNG-Dolgi-most_VN_teksti
+|   |   |-- 050425_42571_NZPO-nadvoz-Tezno-PZI-RECENZIJA
+|   |   |   |-- nacrt
+|   |   |   |-- podatki
+|   |   |   `-- podloge
+|   |   |-- M4_42579_zascita-PL-M4_DKP-D2-Brezice-Krsko_PZI
+|   |   |   |-- nacrt
+|   |   |   |-- podatki
+|   |   |   `-- pologe
+|   |   |-- N-27000_22551_obn-PO-Trg-OF_PZI
+|   |   |   |-- nacrt
+|   |   |   |-- podatki
+|   |   |   `-- podloge
+|   |   |-- N-27010_22475_PO_Metelkova_P6-P7_PCL_DGD_popisi-za-razpis
+|   |   |   |-- podloge
+|   |   |   `-- popisi
+|   |   |-- N-27070_22564_PO-Bohoriceva-DNZO
+|   |   |   |-- nacrt
+|   |   |   `-- podatki
+|   |   |-- N-27100_42492_ureditev-GJI-PCL_faza-1
+|   |   |   |-- _nacrt
+|   |   |   `-- _podatki
+|   |   |-- N-28316_22310_PO_Krmceva-in-CSB_PZI
+|   |   |   |-- nacrt
+|   |   |   |-- podatki
+|   |   |   `-- podloge
+|   |   |-- N-30280_22403_PO_prestavitev_Pregljeva_DGD_DNZO-dopolnitev_2025-10
+|   |   |   |-- nacrt
+|   |   |   `-- podatki
+|   |   |-- N-30280_22403_PO_prestavitev_Pregljeva_PZI
+|   |   |   |-- _STARO
+|   |   |   |-- nacrt
+|   |   |   `-- podatki
+|   |   |-- P-1042_42585_Streliska-ul-36_NPP_PZI_TR
+|   |   |   |-- nacrt
+|   |   |   |-- obrazci
+|   |   |   `-- podatki
+|   |   |-- P-15343_42583_prest_HPP_Medenska-c-143_PZI
+|   |   |   |-- nacrt
+|   |   |   `-- podatki
+|   |   |-- P-30254_P-36951_P-351_Emonika_HPP-ji_PZI
+|   |   |   |-- _podatki_skupno
+|   |   |   |-- _ukinitev-odcepa-PE63_P2_PZI
+|   |   |   |-- P1_P-30254_42480_HPP_Emonika-P1_PZI
+|   |   |   |-- P2_P-36951_42478_HPP_Emonika-P2_PZI
+|   |   |   `-- P3_P-351_42481_HPP_Emonika-P3_PZI
+|   |   |-- P-38332_22558_HPP-SON_Sujica-20_PZI
+|   |   |   |-- nacrt
+|   |   |   `-- podatki
+|   |   |-- RV-18_22380_obn_RV-18_Zalog_DGD
+|   |   |   |-- nacrt
+|   |   |   |-- podatki
+|   |   |   `-- podloge
+|   |   |-- RV-31_22516_obn_RV-31_Tacenska_PZI
+|   |   |   |-- nacrt
+|   |   |   |-- podatki
+|   |   |   `-- podloge
+|   |   |-- S-3010_22476_PO_most-Sora_PZI-dop-10-2025
+|   |   |   |-- nacrt
+|   |   |   `-- podatki
+|   |   `-- V-200_41935_Gradascica-etapa-1A_PID
+|   |       |-- __prve-strani-odsek-D
+|   |       |-- _podatki_skupno
+|   |       |-- _podloge_skupno
+|   |       |-- odsek-B2
+|   |       |-- odsek-B3
+|   |       |-- odsek-B4
+|   |       |-- odsek-C2
+|   |       |-- odsek-D1
+|   |       |-- odsek-D3
+|   |       `-- odsek-E
+|   |-- _2026_2_OSTALO
+|   |   |-- _Brdnikova_SIFONI
+|   |   |   `-- _podloge
+|   |   |-- _Brdnikova-PZI_razmejitev_2016-02
+|   |   |-- _Dragomer-Log_podboji-ceste
+|   |   |-- _Dravlje_za-sluznosti-Simonca_20210507
+|   |   |   |-- obn_Dravlje_2F_E3_Kamnogoriska_PZI_risbe
+|   |   |   `-- PlotCfgs
+|   |   |-- _LUZ_izmik_krizanje_plinovod_kanal_DN250
+|   |   |-- _NGO
+|   |   |-- _PLINOVODI_20210406
+|   |   |-- _Poglavje_10-Sposobnost_248-2014
+|   |   |-- _Pot-za-Brdom_2F_GIRI_20180316
+|   |   |-- _povecava_CNG
+|   |   |-- _SOSTRSKA-CESTA-27_HPP-NPN_ponudba_20210319
+|   |   |-- _Trzaska-nova-zasnova-plin-anodno-lezisce
+|   |   |-- DETAJL-ODPRTINE-ZA-SISTEMSKO-KONTROLO
+|   |   |-- INTERVENCIJE  - NAVODILA ZA VARNO DELO
+|   |   `-- UNP_TE-TOL
+|   |-- _2026_3_NERAZPOREJENO
+|   |-- _2026_4_NASTAVAITVE
+|   |   |-- How To Change Theme in Windows 10 (All Ways)_files
+|   |   |   |-- a_data
+|   |   |   |-- a_data_002
+|   |   |   |-- a_data_003
+|   |   |   |-- a_data_004
+|   |   |   |-- a_data_005
+|   |   |   |-- follow_button_data
+|   |   |   |-- postmessageRelay_data
+|   |   |   |-- subscribe_embed_data
+|   |   |   `-- subscribe_embed_data_002
+|   |   |-- npp_GOlang_settings_20190927
+|   |   |   |-- npp-golang
+|   |   |   `-- npp-golang-master
+|   |   `-- win10setups_20220617
+|   |-- _2026_5_DOKUMENTI
+|   |   |-- ENLJ_TR-podloge-Jaka-20251215
+|   |   |-- EN-LJ-nova-notranja-plinska-napeljava-plinska-kotlovnica-postopki-in-obrazci-20250829
+|   |   |-- EN-LJ-Pravilnik-o-delovni-uspesnosti-20250109
+|   |   |-- EN-LJ-SPISEK-NAVODIL-V11
+|   |   |-- NOVE-GLAVE-Jaka-20251215
+|   |   |-- obrazci_za_manjzahtevne_in_zahtevne_objekte
+|   |   |-- obrazci_za_nezahtevne_objekte_20240829
+|   |   |-- plinovodi-pravilniki_2016-06
+|   |   |-- POPISI_2019
+|   |   |   |-- podatki
+|   |   |   |-- popisi_2019_plin
+|   |   |   `-- popisi_2019_vrocevod
+|   |   |-- POPISI_2020
+|   |   |   |-- POPISI ZA PRIKLJUČKE 2020
+|   |   |   |-- popisi_2019_vrocevod
+|   |   |   `-- popisi_2020_plin
+|   |   |-- Telekom_detajli-teksti_Plestenjak_20230829
+|   |   `-- VN-dokumentacija_20210128
+|   |-- _2026_VARHIVO
+|   |   |-- N
+|   |   |-- P
+|   |   |-- RP
+|   |   |-- S
+|   |   |-- V
+|   |   `-- VN
+|   |-- _PROJDOK_2024-05
+|   |   |-- _DGD_dokumentacija_20240516
+|   |   |   `-- pdf
+|   |   |-- _DNZO_dokumentacija_20240516
+|   |   |   `-- pdf
+|   |   |-- _PID_dokumentacija_20240516
+|   |   |   `-- pdf
+|   |   `-- _PZI_dokumentacija_20240516
+|   |       `-- loceno
+|   `-- Tehnicne-zahteve_2026
+|       |-- _PREJSNJE-VERZIJE
+|       |   |-- _OBRAZCI_2024-03
+|       |   |-- _OBRAZCI_2024-04
+|       |   |-- _OBRAZCI_2024-06
+|       |   |-- _OBRAZCI_2024-08
+|       |   |-- _RISBE_2020-08
+|       |   |-- _RISBE_2021-01
+|       |   |-- _RISBE_2022-09
+|       |   |-- _RISBE_2023-11
+|       |   |-- _RISBE_2024-03
+|       |   |-- _RISBE_2024-04
+|       |   |-- _RISBE_2024-06
+|       |   |-- _RISBE_2024-08
+|       |   |-- _TEKSTI_2020-08
+|       |   |-- _TEKSTI_2023-11
+|       |   |-- _TEKSTI_2024-03
+|       |   |-- _TEKSTI_2024-06
+|       |   |-- _TEKSTI_2024-08
+|       |   |-- Kibarovski_2021-03
+|       |   |-- predlog_2020-07
+|       |   `-- verzija_2020-08
+|       |-- Tehnicne-zahteve_2023-10
+|       |   |-- _RISBE_2023-11
+|       |   `-- _TEKSTI_2023-11
+|       |-- Tehnicne-zahteve_2024-03
+|       |   |-- _OBRAZCI_2024-06
+|       |   |-- _RISBE_2024-06
+|       |   `-- _TEKSTI_2024-06
+|       |-- Tehnicne-zahteve_2024-06
+|       |   |-- _OBRAZCI_2024-06
+|       |   |-- _RISBE_2024-06
+|       |   `-- _TEKSTI_2024-06
+|       |-- Tehnicne-zahteve_2024-08
+|       |   |-- _OBRAZCI_2024-08
+|       |   |-- _RISBE_2024-08
+|       |   `-- _TEKSTI_2024-08
+|       |-- Tehnicne-zahteve_2024-10
+|       |   |-- _OBRAZCI_2024-10
+|       |   |-- _RISBE_2024-10
+|       |   `-- _TEKSTI_2024-10
+|       |-- Tehnicne-zahteve_2024-11
+|       |   |-- _OBRAZCI_2024-11
+|       |   |-- _RISBE_2024-11
+|       |   `-- _TEKSTI_2024-11
+|       |-- Tehnicne-zahteve_2025-04
+|       |   |-- _OBRAZCI_2025-04
+|       |   |-- _RISBE_2025-04
+|       |   `-- _TEKSTI_2025-04
+|       |-- Tehnicne-zahteve_2025-06
+|       |   |-- _OBRAZCI_2025-06
+|       |   |-- _RISBE_2025-06
+|       |   `-- _TEKSTI_2025-06
+|       |-- Tehnicne-zahteve_2025-07
+|       |   |-- _OBRAZCI_2025-07
+|       |   |-- _RISBE_2025-07
+|       |   `-- _TEKSTI_2025-07
+|       |-- Tehnicne-zahteve_2025-10
+|       |   |-- _OBRAZCI_2025-10
+|       |   |-- _RISBE_2025-10
+|       |   `-- _TEKSTI_2025-10
+|       |-- Tehnicne-zahteve_2025-11
+|       |   |-- _OBRAZCI_2025-11
+|       |   |-- _RISBE_2025-11
+|       |   `-- _TEKSTI_2025-11
+|       `-- Tehnicne-zahteve_2026-02
+|           |-- _podatki_2026-02
+|           |-- _podloge_2026-02
+|           |-- _pripombe_2025-10
+|           |-- _pripombe_2026-01
+|           |-- _pripombe_2026-02
+|           |-- TZ_OBRAZCI_2026-02
+|           |-- TZ_RISBE_2026-02
+|           `-- TZ_TEKSTI_2026-02
+|-- 3D Objects
+|-- AppData
+|   |-- Local
+|   |   |-- Adobe
+|   |   |   |-- Acrobat
+|   |   |   |-- AcroCef
+|   |   |   `-- Color
+|   |   |-- AdSSO
+|   |   |   |-- cache
+|   |   |   `-- QtWebEngine
+|   |   |-- Application Data -> /c/Users/gregor.redelonghi/AppData/Local
+|   |   |-- Autodesk
+|   |   |   |-- ActivityInsights
+|   |   |   |-- AutoCAD 2020
+|   |   |   |-- AutoCAD 2022
+|   |   |   |-- AutoCAD 2024
+|   |   |   |-- Autodesk Access
+|   |   |   |-- Autodesk AdSSO
+|   |   |   |-- Autodesk AutoCAD Map 3D 2022
+|   |   |   |-- Autodesk Collaboration
+|   |   |   |-- C3D 2024
+|   |   |   |-- CER
+|   |   |   |-- DWG TrueView 2024 - English
+|   |   |   |-- Genuine Autodesk Service
+|   |   |   |-- Identity Services
+|   |   |   |-- Logs
+|   |   |   |-- ODIS
+|   |   |   |-- User Geospatial Coordinate Systems
+|   |   |   `-- Web Services
+|   |   |-- cache
+|   |   |   |-- qtshadercache
+|   |   |   `-- qtshadercache-x86_64-little_endian-llp64
+|   |   |-- CEF
+|   |   |   `-- User Data
+|   |   |-- Comms
+|   |   |   |-- Unistore
+|   |   |   `-- UnistoreDB
+|   |   |-- ConnectedDevicesPlatform
+|   |   |   |-- L.Administrator
+|   |   |   `-- L.gregor.redelonghi
+|   |   |-- D3DSCache
+|   |   |   |-- 19f4e3cfcda13cab
+|   |   |   |-- 3534848bb9f4cb71
+|   |   |   |-- 48891aaa13564d98
+|   |   |   |-- 4b12d08c91f1908a
+|   |   |   |-- 4c4af0254390c901
+|   |   |   |-- 6570daf0d48f51f7
+|   |   |   |-- 65d788c8b6104740
+|   |   |   |-- 91eb7b761c355f65
+|   |   |   |-- 9b6845e530b979cc
+|   |   |   |-- a3c06bc9ce981758
+|   |   |   |-- a3f6beb3952dfa83
+|   |   |   |-- b5a3c58d1e2d9326
+|   |   |   |-- ba1e86cfcb1c6c98
+|   |   |   |-- d1045fa42060dcaf
+|   |   |   |-- d3fe7cdcb51a5ef5
+|   |   |   |-- e85f66d67edf0af3
+|   |   |   |-- f412814c0561b894
+|   |   |   |-- f4d41c5d09ae781
+|   |   |   |-- faed29a94b1d16bf
+|   |   |   `-- fafc249722612b35
+|   |   |-- DBG
+|   |   |-- Downloaded Installations
+|   |   |   `-- {B38DF12C-E0F5-440B-94D8-94353D1CEDEC}
+|   |   |-- drmingw
+|   |   |   |-- kernel32.pdb
+|   |   |   |-- ntdll.pdb
+|   |   |   |-- user32.pdb
+|   |   |   `-- win32u.pdb
+|   |   |-- glow
+|   |   |   |-- Cache
+|   |   |   `-- Config
+|   |   |-- go-build
+|   |   |   |-- 00
+|   |   |   |-- 01
+|   |   |   |-- 02
+|   |   |   |-- 03
+|   |   |   |-- 04
+|   |   |   |-- 05
+|   |   |   |-- 06
+|   |   |   |-- 07
+|   |   |   |-- 08
+|   |   |   |-- 09
+|   |   |   |-- 0a
+|   |   |   |-- 0b
+|   |   |   |-- 0c
+|   |   |   |-- 0d
+|   |   |   |-- 0e
+|   |   |   |-- 0f
+|   |   |   |-- 10
+|   |   |   |-- 11
+|   |   |   |-- 12
+|   |   |   |-- 13
+|   |   |   |-- 14
+|   |   |   |-- 15
+|   |   |   |-- 16
+|   |   |   |-- 17
+|   |   |   |-- 18
+|   |   |   |-- 19
+|   |   |   |-- 1a
+|   |   |   |-- 1b
+|   |   |   |-- 1c
+|   |   |   |-- 1d
+|   |   |   |-- 1e
+|   |   |   |-- 1f
+|   |   |   |-- 20
+|   |   |   |-- 21
+|   |   |   |-- 22
+|   |   |   |-- 23
+|   |   |   |-- 24
+|   |   |   |-- 25
+|   |   |   |-- 26
+|   |   |   |-- 27
+|   |   |   |-- 28
+|   |   |   |-- 29
+|   |   |   |-- 2a
+|   |   |   |-- 2b
+|   |   |   |-- 2c
+|   |   |   |-- 2d
+|   |   |   |-- 2e
+|   |   |   |-- 2f
+|   |   |   |-- 30
+|   |   |   |-- 31
+|   |   |   |-- 32
+|   |   |   |-- 33
+|   |   |   |-- 34
+|   |   |   |-- 35
+|   |   |   |-- 36
+|   |   |   |-- 37
+|   |   |   |-- 38
+|   |   |   |-- 39
+|   |   |   |-- 3a
+|   |   |   |-- 3b
+|   |   |   |-- 3c
+|   |   |   |-- 3d
+|   |   |   |-- 3e
+|   |   |   |-- 3f
+|   |   |   |-- 40
+|   |   |   |-- 41
+|   |   |   |-- 42
+|   |   |   |-- 43
+|   |   |   |-- 44
+|   |   |   |-- 45
+|   |   |   |-- 46
+|   |   |   |-- 47
+|   |   |   |-- 48
+|   |   |   |-- 49
+|   |   |   |-- 4a
+|   |   |   |-- 4b
+|   |   |   |-- 4c
+|   |   |   |-- 4d
+|   |   |   |-- 4e
+|   |   |   |-- 4f
+|   |   |   |-- 50
+|   |   |   |-- 51
+|   |   |   |-- 52
+|   |   |   |-- 53
+|   |   |   |-- 54
+|   |   |   |-- 55
+|   |   |   |-- 56
+|   |   |   |-- 57
+|   |   |   |-- 58
+|   |   |   |-- 59
+|   |   |   |-- 5a
+|   |   |   |-- 5b
+|   |   |   |-- 5c
+|   |   |   |-- 5d
+|   |   |   |-- 5e
+|   |   |   |-- 5f
+|   |   |   |-- 60
+|   |   |   |-- 61
+|   |   |   |-- 62
+|   |   |   |-- 63
+|   |   |   |-- 64
+|   |   |   |-- 65
+|   |   |   |-- 66
+|   |   |   |-- 67
+|   |   |   |-- 68
+|   |   |   |-- 69
+|   |   |   |-- 6a
+|   |   |   |-- 6b
+|   |   |   |-- 6c
+|   |   |   |-- 6d
+|   |   |   |-- 6e
+|   |   |   |-- 6f
+|   |   |   |-- 70
+|   |   |   |-- 71
+|   |   |   |-- 72
+|   |   |   |-- 73
+|   |   |   |-- 74
+|   |   |   |-- 75
+|   |   |   |-- 76
+|   |   |   |-- 77
+|   |   |   |-- 78
+|   |   |   |-- 79
+|   |   |   |-- 7a
+|   |   |   |-- 7b
+|   |   |   |-- 7c
+|   |   |   |-- 7d
+|   |   |   |-- 7e
+|   |   |   |-- 7f
+|   |   |   |-- 80
+|   |   |   |-- 81
+|   |   |   |-- 82
+|   |   |   |-- 83
+|   |   |   |-- 84
+|   |   |   |-- 85
+|   |   |   |-- 86
+|   |   |   |-- 87
+|   |   |   |-- 88
+|   |   |   |-- 89
+|   |   |   |-- 8a
+|   |   |   |-- 8b
+|   |   |   |-- 8c
+|   |   |   |-- 8d
+|   |   |   |-- 8e
+|   |   |   |-- 8f
+|   |   |   |-- 90
+|   |   |   |-- 91
+|   |   |   |-- 92
+|   |   |   |-- 93
+|   |   |   |-- 94
+|   |   |   |-- 95
+|   |   |   |-- 96
+|   |   |   |-- 97
+|   |   |   |-- 98
+|   |   |   |-- 99
+|   |   |   |-- 9a
+|   |   |   |-- 9b
+|   |   |   |-- 9c
+|   |   |   |-- 9d
+|   |   |   |-- 9e
+|   |   |   |-- 9f
+|   |   |   |-- a0
+|   |   |   |-- a1
+|   |   |   |-- a2
+|   |   |   |-- a3
+|   |   |   |-- a4
+|   |   |   |-- a5
+|   |   |   |-- a6
+|   |   |   |-- a7
+|   |   |   |-- a8
+|   |   |   |-- a9
+|   |   |   |-- aa
+|   |   |   |-- ab
+|   |   |   |-- ac
+|   |   |   |-- ad
+|   |   |   |-- ae
+|   |   |   |-- af
+|   |   |   |-- b0
+|   |   |   |-- b1
+|   |   |   |-- b2
+|   |   |   |-- b3
+|   |   |   |-- b4
+|   |   |   |-- b5
+|   |   |   |-- b6
+|   |   |   |-- b7
+|   |   |   |-- b8
+|   |   |   |-- b9
+|   |   |   |-- ba
+|   |   |   |-- bb
+|   |   |   |-- bc
+|   |   |   |-- bd
+|   |   |   |-- be
+|   |   |   |-- bf
+|   |   |   |-- c0
+|   |   |   |-- c1
+|   |   |   |-- c2
+|   |   |   |-- c3
+|   |   |   |-- c4
+|   |   |   |-- c5
+|   |   |   |-- c6
+|   |   |   |-- c7
+|   |   |   |-- c8
+|   |   |   |-- c9
+|   |   |   |-- ca
+|   |   |   |-- cb
+|   |   |   |-- cc
+|   |   |   |-- cd
+|   |   |   |-- ce
+|   |   |   |-- cf
+|   |   |   |-- d0
+|   |   |   |-- d1
+|   |   |   |-- d2
+|   |   |   |-- d3
+|   |   |   |-- d4
+|   |   |   |-- d5
+|   |   |   |-- d6
+|   |   |   |-- d7
+|   |   |   |-- d8
+|   |   |   |-- d9
+|   |   |   |-- da
+|   |   |   |-- db
+|   |   |   |-- dc
+|   |   |   |-- dd
+|   |   |   |-- de
+|   |   |   |-- df
+|   |   |   |-- e0
+|   |   |   |-- e1
+|   |   |   |-- e2
+|   |   |   |-- e3
+|   |   |   |-- e4
+|   |   |   |-- e5
+|   |   |   |-- e6
+|   |   |   |-- e7
+|   |   |   |-- e8
+|   |   |   |-- e9
+|   |   |   |-- ea
+|   |   |   |-- eb
+|   |   |   |-- ec
+|   |   |   |-- ed
+|   |   |   |-- ee
+|   |   |   |-- ef
+|   |   |   |-- f0
+|   |   |   |-- f1
+|   |   |   |-- f2
+|   |   |   |-- f3
+|   |   |   |-- f4
+|   |   |   |-- f5
+|   |   |   |-- f6
+|   |   |   |-- f7
+|   |   |   |-- f8
+|   |   |   |-- f9
+|   |   |   |-- fa
+|   |   |   |-- fb
+|   |   |   |-- fc
+|   |   |   |-- fd
+|   |   |   |-- fe
+|   |   |   `-- ff
+|   |   |-- Google
+|   |   |   |-- CrashReports
+|   |   |   `-- Software Reporter Tool
+|   |   |-- History -> /c/Users/gregor.redelonghi/AppData/Local/Microsoft/Windows/History
+|   |   |-- lazygit
+|   |   |-- MEGAsync
+|   |   |   |-- iconengines
+|   |   |   |-- imageformats
+|   |   |   |-- leftbanner
+|   |   |   |-- platforms
+|   |   |   `-- styles
+|   |   |-- Microsoft
+|   |   |   |-- CLR_v2.0_32
+|   |   |   |-- CLR_v4.0
+|   |   |   |-- CLR_v4.0_32
+|   |   |   |-- Credentials
+|   |   |   |-- Edge
+|   |   |   |-- EDP
+|   |   |   |-- Event Viewer
+|   |   |   |-- Expertise Tagging
+|   |   |   |-- Feeds
+|   |   |   |-- Feeds Cache
+|   |   |   |-- fluency
+|   |   |   |-- FontCache
+|   |   |   |-- FORMS2
+|   |   |   |-- GameDVR
+|   |   |   |-- Identity
+|   |   |   |-- input
+|   |   |   |-- InstallService
+|   |   |   |-- Internet Explorer
+|   |   |   |-- Media Player
+|   |   |   |-- MSIPC
+|   |   |   |-- MSOIdentityCRL
+|   |   |   |-- Office
+|   |   |   |-- OneAuth
+|   |   |   |-- OneDrive
+|   |   |   |-- Outlook
+|   |   |   |-- PenWorkspace
+|   |   |   |-- PlayReady
+|   |   |   |-- PowerToys
+|   |   |   |-- TeamsMeetingAdd-in
+|   |   |   |-- TeamsMeetingAddinMsis
+|   |   |   |-- TokenBroker
+|   |   |   |-- Vault
+|   |   |   |-- Windows
+|   |   |   |-- Windows Live
+|   |   |   |-- Windows Sidebar
+|   |   |   |-- WindowsApps
+|   |   |   `-- WinGet
+|   |   |-- Microsoft Help
+|   |   |-- Microsoft_Corporation
+|   |   |   `-- PowerShell_ISE.exe_StrongName_lw2v2vm3wmtzzpebq33gybmeoxukb04w
+|   |   |-- MicrosoftEdge
+|   |   |   |-- SharedCacheContainers
+|   |   |   `-- User
+|   |   |-- Mozilla
+|   |   |   `-- Firefox
+|   |   |-- OpenText
+|   |   |   `-- OTEdit
+|   |   |-- Package Cache
+|   |   |   |-- {023803e4-eab7-4b94-8d77-aa7f37e93216}
+|   |   |   |-- {0FE1250F-6DD6-4948-B211-741B7CDBB335}v3.10.5150.0
+|   |   |   |-- {25196DA8-29BD-4383-B7B5-B36C3BAF43F3}v3.10.7826.0
+|   |   |   |-- {269FCA5D-D0CF-43B2-B656-24DF6DAA0D4E}v3.10.5150.0
+|   |   |   |-- {3BC23B98-3D25-4A74-98FD-A1BE957A1340}v3.10.5150.0
+|   |   |   |-- {496B2CAE-CF79-440A-82F1-7587559ABA00}v3.10.5150.0
+|   |   |   |-- {514A924A-361B-4BF4-8FD0-1A431CE7C56E}v3.10.5150.0
+|   |   |   |-- {67F90672-C696-4DBB-8F33-95CCCFA21DCE}v3.10.5150.0
+|   |   |   |-- {7B0F6EAD-C8A1-4496-8492-801EDE1A6323}v3.10.5150.0
+|   |   |   |-- {7F7E3C5D-2A37-4F1D-8E8C-3BB073D36BFE}v3.10.5150.0
+|   |   |   |-- {BBD9CCC0-981B-4976-91EC-4C1E637BCF85}v3.10.5150.0
+|   |   |   |-- {C27B3ABD-EC3C-49F1-98DF-F0AF26D36072}v0.84.1
+|   |   |   |-- {C3B084B6-D193-4633-BBB4-E890AAB946A2}v3.10.5150.0
+|   |   |   `-- {e15803b8-d809-47f3-8818-73f0d155cf58}
+|   |   |-- Packages
+|   |   |   |-- 10864CSTRSK.MarkdownEditorFree_v860xccpn1xnt
+|   |   |   |-- 1527c705-839a-4832-9118-54d4Bd6a0c89_cw5n1h2txyewy
+|   |   |   |-- 2203VeselinKaraganev.FancyWM_9x2ndwrcmyd2c
+|   |   |   |-- 51680krisdb2009.SuperLauncher_c95qpqdnztmre
+|   |   |   |-- ActiveSync
+|   |   |   |-- AppUp.IntelArcSoftware_8j3eq9eme6ctt
+|   |   |   |-- AppUp.IntelGraphicsExperience_8j3eq9eme6ctt
+|   |   |   |-- AppUp.IntelOptaneMemoryandStorageManagement_8j3eq9eme6ctt
+|   |   |   |-- c5e2524a-ea46-4f67-841f-6a9465d9d515_cw5n1h2txyewy
+|   |   |   |-- Clipchamp.Clipchamp_yxz26nhyzhsrt
+|   |   |   |-- cr.sb.cdmbb05959209a1a419c842960253d457532df55bef
+|   |   |   |-- cr.sb.cdmf5200eafd3ad904629cbb0f87a78a3c7211081fe
+|   |   |   |-- cr.sb.odm8c3a99bdfb73ce9abf2ba64480175027ae542cad
+|   |   |   |-- cr.sb.odmBB05959209A1A419C842960253D457532DF55BEF
+|   |   |   |-- cr.sb.odmd8dfbc5aa947da104644eb41b50cc3e5f48fb5a9
+|   |   |   |-- cr.sb.odmeecc7f22c796e6e2ec0afe58069ea1e322a97c81
+|   |   |   |-- cr.sb.odmf5200eafd3ad904629cbb0f87a78a3c7211081fe
+|   |   |   |-- cr.sb.prncf5200eafd3ad904629cbb0f87a78a3c7211081fe
+|   |   |   |-- cr.sb.xrf5200eafd3ad904629cbb0f87a78a3c7211081fe
+|   |   |   |-- E2A4F912-2574-4A75-9BB0-0D023378592B_cw5n1h2txyewy
+|   |   |   |-- F46D4000-FD22-4DB4-AC8E-4E1DDDE828FE_cw5n1h2txyewy
+|   |   |   |-- fx.sb.cdmb54cd91a1d56f59a901b35e20aedf9f7a1ee73c7
+|   |   |   |-- Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy
+|   |   |   |-- Microsoft.AccountsControl_cw5n1h2txyewy
+|   |   |   |-- Microsoft.ApplicationCompatibilityEnhancements_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.AsyncTextService_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.AV1VideoExtension_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.AVCEncoderVideoExtension_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.BingNews_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.BingSearch_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.BioEnrollment_cw5n1h2txyewy
+|   |   |   |-- Microsoft.CredDialogHost_cw5n1h2txyewy
+|   |   |   |-- Microsoft.DesktopAppInstaller_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.ECApp_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.GamingApp_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.GetHelp_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.HEIFImageExtension_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.HEVCVideoExtension_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.LanguageExperiencePacksl-SI_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.LockApp_cw5n1h2txyewy
+|   |   |   |-- Microsoft.MicrosoftEdge.Stable_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.MicrosoftEdgeDevToolsClient_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.MicrosoftStickyNotes_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.MixedReality.Portal_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.MPEG2VideoExtension_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.NET.Native.Framework.1.7_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.NET.Native.Framework.2.2_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.NET.Native.Runtime.1.7_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.NET.Native.Runtime.2.2_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.OutlookForWindows_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.Paint_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.PowerAutomateDesktop_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.PowerToys.FileLocksmithContextMenu_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.PowerToys.ImageResizerContextMenu_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.PowerToys.PowerRenameContextMenu_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.RawImageExtension_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.ScreenSketch_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.SecHealthUI_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.Services.Store.Engagement_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.StorePurchaseApp_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.Todos_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.UI.Xaml.2.4_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.UI.Xaml.2.7_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.UI.Xaml.2.8_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.UI.Xaml.CBS_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.VCLibs.140.00.UWPDesktop_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.VCLibs.140.00_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.VP9VideoExtensions_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.WebMediaExtensions_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.WebpImageExtension_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.Win32WebViewHost_cw5n1h2txyewy
+|   |   |   |-- Microsoft.Windows.Apprep.ChxApp_cw5n1h2txyewy
+|   |   |   |-- Microsoft.Windows.AssignedAccessLockApp_cw5n1h2txyewy
+|   |   |   |-- Microsoft.Windows.AugLoop.CBS_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.Windows.CapturePicker_cw5n1h2txyewy
+|   |   |   |-- Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy
+|   |   |   |-- Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy
+|   |   |   |-- Microsoft.Windows.DevHome_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.Windows.NarratorQuickStart_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.Windows.OOBENetworkCaptivePortal_cw5n1h2txyewy
+|   |   |   |-- Microsoft.Windows.OOBENetworkConnectionFlow_cw5n1h2txyewy
+|   |   |   |-- Microsoft.Windows.ParentalControls_cw5n1h2txyewy
+|   |   |   |-- Microsoft.Windows.PeopleExperienceHost_cw5n1h2txyewy
+|   |   |   |-- Microsoft.Windows.Photos_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.Windows.PinningConfirmationDialog_cw5n1h2txyewy
+|   |   |   |-- Microsoft.Windows.SecureAssessmentBrowser_cw5n1h2txyewy
+|   |   |   |-- Microsoft.Windows.ShellExperienceHost_cw5n1h2txyewy
+|   |   |   |-- Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy
+|   |   |   |-- Microsoft.Windows.XGpuEjectDialog_cw5n1h2txyewy
+|   |   |   |-- Microsoft.WindowsAppRuntime.1.2_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.WindowsAppRuntime.1.3_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.WindowsAppRuntime.1.4_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.WindowsAppRuntime.1.5_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.WindowsAppRuntime.1.6_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.WindowsAppRuntime.1.7_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.WindowsAppRuntime.1.8_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.WindowsCalculator_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.WindowsCamera_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.WindowsNotepad_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.WindowsSoundRecorder_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.WindowsStore_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.WindowsTerminal_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.Winget.Source_8wekyb3d8bbwe
+|   |   |   |-- Microsoft.XboxGameCallableUI_cw5n1h2txyewy
+|   |   |   |-- MicrosoftCorporationII.WinAppRuntime.Main.1.5_8wekyb3d8bbwe
+|   |   |   |-- MicrosoftCorporationII.WinAppRuntime.Singleton_8wekyb3d8bbwe
+|   |   |   |-- MicrosoftWindows.Client.CBS_cw5n1h2txyewy
+|   |   |   |-- MicrosoftWindows.Client.CoreAI_cw5n1h2txyewy
+|   |   |   |-- MicrosoftWindows.Client.OOBE_cw5n1h2txyewy
+|   |   |   |-- MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy
+|   |   |   |-- MicrosoftWindows.CrossDevice_cw5n1h2txyewy
+|   |   |   |-- MicrosoftWindows.UndockedDevKit_cw5n1h2txyewy
+|   |   |   |-- MSTeams_8wekyb3d8bbwe
+|   |   |   |-- PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0
+|   |   |   |-- sb.xr3
+|   |   |   |-- Windows.CBSPreview_cw5n1h2txyewy
+|   |   |   |-- windows.immersivecontrolpanel_cw5n1h2txyewy
+|   |   |   |-- Windows.PrintDialog_cw5n1h2txyewy
+|   |   |   `-- windows_ie_ac_001
+|   |   |-- PeerDistRepub
+|   |   |-- pip
+|   |   |   `-- cache
+|   |   |-- PlaceholderTileLogoFolder
+|   |   |   |-- 9P1741LKHQS9
+|   |   |   `-- 9PKFLMLPCW3C
+|   |   |-- PowerToys
+|   |   |   |-- ar-SA
+|   |   |   |-- Assets
+|   |   |   |-- cs-CZ
+|   |   |   |-- de-DE
+|   |   |   |-- DSCModules
+|   |   |   |-- es-ES
+|   |   |   |-- fa-IR
+|   |   |   |-- fr-FR
+|   |   |   |-- he-IL
+|   |   |   |-- hu-HU
+|   |   |   |-- it-IT
+|   |   |   |-- ja-JP
+|   |   |   |-- KeyboardManagerEditor
+|   |   |   |-- KeyboardManagerEngine
+|   |   |   |-- ko-KR
+|   |   |   |-- nl-NL
+|   |   |   |-- pl-PL
+|   |   |   |-- pt-BR
+|   |   |   |-- pt-PT
+|   |   |   |-- RunPlugins
+|   |   |   |-- ru-RU
+|   |   |   |-- sv-SE
+|   |   |   |-- Tools
+|   |   |   |-- tr-TR
+|   |   |   |-- uk-UA
+|   |   |   |-- WinUI3Apps
+|   |   |   |-- zh-CN
+|   |   |   `-- zh-TW
+|   |   |-- Programs
+|   |   |   |-- Common
+|   |   |   |-- Python
+|   |   |   `-- Warp
+|   |   |-- Publishers
+|   |   |   |-- 8j3eq9eme6ctt
+|   |   |   `-- 8wekyb3d8bbwe
+|   |   |-- pyinstaller
+|   |   |   `-- bincache00_py310_64bit
+|   |   |-- rclone
+|   |   |   `-- webgui
+|   |   |-- SL-King
+|   |   |   |-- GeoSX
+|   |   |   |-- King.Infra
+|   |   |   |-- Sewer+
+|   |   |   `-- Sewer+ 16
+|   |   |-- speech
+|   |   |   `-- Microsoft
+|   |   |-- Temp
+|   |   |   |-- {3A79DE1F-0FC2-4089-AAD0-53891DBC6A7B}
+|   |   |   |-- {3FA3442D-4D24-46A4-9D21-32ED850ACC67}
+|   |   |   |-- {44599A4F-C11A-4730-8A60-6523E77CEAA7}
+|   |   |   |-- {47252FF3-A94F-44ED-AD0D-63FBCD644D56}
+|   |   |   |-- {5C4D50F7-115C-4BE6-9FD3-CD031EB6D0B6}
+|   |   |   |-- {AD1850FA-0ECB-47A3-8F95-B5F037A264D0}
+|   |   |   |-- {C60F8BC0-0710-40D9-8F4D-E07786B99B27}
+|   |   |   |-- {CC46AD7F-5075-3702-B2BF-CFCC5AB8468B}
+|   |   |   |-- {E02B5ADC-3EC8-4A2B-9307-74953F94F7F4}
+|   |   |   |-- {E1027CFC-174B-4FF4-B7B8-C1EEB2870F99}
+|   |   |   |-- {F9FA46C1-CBFC-4FD3-BB69-050629ADEB35}
+|   |   |   |-- 0FC61B838D5E0F6B
+|   |   |   |-- 3ed4b763-34e4-4659-849c-929bed22faa1
+|   |   |   |-- 58f8-1f7d-fb0a-3f0d
+|   |   |   |-- acad
+|   |   |   |-- acrocef_low
+|   |   |   |-- Adobe
+|   |   |   |-- collab_low
+|   |   |   |-- cop5516.tmp
+|   |   |   |-- cop7531.tmp
+|   |   |   |-- copA993.tmp
+|   |   |   |-- copBC92.tmp
+|   |   |   |-- copC15B.tmp
+|   |   |   |-- d8e4c2fc-50ac-4aca-bf47-acd69d79dcf1_Specifikacije.zip.Specifikacije.zip
+|   |   |   |-- Diagnostics
+|   |   |   |-- dwgdata
+|   |   |   |-- Excel8.0
+|   |   |   |-- IndexPipeline
+|   |   |   |-- lazygit-S-1-5-21-3276175991-2128578656-3475652450-7634
+|   |   |   |-- Low
+|   |   |   |-- Microsoft
+|   |   |   |-- mozilla-temp-files
+|   |   |   |-- msedge_url_fetcher_13752_653507244
+|   |   |   |-- msedge_url_fetcher_14224_1177717126
+|   |   |   |-- msohtmlclip
+|   |   |   |-- msohtmlclip1
+|   |   |   |-- odis_download_dest
+|   |   |   |-- ogs
+|   |   |   |-- Outlook Logging
+|   |   |   |-- PhotoCache
+|   |   |   |-- pkg
+|   |   |   |-- proteinrun
+|   |   |   |-- scoped_dir11928_458535425
+|   |   |   |-- scoped_dir13324_313131114
+|   |   |   |-- scoped_dir14304_732018780
+|   |   |   |-- scoped_dir14388_629952536
+|   |   |   |-- scoped_dir14552_139794078
+|   |   |   |-- scoped_dir14656_24613006
+|   |   |   |-- scoped_dir14720_1528496904
+|   |   |   |-- scoped_dir14720_1808155743
+|   |   |   |-- scoped_dir14728_1812120440
+|   |   |   |-- scoped_dir14780_1808952538
+|   |   |   |-- scoped_dir14848_1357643069
+|   |   |   |-- scoped_dir14876_1058534286
+|   |   |   |-- scoped_dir14944_1575881165
+|   |   |   |-- scoped_dir15064_91624830
+|   |   |   |-- scoped_dir16004_1600306245
+|   |   |   |-- scoped_dir16364_812489352
+|   |   |   |-- scoped_dir17132_65791687
+|   |   |   |-- TCD1235.tmp
+|   |   |   |-- TCD1246.tmp
+|   |   |   |-- TCD1247.tmp
+|   |   |   |-- TCD1248.tmp
+|   |   |   |-- TCD1249.tmp
+|   |   |   |-- TCD124A.tmp
+|   |   |   |-- TCD124B.tmp
+|   |   |   |-- TCD124C.tmp
+|   |   |   |-- TCD124D.tmp
+|   |   |   |-- TCD124E.tmp
+|   |   |   |-- TCD124F.tmp
+|   |   |   |-- TCD1250.tmp
+|   |   |   |-- TCD1251.tmp
+|   |   |   |-- TCD2B23.tmp
+|   |   |   |-- TCD2B24.tmp
+|   |   |   |-- TCD2B35.tmp
+|   |   |   |-- TCD2B36.tmp
+|   |   |   |-- TCD2B37.tmp
+|   |   |   |-- TCD2B38.tmp
+|   |   |   |-- TCD2B39.tmp
+|   |   |   |-- TCD2B3A.tmp
+|   |   |   |-- TCD2B3B.tmp
+|   |   |   |-- TCD2B3C.tmp
+|   |   |   |-- TCD2B3D.tmp
+|   |   |   |-- TCD2B3E.tmp
+|   |   |   |-- TCD2B3F.tmp
+|   |   |   |-- TCD447D.tmp
+|   |   |   |-- TCD447E.tmp
+|   |   |   |-- TCD447F.tmp
+|   |   |   |-- TCD4480.tmp
+|   |   |   |-- TCD4481.tmp
+|   |   |   |-- TCD4482.tmp
+|   |   |   |-- TCD4483.tmp
+|   |   |   |-- TCD4484.tmp
+|   |   |   |-- TCD4485.tmp
+|   |   |   |-- TCD4486.tmp
+|   |   |   |-- TCD4487.tmp
+|   |   |   |-- TCD4488.tmp
+|   |   |   |-- TCD4489.tmp
+|   |   |   |-- TCD4B9D.tmp
+|   |   |   |-- TCD4B9E.tmp
+|   |   |   |-- TCD4B9F.tmp
+|   |   |   |-- TCD4BA0.tmp
+|   |   |   |-- TCD4BA1.tmp
+|   |   |   |-- TCD4BA2.tmp
+|   |   |   |-- TCD4BA3.tmp
+|   |   |   |-- TCD4BA4.tmp
+|   |   |   |-- TCD4BA5.tmp
+|   |   |   |-- TCD4BA6.tmp
+|   |   |   |-- TCD4BA7.tmp
+|   |   |   |-- TCD4BA8.tmp
+|   |   |   |-- TCD4BA9.tmp
+|   |   |   |-- TCD5E5.tmp
+|   |   |   |-- TCD5E6.tmp
+|   |   |   |-- TCD5E7.tmp
+|   |   |   |-- TCD5E8.tmp
+|   |   |   |-- TCD5E9.tmp
+|   |   |   |-- TCD5EA.tmp
+|   |   |   |-- TCD5EB.tmp
+|   |   |   |-- TCD5EC.tmp
+|   |   |   |-- TCD5ED.tmp
+|   |   |   |-- TCD5EE.tmp
+|   |   |   |-- TCD5EF.tmp
+|   |   |   |-- TCD5F0.tmp
+|   |   |   |-- TCD5F1.tmp
+|   |   |   |-- TCD6D07.tmp
+|   |   |   |-- TCD6D17.tmp
+|   |   |   |-- TCD6D18.tmp
+|   |   |   |-- TCD6D19.tmp
+|   |   |   |-- TCD6D1A.tmp
+|   |   |   |-- TCD6D1B.tmp
+|   |   |   |-- TCD6D1C.tmp
+|   |   |   |-- TCD6D1D.tmp
+|   |   |   |-- TCD6D1E.tmp
+|   |   |   |-- TCD6D1F.tmp
+|   |   |   |-- TCD6D20.tmp
+|   |   |   |-- TCD6D21.tmp
+|   |   |   |-- TCD6D22.tmp
+|   |   |   |-- TCD768D.tmp
+|   |   |   |-- TCD768E.tmp
+|   |   |   |-- TCD768F.tmp
+|   |   |   |-- TCD7690.tmp
+|   |   |   |-- TCD7691.tmp
+|   |   |   |-- TCD7692.tmp
+|   |   |   |-- TCD7693.tmp
+|   |   |   |-- TCD7694.tmp
+|   |   |   |-- TCD7695.tmp
+|   |   |   |-- TCD7696.tmp
+|   |   |   |-- TCD7697.tmp
+|   |   |   |-- TCD7698.tmp
+|   |   |   |-- TCD7699.tmp
+|   |   |   |-- TCD7951.tmp
+|   |   |   |-- TCD7962.tmp
+|   |   |   |-- TCD7963.tmp
+|   |   |   |-- TCD7964.tmp
+|   |   |   |-- TCD7965.tmp
+|   |   |   |-- TCD7966.tmp
+|   |   |   |-- TCD7967.tmp
+|   |   |   |-- TCD7968.tmp
+|   |   |   |-- TCD7969.tmp
+|   |   |   |-- TCD796A.tmp
+|   |   |   |-- TCD796B.tmp
+|   |   |   |-- TCD796C.tmp
+|   |   |   |-- TCD796D.tmp
+|   |   |   |-- TCD7BFF.tmp
+|   |   |   |-- TCD7C00.tmp
+|   |   |   |-- TCD7C01.tmp
+|   |   |   |-- TCD7C02.tmp
+|   |   |   |-- TCD7C03.tmp
+|   |   |   |-- TCD7C14.tmp
+|   |   |   |-- TCD7C15.tmp
+|   |   |   |-- TCD7C16.tmp
+|   |   |   |-- TCD7C17.tmp
+|   |   |   |-- TCD7C18.tmp
+|   |   |   |-- TCD7C19.tmp
+|   |   |   |-- TCD7C1A.tmp
+|   |   |   |-- TCD7C1B.tmp
+|   |   |   |-- TCD8020.tmp
+|   |   |   |-- TCD8021.tmp
+|   |   |   |-- TCD8022.tmp
+|   |   |   |-- TCD8023.tmp
+|   |   |   |-- TCD8024.tmp
+|   |   |   |-- TCD8025.tmp
+|   |   |   |-- TCD8026.tmp
+|   |   |   |-- TCD8027.tmp
+|   |   |   |-- TCD8028.tmp
+|   |   |   |-- TCD8029.tmp
+|   |   |   |-- TCD802A.tmp
+|   |   |   |-- TCD802B.tmp
+|   |   |   |-- TCD802C.tmp
+|   |   |   |-- TCD884B.tmp
+|   |   |   |-- TCD884C.tmp
+|   |   |   |-- TCD885D.tmp
+|   |   |   |-- TCD885E.tmp
+|   |   |   |-- TCD885F.tmp
+|   |   |   |-- TCD8860.tmp
+|   |   |   |-- TCD8861.tmp
+|   |   |   |-- TCD8862.tmp
+|   |   |   |-- TCD8863.tmp
+|   |   |   |-- TCD8864.tmp
+|   |   |   |-- TCD8865.tmp
+|   |   |   |-- TCD8866.tmp
+|   |   |   |-- TCD8867.tmp
+|   |   |   |-- TCD8EAD.tmp
+|   |   |   |-- TCD8EAE.tmp
+|   |   |   |-- TCD8EAF.tmp
+|   |   |   |-- TCD8EB0.tmp
+|   |   |   |-- TCD8EB1.tmp
+|   |   |   |-- TCD8EB2.tmp
+|   |   |   |-- TCD8EB3.tmp
+|   |   |   |-- TCD8EB4.tmp
+|   |   |   |-- TCD8EB5.tmp
+|   |   |   |-- TCD8EB6.tmp
+|   |   |   |-- TCD8EB7.tmp
+|   |   |   |-- TCD8EB8.tmp
+|   |   |   |-- TCD8EB9.tmp
+|   |   |   |-- TCDA28.tmp
+|   |   |   |-- TCDA29.tmp
+|   |   |   |-- TCDA2A.tmp
+|   |   |   |-- TCDA2B.tmp
+|   |   |   |-- TCDA2C.tmp
+|   |   |   |-- TCDA2D.tmp
+|   |   |   |-- TCDA2E.tmp
+|   |   |   |-- TCDA2F.tmp
+|   |   |   |-- TCDA30.tmp
+|   |   |   |-- TCDA31.tmp
+|   |   |   |-- TCDA32.tmp
+|   |   |   |-- TCDA33.tmp
+|   |   |   |-- TCDA34.tmp
+|   |   |   |-- TCDA6DE.tmp
+|   |   |   |-- TCDA6DF.tmp
+|   |   |   |-- TCDA6E0.tmp
+|   |   |   |-- TCDA6E1.tmp
+|   |   |   |-- TCDA6E2.tmp
+|   |   |   |-- TCDA6E3.tmp
+|   |   |   |-- TCDA6E4.tmp
+|   |   |   |-- TCDA6E5.tmp
+|   |   |   |-- TCDA6E6.tmp
+|   |   |   |-- TCDA6E7.tmp
+|   |   |   |-- TCDA6E8.tmp
+|   |   |   |-- TCDA6E9.tmp
+|   |   |   |-- TCDA6EA.tmp
+|   |   |   |-- TCDBB28.tmp
+|   |   |   |-- TCDBB29.tmp
+|   |   |   |-- TCDBB2A.tmp
+|   |   |   |-- TCDBB2B.tmp
+|   |   |   |-- TCDBB2C.tmp
+|   |   |   |-- TCDBB2D.tmp
+|   |   |   |-- TCDBB2E.tmp
+|   |   |   |-- TCDBB2F.tmp
+|   |   |   |-- TCDBB30.tmp
+|   |   |   |-- TCDBB31.tmp
+|   |   |   |-- TCDBB32.tmp
+|   |   |   |-- TCDBB33.tmp
+|   |   |   |-- TCDBB34.tmp
+|   |   |   |-- TCDC786.tmp
+|   |   |   |-- TCDC787.tmp
+|   |   |   |-- TCDC788.tmp
+|   |   |   |-- TCDC789.tmp
+|   |   |   |-- TCDC78A.tmp
+|   |   |   |-- TCDC78B.tmp
+|   |   |   |-- TCDC78C.tmp
+|   |   |   |-- TCDC78D.tmp
+|   |   |   |-- TCDC78E.tmp
+|   |   |   |-- TCDC78F.tmp
+|   |   |   |-- TCDC790.tmp
+|   |   |   |-- TCDC791.tmp
+|   |   |   |-- TCDC792.tmp
+|   |   |   |-- TCDC8D6.tmp
+|   |   |   |-- TCDC8D7.tmp
+|   |   |   |-- TCDC8E8.tmp
+|   |   |   |-- TCDC8E9.tmp
+|   |   |   |-- TCDC8EA.tmp
+|   |   |   |-- TCDC8EB.tmp
+|   |   |   |-- TCDC8EC.tmp
+|   |   |   |-- TCDC8ED.tmp
+|   |   |   |-- TCDC8EE.tmp
+|   |   |   |-- TCDC8EF.tmp
+|   |   |   |-- TCDC8F0.tmp
+|   |   |   |-- TCDC8F1.tmp
+|   |   |   |-- TCDC8F2.tmp
+|   |   |   |-- TCDD331.tmp
+|   |   |   |-- TCDD332.tmp
+|   |   |   |-- TCDD333.tmp
+|   |   |   |-- TCDD334.tmp
+|   |   |   |-- TCDD335.tmp
+|   |   |   |-- TCDD336.tmp
+|   |   |   |-- TCDD337.tmp
+|   |   |   |-- TCDD338.tmp
+|   |   |   |-- TCDD339.tmp
+|   |   |   |-- TCDD33A.tmp
+|   |   |   |-- TCDD33B.tmp
+|   |   |   |-- TCDD33C.tmp
+|   |   |   |-- TCDD33D.tmp
+|   |   |   |-- TCDD5B6.tmp
+|   |   |   |-- TCDD5B7.tmp
+|   |   |   |-- TCDD5B8.tmp
+|   |   |   |-- TCDD5B9.tmp
+|   |   |   |-- TCDD5BA.tmp
+|   |   |   |-- TCDD5BB.tmp
+|   |   |   |-- TCDD5BC.tmp
+|   |   |   |-- TCDD5BD.tmp
+|   |   |   |-- TCDD5BE.tmp
+|   |   |   |-- TCDD5BF.tmp
+|   |   |   |-- TCDD5C0.tmp
+|   |   |   |-- TCDD5C1.tmp
+|   |   |   |-- TCDD5C2.tmp
+|   |   |   |-- TCDF677.tmp
+|   |   |   |-- TCDF678.tmp
+|   |   |   |-- TCDF689.tmp
+|   |   |   |-- TCDF68A.tmp
+|   |   |   |-- TCDF68B.tmp
+|   |   |   |-- TCDF68C.tmp
+|   |   |   |-- TCDF68D.tmp
+|   |   |   |-- TCDF68E.tmp
+|   |   |   |-- TCDF68F.tmp
+|   |   |   |-- TCDF690.tmp
+|   |   |   |-- TCDF691.tmp
+|   |   |   |-- TCDF692.tmp
+|   |   |   |-- TCDF693.tmp
+|   |   |   |-- VBE
+|   |   |   |-- WinGet
+|   |   |   `-- WPF
+|   |   |-- Temporary Internet Files -> /c/Users/gregor.redelonghi/AppData/Local/Microsoft/Windows/INetCache
+|   |   |-- ToastNotificationManagerCompat
+|   |   |   `-- Apps
+|   |   |-- VirtualStore
+|   |   |   `-- Windows
+|   |   |-- warp
+|   |   |   `-- Warp
+|   |   |-- zig
+|   |   |   |-- b
+|   |   |   |-- h
+|   |   |   |-- o
+|   |   |   |-- tmp
+|   |   |   `-- z
+|   |   `-- zoxide
+|   |-- LocalLow
+|   |   |-- Adobe
+|   |   |   |-- Acrobat
+|   |   |   |-- AcroCef
+|   |   |   `-- Linguistics
+|   |   |-- Intel
+|   |   |   `-- ShaderCache
+|   |   |-- Microsoft
+|   |   |   |-- CryptnetFlushCache
+|   |   |   |-- CryptnetUrlCache
+|   |   |   |-- Internet Explorer
+|   |   |   `-- RMSLocalStorage
+|   |   |-- Temp
+|   |   |   `-- Microsoft
+|   |   `-- webviewdata
+|   |       |-- 2
+|   |       `-- 3
+|   `-- Roaming
+|       |-- Adobe
+|       |   |-- Acrobat
+|       |   |-- Flash Player
+|       |   |-- Headlights
+|       |   |-- Linguistics
+|       |   `-- LogTransport2
+|       |-- Autodesk
+|       |   |-- ADPSDK
+|       |   |-- ApplicationPlugins
+|       |   |-- AutoCAD
+|       |   |-- AutoCAD 2020
+|       |   |-- AutoCAD 2022
+|       |   |-- AutoCAD 2024
+|       |   |-- Autodesk AutoCAD Map 3D 2020
+|       |   |-- Autodesk AutoCAD Map 3D 2022
+|       |   |-- Configuration
+|       |   |-- DWG TrueView 2024 - English
+|       |   |-- Inventor Server for AutoCAD 2020
+|       |   |-- Inventor Server for AutoCAD 2022
+|       |   `-- Project Management
+|       |-- CodeBlocks
+|       |   `-- share
+|       |-- go
+|       |   `-- telemetry
+|       |-- jupyter
+|       |   |-- kernels
+|       |   `-- runtime
+|       |-- Microsoft
+|       |   |-- Bibliography
+|       |   |-- CLR Security Config
+|       |   |-- Credentials
+|       |   |-- Crypto
+|       |   |-- Document Building Blocks
+|       |   |-- Dodatki
+|       |   |-- Excel
+|       |   |-- Installer
+|       |   |-- Internet Explorer
+|       |   |-- MMC
+|       |   |-- Network
+|       |   |-- Office
+|       |   |-- Outlook
+|       |   |-- Podpisi
+|       |   |-- PowerPoint
+|       |   |-- Predloge
+|       |   |-- Preskus
+|       |   |-- Protect
+|       |   |-- QuickStyles
+|       |   |-- Software Center
+|       |   |-- Speech
+|       |   |-- Spelling
+|       |   |-- SystemCertificates
+|       |   |-- Tiskovina
+|       |   |-- UProof
+|       |   |-- Vault
+|       |   |-- Windows
+|       |   `-- Word
+|       |-- Mozilla
+|       |   |-- Extensions-BackupByFirefoxPortable
+|       |   `-- Firefox
+|       |-- MultiCommander
+|       |   |-- Config
+|       |   |-- Logs
+|       |   `-- UserData
+|       |-- npm-cache
+|       |   |-- _cacache
+|       |   |-- _libvips
+|       |   |-- _locks
+|       |   `-- _prebuilds
+|       |-- OpenText
+|       |   `-- OTEdit
+|       |-- Processing
+|       |   `-- console
+|       |-- SAP
+|       |   `-- SAP GUI
+|       |-- SL-King
+|       |   |-- GeoSX
+|       |   `-- Sewer+
+|       |-- UI Launcher
+|       |   |-- ada-ui
+|       |   |-- blob_storage
+|       |   |-- Cache
+|       |   |-- Code Cache
+|       |   |-- DawnGraphiteCache
+|       |   |-- DawnWebGPUCache
+|       |   |-- GPUCache
+|       |   |-- Local Storage
+|       |   |-- Network
+|       |   |-- Session Storage
+|       |   `-- Shared Dictionary
+|       `-- Zoom
+|           |-- data
+|           |-- logs
+|           `-- reports
+|-- Application Data -> /c/Users/gregor.redelonghi/AppData/Roaming
+|-- Contacts
+|-- Cookies -> /c/Users/gregor.redelonghi/AppData/Local/Microsoft/Windows/INetCookies
+|-- Desktop
+|-- Downloads
+|   |-- __ARHIVIRAJ
+|   |   |-- _IMAGES
+|   |   |   |-- Airbus_colors
+|   |   |   `-- Bbs_and_Rest
+|   |   |-- _MUSKA
+|   |   `-- Avioni_Flight-computers-specs
+|   |-- 3-tja_razvojna_os
+|   |-- bash-bmp-info
+|   |-- c-20251210
+|   `-- downloaded-books-2026
+|-- Favorites
+|   |-- _Check Out !!!
+|   |-- _JPE
+|   |-- _Razno
+|   |   |-- Conan
+|   |   |-- Gostilne
+|   |   |-- GSM muzika
+|   |   |-- Knjigarne
+|   |   |-- MP3
+|   |   |   |-- Bossa Nova
+|   |   |   `-- MP3 - iskalci
+|   |   |-- Naredi SAM
+|   |   |-- Oblikovanje spletnih strani
+|   |   |-- OnLine Grafika
+|   |   |-- Restavracije
+|   |   `-- Smileys
+|   |-- _RgregoR
+|   |   |-- Avdio-Video
+|   |   |   |-- DVD predvajalniki
+|   |   |   `-- Goldstar SERVIS
+|   |   |-- Avto
+|   |   |   |-- 100 oktanski bencin
+|   |   |   `-- AMZS
+|   |   |-- Glasba
+|   |   |-- GPS sprejemniki
+|   |   |-- Kolosej
+|   |   |-- Majski prazniki 2005
+|   |   |-- Morje
+|   |   |   |-- Losinj 2005
+|   |   |   `-- Morje 2004
+|   |   |-- PLES
+|   |   |-- TV servis
+|   |   |-- UPRAVNIKI
+|   |   |-- Zala - aktivnosti
+|   |   `-- Zaposlovanje
+|   |-- Autodesk
+|   |-- Energetika
+|   |   |-- Cevi po DIN 2440
+|   |   |   `-- Jeklene cevi in fazonski kosi (5+)
+|   |   |-- Cevi_po_DIN2448
+|   |   |-- CGSa
+|   |   |-- Etanol - sladkor
+|   |   |-- GIS
+|   |   |   `-- ArcInfo
+|   |   |-- OVE
+|   |   |   |-- BioDiesel
+|   |   |   |-- Hydrogen - Fuel Cell
+|   |   |   `-- Vetrne elektrarne
+|   |   |-- Program za VP (Haris)
+|   |   |-- TPPS
+|   |   |-- TycoAdhesives - Reychem & Flexclad
+|   |   `-- UNP
+|   |-- EU
+|   |-- Glasba
+|   |   `-- YugoNostalgija
+|   |-- Iskalniki
+|   |   `-- SLO
+|   |-- Links
+|   |-- Microsoft Websites
+|   |-- Microsoftova spletna mesta
+|   |-- MoyeaMedia
+|   |-- MS Windows XP
+|   |-- PLES
+|   |-- Povezave
+|   |-- Project Guttenberg E-books
+|   |-- RgregoR_2008
+|   |   `-- Nudizem_2008_01
+|   |-- Slovenija
+|   |-- smucarija 2006
+|   |   `-- Andalo
+|   |-- Strojnistvo
+|   |   `-- jeklo - fittingi, cevi
+|   |-- Trgovine
+|   |-- Vreme
+|   |-- WebISO_Projektiranje - POSTOPKI
+|   |-- Windows Live
+|   |-- Zavarovalnice
+|   |-- Zdravje
+|   `-- Zemljevidi
+|-- go
+|   |-- bin
+|   `-- pkg
+|       |-- mod
+|       |   |-- cache
+|       |   |-- dario.cat
+|       |   |-- github.com
+|       |   |-- go.opencensus.io@v0.22.5
+|       |   |-- go.yaml.in
+|       |   |-- golang.org
+|       |   `-- gopkg.in
+|       `-- sumdb
+|           `-- sum.golang.org
+|-- gredelonghi_acad_support
+|   |-- doc
+|   |-- files
+|   |-- lisp
+|   |-- menus
+|   |-- scripts
+|   `-- test
+|       `-- external
+|-- IntelGraphicsProfiles
+|-- Links
+|-- Local Settings -> /c/Users/gregor.redelonghi/AppData/Local
+|-- majstaf
+|   `-- majprogs
+|       |-- cygwin_LPD
+|       |   `-- https%3a%2f%2fmirror.easyname.at%2fcygwin%2f
+|       `-- cygwin64
+|           |-- etc
+|           `-- var
+|-- majstaf_en
+|   |-- __from_Downloads
+|   |   |-- __FONTS
+|   |   |-- 20241010_installations_scripts_from_github
+|   |   |   |-- Debian-Xfce4-Minimal-Install
+|   |   |   |-- grewgrif
+|   |   |   `-- qtile-ubuntu
+|   |   |-- bookworm-scripts
+|   |   |   |-- colorschemes
+|   |   |   |-- documentation
+|   |   |   `-- install_scripts
+|   |   |-- debian12_minimal-install-plus-i3_from-pmcfernandes_20241120
+|   |   |-- Gregor-Redelonghi_zpiz_20231218
+|   |   |-- mintyfresh_LMDE6-install-script_20241120
+|   |   |   `-- files
+|   |   |-- Prenova-trznice_20241210
+|   |   |-- TRIGLAV_Nezgodna-zavarovanja_2024-25
+|   |   `-- UWIDE_WPS_20241202
+|   |-- BRISI
+|   |   |-- __GMAIL_dump
+|   |   |   `-- gmali__from-ME_20260214
+|   |   |-- _poslji
+|   |   |   |-- Tim
+|   |   |   `-- Trunkelj
+|   |   |-- 20241209_izolirni-kos_web
+|   |   |-- 20260121_c-array-of-structs-sort-test
+|   |   |   |-- bin
+|   |   |   `-- src
+|   |   |-- ct_999_array-of-structs-sort-test
+|   |   |   |-- bin
+|   |   |   `-- src
+|   |   |-- danes-20260224
+|   |   |   |-- ff-launch-en
+|   |   |   |-- ff-personal-launch-en
+|   |   |   |-- git-commands
+|   |   |   |-- kndb-files-from-tmst
+|   |   |   |-- rbekap-meganz
+|   |   |   `-- string-manipulations-en
+|   |   |-- DEST_jbe
+|   |   |-- DEST_mdb
+|   |   |-- P-30254_42480_HPP_Emonika-P1_PZI
+|   |   |   |-- risbe
+|   |   |   `-- teksti
+|   |   `-- ysap
+|   |       |-- code
+|   |       `-- episodes
+|   |-- drpbx-en
+|   |   `-- SKUPNI
+|   |       |-- _AVTO_ZAVAROVANJE
+|   |       |-- _PDF
+|   |       |-- BAJSOVA
+|   |       |-- BERLIN_2024
+|   |       |-- e-VINJETA_2023
+|   |       |-- e-VINJETA_2024
+|   |       |-- FORD_S-MAX_dokumentacija
+|   |       |-- HVAR_2023
+|   |       |-- KUNAVERJEVA-8
+|   |       |-- Mark_Avto-zavarovanje_20240313
+|   |       |-- SALSA
+|   |       |-- SEZNAMI
+|   |       |-- SLIKE ZA ODPRODAJO
+|   |       |-- TRIGLAV_2022-10
+|   |       |-- TRIGLAV_podalj-nezg-zav_Spela-Mark_20231127
+|   |       |-- VALVASORJEVA_5
+|   |       |-- ZAMAKANJE_20230807
+|   |       |-- Zavarovalnica-Triglav_zav-Fleksi-dokumentacija_20220922
+|   |       |-- ZAVAROVANJA_20221023
+|   |       `-- ZPIZ
+|   |-- en_staf
+|   |   |-- majvolpejprs
+|   |   |   |-- mywallpaper_bob
+|   |   |   |-- mywallpapers_9_20241001
+|   |   |   |-- mywallpapers_uw_5120_1440
+|   |   |   |-- normal_aspect_ratio_new
+|   |   |   |-- wpps_from_dt
+|   |   |   `-- wpps_from_linux-dabbler
+|   |   |-- mybin
+|   |   |-- mydoks
+|   |   |   |-- _energetika
+|   |   |   `-- eGraditev
+|   |   |-- myfonts
+|   |   |-- mynastavitve
+|   |   |   |-- How To Change Theme in Windows 10 (All Ways)_files
+|   |   |   |-- npp_GOlang_settings_20190927
+|   |   |   `-- win10setups_20220617
+|   |   |-- myprojects
+|   |   |   |-- 20210513_bootstrap
+|   |   |   |-- 20210614_flasktest-with-venv
+|   |   |   |-- BRISI2
+|   |   |   |-- emmet-test
+|   |   |   `-- pn073_oop_20210413
+|   |   |-- podpis_2014
+|   |   |   `-- ostalo
+|   |   `-- WIN10wallpapers
+|   |       |-- _win10wallpapers_ALL
+|   |       |-- win10wallpapers_20250919
+|   |       `-- win10wallpapers_20250930
+|   |-- majprogs_en
+|   |   |-- 7-Zip
+|   |   |   `-- Lang
+|   |   |-- 7z-source
+|   |   |-- c3-windows-Release
+|   |   |   `-- lib
+|   |   |-- CodeBlocks
+|   |   |   `-- share
+|   |   |-- CyberChef_v10.19.4
+|   |   |   |-- assets
+|   |   |   |-- images
+|   |   |   `-- modules
+|   |   |-- cygwin_LPD
+|   |   |   |-- https%3a%2f%2fcygwin.mirror.gtcomm.net%2f
+|   |   |   `-- https%3a%2f%2flinux.rz.ruhr-uni-bochum.de%2fdownload%2fcygwin%2f
+|   |   |-- cygwin64
+|   |   |   |-- bin
+|   |   |   |-- dev
+|   |   |   |-- etc
+|   |   |   |-- home
+|   |   |   |-- lib
+|   |   |   |-- mnt
+|   |   |   |-- opt
+|   |   |   |-- sbin
+|   |   |   |-- srv
+|   |   |   |-- tmp
+|   |   |   |-- usr
+|   |   |   `-- var
+|   |   |-- DB_Browser_for_SQLite
+|   |   |   |-- bearer
+|   |   |   |-- extensions
+|   |   |   |-- imageformats
+|   |   |   |-- licenses
+|   |   |   |-- platforms
+|   |   |   |-- printsupport
+|   |   |   |-- styles
+|   |   |   `-- translations
+|   |   |-- Explorerpp
+|   |   |-- FileZillaPortable
+|   |   |   |-- App
+|   |   |   |-- Data
+|   |   |   `-- Other
+|   |   |-- FireFox_63.0.1
+|   |   |   |-- App
+|   |   |   |-- Data
+|   |   |   `-- Other
+|   |   |-- go1.25.5.windows-amd64
+|   |   |   |-- api
+|   |   |   |-- bin
+|   |   |   |-- doc
+|   |   |   |-- lib
+|   |   |   |-- misc
+|   |   |   |-- pkg
+|   |   |   |-- src
+|   |   |   `-- test
+|   |   |-- godu_1.5.2_windows_amd64
+|   |   |-- javafx-sdk-11.0.2
+|   |   |   |-- bin
+|   |   |   |-- legal
+|   |   |   `-- lib
+|   |   |-- jdk-11
+|   |   |   |-- bin
+|   |   |   |-- conf
+|   |   |   |-- include
+|   |   |   |-- jmods
+|   |   |   |-- legal
+|   |   |   `-- lib
+|   |   |-- lf-windows-amd64
+|   |   |-- micro-2.0.14-win64
+|   |   |   `-- micro-2.0.14
+|   |   |-- mingw64
+|   |   |   |-- bin
+|   |   |   |-- include
+|   |   |   |-- lib
+|   |   |   |-- libexec
+|   |   |   |-- share
+|   |   |   `-- x86_64-w64-mingw32
+|   |   |-- MultiCommander_X64
+|   |   |   |-- Config
+|   |   |   |-- Extensions
+|   |   |   `-- Languages
+|   |   |-- mupdf-1.22.1-windows
+|   |   |-- node-v14.17.5-win-x64
+|   |   |   `-- node_modules
+|   |   |-- Notepad++
+|   |   |   |-- backup
+|   |   |   |-- localization
+|   |   |   |-- plugins
+|   |   |   |-- themes
+|   |   |   |-- updater
+|   |   |   `-- user.manual
+|   |   |-- OneCommander
+|   |   |   |-- af-ZA
+|   |   |   |-- am-ET
+|   |   |   |-- ar
+|   |   |   |-- arm64
+|   |   |   |-- ar-SA
+|   |   |   |-- az-Latn-AZ
+|   |   |   |-- be-BY
+|   |   |   |-- bg-BG
+|   |   |   |-- bn-BD
+|   |   |   |-- bs-Latn-BA
+|   |   |   |-- ca-ES
+|   |   |   |-- cs
+|   |   |   |-- cs-CZ
+|   |   |   |-- da
+|   |   |   |-- da-DK
+|   |   |   |-- de
+|   |   |   |-- de-DE
+|   |   |   |-- el-GR
+|   |   |   |-- en
+|   |   |   |-- en-GB
+|   |   |   |-- es
+|   |   |   |-- es-ES
+|   |   |   |-- es-MX
+|   |   |   |-- et-EE
+|   |   |   |-- eu-ES
+|   |   |   |-- fa-IR
+|   |   |   |-- fi-FI
+|   |   |   |-- Fonts
+|   |   |   |-- fr
+|   |   |   |-- fr-CA
+|   |   |   |-- fr-FR
+|   |   |   |-- gl-ES
+|   |   |   |-- ha-Latn-NG
+|   |   |   |-- he-IL
+|   |   |   |-- hi-IN
+|   |   |   |-- hr-HR
+|   |   |   |-- hu
+|   |   |   |-- hu-HU
+|   |   |   |-- id
+|   |   |   |-- id-ID
+|   |   |   |-- is-IS
+|   |   |   |-- it
+|   |   |   |-- it-IT
+|   |   |   |-- ja
+|   |   |   |-- ja-JP
+|   |   |   |-- ka-GE
+|   |   |   |-- kk-KZ
+|   |   |   |-- km-KH
+|   |   |   |-- kn-IN
+|   |   |   |-- ko
+|   |   |   |-- ko-KR
+|   |   |   |-- Licenses
+|   |   |   |-- Logs
+|   |   |   |-- lo-LA
+|   |   |   |-- lt-LT
+|   |   |   |-- lv-LV
+|   |   |   |-- mk-MK
+|   |   |   |-- ml-IN
+|   |   |   |-- ms-MY
+|   |   |   |-- nb
+|   |   |   |-- nb-NO
+|   |   |   |-- nl
+|   |   |   |-- nl-NL
+|   |   |   |-- nn-NO
+|   |   |   |-- pl
+|   |   |   |-- pl-PL
+|   |   |   |-- pt
+|   |   |   |-- pt-BR
+|   |   |   |-- pt-PT
+|   |   |   |-- qps-ploc
+|   |   |   |-- Resources
+|   |   |   |-- ro-RO
+|   |   |   |-- ru
+|   |   |   |-- ru-RU
+|   |   |   |-- Settings
+|   |   |   |-- sk-SK
+|   |   |   |-- sl
+|   |   |   |-- sl-SI
+|   |   |   |-- sq-AL
+|   |   |   |-- sr-Latn
+|   |   |   |-- sr-Latn-RS
+|   |   |   |-- sv-SE
+|   |   |   |-- sw-KE
+|   |   |   |-- ta-IN
+|   |   |   |-- te-IN
+|   |   |   |-- temp
+|   |   |   |-- Templates
+|   |   |   |-- TemplatesInstall
+|   |   |   |-- th
+|   |   |   |-- Themes
+|   |   |   |-- th-TH
+|   |   |   |-- tr
+|   |   |   |-- tr-TR
+|   |   |   |-- uk
+|   |   |   |-- uk-UA
+|   |   |   |-- uz-Latn-UZ
+|   |   |   |-- vi
+|   |   |   |-- vi-VN
+|   |   |   |-- x64
+|   |   |   |-- x86
+|   |   |   |-- zh-CN
+|   |   |   |-- zh-Hans
+|   |   |   |-- zh-Hant
+|   |   |   `-- zh-TW
+|   |   |-- openjfx-11.0.2_windows-x64_bin-jmods
+|   |   |   `-- javafx-jmods-11.0.2
+|   |   |-- Python310_win
+|   |   |-- rclone-v1.53.2-windows-amd64
+|   |   |-- sendEmail-v156
+|   |   |-- sendEmail-v156_noTLS
+|   |   |-- starigo
+|   |   |   `-- go
+|   |   |-- SumatraPDF-3.3.3-64
+|   |   |   `-- sumatrapdfcache
+|   |   |-- WinFontsForAll
+|   |   |   `-- Application Files
+|   |   |-- winMd5SumPortable
+|   |   |   |-- App
+|   |   |   |-- Data
+|   |   |   `-- Other
+|   |   |-- WinSCP
+|   |   |   `-- PuTTY
+|   |   `-- zig-windows-x86_64-0.14.0
+|   |       |-- doc
+|   |       `-- lib
+|   |-- processing
+|   |   |-- examples
+|   |   |-- libraries
+|   |   |-- modes
+|   |   |   `-- p5jsMode
+|   |   |-- sketch_230420a
+|   |   |   |-- sketch_230420b
+|   |   |   `-- sketch_230420b_2
+|   |   |-- templates
+|   |   `-- tools
+|   |-- PS_stuf
+|   |-- PWS_en
+|   |   |-- CountryCapitalsGui
+|   |   |   `-- lib
+|   |   `-- PWS_en_testing
+|   |       `-- 20230104
+|   |-- r.gregor.en
+|   |   |-- acad2012_backup_20170531
+|   |   |-- acad2017_backup_20170531
+|   |   |-- DB_Atlantis_2023
+|   |   |-- E-3
+|   |   |-- gregor.redelonghi -> /home/gregor.redelonghi
+|   |   |-- nalepke_imena_20231219
+|   |   |-- orodjarna
+|   |   |   |-- gredelonghi_acad_support
+|   |   |   |-- MD5sums-win
+|   |   |   `-- ukazi
+|   |   |-- PREBERI
+|   |   |-- skladisce
+|   |   |-- slike
+|   |   |-- start.en
+|   |   |   |-- 0_podloge
+|   |   |   |-- barvna
+|   |   |   |-- dnevno
+|   |   |   |-- html-seznami
+|   |   |   |-- judo
+|   |   |   |-- kolo
+|   |   |   |-- skladisce
+|   |   |   `-- tech
+|   |   |-- T-2
+|   |   |-- twitter_common
+|   |   `-- VALMEINIER-slike-Matic_20170131
+|   `-- winshortcuts
+|-- MicrosoftEdgeBackups
+|-- NetHood -> /c/Users/gregor.redelonghi/AppData/Roaming/Microsoft/Windows/Network Shortcuts
+|-- nimcache
+|   |-- greetings_d
+|   `-- t_d
+|-- Nova mapa
+|-- PrintHood -> /c/Users/gregor.redelonghi/AppData/Roaming/Microsoft/Windows/Printer Shortcuts
+|-- PSAppDeployToolkit
+|   `-- ExecuteAsUser
+|-- Recent -> /c/Users/gregor.redelonghi/AppData/Roaming/Microsoft/Windows/Recent
+|-- Saved Games
+|-- Searches
+|-- SendTo -> /c/Users/gregor.redelonghi/AppData/Roaming/Microsoft/Windows/SendTo
+|-- Start Menu -> /c/Users/gregor.redelonghi/AppData/Roaming/Microsoft/Windows/Start Menu
+|-- Templates -> /c/Users/gregor.redelonghi/AppData/Roaming/Microsoft/Windows/Templates
+`-- TESTING2022

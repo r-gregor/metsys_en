@@ -1,0 +1,74 @@
+﻿1 - download [ https://bootstrap.pypa.io/get-pip.py ]
+2 - run ...
+
+
+$> gregor.redelonghi@cygwin-en [/c/Users/gregor.redelonghi/Downloads]
+$> export http_proxy=http://172.17.3.64:80/
+
+$> gregor.redelonghi@cygwin-en [/c/Users/gregor.redelonghi/Downloads]
+$> export https_proxy=http://172.17.3.64:80/
+
+$> gregor.redelonghi@cygwin-en [/c/Users/gregor.redelonghi/Downloads]
+$> python get-pip.py
+Collecting pip
+/tmp/tmpWDZ55a/pip.zip/pip/_vendor/requests/packages/urllib3/util/ssl_.py:318: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#snimissingwarning.
+/tmp/tmpWDZ55a/pip.zip/pip/_vendor/requests/packages/urllib3/util/ssl_.py:122: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+  Downloading pip-8.1.2-py2.py3-none-any.whl (1.2MB)
+    100% |################################| 1.2MB 687kB/s
+Collecting wheel
+  Downloading wheel-0.29.0-py2.py3-none-any.whl (66kB)
+    100% |################################| 71kB 4.8MB/s
+Installing collected packages: pip, wheel
+Successfully installed pip-8.1.2 wheel-0.29.0
+/tmp/tmpWDZ55a/pip.zip/pip/_vendor/requests/packages/urllib3/util/ssl_.py:122: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+
+$> gregor.redelonghi@cygwin-en [/c/Users/gregor.redelonghi/Downloads]
+$> pip install sh
+Collecting sh
+/usr/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:318: SNIMissingWarning: An HTTPS request has been made, but the SNI (Subject Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#snimissingwarning.
+  SNIMissingWarning
+/usr/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:122: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+  InsecurePlatformWarning
+  Downloading sh-1.11.tar.gz
+Building wheels for collected packages: sh
+  Running setup.py bdist_wheel for sh ... error
+  Complete output from command /usr/bin/python2.7 -u -c "import setuptools, tokenize;__file__='/tmp/pip-build-diQw2R/sh/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" bdist_wheel -d /tmp/tmpGBG_rBpip-wheel- --python-tag cp27:
+  Traceback (most recent call last):
+    File "<string>", line 1, in <module>
+    File "/tmp/pip-build-diQw2R/sh/setup.py", line 35, in <module>
+      "Topic :: Software Development :: Libraries :: Python Modules",
+    File "/usr/lib/python2.7/distutils/core.py", line 137, in setup
+      ok = dist.parse_command_line()
+    File "/usr/lib/python2.7/site-packages/setuptools/dist.py", line 232, in parse_command_line
+      result = _Distribution.parse_command_line(self)
+    File "/usr/lib/python2.7/distutils/dist.py", line 467, in parse_command_line
+      args = self._parse_command_opts(parser, args)
+    File "/usr/lib/python2.7/site-packages/setuptools/dist.py", line 558, in _parse_command_opts
+      nargs = _Distribution._parse_command_opts(self, parser, args)
+    File "/usr/lib/python2.7/distutils/dist.py", line 523, in _parse_command_opts
+      cmd_class = self.get_command_class(command)
+    File "/usr/lib/python2.7/site-packages/setuptools/dist.py", line 362, in get_command_class
+      ep.require(installer=self.fetch_build_egg)
+    File "/usr/lib/python2.7/site-packages/pkg_resources.py", line 2025, in require
+      working_set.resolve(self.dist.requires(self.extras),env,installer))
+    File "/usr/lib/python2.7/site-packages/pkg_resources.py", line 2235, in requires
+      dm = self._dep_map
+    File "/usr/lib/python2.7/site-packages/pkg_resources.py", line 2464, in _dep_map
+      self.__dep_map = self._compute_dependencies()
+    File "/usr/lib/python2.7/site-packages/pkg_resources.py", line 2497, in _compute_dependencies
+      common = frozenset(reqs_for_extra(None))
+    File "/usr/lib/python2.7/site-packages/pkg_resources.py", line 2494, in reqs_for_extra
+      if req.marker_fn(override={'extra':extra}):
+    File "/usr/lib/python2.7/site-packages/_markerlib/markers.py", line 109, in marker_fn
+      return eval(compiled_marker, environment)
+    File "<environment marker>", line 1, in <module>
+  NameError: name 'sys_platform' is not defined
+
+  ----------------------------------------
+  Failed building wheel for sh
+  Running setup.py clean for sh
+Failed to build sh
+Installing collected packages: sh
+  Running setup.py install for sh ... done
+Successfully installed sh-1.11
+

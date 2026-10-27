@@ -1,0 +1,351 @@
+filename: polybar_formatting_20241216.txt
+https://github.com/polybar/polybar/issues/775
+
+How can I add custom click-handler to date module?
+
+I wrote script that show a calendar, how can I edit date module to do that?
+
+***
+There is no built-in handler on the date module. However there is an
+[**1][https://github.com/polybar/polybar/wiki/Formatting#action-a]action format tag which you can use as part
+of the label or format:
+
+format =%{A1:launch-calendar.sh:} 🕓 <label> %{A}
+
+
+---
+[**1]
+https://github.com/polybar/polybar/wiki/Formatting
+
+Formatting
+Nov 5, 2023
+
+   This page describes how text and individual components can be configured.
+
+   Make sure you read the [https://github.com/polybar/polybar/wiki/Configuration]Configuration wiki page for
+   the basic syntax for writing config files.
+
+Formats
+   The look of a module is primarily decided by its "format". Modules define formats in the form of
+   config settings called format and/or format-NAME which different format names. The module generally
+   chooses a format to be displayed depending on its current state.
+
+   For example, the mpd module defines the following formats that will be used depending on connection
+   state
+[module/mpd]
+format-online = ...
+format-offline = ...
+
+   Formats contain labels, progress bars, ramps, and animations. These can be arranged
+   in the format by surrounding the name of the label, progress bar, etc. in angle brackets (<...>). For
+   example, format-connected = <label-connected> defines the format named "connected" to contain the
+   label named label-connected.
+
+   All formats can be configured using the following parameters:
+format-NAME = ...
+
+; The prefix and suffix properties contains all
+; properties that are available for any '<label>'.
+format-NAME-prefix = ...
+format-NAME-prefix-foreground = #f00
+format-NAME-suffix = ...
+format-NAME-suffix-background = #0f0
+
+; By only specifying alpha value, it will be
+; applied to the bar's default foreground/background color
+format-NAME-foreground = #aa[rrggbb]
+format-NAME-background = #aa[rrggbb]
+format-NAME-underline  = #aa[rrggbb]
+format-NAME-overline   = #aa[rrggbb]
+
+; Number of spaces, points or pixels
+format-NAME-padding = N[pt|px]
+format-NAME-margin  = N[pt|px]
+format-NAME-spacing = N[pt|px]
+
+; Use Nth font for this format (1-indexed)
+format-NAME-font = N
+
+; Displace the format block horizontally by +/-N pixels or points
+format-NAME-offset = N{pt,px}
+
+   TODO: Improve section
+
+Tokens
+   Tokens can be used in many labels to display dynamic values set by the module. For example in the
+   [https://github.com/polybar/polybar/wiki/Module:-date]internal/date module, %time% will be replaced with
+   the formatted time string.
+label = %token%
+
+; Set value min width
+; By default, the text is padded to the left, if the min-width is negative, it
+; will be right-padded.
+; If the min-width begins with a `0`, the string will be zero-padded (only for
+; left-padding).
+; Changed in version 3.7.0: Negative min-width causes right padding
+label = %token:3%
+
+; Set value max width
+; NOTE: the length of the token includes suffixes appended internally (KB/s, %, etc.)
+label = %token:0:10%
+
+; Specify suffix to be used if truncated to max width
+label = %token:0:10:...%
+label = %token:0:10:---%
+
+Content types
+   This section describes the building blocks that can be used in a module's format.
+
+Label
+   A label is simply text. You may include a token which represents a value.
+
+   Labels are the most basic building blocks of modules; formats can contain labels directly, but many
+   other configuration options are also labels and thus inherit all the same configuration settings. For
+   example, each level of a ramp is in itself a label.
+label-NAME = foobar
+;label-NAME-foreground = #aarrggbb
+;label-NAME-background = #aarrggbb
+;label-NAME-overline = #aarrggbb
+;label-NAME-underline = #aarrggbb
+;label-NAME-font = N
+
+; Add N spaces, points, pixels before and after the label
+; Spacing added this way is not affected by the label colors
+; Default: 0
+label-NAME-padding = N[pt|px]
+
+; Add N spaces, points, pixels before and after the label text
+; Spacing added this way is affected by the label colors
+; Default: 0
+label-NAME-margin = N[pt|px]
+
+; Truncate text if it exceeds given limit.
+; Default: 0
+label-NAME-maxlen = 30
+
+; Pad with spaces if the text doesn't have at least minlen characters
+; Default: 0
+label-NAME-minlen = 10
+; Alignment when the text is shorter than minlen
+; Possible Values: left, center, right
+; Default: left
+label-NAME-alignment = center
+
+; Optionally append ... to the truncated string.
+; Default: true
+label-NAME-ellipsis = false
+
+   TODO: Improve section
+
+Ramp
+   Ramps are used to display different things depending on some value reported by the module (e.g.
+   volume). Each level of the ramp is responsible for a range of values.
+ramp-NAME-0 = A
+ramp-NAME-1 = B
+ramp-NAME-2 = C
+
+   The first and last element are responsible for the edges of the range of values. For example if a
+   module provides a percentage, ramp-NAME-0 = A will be displayed if that percentage is 0 (or lower if
+   that is supported) and ramp-NAME-2 = C is used for values >= 100. The inside of the range is evenly
+   distributed between the remaining ramp elements.
+
+   Ramp entries are based on labels which means that you can define all properties that are available
+   for a <label>, for example:
+ramp-NAME-0-foreground = #00f
+ramp-NAME-1-background = #f90
+
+   To avoid repetition it's possible to define default values for each entry on the <ramp> itself. The
+   following would set the background/foreground color for all entries with a custom foreground color
+   for ramp-NAME-0.
+ramp-NAME-background = #fff
+ramp-NAME-foreground = #000
+ramp-NAME-0 = A
+ramp-NAME-0-foreground = #f00
+ramp-NAME-1 = B
+ramp-NAME-2 = C
+
+Ramp Weights
+   New in version 3.6.0
+
+   Each ramp element also has a weight associated with it (defaults to 1) which defines how much of the
+   overall range, the element is assigned to:
+ramp-NAME-0 = A
+ramp-NAME-1 = B
+ramp-NAME-1-weight = 9
+ramp-NAME-2 = B
+ramp-NAME-3 = D
+
+   Here, the first and last element are again responsible for the edges of the range. The second element
+   has weight 9 and the third has the default weight 1. This means for the first 90% of the ramp range
+   the second element is used and for the remaining 10%, the third element is used.
+
+Progressbar
+   Like ramps, progress bars are also controlled by some value in the module (e.g. cpu load). They are
+   made up of three parts: a filled part, an indicator, and an empty part.
+
+   The contents of these are controlled by the three labels bar-NAME-fill, bar-NAME-indicator, and
+   bar-NAME-empty.
+
+   Note: The width (bar-NAME-width) defines how often the filled and empty part are duplicated, not the
+   final width. If the labels are not the same size, you may run into unexpected proportions in the
+   progress bar.
+bar-NAME-format = %fill%%indicator%%empty%
+bar-NAME-width = 10
+
+; Defines the text color of the filled part.
+; If the gradient is enabled, the filled part's color is a gradient using the listed colors.
+; Otherwise the entire filled part will have the same color, based on the current value.
+bar-NAME-gradient = true
+bar-NAME-foreground-0 = #00ff00
+bar-NAME-foreground-1 = #ff9900
+bar-NAME-foreground-2 = #ff0000
+
+; The fill, indicator and empty icon can be configured like any <label>
+bar-NAME-fill = x
+bar-NAME-indicator = x
+bar-NAME-empty = x
+
+   TODO: Improve section
+
+Animation
+   Animations are basically just labels that change their value in a defined frequency.
+; Each animation step is itself a label
+animation-NAME-0 = A
+animation-NAME-1 = B
+animation-NAME-2 = C
+; Framerate in milliseconds
+animation-NAME-framerate = 1000
+
+   TODO: Improve section
+
+Sizes & Spacing
+   New in version 3.6.0
+
+   In many parts of the config, you can specify some kind of size (width, height, border) or spacing
+   (margin, padding). These are similar but all differ slightly. We differentiate between three types:
+   spacing, extents, and "percentage with offset".
+
+Spacing
+   Spacing can be specified as either a number of spaces (no unit), pixels (px) or points (pt). For
+   example:
+; 10 spaces
+label-padding = 10
+; 20 pixels
+label-padding = 20px
+; 15 points
+label-padding = 15pt
+
+   Spaces are just added as whitespace characters, the size depends on the active font. One point is
+   1/72th of an inch and is translated to a number of pixels according to the specified DPI.
+
+Extent
+   Extent values are almost like spacing but don't support spaces, only pixels (no unit or px) and
+   points (pt). These are mainly used to described the size of something (and thus can't support spaces)
+
+Percentage with Offset
+   A percentage with offset specifies the size of something using a relative percentage together with an
+   extent value that is added to it. For example:
+[bar/...]
+...
+width = 90%:-10pt
+
+   This specifies a bar width of 90% minus 10 points. What exactly the percentage is relative to depends
+   on the setting. For the bar width, it is relative to the width of the monitor.
+
+   Both the percentage value and the extent value can also be specified on their own:
+width = 100%
+height = 12pt
+
+Format tags
+   Polybar has built-in support for basic [https://github.com/LemonBoy/bar#formatting]lemonbar tags.
+
+   NOTE: The %{U} tag has been replaced by %{u#hex} and %{o#hex} to allow changing under-/overline color
+   independently.
+
+   A script that is called from a custom/script module can wrap its output (or parts of it) in these
+   format tags to change how polybar displays the text in between them.
+
+Format tags inside polybar config
+   Of course you can use the format tags inside other modules also, but since most format- field have
+   their own foreground, background, etc suffixes, this often is not necessary. One use case is to style
+   only parts of a label, for example if in the volume module you wanted to only display the percentage
+   in a certain color but not the percent sign, you could use the foreground tag like this:
+label-volume = %{F#f00}%percentage%%{F-}%
+
+   Pitfalls: As described in #615 using polybar variables inside format tags is not possible. So
+   something like this won't work:
+label = "Some text %{F${colors.foreground-alt}}Colored%{F-}"
+
+   If you want this behaviour, you'll need to define the whole label string, with the color codes, in an
+   environment variable before you start the bar and then reference that variable inside the config like
+   this:
+export BAR_MODULE_LABEL="Some text %{F$COLOR_FG_ALT}Colored%{F-}"
+
+   This means, you will also have to define the colors as environment variables.
+
+   And inside the polybar config:
+...
+label = ${env:BAR_MODULE_LABEL}
+...
+
+Foreground color %{F}
+%{F#f00} red text %{F-} default text
+
+Background color %{B}
+%{B#f00}%{F#000} black text on red background %{B- F-}
+
+Reverse back-/foreground colors %{R}
+black bg, white fg %{R} white bg, black fg
+
+Underline color %{u}
+%{u#ff9900}%{+u} orange underline %{u#0000ff} blue underline %{u-} default underline color %{-u} underline
+disabled
+
+Overline color %{o}
+%{o#ff9900}%{+o} orange overline %{o#0000ff} blue overline %{o-} default overline color %{-o} overline disabled
+
+Font %{T}
+%{T3} Uses font-2 %{T-} use first (default) font
+
+   Notice how the font tag uses a 1-based index, same as the -font property. See also Fonts.
+
+Offset %{O}
+   Inserts a gap of the specified size (can also be negative).
+%{O10} pushed 10 pixels to the right %{O-5pt} 5 points to the left
+
+   The value specified can be any extent value.
+
+### Action %{A} ###
+   Actions handlers are defined using the following syntax:
+   %{A<button-index><colon><command><colon>}<inner-text>%{A}
+%{A1:command:} clickable text %{A}
+
+   Note: If command contains any colons (:), you have to escape them with a backslash like this: \:.
+   Otherwise the colon acts as the command delimiter and polybar would only parse the command until the
+   colon.
+
+   The following values for <button-index> are allowed:
+     * 1: left click
+     * 2: middle click
+     * 3: right click
+     * 4: scroll up
+     * 5: scroll down
+     * 6: double left click
+     * 7: double middle click
+     * 8: double right click
+
+   Note: Double click actions are only triggered if they occur within the double-click-interval
+   specified in the [https://github.com/polybar/polybar/wiki/Configuration#bar-settings]bar section.
+
+Nested Actions
+   As with any formatting tag you can also have nested action. For example:
+%{A1:...:}%{A2:...:}Some clickable text%{A} only left click%{A}
+
+   The text inside both tags responds to both left and middle clicks.
+
+   If you nest actions for the same button, the innermost action tag will be chosen when clicked:
+%{A1:firefox:}%{A1:chromium:}This opens chromium%{A} and this one firefox%{A}
+
+
+---
+

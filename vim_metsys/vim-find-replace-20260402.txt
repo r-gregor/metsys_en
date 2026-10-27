@@ -1,0 +1,217 @@
+filename: vim-find-replace-20260402.txt
+https://linuxize.com/post/vim-find-replace/
+
+Find and Replace in Vim / Vi
+Mar 9, 2026
+
+Find and Replace
+Vim is one of the most popular command-line text editors. It comes preinstalled on macOS and most Linux
+distributions.
+
+One of Vim´s most powerful features is search and replace. Once you get comfortable with it, editing
+text becomes incredibly fast and easy.
+
+In this guide, we will show you how to find and replace text in Vim and its predecessor Vi.
+Basic Find and Replace
+
+In Vim, search and replace is done with the :substitute command, often abbreviated as :s.
+
+Before running any command, make sure you are in Normal mode, the default mode when starting the editor. To
+go back to normal mode from any other mode, just press the Esc key.
+
+The general syntax looks like this:
+:[range]s/{pattern}/{replacement}/[flags] [count]
+
+  * range - which lines to apply the command to.
+  * pattern - the text or regular expression to search for.
+  * replacement - the text to replace it with.
+  * flags - options that change how the command behaves.
+  * count - a positive integer that multiplies the command.
+
+If no range is specified, Vim only replaces text in the current line. The current line is the line where
+the cursor is placed.
+
+Replace the First Match in the Current Line
+The following example replaces the first occurrence of foo with bar on the current line.
+:s/foo/bar/
+
+Replace All Matches in the Current Line
+To replace all occurrences of the search pattern in the current line, add the g (global) flag:
+:s/foo/bar/g
+
+Replace Text in the Entire File
+To search and replace the pattern in the entire file, use the percentage character % as a range. It
+represents all lines from the beginning to the end of the file.
+:%s/foo/bar/g
+
+Delete Text Using Substitute
+If the {replacement} part is omitted, Vim replaces the match with an empty string, effectively deleting it.
+
+The following command deletes all occurrences of the string foo from the current line:
+:s/foo//g
+
+Using Different Delimiters
+Instead of the slash character (/), you can use any other non-alphanumeric single-byte character as a
+delimiter. This option is useful when you have the / character in the search pattern or the replacement
+string.
+:s|foo|bar|
+
+Confirm Each Replacement
+To review and confirm each substitution, use the c flag:
+:s/foo/bar/gc
+
+Vim will prompt you for each match:
+replace with bar (y/n/a/q/l/^E/^Y)?
+
+  * y - replace this match.
+  * n - skip this match.
+  * a - replace this and all remaining matches.
+  * l - replace this match and quit.
+  * q or Esc - quit without further replacements.
+  * Ctrl+E - scroll the screen up.
+  * Ctrl+Y - scroll the screen down.
+
+Using Regular Expressions
+Vim´s substitute command also supports regular expressions as a search pattern. If you are not yet
+familiar with how Vim searches work, see the Vim search guide first.
+
+The command below replaces all lines starting with foo with "Vim is the best":
+:%s/^foo.*/Vim is the best/gc
+    ^ - the caret symbol matches the beginning of a line.
+    .* - matches any number of any characters.
+
+Case Sensitivity
+By default, searches in Vim are case sensitive; searching for "FOO" will not match "Foo".
+
+Ignore Case
+To ignore case for the search pattern, use the i flag:
+:s/Foo/bar/gi
+
+Another way to force ignore case is to append \c after the search pattern. For example, /Linux\c performs
+an ignore-case search.
+
+Force Case Sensitivity
+If you changed the default case setting and you want to perform a case-sensitive search, use the I flag:
+:s/foo/bar/gI
+
+Uppercase \C after the pattern also forces case-match search.
+
+Limiting the Search Range
+When no range is specified, the substitute command operates only on the current line.
+
+The range can be either one line or a range between two lines. The line specifiers are separated with
+the , or ; characters. The range can be specified using the absolute line number or special symbols.
+
+Replace Between Two Line Numbers
+To substitute all occurrences of foo with bar in lines 3 to 10:
+:3,10s/foo/bar/g
+
+The range is inclusive, meaning the first and last lines are included.
+
+From Current Line to End of File
+To substitute foo in all lines starting from the current line to the last one:
+:.,$s/foo/bar/
+
+    The dot . character represents the current line.
+    $ represents the last line.
+
+Using Relative Line Numbers
+The line specifier can also be set using the + or - symbol, followed by a number that is added or
+subtracted from the preceding line number. If the number after the symbol is omitted, it defaults to 1.
+:.,+4s/foo/bar/g
+
+This replaces foo with bar on the current line and the next four lines.
+
+Replacing Whole Words Only
+By default, Vim matches substrings - the substitute command looks for the pattern as a string, not a
+whole word.
+
+For example, when searching for "gnu", the command finds matches where "gnu" is embedded in
+larger words, such as "cygnus" or "magnum".
+
+To match whole words only, use word boundaries:
+:s/\<foo\>/bar/
+
+    \< marks the beginning of a word.
+    \> marks the end of a word.
+
+Substitute Command History
+Vim keeps track of all commands you run in the current session. To browse the history for previous
+substitute commands:
+
+  * Type :s
+  * Use the arrow up/down keys to find a previous substitute operation.
+  * Press Enter to run the command. You can edit the command before running it.
+
+Practical Examples
+The following examples demonstrate common real-world substitutions that can save time when editing
+configuration files, source code, or large text documents.
+Add Comments to a Line Range
+:5,20s/^/#/
+
+Remove Comments from a Line Range
+:5,20s/^#//
+
+Replace Multiple Words at Once
+:%s/apple\|orange\|mango/fruit/g
+
+Remove Trailing Whitespace
+:%s/\s\+$//e
+
+The e flag prevents errors if no matches are found.
+
+Quick Reference
+-------------------------------------------------------------------
+Command                    Description
+-------------------------------------------------------------------
+:s/foo/bar/                Replace first match on current line
+:s/foo/bar/g               Replace all matches on current line
+:%s/foo/bar/g              Replace all matches in the file
+:3,10s/foo/bar/g           Replace in line range 3-10
+:.,$s/foo/bar/g            Replace from current line to end of file
+:s/foo/bar/gi              Replace, ignoring case
+:s/foo/bar/gc              Replace with confirmation prompt
+:s/foo//g                  Delete all matches on current line
+:s/\<foo\>/bar/            Replace whole word only
+:%s/apple|orange/fruit/g   Replace multiple patterns at once
+-------------------------------------------------------------------
+
+Troubleshooting
+Pattern not found The search pattern is case-sensitive by default. If you expect a match but get "Pattern
+not found", add the i flag (:s/foo/bar/gi) or append \c to the pattern (:s/foo\c/bar/g).
+
+Substitution only runs on the current line Without a range, :s operates only on the current line. Use
+:%s to apply the substitution across the entire file.
+
+Pattern contains / characters The slash is the default delimiter, so a literal / in the pattern must be
+escaped (\/) or you can switch to a different delimiter such as | or #: :s|/old/path|/new/path|g.
+
+Special regex characters not matching literally Characters like ., *, [, and \ have special meaning in
+Vim regex. To match them literally, escape each one with a backslash: :s/foo\.bar/baz/g.
+
+FAQ
+How do I undo a substitution? Press u in Normal mode to undo the last change. You can press u multiple
+times to step back through the undo history.
+
+What is the difference between :s and :%s? :s applies the substitution to the current line only. :%s
+applies it to every line in the file. The % is a range specifier meaning "all lines".
+
+How do I replace a whole word, not a substring? Use word boundary anchors: :s/\<foo\>/bar/g. Without them,
+searching for foo would also match foobar or seafood.
+
+Can I use regex in the search pattern? Yes. Vim´s substitute command supports regular expressions. For
+example, :%s/^\s\+// removes leading whitespace from every line. See the regular expressions guide for
+a full reference.
+
+How do I replace text only in a visual selection? Select the lines you want in Visual mode (press V
+to select lines), then type :s/foo/bar/g. Vim automatically inserts '<,'> as the range, limiting the
+substitution to the selected lines.
+
+Conclusion
+The :substitute command is one of Vim´s most powerful editing tools. Once you know how to use it,
+you can make large-scale changes to text files quickly. For a broader reference on Vim commands and
+shortcuts, see our Vim cheatsheet.
+
+
+---
+

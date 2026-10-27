@@ -1,0 +1,12 @@
+CONVERT-ALL-UNDERSCORES-TO-HYPENS-20250331.txt
+
+~/majstaf_en/scripts_majbin_en/00_ukazi_en/single-file-underscores-to-hypens-d.sh
+~/majstaf_en/scripts_majbin_en/00_ukazi_en/single-file-underscores-to-hypens-en.sh
+*** ~/majstaf_en/scripts_majbin_en/00_ukazi_en/spaces-to-underscores.sh***
+~/majstaf_en/scripts_majbin_en/00_ukazi_en/underscores-to-hypens-d.sh
+~/majstaf_en/scripts_majbin_en/00_ukazi_en/underscores-to-hypens-d_20200831.onl.txt
+~/majstaf_en/scripts_majbin_en/00_ukazi_en/underscores-to-hypens-en.sh
+*** ~/majstaf_en/scripts_majbin_en/oneliners_en/convert_lower_upper_wariables_with_underscore.onl.txt
+~/majstaf_en/scripts_majbin_en/oneliners_en/underscores-to-hypens-d-20200831.onl.txt
+
+

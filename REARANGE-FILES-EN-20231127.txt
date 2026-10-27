@@ -1,0 +1,46 @@
+Rearange files (en) 20231128 (02)
+=================================
+
+/home/gregor.redelonghi
+|
++-- majstaf
+    |
+    +-- coding      [C_Cpp_t, JAVA_t, PYTHON_t, ...]
+    |
+    +-- majbin_en   [executables]
+    |
+    |-- src_majbin  [00_ukazi_en, zze_en, ...]
+    |
+    .
+    .
+    .
+
+---
+ 2454  2023-11-28 08:40:23 mkdir _majbin_en_src_en
+ 2455  2023-11-28 08:40:30 mkdir _majbin_d_src_d
+ 2456  2023-11-28 08:41:28 mv 00_ukazi_en/ bekap_en/ ddbaklog_en/ ext_backups_metsys_en/ fnd_en/ git-commands_en/ gremdomov_en/ lynxdump_en/ oneliners_en/ _majbin_en_src_en/
+ 2458  2023-11-28 08:42:14 mv python_venv_and_pip_setup_en/ rsync_backup_en/ send_mail_en/ toolbox_en/ w3mdump_en/ zze_en/ _majbin_en_src_en/
+ 2464  2023-11-28 08:43:30 find * -maxdepth 0 -type d -name "*_d" |grep -v _majbin | xargs -I{} mv {} _majbin_d_src_d/
+ 2467  2023-11-28 08:44:28 mkdir _majbin_en_src_en/ostalo_en
+ 2469  2023-11-28 08:44:52 find * -maxdepth 0 -type f -exec mv {} _majbin_en_src_en/ostalo_en/ \;
+ 2470  2023-11-28 08:45:23 mv meganz_sync_commands{,_en}
+ 2471  2023-11-28 08:45:36 mv meganz_sync_commands_en/ _majbin_en_src_en/
+ 2474  2023-11-28 08:46:16 cp -r majbin{,_backup}
+ 2478  2023-11-28 08:46:55 mv majbin{,_en}
+ 2504  2023-11-28 08:52:53 mkdir src_majbin
+ 2513  2023-11-28 08:56:49 cp -r /c/Users/gregor.redelonghi/majstaf/drpbx-en/ODPRTO/MCDN/coding/* ~/majstaf/majbin_en/src_majbin/
+ 2516  2023-11-28 08:59:09 find * -maxdepth 0 -type d ! -name "*_en" | xargs -I{} rm -rv {}
+ 2517  2023-11-28 08:59:27 mkdir src_ostalo_en
+ 2519  2023-11-28 08:59:53 find * -maxdepth 0 -type f -exec mv {} src_ostalo_en/ \;
+ 2523  2023-11-28 09:02:19 ./listulb > ../seznami/listulb_20231127.txt
+ 2527  2023-11-28 09:04:33 cat ../seznami/listulb_20231127.txt | sed 's/\.\+\//___\//' > ../seznami/listulb_20231127_02.txt 
+ 2531  2023-11-28 09:06:52 cat listulb_20231127_02.txt | awk -F'___' '{print $2,$1}' > listulb_20231127_03.txt
+ 2532  2023-11-28 09:07:01 vim listulb_20231127_03.txt
+ 2538  2023-11-28 09:13:28 vim listulb_20231127_04.txt
+ 2539  2023-11-28 09:14:21 while read LINE; do $($LINE); done < listulb_20231127_04.txt 
+ 2545  2023-11-28 09:16:54 ln -snf /home/gregor.redelonghi/majstaf/majbin_en/square-brackets-num-bookmarks-find-and-remove ~/.local/bin/square-brackets-num-bookmarks-find-and-remove 
+ 2546  2023-11-28 09:17:11 rm mRUN-en-cdng 
+ 2561  2023-11-28 09:21:41 vim ~/.local/bin/RUN-en-cdng 
+ 2562  2023-11-28 09:22:01 RUN-en-cdng 
+---
+

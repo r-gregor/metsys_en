@@ -1,0 +1,3 @@
+After PREREZ setup no 'Drafting and annotation' workspace does not show menubar.
+fix: MENNUBAR command and set it to '1'
+

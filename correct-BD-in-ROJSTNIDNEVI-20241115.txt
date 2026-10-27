@@ -1,0 +1,5 @@
+find -type f -iname "ROJSTNIDNEVI.txt"
+for FFF in $(find -type f -iname "ROJSTNIDNEVI.txt"); do grep Jelena $FFF; done
+for FFF in $(find -type f -iname "ROJSTNIDNEVI.txt"); do sed -i "s/Jelena Nolimal,19.11.1970/Jelena Nolimal,19.11.1973/" $FFF; done
+for FFF in $(find -type f -iname "ROJSTNIDNEVI.txt"); do grep Jelena $FFF; done
+

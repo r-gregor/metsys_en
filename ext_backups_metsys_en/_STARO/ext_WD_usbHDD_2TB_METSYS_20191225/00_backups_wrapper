@@ -1,0 +1,112 @@
+#! /bin/bash
+
+### Name:   00_backups_wrapper.sh
+### Author: RgregoR 
+### Date:   2013-05-24 
+### Decription:
+### 
+### Last change: 20191015
+###
+### UPDATE 20191023
+### NEW FOLDER STRUCTURE (NEW HDD)
+### *********************************************************************************************************
+
+bT1=$(date +"%s")
+
+
+# changed 20191023:
+gr_run_c=en_METSYS/cqrsync_backups.sh
+gr_run_d=en_METSYS/dqrsync_backups.sh
+gr_run_a=en_METSYS/qrsync_backups.sh
+gr_run_h=en_METSYS/hqrsync_backups.sh
+gr_run_p=en_METSYS/pqrsync_backups.sh
+
+
+read -r -d '' gr_msg <<EOF
+
+    Usage: $0 -option[s]:
+        options:
+        -a  run all backups
+        -c  run backups on C:\ (/c/..) - user, home, cygwin, ...
+        -d  run backups on Dropbox/{ODPRTO, SKUPNI}
+        -h  run backups on H:\ (/h/..)
+        -p  run backups on /c/Users/gregor.redelonghi/majstaf/myprogs
+EOF
+
+
+# START: added 20180417 ---------------------------------
+
+export gr_LOGF2=./bekaps_en/bekap_en.log
+
+function tms() {
+    echo -n "[ $(date +%Y%m%d_%H%M%S) ] "
+}
+
+
+(tms; echo "Starting NEW backup session ...") | tee -a ${gr_LOGF2}
+# END: added 20180417 ---------------------------------
+
+
+if [ $# -eq 0 ]; then
+    echo "$gr_msg"
+    exit 1
+fi
+
+while getopts ":cdahp" gr_OPT; do
+    case $gr_OPT in
+        a)
+            # echo "Option -a: run all backups" >&2
+            bTa1=$(date +"%s")
+            (tms; echo "Starting $gr_run_a ...") | tee -a ${gr_LOGF2}
+            $gr_run_a
+            (tms; bTa2=$(date +"%s"); echo "$gr_run_a done in $((bTa2-bTa1)) seconds.") | tee -a ${gr_LOGF2}
+            (tms; echo "-----------------------------------------------------------------------------") | tee -a ${gr_LOGF2}
+            break
+            ;;
+        c)
+            # echo "option -c: run cqrsync_backups.sh" >&2
+            bTc1=$(date +"%s")
+            (tms; echo "Starting $gr_run_c ...") | tee -a ${gr_LOGF2}
+            $gr_run_c
+            (tms; bTc2=$(date +"%s"); echo "$gr_run_c done in $((bTc2-bTc1)) seconds.") | tee -a ${gr_LOGF2}
+            (tms; echo "-----------------------------------------------------------------------------") | tee -a ${gr_LOGF2}
+            ;;
+        d)
+            # echo "option -d: run dqrsync_backups.sh" >&2
+            bTd1=$(date +"%s")
+            (tms; echo "Starting $gr_run_d ...") | tee -a ${gr_LOGF2}
+            $gr_run_d
+            (tms; bTd2=$(date +"%s"); echo "$gr_run_d done in $((bTd2-bTd1)) seconds.") | tee -a ${gr_LOGF2}
+            (tms; echo "-----------------------------------------------------------------------------") | tee -a ${gr_LOGF2}
+            ;;
+        h)
+            # echo "option -h: run hqrsync_backups.sh" >&2
+            bTh1=$(date +"%s")
+            (tms; echo "Starting $gr_run_h ...") | tee -a ${gr_LOGF2}
+            $gr_run_h
+            (tms; bTh2=$(date +"%s"); echo "$gr_run_h done in $((bTh2-bTh1)) seconds.") | tee -a ${gr_LOGF2}
+            (tms; echo "-----------------------------------------------------------------------------") | tee -a ${gr_LOGF2}
+            ;;
+        p)
+            # echo "option -p: run pqrsync_backups.sh" >&2
+            bTh1=$(date +"%s")
+            (tms; echo "Starting $gr_run_p ...") | tee -a ${gr_LOGF2}
+            $gr_run_p
+            (tms; bTh2=$(date +"%s"); echo "$gr_run_p done in $((bTh2-bTh1)) seconds.") | tee -a ${gr_LOGF2}
+            (tms; echo "-----------------------------------------------------------------------------") | tee -a ${gr_LOGF2}
+            ;;            
+        \?)
+            echo "Invalid option: -$OPTARG" >&2
+            exit 1
+            ;;
+        \?)
+            echo "Option -$OPTARG requires an argument." >&2
+            exit 1
+            ;;
+    esac
+done
+
+bT2=$(date +"%s")
+
+(tms; echo "$0 done in $((bT2-bT1)) seconds!") | tee -a ${gr_LOGF2}
+(tms; echo "=============================================================================") | tee -a ${gr_LOGF2}

@@ -1,0 +1,589 @@
+$> gregor.redelonghi@cygwin-en [/home/gregor.redelonghi]
+$> tree -d >> majfajls/TREE_rut_home_gregor.redelonghi_20181213.txt
+
+.
+├── 0a_povezave
+├── BCKP -> /c/Users/gregor.redelonghi/majstaf/r.gregor.en/bekap_en_all
+├── BRISI -> /c/Users/gregor.redelonghi/majstaf/BRISI
+├── C_GREDELONGHI -> /c/Users/gregor.redelonghi
+├── docs
+├── DOLPOTEGI
+│   ├── dropbox-filesystem-fix
+│   └── text2pdf
+├── DOWNLOADS -> /c/Users/gregor.redelonghi/Downloads
+├── DROPBOX -> /c/Users/gregor.redelonghi/Dropbox
+├── forallusers
+│   └── ETC -> /c/Windows/System32/drivers/etc
+├── G_REDELONGHI -> /g/SKUPNO/Redelonghi
+├── JAVA_en_testing -> /home/gregor.redelonghi/majfajls/coding/JAVA_en/JAVA_en_testing
+├── logging
+├── majfajls
+│   └── coding
+│       ├── __pycache__
+│       ├── 00_bin_metsys_en
+│       │   ├── _STARO
+│       │   │   ├── ext_SAMSUNG-320GB_USB-HDD_metsys_en_20180103
+│       │   │   │   └── _staro
+│       │   │   ├── ext_SAMSUNG-320GB_USB-HDD_metsys_en_20180215
+│       │   │   ├── ext_SAMSUNG-320GB_USB-HDD_metsys_en_20180314
+│       │   │   ├── ext_SAMSUNG-320GB_USB-HDD_metsys_en_20180411
+│       │   │   ├── ext_USB_32GB_metsys_en_20180103
+│       │   │   │   └── _staro
+│       │   │   ├── ext_USB_32GB_metsys_en_20180215
+│       │   │   ├── ext_USB_32GB_metsys_en_20180314
+│       │   │   ├── ext_USB_32GB_metsys_en_20180315
+│       │   │   └── ext_USB_32GB_metsys_en_20180411
+│       │   ├── ext_SAMSUNG-320GB_USB-HDD_metsys_en_20181106
+│       │   ├── ext_USB_32GB_metsys_en_20181106
+│       │   └── metsys_en_copy_20180206
+│       ├── 00_ostalo
+│       │   └── check_subs
+│       ├── 00_ukazi
+│       ├── 99_STARO_en
+│       ├── bekap
+│       │   └── _staro
+│       ├── C_en
+│       ├── Cpp_en
+│       │   └── Cpp_en_testing
+│       ├── ddbaklog
+│       ├── fnd
+│       ├── GO_en
+│       │   ├── GO_en_metsys
+│       │   └── GO_en_testing
+│       │       └── hello
+│       ├── gooo
+│       ├── gremdomov
+│       ├── JAVA_en
+│       │   ├── hvar_izracun_d_20180830_V2
+│       │   │   └── hvar
+│       │   │       ├── camp
+│       │   │       └── pot
+│       │   ├── JAVA_en_metsys
+│       │   ├── JAVA_en_RUT
+│       │   │   ├── datetime
+│       │   │   ├── func_list_en
+│       │   │   ├── left_right
+│       │   │   │   ├── left
+│       │   │   │   │   └── subleft
+│       │   │   │   └── right
+│       │   │   ├── ponjave
+│       │   │   │   └── ponjave_slike
+│       │   │   └── project1
+│       │   └── JAVA_en_testing
+│       │       ├── 20180410_java21_test
+│       │       ├── 20180410_test_1
+│       │       ├── 20180508_test_2_funcs
+│       │       ├── 20180515_text_from_geegs-to-geeks
+│       │       ├── 20180517_simpleTest
+│       │       ├── 20180522_test_3_arrays-objcts
+│       │       ├── 20180524_test_4_funcs
+│       │       ├── 20180525_test_5_formated-o
+│       │       ├── 20180527_test_7_packages
+│       │       │   ├── house
+│       │       │   │   ├── doors
+│       │       │   │   └── windows
+│       │       │   └── rootp
+│       │       │       ├── leftp
+│       │       │       └── rightp
+│       │       ├── 20180528_test_6_web
+│       │       ├── 20180603_test_8_Lists
+│       │       ├── 20180709_test_packages
+│       │       │   └── rut
+│       │       │       ├── left
+│       │       │       │   └── subleft
+│       │       │       └── right
+│       │       ├── 20180816_datetime
+│       │       ├── 20180830_hvar_izracun_d
+│       │       │   └── hvar
+│       │       │       ├── camp
+│       │       │       └── pot
+│       │       ├── 20180901_Dictionary
+│       │       ├── 20180902_MapExport
+│       │       ├── 20180903_funcs
+│       │       ├── 20180905_galactica
+│       │       │   ├── bin
+│       │       │   │   └── galactica
+│       │       │   │       ├── engine
+│       │       │   │       ├── food
+│       │       │   │       ├── living
+│       │       │   │       └── security
+│       │       │   ├── PROGRAM
+│       │       │   │   ├── engine
+│       │       │   │   ├── food
+│       │       │   │   └── living
+│       │       │   └── src
+│       │       │       └── galactica
+│       │       │           ├── engine
+│       │       │           ├── food
+│       │       │           ├── living
+│       │       │           └── security
+│       │       ├── 20180907_ponjave_2018
+│       │       │   ├── ponjave_slike
+│       │       │   └── z_ostalo
+│       │       ├── 20180907_PROJECT
+│       │       │   ├── bin
+│       │       │   │   └── app_name
+│       │       │   │       ├── common
+│       │       │   │       │   └── func_list_en
+│       │       │   │       ├── pkg_name_1
+│       │       │   │       └── pkg_name_2
+│       │       │   ├── src
+│       │       │   │   └── app_name
+│       │       │   │       ├── common
+│       │       │   │       │   └── func_list_en
+│       │       │   │       ├── pkg_name_1
+│       │       │   │       └── pkg_name_2
+│       │       │   ├── test_2
+│       │       │   │   └── app_name
+│       │       │   │       ├── common
+│       │       │   │       │   └── func_list_en
+│       │       │   │       ├── pkg_name_1
+│       │       │   │       └── pkg_name_2
+│       │       │   └── tests
+│       │       │       └── app_name
+│       │       │           ├── common
+│       │       │           │   └── func_list_en
+│       │       │           ├── pkg_name_1
+│       │       │           └── pkg_name_2
+│       │       ├── 20180907_PROJECT_2
+│       │       │   ├── bin
+│       │       │   │   └── app_name
+│       │       │   ├── src
+│       │       │   │   └── app_name
+│       │       │   │       ├── common
+│       │       │   │       │   └── func_list_en
+│       │       │   │       ├── pkg_name_1
+│       │       │   │       └── pkg_name_2
+│       │       │   └── test_2
+│       │       │       └── app_name
+│       │       │           ├── common
+│       │       │           │   └── func_list_en
+│       │       │           ├── pkg_name_1
+│       │       │           └── pkg_name_2
+│       │       ├── 20180907_StopMe_d
+│       │       ├── 20180907_StopMe_en
+│       │       ├── 20180907_tests2
+│       │       │   ├── app_name
+│       │       │   │   ├── common
+│       │       │   │   │   └── func_list_en
+│       │       │   │   ├── pkg_name_1
+│       │       │   │   └── pkg_name_2
+│       │       │   ├── bin
+│       │       │   │   └── app_name
+│       │       │   │       ├── common
+│       │       │   │       │   └── func_list_en
+│       │       │   │       └── pkg_name_1
+│       │       │   └── src
+│       │       │       └── app_name
+│       │       │           ├── common
+│       │       │           │   └── func_list_en
+│       │       │           ├── pkg_name_1
+│       │       │           └── pkg_name_2
+│       │       ├── 20180912_STRINGS_en
+│       │       ├── 20180913_pdtk_en
+│       │       │   ├── pdtk
+│       │       │   └── src
+│       │       │       └── pdtk
+│       │       ├── 20180924_properties
+│       │       ├── 20181002_instances_as_list_members
+│       │       ├── 20181008_elektrika_en
+│       │       │   ├── main
+│       │       │   │   └── ostalo
+│       │       │   └── sources
+│       │       │       ├── 2017
+│       │       │       └── 2018
+│       │       ├── 20181113_JAR_test
+│       │       │   └── com
+│       │       │       └── example
+│       │       │           └── test
+│       │       ├── 20181119_st_dur
+│       │       │   ├── st_dur_V1
+│       │       │   ├── st_dur_V2
+│       │       │   ├── st_dur_V3
+│       │       │   ├── st_dur_V4
+│       │       │   ├── st_dur_V5
+│       │       │   └── TESTS
+│       │       ├── 20181120_AddUsers
+│       │       ├── 20181120_elektrika_en
+│       │       │   ├── application
+│       │       │   │   └── elektrika
+│       │       │   │       ├── main
+│       │       │   │       └── sources
+│       │       │   │           ├── 2017
+│       │       │   │           └── 2018
+│       │       │   └── src
+│       │       │       └── elektrika
+│       │       │           ├── main
+│       │       │           └── sources
+│       │       │               ├── 2017
+│       │       │               └── 2018
+│       │       ├── 20181123_loops_and_locale_tests
+│       │       ├── 20181126_PRINTOUTS
+│       │       ├── 20181128_chars
+│       │       ├── 20181129_Padec
+│       │       ├── 20181130_testing_unittests
+│       │       ├── learning_java_book
+│       │       └── UNSORTED
+│       ├── lynxdump
+│       ├── oneliners_en
+│       ├── opn
+│       ├── pnp
+│       ├── PYTHON_en
+│       │   ├── __pycache__
+│       │   ├── PYTHON_command_library
+│       │   ├── PYTHON_en_projects
+│       │   │   └── test_project_1
+│       │   │       ├── bin
+│       │   │       ├── include
+│       │   │       ├── lib
+│       │   │       │   └── python3.6
+│       │   │       │       └── site-packages
+│       │   │       │           ├── __pycache__
+│       │   │       │           ├── pip
+│       │   │       │           │   ├── __pycache__
+│       │   │       │           │   ├── _vendor
+│       │   │       │           │   │   ├── __pycache__
+│       │   │       │           │   │   ├── cachecontrol
+│       │   │       │           │   │   │   ├── __pycache__
+│       │   │       │           │   │   │   └── caches
+│       │   │       │           │   │   │       └── __pycache__
+│       │   │       │           │   │   ├── colorama
+│       │   │       │           │   │   │   └── __pycache__
+│       │   │       │           │   │   ├── distlib
+│       │   │       │           │   │   │   ├── __pycache__
+│       │   │       │           │   │   │   └── _backport
+│       │   │       │           │   │   │       └── __pycache__
+│       │   │       │           │   │   ├── html5lib
+│       │   │       │           │   │   │   ├── __pycache__
+│       │   │       │           │   │   │   ├── _trie
+│       │   │       │           │   │   │   │   └── __pycache__
+│       │   │       │           │   │   │   ├── filters
+│       │   │       │           │   │   │   │   └── __pycache__
+│       │   │       │           │   │   │   ├── treeadapters
+│       │   │       │           │   │   │   │   └── __pycache__
+│       │   │       │           │   │   │   ├── treebuilders
+│       │   │       │           │   │   │   │   └── __pycache__
+│       │   │       │           │   │   │   └── treewalkers
+│       │   │       │           │   │   │       └── __pycache__
+│       │   │       │           │   │   ├── lockfile
+│       │   │       │           │   │   │   └── __pycache__
+│       │   │       │           │   │   ├── packaging
+│       │   │       │           │   │   │   └── __pycache__
+│       │   │       │           │   │   ├── pkg_resources
+│       │   │       │           │   │   │   └── __pycache__
+│       │   │       │           │   │   ├── progress
+│       │   │       │           │   │   │   └── __pycache__
+│       │   │       │           │   │   ├── requests
+│       │   │       │           │   │   │   ├── __pycache__
+│       │   │       │           │   │   │   └── packages
+│       │   │       │           │   │   │       ├── __pycache__
+│       │   │       │           │   │   │       ├── chardet
+│       │   │       │           │   │   │       │   └── __pycache__
+│       │   │       │           │   │   │       └── urllib3
+│       │   │       │           │   │   │           ├── __pycache__
+│       │   │       │           │   │   │           ├── contrib
+│       │   │       │           │   │   │           │   └── __pycache__
+│       │   │       │           │   │   │           ├── packages
+│       │   │       │           │   │   │           │   ├── __pycache__
+│       │   │       │           │   │   │           │   └── ssl_match_hostname
+│       │   │       │           │   │   │           │       └── __pycache__
+│       │   │       │           │   │   │           └── util
+│       │   │       │           │   │   │               └── __pycache__
+│       │   │       │           │   │   └── webencodings
+│       │   │       │           │   │       └── __pycache__
+│       │   │       │           │   ├── commands
+│       │   │       │           │   │   └── __pycache__
+│       │   │       │           │   ├── compat
+│       │   │       │           │   │   └── __pycache__
+│       │   │       │           │   ├── models
+│       │   │       │           │   │   └── __pycache__
+│       │   │       │           │   ├── operations
+│       │   │       │           │   │   └── __pycache__
+│       │   │       │           │   ├── req
+│       │   │       │           │   │   └── __pycache__
+│       │   │       │           │   ├── utils
+│       │   │       │           │   │   └── __pycache__
+│       │   │       │           │   └── vcs
+│       │   │       │           │       └── __pycache__
+│       │   │       │           ├── pip-9.0.1.dist-info
+│       │   │       │           ├── pkg_resources
+│       │   │       │           │   ├── __pycache__
+│       │   │       │           │   ├── _vendor
+│       │   │       │           │   │   ├── __pycache__
+│       │   │       │           │   │   └── packaging
+│       │   │       │           │   │       └── __pycache__
+│       │   │       │           │   └── extern
+│       │   │       │           │       └── __pycache__
+│       │   │       │           ├── setuptools
+│       │   │       │           │   ├── __pycache__
+│       │   │       │           │   ├── command
+│       │   │       │           │   │   └── __pycache__
+│       │   │       │           │   └── extern
+│       │   │       │           │       └── __pycache__
+│       │   │       │           └── setuptools-28.8.0.dist-info
+│       │   │       └── lib64 -> lib
+│       │   └── PYTHON_en_testing
+│       │       ├── __pycache__
+│       │       ├── 20161025
+│       │       ├── 20170518
+│       │       │   ├── DIR1
+│       │       │   └── DIR2
+│       │       ├── 20170614
+│       │       ├── 20171025_file-manipulations
+│       │       ├── args
+│       │       ├── beri_20160616
+│       │       ├── clean_movies_dirname_20180105
+│       │       │   ├──  Dir two (1996)
+│       │       │   ├── Dir one (2004)
+│       │       │   ├── Fold 5 (2017)
+│       │       │   └── Njam 2 (2017)[1080p]
+│       │       ├── copying_20161014
+│       │       │   ├── DEST1
+│       │       │   └── SRC1
+│       │       ├── data_prety_print_20180423
+│       │       ├── dates_20180131
+│       │       ├── dec_to_bin
+│       │       ├── elektrika_V1_en_20180925
+│       │       │   └── sources
+│       │       │       ├── 2017
+│       │       │       └── 2018
+│       │       ├── filedelta_20180111
+│       │       │   └── __pycache__
+│       │       ├── find_files_by_name
+│       │       ├── from_Mark__alterniraj_20181203
+│       │       ├── heap_20171206
+│       │       ├── hvar_izracun_en_V3_20180830
+│       │       ├── hvar_izracun_en_V4_20180917
+│       │       ├── JSON
+│       │       ├── LEARN-PYTHON-HARD-WAY
+│       │       ├── LList_20180426
+│       │       ├── mymath_20161013
+│       │       │   └── __pycache__
+│       │       ├── obesenec
+│       │       ├── OOP
+│       │       ├── Packaging_Test_1_20181211
+│       │       │   └── AppName
+│       │       │       ├── SubPackage_1
+│       │       │       │   └── __pycache__
+│       │       │       └── SubPackage_2
+│       │       │           └── __pycache__
+│       │       ├── path_20161013
+│       │       ├── ponjave_2018
+│       │       │   ├── __pycache__
+│       │       │   ├── _ostalo
+│       │       │   └── ponjave_slike
+│       │       ├── PRACTICE-PYTHON_20170523
+│       │       ├── project_20181010
+│       │       ├── rename_movie_fnames_20180322
+│       │       │   ├── __pycache__
+│       │       │   └── FAJLS
+│       │       ├── repl_blanks-and-punct_with-dashes-or_undsc_20180104
+│       │       ├── rsync-backup_20161020
+│       │       │   ├── destination_directory_B
+│       │       │   └── source_directory_A
+│       │       ├── serialization_20181106
+│       │       ├── sort-by-field_20171130
+│       │       ├── sorting
+│       │       ├── st-delovnih-ur-v-mesecu_20181013
+│       │       ├── st-delovnih-ur-v-mesecu_20181014
+│       │       ├── subs_20171122
+│       │       │   ├── __pycache__
+│       │       │   └── _subs_previous
+│       │       ├── subscript_for_movies
+│       │       ├── test_20160506
+│       │       ├── test_20170321
+│       │       ├── timedelta_20180111
+│       │       │   └── __pycache__
+│       │       ├── timing-algorithms_20170608
+│       │       └── virt_env_1
+│       │           └── my_venv_1
+│       │               ├── bin
+│       │               ├── include
+│       │               ├── lib
+│       │               │   └── python3.6
+│       │               │       └── site-packages
+│       │               │           ├── __pycache__
+│       │               │           ├── certifi
+│       │               │           │   └── __pycache__
+│       │               │           ├── certifi-2018.11.29.dist-info
+│       │               │           ├── chardet
+│       │               │           │   ├── __pycache__
+│       │               │           │   └── cli
+│       │               │           │       └── __pycache__
+│       │               │           ├── chardet-3.0.4.dist-info
+│       │               │           ├── idna
+│       │               │           │   └── __pycache__
+│       │               │           ├── idna-2.8.dist-info
+│       │               │           ├── pip
+│       │               │           │   ├── __pycache__
+│       │               │           │   ├── _internal
+│       │               │           │   │   ├── __pycache__
+│       │               │           │   │   ├── cli
+│       │               │           │   │   │   └── __pycache__
+│       │               │           │   │   ├── commands
+│       │               │           │   │   │   └── __pycache__
+│       │               │           │   │   ├── models
+│       │               │           │   │   │   └── __pycache__
+│       │               │           │   │   ├── operations
+│       │               │           │   │   │   └── __pycache__
+│       │               │           │   │   ├── req
+│       │               │           │   │   │   └── __pycache__
+│       │               │           │   │   ├── utils
+│       │               │           │   │   │   └── __pycache__
+│       │               │           │   │   └── vcs
+│       │               │           │   │       └── __pycache__
+│       │               │           │   └── _vendor
+│       │               │           │       ├── __pycache__
+│       │               │           │       ├── cachecontrol
+│       │               │           │       │   ├── __pycache__
+│       │               │           │       │   └── caches
+│       │               │           │       │       └── __pycache__
+│       │               │           │       ├── certifi
+│       │               │           │       │   └── __pycache__
+│       │               │           │       ├── chardet
+│       │               │           │       │   ├── __pycache__
+│       │               │           │       │   └── cli
+│       │               │           │       │       └── __pycache__
+│       │               │           │       ├── colorama
+│       │               │           │       │   └── __pycache__
+│       │               │           │       ├── distlib
+│       │               │           │       │   ├── __pycache__
+│       │               │           │       │   └── _backport
+│       │               │           │       │       └── __pycache__
+│       │               │           │       ├── html5lib
+│       │               │           │       │   ├── __pycache__
+│       │               │           │       │   ├── _trie
+│       │               │           │       │   │   └── __pycache__
+│       │               │           │       │   ├── filters
+│       │               │           │       │   │   └── __pycache__
+│       │               │           │       │   ├── treeadapters
+│       │               │           │       │   │   └── __pycache__
+│       │               │           │       │   ├── treebuilders
+│       │               │           │       │   │   └── __pycache__
+│       │               │           │       │   └── treewalkers
+│       │               │           │       │       └── __pycache__
+│       │               │           │       ├── idna
+│       │               │           │       │   └── __pycache__
+│       │               │           │       ├── lockfile
+│       │               │           │       │   └── __pycache__
+│       │               │           │       ├── msgpack
+│       │               │           │       │   └── __pycache__
+│       │               │           │       ├── packaging
+│       │               │           │       │   └── __pycache__
+│       │               │           │       ├── pep517
+│       │               │           │       │   └── __pycache__
+│       │               │           │       ├── pkg_resources
+│       │               │           │       │   └── __pycache__
+│       │               │           │       ├── progress
+│       │               │           │       │   └── __pycache__
+│       │               │           │       ├── pytoml
+│       │               │           │       │   └── __pycache__
+│       │               │           │       ├── requests
+│       │               │           │       │   └── __pycache__
+│       │               │           │       ├── urllib3
+│       │               │           │       │   ├── __pycache__
+│       │               │           │       │   ├── contrib
+│       │               │           │       │   │   ├── __pycache__
+│       │               │           │       │   │   └── _securetransport
+│       │               │           │       │   │       └── __pycache__
+│       │               │           │       │   ├── packages
+│       │               │           │       │   │   ├── __pycache__
+│       │               │           │       │   │   ├── backports
+│       │               │           │       │   │   │   └── __pycache__
+│       │               │           │       │   │   └── ssl_match_hostname
+│       │               │           │       │   │       └── __pycache__
+│       │               │           │       │   └── util
+│       │               │           │       │       └── __pycache__
+│       │               │           │       └── webencodings
+│       │               │           │           └── __pycache__
+│       │               │           ├── pip-18.1.dist-info
+│       │               │           ├── pkg_resources
+│       │               │           │   ├── __pycache__
+│       │               │           │   ├── _vendor
+│       │               │           │   │   ├── __pycache__
+│       │               │           │   │   └── packaging
+│       │               │           │   │       └── __pycache__
+│       │               │           │   └── extern
+│       │               │           │       └── __pycache__
+│       │               │           ├── requests
+│       │               │           │   └── __pycache__
+│       │               │           ├── requests-2.21.0.dist-info
+│       │               │           ├── setuptools
+│       │               │           │   ├── __pycache__
+│       │               │           │   ├── command
+│       │               │           │   │   └── __pycache__
+│       │               │           │   └── extern
+│       │               │           │       └── __pycache__
+│       │               │           ├── setuptools-28.8.0.dist-info
+│       │               │           ├── urllib3
+│       │               │           │   ├── __pycache__
+│       │               │           │   ├── contrib
+│       │               │           │   │   ├── __pycache__
+│       │               │           │   │   └── _securetransport
+│       │               │           │   │       └── __pycache__
+│       │               │           │   ├── packages
+│       │               │           │   │   ├── __pycache__
+│       │               │           │   │   ├── backports
+│       │               │           │   │   │   └── __pycache__
+│       │               │           │   │   └── ssl_match_hostname
+│       │               │           │   │       └── __pycache__
+│       │               │           │   └── util
+│       │               │           │       └── __pycache__
+│       │               │           └── urllib3-1.24.1.dist-info
+│       │               └── lib64 -> lib
+│       ├── rsync_backup
+│       ├── send_mail
+│       │   ├── __pycache__
+│       │   └── _send_mail_staro
+│       ├── testing_en
+│       │   ├── 20180109
+│       │   ├── BRISI_ME
+│       │   │   ├── A
+│       │   │   └── B
+│       │   ├── C_programs
+│       │   ├── DIFF_and_PATCH_tests
+│       │   ├── filmi
+│       │   │   ├── film A (2016)
+│       │   │   ├── film B (2014)
+│       │   │   └── film C (2015)
+│       │   ├── RSYNC_testing_20180411
+│       │   │   ├── A_SRC
+│       │   │   └── B_DST
+│       │   └── slikce
+│       ├── w3mdump
+│       └── zze
+├── majprogs
+├── metsys_en
+├── mplayer
+├── ORIGINALI_20180907
+├── PRENOSI -> DOWNLOADS
+├── PYTHON_en_testing -> /home/gregor.redelonghi/majfajls/coding/PYTHON_en/PYTHON_en_testing
+├── RUT
+│   └── home
+│       ├── forallusers
+│       ├── pbin
+│       │   ├── rename
+│       │   │   └── __pycache__
+│       │   └── testing
+│       │       ├── FAJLS
+│       │       └── TEST_movie_fnames_20180322
+│       └── rgregor
+├── seznami
+├── sorsi
+│   ├── dotfiles
+│   ├── imgp
+│   │   └── auto-completion
+│   │       ├── bash
+│   │       ├── fish
+│   │       └── zsh
+│   ├── ncdu-1.12
+│   │   ├── deps
+│   │   ├── doc
+│   │   └── src
+│   ├── tinywm-1.3
+│   ├── unrar
+│   ├── vim-themes-downloaded
+│   └── wikipedia2text
+└── UKAZI -> /home/gregor.redelonghi/majfajls/coding/00_ukazi
+
+583 directories

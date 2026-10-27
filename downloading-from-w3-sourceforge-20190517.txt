@@ -1,0 +1,83 @@
+$> gregor.redelonghi@cygwin-en [/c/Users/gregor.redelonghi/Dropbox/ODPRTO/_TXT]
+$> cat ~/seznami/HTF_seznam_3.txt
+
+https://www.howtoforge.com/linux-c-programming-introduction/
+https://www.howtoforge.com/c-programming-tutorial-part-2-preprocessors/
+https://www.howtoforge.com/c-programming-tutorial-part-3-variables/
+https://www.howtoforge.com/c-programming-tutorial-part-3-variables-and-memory/
+https://www.howtoforge.com/c-programming-tutorial-part-3-character-variables/
+https://www.howtoforge.com/c-command-line-tutorial-part-6/
+https://www.howtoforge.com/c-programming-tutorial-part-7-arrays/
+https://www.howtoforge.com/c-programming-call-by-value-vs-call-by-pointer/
+https://www.howtoforge.com/c-programming-tutorial-part-9-strings/
+https://www.howtoforge.com/c-programming-tutorial-part-9-variable-scopes/
+https://www.howtoforge.com/c-programming-tutorial-part-11-arithmetic-relational-and-logical-operators/
+https://www.howtoforge.com/c-programming-assignment-operators/
+https://www.howtoforge.com/c-programming-bitwise-operators/
+https://www.howtoforge.com/linux-c-programming-14-bitwise-operator-examples/
+https://www.howtoforge.com/c-programming-15-complement-negative-numbers/
+https://www.howtoforge.com/c-programming-16-switch-break-and-continue-statements/
+https://www.howtoforge.com/c-programming-17-variable-initialization/
+https://www.howtoforge.com/c-programming-tutorial-part-18-recursive-functions/
+https://www.howtoforge.com/linux-c-programming-tutorial-part-19-pointers-and-arrays/
+https://www.howtoforge.com/c-programming-tutorial-part-20-pointer-address-arithmetic/
+https://www.howtoforge.com/c-programming-tutorial-part-21-character-pointers-array-of-pointers-and-pointer-to-pointer/
+https://www.howtoforge.com/linux-c-programming-tutorial-part-22-accessing-command-line-arguments-within-c-program/
+https://www.howtoforge.com/linux-c-programming-tutorial-part-23-structures/
+https://www.howtoforge.com/linux-c-programming-tutorial-part-24-multi-dimensional-arrays/
+https://www.howtoforge.com/linux-c-programming-tutorial-part-25-function-pointers/
+https://www.howtoforge.com/linux-c-programming-tutorial-part-26-structures-and-functions/
+https://www.howtoforge.com/linux-c-programming-tutorial-part-27-array-of-structures/
+
+# ============================================================================================================
+$> gregor.redelonghi@cygwin-en [/c/Users/gregor.redelonghi/Dropbox/ODPRTO/_TXT]
+$> cat ~/seznami/lynxdump_webpage_to_file.sh
+
+###  EN-proxy ...
+# prx_ip=172.17.3.64
+prx_ip=10.91.8.21
+export http_proxy=http://${prx_ip}:80/
+export ftp_proxy=ftp://${prx_ip}:8021/
+export https_proxy=http://${prx_ip}:80/
+
+gr_weburl="$1"
+gr_fjl="$PWD/c_programming_3w-howtoforge_20190517.txt"
+
+echo -n "Inserting ${gr_weburl} into ${gr_fjl} ... "
+echo -e "${gr_weburl}\n\n" >> ${gr_fjl}
+lynx -dump -width=110 ${gr_weburl} >> ${gr_fjl}
+echo -e "\n\n---\n" >> ${gr_fjl}
+
+echo ' [OK].'
+
+# ============================================================================================================
+$> gregor.redelonghi@cygwin-en [/c/Users/gregor.redelonghi/Dropbox/ODPRTO/_TXT]
+$> while read _LINE; do ~/seznami/lynxdump_webpage_to_file.sh $_LINE; done < ~/seznami/HTF_seznam_3.txt
+Inserting https://www.howtoforge.com/linux-c-programming-introduction/ into /c/Users/gregor.redelonghi/Dropbox/ODPRTO/_TXT/c_programming_3w-howtoforge_20190517.txt ...  [OK].
+Inserting https://www.howtoforge.com/c-programming-tutorial-part-2-preprocessors/ into /c/Users/gregor.redelonghi/Dropbox/ODPRTO/_TXT/c_programming_3w-howtoforge_20190517.txt ...  [OK].
+Inserting https://www.howtoforge.com/c-programming-tutorial-part-3-variables/ into /c/Users/gregor.redelonghi/Dropbox/ODPRTO/_TXT/c_programming_3w-howtoforge_20190517.txt ...  [OK].
+Inserting https://www.howtoforge.com/c-programming-tutorial-part-3-variables-and-memory/ into /c/Users/gregor.redelonghi/Dropbox/ODPRTO/_TXT/c_programming_3w-howtoforge_20190517.txt ...  [OK].
+Inserting https://www.howtoforge.com/c-programming-tutorial-part-3-character-variables/ into /c/Users/gregor.redelonghi/Dropbox/ODPRTO/_TXT/c_programming_3w-howtoforge_20190517.txt ...  [OK].
+Inserting https://www.howtoforge.com/c-command-line-tutorial-part-6/ into /c/Users/gregor.redelonghi/Dropbox/ODPRTO/_TXT/c_programming_3w-howtoforge_20190517.txt ...  [OK].
+Inserting https://www.howtoforge.com/c-programming-tutorial-part-7-arrays/ into /c/Users/gregor.redelonghi/Dropbox/ODPRTO/_TXT/c_programming_3w-howtoforge_20190517.txt ...  [OK].
+Inserting https://www.howtoforge.com/c-programming-call-by-value-vs-call-by-pointer/ into /c/Users/gregor.redelonghi/Dropbox/ODPRTO/_TXT/c_programming_3w-howtoforge_20190517.txt ...  [OK].
+Inserting https://www.howtoforge.com/c-programming-tutorial-part-9-strings/ into /c/Users/gregor.redelonghi/Dropbox/ODPRTO/_TXT/c_programming_3w-howtoforge_20190517.txt ...  [OK].
+Inserting https://www.howtoforge.com/c-programming-tutorial-part-9-variable-scopes/ into /c/Users/gregor.redelonghi/Dropbox/ODPRTO/_TXT/c_programming_3w-howtoforge_20190517.txt ...  [OK].
+Inserting https://www.howtoforge.com/c-programming-tutorial-part-11-arithmetic-relational-and-logical-operators/ into /c/Users/gregor.redelonghi/Dropbox/ODPRTO/_TXT/c_programming_3w-howtoforge_20190517.txt ...  [OK].
+Inserting https://www.howtoforge.com/c-programming-assignment-operators/ into /c/Users/gregor.redelonghi/Dropbox/ODPRTO/_TXT/c_programming_3w-howtoforge_20190517.txt ...  [OK].
+Inserting https://www.howtoforge.com/c-programming-bitwise-operators/ into /c/Users/gregor.redelonghi/Dropbox/ODPRTO/_TXT/c_programming_3w-howtoforge_20190517.txt ...  [OK].
+Inserting https://www.howtoforge.com/linux-c-programming-14-bitwise-operator-examples/ into /c/Users/gregor.redelonghi/Dropbox/ODPRTO/_TXT/c_programming_3w-howtoforge_20190517.txt ...  [OK].
+Inserting https://www.howtoforge.com/c-programming-15-complement-negative-numbers/ into /c/Users/gregor.redelonghi/Dropbox/ODPRTO/_TXT/c_programming_3w-howtoforge_20190517.txt ...  [OK].
+Inserting https://www.howtoforge.com/c-programming-16-switch-break-and-continue-statements/ into /c/Users/gregor.redelonghi/Dropbox/ODPRTO/_TXT/c_programming_3w-howtoforge_20190517.txt ...  [OK].
+Inserting https://www.howtoforge.com/c-programming-17-variable-initialization/ into /c/Users/gregor.redelonghi/Dropbox/ODPRTO/_TXT/c_programming_3w-howtoforge_20190517.txt ...  [OK].
+Inserting https://www.howtoforge.com/c-programming-tutorial-part-18-recursive-functions/ into /c/Users/gregor.redelonghi/Dropbox/ODPRTO/_TXT/c_programming_3w-howtoforge_20190517.txt ...  [OK].
+Inserting https://www.howtoforge.com/linux-c-programming-tutorial-part-19-pointers-and-arrays/ into /c/Users/gregor.redelonghi/Dropbox/ODPRTO/_TXT/c_programming_3w-howtoforge_20190517.txt ...  [OK].
+Inserting https://www.howtoforge.com/c-programming-tutorial-part-20-pointer-address-arithmetic/ into /c/Users/gregor.redelonghi/Dropbox/ODPRTO/_TXT/c_programming_3w-howtoforge_20190517.txt ...  [OK].
+Inserting https://www.howtoforge.com/c-programming-tutorial-part-21-character-pointers-array-of-pointers-and-pointer-to-pointer/ into /c/Users/gregor.redelonghi/Dropbox/ODPRTO/_TXT/c_programming_3w-howtoforge_20190517.txt ...  [OK].
+Inserting https://www.howtoforge.com/linux-c-programming-tutorial-part-22-accessing-command-line-arguments-within-c-program/ into /c/Users/gregor.redelonghi/Dropbox/ODPRTO/_TXT/c_programming_3w-howtoforge_20190517.txt ...  [OK].
+Inserting https://www.howtoforge.com/linux-c-programming-tutorial-part-23-structures/ into /c/Users/gregor.redelonghi/Dropbox/ODPRTO/_TXT/c_programming_3w-howtoforge_20190517.txt ...  [OK].
+Inserting https://www.howtoforge.com/linux-c-programming-tutorial-part-24-multi-dimensional-arrays/ into /c/Users/gregor.redelonghi/Dropbox/ODPRTO/_TXT/c_programming_3w-howtoforge_20190517.txt ...  [OK].
+Inserting https://www.howtoforge.com/linux-c-programming-tutorial-part-25-function-pointers/ into /c/Users/gregor.redelonghi/Dropbox/ODPRTO/_TXT/c_programming_3w-howtoforge_20190517.txt ...  [OK].
+Inserting https://www.howtoforge.com/linux-c-programming-tutorial-part-26-structures-and-functions/ into /c/Users/gregor.redelonghi/Dropbox/ODPRTO/_TXT/c_programming_3w-howtoforge_20190517.txt ...  [OK].
+Inserting https://www.howtoforge.com/linux-c-programming-tutorial-part-27-array-of-structures/ into /c/Users/gregor.redelonghi/Dropbox/ODPRTO/_TXT/c_programming_3w-howtoforge_20190517.txt ...  [OK].
+

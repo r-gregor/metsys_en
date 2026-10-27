@@ -1,0 +1,54 @@
+$> gregor.redelonghi@cygwin-en [/c/Users/gregor.redelonghi/majstaf/r.gregor.en]
+$> tree -d >> ~/majfajls/TREE_c_Users_gregor.redelonghi_r.gregor.en_20181213.txt
+.
+├── acad2012_backup_20170531
+├── acad2017_backup_20170531
+├── bekap_en_all
+├── BEKAP_LAST_20180105
+├── E-3
+├── gregor.redelonghi -> /home/gregor.redelonghi
+├── muska_2016
+│   ├── 01_Funk
+│   ├── 02_Latino
+│   ├── 03_Zaganje
+│   ├── 04_Spesial
+│   ├── 05_Disco
+│   ├── 06_Plesna
+│   ├── 07_Yugo
+│   ├── 08_Tango
+│   └── 09_Ostalo
+├── orodjarna
+│   ├── gredelonghi_acad_support
+│   │   ├── files
+│   │   ├── lisp
+│   │   ├── menus
+│   │   └── scripts
+│   ├── MD5sums-win
+│   └── ukazi
+│       ├── ostalo
+│       ├── podukazi
+│       ├── sendEmail-v156
+│       └── staro
+├── PREBERI
+├── skladisce
+├── slike
+├── start.en
+│   ├── 0_podloge
+│   │   └── web barve
+│   │       ├── Color Chart by VisiBone_datoteke
+│   │       ├── Datoteke_za_htmcolor_5-plus
+│   │       ├── Datoteke_za_html_colors
+│   │       └── HTML Colors 01 (W3C)_datoteke
+│   ├── barvna
+│   ├── dnevno
+│   ├── html-seznami
+│   ├── judo
+│   ├── kolo
+│   │   └── kolo-slike
+│   ├── skladisce
+│   └── tech
+├── T-2
+├── twitter_common
+└── VALMEINIER-slike-Matic_20170131
+
+49 directories

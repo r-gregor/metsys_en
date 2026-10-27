@@ -1,0 +1,66 @@
+filename: git_revert-to-previous-commit_20250204.txt
+from: https://medium.com/swlh/using-git-how-to-go-back-to-a-previous-commit-8579ccc8180f
+
+Using Git - how to go back to a previous commit
+May 30, 2020
+
+Git & GitHub are powerful tools which allow us to track all our changes to our projects and, when we
+inevitably do something that breaks them, go back to a previous working state. We are all aware of this
+time-reversing magic, but not necessarily how to do it!
+
+Here's a quick and simple guide on how to turn back time on your project and revert to a previous version.
+
+Find the version you want to go back to
+
+You have two options here:
+1) In your terminal you can type:
+$> git log --oneline
+
+This is where it is important you gave yourself descriptive commit messages! It will show in your terminal a
+list of commits along with the commit message you set originally. If you have decent commit messages and you
+know what you're looking for you should be able to work out which version you want to go back to from here. If
+you want a bit more information such as the time, date, and author of each commit you can omit the --oneline
+tag.
+
+2) You can go through your commit history on your GitHub repo via the GitHub website. This allows you to check
+the state of all the files in the repo at each commit to make sure you are going back to the correct version.
+
+This is useful if you didn't give yourself useful commit messages, or you're just not sure exactly which
+version you need to go back to. Committing little and often, so that your change history is clear should save
+you from having to take this route.
+
+Whichever option you use, take a note of the ID of the commit you want to revert to.
+Go back to the selected commit on your local environment
+
+Use git checkout & the ID (in the same way you would checkout a branch) to go back:
+$> git checkout <commit-id> .
+
+	Don't forget the final ' .' - You aren't required to add this, and it may look like it has worked but if
+	you leave this off it will take you to a new "detached head state" where you can make changes and it will
+	allow you to make commits, but nothing will be saved and any commits you make will be lost.
+
+This will take you to the version you wanted to go back to in your local environment.
+Add this version to the staging area and push to remote
+
+In the same way that you would with any normal commit, you have to add all files and push to remote to save
+this state.
+$> git add .
+$> git commit -m "Reverting to <commit-id>"
+$> git push
+
+Give yourself a slightly more descriptive commit message - maybe why you are reverting!!
+
+And that's it! You've turned back time on your project! Hurrah!
+
+
+=== ? ===
+1 - git log to find hash of commit right before the problematic one
+
+2 - command to revert to last OK commit:
+$> git rebase -i bec875db9b097341ff74ed89853de0f68f549274
+	write 'drop' for all consequtive commits stated,
+	save and close to make it happen
+
+
+---
+

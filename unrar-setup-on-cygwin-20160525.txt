@@ -1,0 +1,10 @@
+HOWTO: Extract rar files on Cygwin
+Leave a comment Posted by Wenjian Zhang on September 28, 2014
+Compile and install unrar:
+
+$ wget http://www.rarlab.com/rar/unrarsrc-5.1.7.tar.gz
+$ tar -xzvf unrarsrc-5.1.7.tar.gz
+$ cd unrar
+$ make
+
+Copy the resulting unrar.exe file to /usr/loca/bin/ directory. Now you are ready to uncompress your .rar files.

@@ -1,0 +1,309 @@
+$> getconf -a
+PATH                                /bin:/usr/bin
+POSIX_V7_ILP32_OFF32_CFLAGS         undefined
+POSIX_V7_ILP32_OFF32_LDFLAGS        undefined
+POSIX_V7_ILP32_OFF32_LIBS           undefined
+POSIX_V7_ILP32_OFFBIG_CFLAGS        undefined
+POSIX_V7_ILP32_OFFBIG_LDFLAGS       undefined
+POSIX_V7_ILP32_OFFBIG_LIBS          undefined
+POSIX_V7_LP64_OFF64_CFLAGS
+POSIX_V7_LP64_OFF64_LDFLAGS
+POSIX_V7_LP64_OFF64_LIBS
+POSIX_V7_LPBIG_OFFBIG_CFLAGS
+POSIX_V7_LPBIG_OFFBIG_LDFLAGS
+POSIX_V7_LPBIG_OFFBIG_LIBS
+POSIX_V7_THREADS_CFLAGS
+POSIX_V7_THREADS_LDFLAGS
+POSIX_V7_WIDTH_RESTRICTED_ENVS      POSIX_V6_LP64_OFF64
+POSIX_V6_ILP32_OFF32_CFLAGS         undefined
+POSIX_V6_ILP32_OFF32_LDFLAGS        undefined
+POSIX_V6_ILP32_OFF32_LIBS           undefined
+POSIX_V6_ILP32_OFFBIG_CFLAGS        undefined
+POSIX_V6_ILP32_OFFBIG_LDFLAGS       undefined
+POSIX_V6_ILP32_OFFBIG_LIBS          undefined
+POSIX_V6_LP64_OFF64_CFLAGS
+POSIX_V6_LP64_OFF64_LDFLAGS
+POSIX_V6_LP64_OFF64_LIBS
+POSIX_V6_LPBIG_OFFBIG_CFLAGS
+POSIX_V6_LPBIG_OFFBIG_LDFLAGS
+POSIX_V6_LPBIG_OFFBIG_LIBS
+POSIX_V6_WIDTH_RESTRICTED_ENVS      POSIX_V6_LP64_OFF64
+XBS5_ILP32_OFF32_CFLAGS             undefined
+XBS5_ILP32_OFF32_LDFLAGS            undefined
+XBS5_ILP32_OFF32_LIBS               undefined
+XBS5_ILP32_OFF32_LINTFLAGS          undefined
+XBS5_ILP32_OFFBIG_CFLAGS            undefined
+XBS5_ILP32_OFFBIG_LDFLAGS           undefined
+XBS5_ILP32_OFFBIG_LIBS              undefined
+XBS5_ILP32_OFFBIG_LINTFLAGS         undefined
+XBS5_LP64_OFF64_CFLAGS
+XBS5_LP64_OFF64_LDFLAGS
+XBS5_LP64_OFF64_LIBS
+XBS5_LP64_OFF64_LINTFLAGS
+XBS5_LPBIG_OFFBIG_CFLAGS
+XBS5_LPBIG_OFFBIG_LDFLAGS
+XBS5_LPBIG_OFFBIG_LIBS
+XBS5_LPBIG_OFFBIG_LINTFLAGS
+XBS5_WIDTH_RESTRICTED_ENVS          POSIX_V6_LP64_OFF64
+V7_ENV                              POSIXLY_CORRECT=1
+V6_ENV                              POSIXLY_CORRECT=1
+LFS_CFLAGS
+LFS_LDFLAGS
+LFS_LIBS
+LFS_LINTFLAGS
+_POSIX_AIO_LISTIO_MAX               2
+_POSIX_AIO_MAX                      1
+_POSIX_ARG_MAX                      4096
+_POSIX_CHILD_MAX                    25
+_POSIX_CLOCKRES_MIN                 20000000
+_POSIX_DELAYTIMER_MAX               32
+_POSIX_HOST_NAME_MAX                255
+_POSIX_LINK_MAX                     8
+_POSIX_LOGIN_NAME_MAX               9
+_POSIX_MAX_CANON                    255
+_POSIX_MAX_INPUT                    255
+_POSIX_MQ_OPEN_MAX                  8
+_POSIX_MQ_PRIO_MAX                  32
+_POSIX_NAME_MAX                     14
+_POSIX_NGROUPS_MAX                  8
+_POSIX_OPEN_MAX                     20
+_POSIX_PATH_MAX                     256
+_POSIX_PIPE_BUF                     512
+_POSIX_RE_DUP_MAX                   255
+_POSIX_RTSIG_MAX                    8
+_POSIX_SEM_NSEMS_MAX                256
+_POSIX_SEM_VALUE_MAX                32767
+_POSIX_SIGQUEUE_MAX                 32
+_POSIX_SSIZE_MAX                    32767
+_POSIX_SS_REPL_MAX                  4
+_POSIX_STREAM_MAX                   8
+_POSIX_SYMLINK_MAX                  255
+_POSIX_SYMLOOP_MAX                  8
+_POSIX_THREAD_DESTRUCTOR_ITERATIONS 4
+_POSIX_THREAD_KEYS_MAX              128
+_POSIX_THREAD_THREADS_MAX           64
+_POSIX_TIMER_MAX                    32
+_POSIX_TRACE_EVENT_NAME_MAX         30
+_POSIX_TRACE_NAME_MAX               8
+_POSIX_TRACE_SYS_MAX                8
+_POSIX_TRACE_USER_EVENT_MAX         32
+_POSIX_TTY_NAME_MAX                 9
+_POSIX_TZNAME_MAX                   6
+_POSIX2_BC_BASE_MAX                 99
+_POSIX2_BC_DIM_MAX                  2048
+_POSIX2_BC_SCALE_MAX                99
+_POSIX2_BC_STRING_MAX               1000
+_POSIX2_COLL_WEIGHTS_MAX            2
+_POSIX2_EXPR_NEXT_MAX               32
+_POSIX2_LINE_MAX                    2048
+_POSIX2_RE_DUP_MAX                  255
+_XOPEN_IOV_MAX                      16
+_XOPEN_NAME_MAX                     255
+_XOPEN_PATH_MAX                     1024
+CHAR_BIT                            8
+CHAR_MAX                            127
+CHAR_MIN                            -128
+INT_MAX                             2147483647
+INT_MIN                             -2147483648
+LLONG_MIN                           -9223372036854775808
+LLONG_MAX                           9223372036854775807
+LONG_BIT                            64
+LONG_MAX                            9223372036854775807
+LONG_MIN                            -9223372036854775808
+MB_LEN_MAX                          8
+SCHAR_MAX                           127
+SCHAR_MIN                           -128
+SHRT_MAX                            32767
+SHRT_MIN                            -32768
+SSIZE_MAX                           9223372036854775807
+UCHAR_MAX                           255
+UINT_MAX                            4294967295
+ULLONG_MAX                          -1
+ULONG_MAX                           -1
+USHRT_MAX                           65535
+WORD_BIT                            32
+NL_ARGMAX                           9
+ML_LANGMAX                          14
+NL_MSGMAX                           32767
+NL_SETMAX                           255
+NL_TEXTMAX                          2048
+NZERO                               20
+POSIX2_BC_BASE_MAX                  99
+POSIX2_BC_DIM_MAX                   2048
+POSIX2_BC_SCALE_MAX                 99
+POSIX2_BC_STRING_MAX                1000
+POSIX2_COLL_WEIGHTS_MAX             2
+POSIX2_EXPR_NEXT_MAX                32
+POSIX2_LINE_MAX                     2048
+POSIX2_RE_DUP_MAX                   255
+AIO_LISTIO_MAX                      32
+AIO_MAX                             8
+AIO_PRIO_DELTA_MAX                  0
+ARG_MAX
+ATEXIT_MAX                          32
+BC_BASE_MAX                         99
+BC_DIM_MAX                          2048
+BC_SCALE_MAX                        99
+BC_STRING_MAX                       1000
+CHILD_MAX                           256
+CLK_TCK                             1000
+COLL_WEIGHTS_MAX
+DELAYTIMER_MAX                      2147483647
+EXPR_NEST_MAX                       32
+GETGR_R_SIZE_MAX                    16384
+GETPW_R_SIZE_MAX                    16384
+HOST_NAME_MAX                       255
+IOV_MAX                             1024
+LINE_MAX                            2048
+LOGIN_NAME_MAX                      256
+MQ_OPEN_MAX                         256
+MQ_PRIO_MAX                         2147483647
+NGROUPS_MAX                         1024
+OPEN_MAX                            3200
+PAGE_SIZE                           65536
+PAGESIZE                            65536
+PTHREAD_DESTRUCTOR_ITERATIONS       4
+PTHREAD_KEYS_MAX                    1024
+PTHREAD_STACK_MIN                   65536
+PTHREAD_THREADS_MAX
+RE_DUP_MAX                          255
+RTSIG_MAX                           33
+SEM_NSEMS_MAX
+SEM_VALUE_MAX                       1147483648
+SIGQUEUE_MAX                        32
+STREAM_MAX                          20
+SYMLOOP_MAX                         10
+TIMER_MAX                           32
+TTY_NAME_MAX                        32
+TZNAME_MAX
+_POSIX_ADVISORY_INFO                200809
+_POSIX_ASYNCHRONOUS_IO              200809
+_POSIX_BARRIERS                     200809
+_POSIX_CLOCK_SELECTION              200809
+_POSIX_CPUTIME                      200809
+_POSIX_FSYNC                        200809
+_POSIX_IPV6                         200809
+_POSIX_JOB_CONTROL                  1
+_POSIX_MAPPED_FILES                 200809
+_POSIX_MEMLOCK
+_POSIX_MEMLOCK_RANGE                200809
+_POSIX_MEMORY_PROTECTION            200809
+_POSIX_MESSAGE_PASSING              200809
+_POSIX_MONOTONIC_CLOCK              200809
+_POSIX_PRIORITIZED_IO
+_POSIX_PRIORITY_SCHEDULING          200809
+_POSIX_RAW_SOCKETS                  200809
+_POSIX_READER_WRITER_LOCKS          200809
+_POSIX_REALTIME_SIGNALS             200809
+_POSIX_REGEXP                       1
+_POSIX_SAVED_IDS                    1
+_POSIX_SEMAPHORES                   200809
+_POSIX_SHARED_MEMORY_OBJECTS        200809
+_POSIX_SHELL                        1
+_POSIX_SPAWN                        200809
+_POSIX_SPIN_LOCKS                   200809
+_POSIX_SPORADIC_SERVER
+_POSIX_SS_REPL_MAX
+_POSIX_SYNCHRONIZED_IO              200809
+_POSIX_THREAD_ATTR_STACKADDR        200809
+_POSIX_THREAD_ATTR_STACKSIZE        200809
+_POSIX_THREAD_CPUTIME               200809
+_POSIX_THREAD_PRIO_INHERIT
+_POSIX_THREAD_PRIO_PROTECT
+_POSIX_THREAD_PRIORITY_SCHEDULING   200809
+_POSIX_THREAD_PROCESS_SHARED        200809
+_POSIX_THREAD_ROBUST_PRIO_INHERIT
+_POSIX_THREAD_ROBUST_PRIO_PROTECT
+_POSIX_THREAD_SAFE_FUNCTIONS        200809
+_POSIX_THREAD_SPORADIC_SERVER
+_POSIX_THREADS                      200809
+_POSIX_TIMEOUTS                     200809
+_POSIX_TIMERS                       200809
+_POSIX_TRACE
+_POSIX_TRACE_EVENT_FILTER
+_POSIX_TRACE_EVENT_NAME_MAX
+_POSIX_TRACE_INHERIT
+_POSIX_TRACE_LOG
+_POSIX_TRACE_NAME_MAX
+_POSIX_TRACE_SYS_MAX
+_POSIX_TRACE_USER_EVENT_MAX
+_POSIX_TYPED_MEMORY_OBJECTS
+_POSIX_VERSION                      200809
+_POSIX_V7_ILP32_OFF32
+_POSIX_V7_ILP32_OFFBIG
+_POSIX_V7_LP64_OFF64                1
+_POSIX_V7_LPBIG_OFFBIG              1
+_POSIX_V6_ILP32_OFF32
+_POSIX_V6_ILP32_OFFBIG
+_POSIX_V6_LP64_OFF64                1
+_POSIX_V6_LPBIG_OFFBIG              1
+_POSIX2_C_BIND                      200809
+_POSIX2_C_DEV                       200809
+_POSIX2_CHAR_TERM                   200809
+_POSIX2_FORT_DEV
+_POSIX2_FORT_RUN
+_POSIX2_LOCALEDEF
+_POSIX2_PBS
+_POSIX2_PBS_ACCOUNTING
+_POSIX2_PBS_CHECKPOINT
+_POSIX2_PBS_LOCATE
+_POSIX2_PBS_MESSAGE
+_POSIX2_PBS_TRACK
+_POSIX2_SW_DEV                      200809
+_POSIX2_UPE                         200809
+_POSIX2_VERSION                     200809
+_XBS5_ILP32_OFF32
+_XBS5_ILP32_OFFBIG
+_XBS5_LP64_OFF64                    1
+_XBS5_LPBIG_OFFBIG                  1
+_XOPEN_CRYPT                        1
+_XOPEN_ENH_I18N                     1
+_XOPEN_LEGACY
+_XOPEN_REALTIME
+_XOPEN_REALTIME_THREADS
+_XOPEN_SHM                          1
+_XOPEN_STREAMS
+_XOPEN_UNIX
+_XOPEN_UUCP
+_XOPEN_VERSION                      700
+POSIX2_C_BIND                       200809
+POSIX2_C_DEV                        200809
+POSIX2_CHAR_TERM                    200809
+POSIX2_FORT_DEV
+POSIX2_FORT_RUN
+POSIX2_LOCALEDEF
+POSIX2_PBS
+POSIX2_PBS_ACCOUNTING
+POSIX2_PBS_CHECKPOINT
+POSIX2_PBS_LOCATE
+POSIX2_PBS_MESSAGE
+POSIX2_PBS_TRACK
+POSIX2_SW_DEV                       200809
+POSIX2_UPE                          200809
+POSIX2_VERSION                      200809
+LEVEL1_ICACHE_SIZE                  32768
+LEVEL1_ICACHE_ASSOC                 8
+LEVEL1_ICACHE_LINESIZE              64
+LEVEL1_DCACHE_SIZE                  49152
+LEVEL1_DCACHE_ASSOC                 12
+LEVEL1_DCACHE_LINESIZE              64
+LEVEL2_CACHE_SIZE                   524288
+LEVEL2_CACHE_ASSOC                  8
+LEVEL2_CACHE_LINESIZE               64
+LEVEL3_CACHE_SIZE                   16777216
+LEVEL3_CACHE_ASSOC                  16
+LEVEL3_CACHE_LINESIZE               64
+LEVEL4_CACHE_SIZE                   0
+LEVEL4_CACHE_ASSOC                  0
+LEVEL4_CACHE_LINESIZE               0
+_NPROCESSORS_CONF                   16
+_NPROCESSORS_ONLN                   16
+_AVPHYS_PAGES                       86502
+_PHYS_PAGES                         257681
+
+---
+$> getconf LEVEL1_DCACHE_LINESIZE
+64
+
+---
+

@@ -1,0 +1,91 @@
+fname: dot-vimrc-en-mapped-commands-20260908.txt
+----------------------------------------------------------------------------------------------------------
+mapping type    mapping             description
+----------------------------------------------------------------------------------------------------------
+vnoremap        1q                  put sellection inside single quotes
+vnoremap        2q                  put sellection inside double quotes
+nnoremap        ,b                  break line at position 110 chars
+nnoremap        ,bt                 open all buffers into separate tabs
+vnoremap        ,cd                 enclose visual selection between <code></code> tags
+inoremap        <c-f>               map ctrl+x ctrl+f to ctrl+f
+nnoremap        ,c                  insert <code></code> and put cursor inside
+vnoremap        ,ct                 c-style comment out visual block
+vnoremap        ,cu                 c-style un-comment visual block
+nnoremap        ,d                  search for [12] or [123] troughout a file and ask to deete it
+nnoremap        ,ds                 remove '[...]' in current line
+vnoremap        ,ds                 remove '[...]' in current line
+inoremap        ,dt                 insert datestamp 'YYYYmmdd'
+nnoremap        ,dt                 insert datestamp 'YYYYmmdd'
+vnoremap        ,dt                 insert datestamp 'YYYYmmdd'
+inoremap        ${{                 enclosing brackets/square/curly
+inoremap        ((                  enclosing brackets/square/curly
+inoremap        [[                  enclosing brackets/square/curly
+inoremap        [[[                 enclosing brackets/square/curly
+inoremap        {{                  enclosing brackets/square/curly
+vnoremap        ,ht                 html comment
+vnoremap        ,hu                 html uncomment
+vnoremap        ,ju                 un-comment java visual block
+vnoremap        ,jv                 comment out java visual block
+noremap         ,lc                 copy http link into the [number] holder
+nnoremap        <leader>b           change buffer to file from list
+noremap         <leader>c           clone current line or sellection
+vnoremap        <leader>c           clone current line or sellection
+nnoremap        <leader>fe          :FZF -e
+nnoremap        <leader>ff          :FZF
+nnoremap        <leader>n           :NERDTreeToggle
+nnoremap        <leader>oo          search in vim's file edit histroy and open it for edit/view
+nnoremap        <leader>pv          netrw window setup
+nnoremap        <leader>r           ranger
+nnoremap        <leader>s           replace spaces and semicolon or just spaces
+nnoremap        <leader>st          remove lagging when editing *.h files
+nnoremap        <leader>x           replace spaces and semicolon or just spaces
+noremap         ,mf                 change from 'nonmodifiable' to 'modifiable'
+nnoremap        ,n                  :call NumberToggle()
+noremap         ,nf                 change from 'modifiable' to 'nonmodifiable'
+vnoremap        ,pt                 comment out python visual block
+vnoremap        ,pu                 un-comment python visual block
+vnoremap        ,rr                 shift tab and remove spacesl
+vnoremap        ,rt                 retab visual sellection
+nnoremap        ,sb                 move line under the cursor inside []
+vnoremap        ,sb                 move line under the cursor inside []
+nnoremap        <silent>,dq         add double quotes around word
+nnoremap        <silent>,sq         add single quotes around word
+nnoremap        <silent>,uq         remove quotes around word
+inoremap        sout                System.out.println("")
+nnoremap        <space>0            indent/format main{} block
+nnoremap        <space>2t           replace leading 2 spaces to tabs
+vnoremap        <space>2t           replace leading 2 spaces to tabs
+nnoremap        ,4                  cmd promt symbol replacement
+vnoremap        ,4                  cmd promt symbol replacement
+nnoremap        <Space>4            cmd promt symbol replacement
+vnoremap        <Space>4            cmd promt symbol replacement
+nnoremap        <space>4t           replace leading 4 spaces to tabs
+vnoremap        <space>4t           replace leading 4 spaces to tabs
+nnoremap        <space>9            replace single quote inside words with apostrophe
+vnoremap        <space>dq           move selected text between ""
+vnoremap        <space>sq           move selected text between ''
+noremap         <space>f            move '{' after 'func() '
+nnoremap        <Space>j            multiple lines move
+vnoremap        <Space>j            multiple lines move
+nnoremap        <Space>k            multiple lines move
+vnoremap        <Space>k            multiple lines move
+vnoremap        ,<space>            remove leading chars with space in visual mode
+noremap         <space>s            insert <space> between // and text
+noremap         <space>ssc          :set syntax=c
+noremap         <space>ssg          :set syntax=go
+noremap         <space>ssh          :set syntax=sh
+noremap         <space>ssj          :set syntax=java
+noremap         <space>ssp          :set syntax=python
+noremap         <space>ss           :set syntax=
+noremap         <space>sst          :set syntax=text
+nnoremap        <space>v            initial config source and syntax setup
+noremap         ,stb                :so ~/.vimrc | :set syntax=bash
+noremap         ,stc                :so ~/.vimrc | :set syntax=c
+noremap         ,stj                :so ~/.vimrc | :set syntax=java
+noremap         ,stp                :so ~/.vimrc | :set syntax=python
+noremap         ,stz                :so ~/.vimrc | :set syntax=zig
+vnoremap        ,t                  replace multiple <tab>s with trailing <space> with <tab>s only
+noremap         ,tr                 table row dividers
+noremap         ,wd                 write and close buffer
+----------------------------------------------------------------------------------------------------------
+

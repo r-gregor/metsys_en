@@ -1,0 +1,15 @@
+# cat style command with syntax highlighting
+apt-cyg install highlight
+apt-cyg install highlight-common
+apt-cyg install highlight-gui
+
+# docs: http://www.andre-simon.de/doku/highlight/en/highlight.php
+
+# ---
+# filetypes.conf:
+1 - download: https://github.com/andre-simon/highlight/blob/master/filetypes.conf
+2 - mkdir ~/.highlight/
+3 - cp filetypes.conf ~/.highlight/
+
+# ---
+

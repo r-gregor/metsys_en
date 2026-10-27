@@ -1,0 +1,18 @@
+Vim replace with unicode character
+
+To enter unicode char, you mast enter the x-mode:
+
+   i_CTRL-V
+   CTRL-V          Insert next non-digit literally.  For special keys, the
+                   terminal code is inserted.  It's also possible to enter the
+                   decimal, octal or hexadecimal value of a character
+                   i_CTRL-V_digit.
+                   The characters typed right after CTRL-V are not considered for
+                   mapping.  {Vi: no decimal byte entry}
+                   Note: When CTRL-V is mapped (e.g., to paste text) you can
+                   often use CTRL-Q instead i_CTRL-Q.
+
+So, to replace ' with ʼ you must enter command:
+	:s/'/<c-v>u02bc/
+---
+

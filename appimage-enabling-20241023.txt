@@ -1,0 +1,11 @@
+filenme: appimage_enabling_20241023.txt
+
+Some software websites provide the AppImage packages for downloading for all Linux users on amd64 (Intel/AMD)
+platform.
+
+Ubuntu 22.04 and higher does NOT support AppImage out-of-the-box. User needs to first open terminal
+(Ctrl+Alt+T) and run command to enable it:
+$> sudo apt install libfuse2
+
+Then, grab the package, add executable permission from file 'Properties' dialog. Finally, click Run to launch
+the image editor.

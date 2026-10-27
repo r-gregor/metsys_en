@@ -1,0 +1,46 @@
+# commands to convert multiple *.html files into one *.txt file
+# from .../cli_text_processing_coreutils/*.html
+
+FJLNM="cli-text-processing-with-gnu-coreutils-20250605.txt"
+
+CCMDS=(
+introduction.html
+cat-tac.html
+head-tail.html
+tr.html
+cut.html
+seq.html
+shuf.html
+paste.html
+pr.html
+fold-fmt.html
+sort.html
+uniq.html
+comm.html
+join.html
+nl.html
+wc.html
+split.html
+csplit.html
+expand-unexpand.html
+basename-dirname.html)
+
+echo -n "[INFO] creating ${FJLNM} ... "
+touch ${FJLNM}
+if [ $# -eq 0 ]; then
+	echo "[OK]"
+fi
+
+echo -n "[INFO] populating ${FJLNM} with html-s ... "
+for CMD in ${CCMDS[@]}; do
+	echo "[INFO] Inserting ${CMD} into ${FJLNM} ..."
+	w3m -dump -cols 110 ${CMD} >> ${FJLNM}
+	echo -e "\n\n---\n" >> ${FJLNM}
+done
+
+if [ $# -eq 0 ]; then
+	echo "[OK]"
+else
+	echo "[ERROR] Something went wrong"
+fi
+

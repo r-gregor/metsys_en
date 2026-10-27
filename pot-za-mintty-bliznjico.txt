@@ -1,0 +1,1 @@
+C:\Users\gregor.redelonghi\myprogs\cygwin64\bin\mintty.exe -i /Cygwin-Terminal.ico -

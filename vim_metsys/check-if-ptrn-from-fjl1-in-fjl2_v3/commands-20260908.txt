@@ -1,0 +1,6 @@
+cat /home/gregor.redelonghi/majstaf/engit/prenos/update_en/dot-vimrc-mdb-mapped-commands-20260907.txt | cut -b17-
+cat /home/gregor.redelonghi/majstaf/engit/prenos/update_en/dot-vimrc-mdb-mapped-commands-20260907.txt | cut -b17- | less
+cp ~/.vimrc ./dot-vimrc-en-mapped-commands-20260908.txt
+grep map dot-vimrc-en-mapped-commands-20260908.txt | grep -v '^"' | cut -d' ' -f2 > en_mappings
+cat dot-vimrc-mdb-mapped-commands-20260907.txt | grep map | sed 's/^.*map *//' | cut -d' ' -f1 >> mdb_mapped_commands_only
+

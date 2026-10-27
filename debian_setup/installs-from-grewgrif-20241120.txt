@@ -1,0 +1,96 @@
+sudo apt install git -y
+sudo apt install -y bluez blueman
+sudo apt install -y libgtk3-perl
+sudo apt install -y libmodule-build-perl
+sudo apt install -y lightdm
+sudo apt install -y --no-install-recommends gdm3
+sudo apt install -y --no-install-recommends sddm
+sudo apt install -y --no-install-recommends lxdm
+sudo apt install -y slim
+sudo apt install unzip -y
+sudo apt install -y libgtk3-perl
+sudo apt install -y libmodule-build-perl
+sudo apt install -y "$@"
+sudo apt install -y libconfig-dev libdbus-1-dev libegl-dev libev-dev libgl-dev libepoxy-dev libpcre2-dev libpixman-1-dev libx11-xcb-dev libxcb1-dev libxcb-composite0-dev libxcb-damage0-dev libxcb-dpms0-dev libxcb-glx0-dev libxcb-image0-dev libxcb-present-dev libxcb-randr0-dev libxcb-render0-dev libxcb-render-util0-dev libxcb-shape0-dev libxcb-util-dev libxcb-xfixes0-dev libxext-dev meson ninja-build uthash-dev
+sudo apt install -y cups system-config-printer simple-scan
+sudo apt install unzip
+sudo apt install -y xorg xbacklight xbindkeys xvkbd xinput
+sudo apt install -y build-essential
+sudo apt install -y amd64-microcode
+sudo apt install -y intel-microcode
+sudo apt install -y dialog mtools dosfstools avahi-daemon acpi acpid gvfs-backends xfce4-power-manager
+sudo apt install -y pcmanfm
+sudo apt install -y kitty
+sudo apt install -y pulseaudio alsa-utils pavucontrol volumeicon-alsa
+sudo apt install -y neofetch htop
+sudo apt install -y network-manager network-manager-gnome
+sudo apt install -y lxappearance
+sudo apt install -y firefox-esr
+sudo apt install -y feh
+sudo apt install -y fonts-firacode fonts-liberation2 fonts-ubuntu papirus-icon-theme fonts-cascadia-code
+sudo apt install -y exa
+sudo apt install -y cups system-config-printer simple-scan
+sudo apt install -y bluez blueman
+sudo apt install -y bspwm dmenu sxhkd picom numlockx rofi dunst libnotify-bin unzip geany scrot
+sudo apt install -y micro
+sudo apt install -y vim
+sudo apt install -y lightdm lightdm-gtk-greeter-settings
+sudo apt install -yy xorg xbacklight xbindkeys xvkbd xinput xorg-dev
+sudo apt install -yy build-essential
+sudo apt install -yy intel-microcode
+sudo apt install -t unstable thunar -yy
+sudo apt install -yy tilix
+sudo apt install mtools dosfstools acpi acpid timeshift -yy
+sudo apt install -t unstable avahi-daemon gvfs-backends -yy
+sudo apt install -yy neofetch htop
+sudo apt install -yy exa
+sudo apt install -t unstable cups simple-scan -yy
+sudo apt install -t unstable firefox-esr -yy
+sudo apt install -t unstable unzip file-roller gedit network-manager-openvpn-gnome -yy
+sudo apt install fonts-font-awesome fonts-ubuntu fonts-liberation2 fonts-liberation fonts-terminus  -yy
+sudo apt install -y lightdm lightdm-gtk-greeter-settings slick-greeter
+sudo apt install -t unstable budgie-desktop -yy
+sudo apt install -t unstable budgie-indicator-applet -yy
+sudo apt install -t unstable gnome-control-center -yy
+sudo apt install -t unstable numix-icon-theme numix-gtk-theme materia-gtk-theme papirus-icon-theme dmz-cursor-theme -yy
+sudo apt install -yy xorg xbacklight xbindkeys xvkbd xinput xorg-dev
+sudo apt install -yy build-essential
+sudo apt install -yy intel-microcode
+sudo apt install -yy tilix
+sudo apt install mtools dosfstools acpi acpid timeshift avahi-daemon gvfs-backends -yy
+sudo apt install -yy neofetch htop
+sudo apt install -yy exa
+sudo apt install cups simple-scan -yy
+sudo apt install firefox-esr -yy
+sudo apt install unzip file-roller gedit network-manager-openvpn-gnome -yy
+sudo apt install fonts-font-awesome fonts-ubuntu fonts-liberation2 fonts-liberation fonts-terminus  -yy
+sudo apt install -y lightdm lightdm-gtk-greeter-settings slick-greeter
+sudo apt install numix-icon-theme numix-gtk-theme dmz-cursor-theme -yy
+sudo apt install -t unstable thunar -yy
+sudo apt install -t unstable budgie-desktop -yy
+sudo apt install -t unstable budgie-indicator-applet -yy
+sudo apt install -t unstable gnome-control-center -yy
+sudo apt install -y xorg xbacklight xbindkeys xvkbd xinput
+sudo apt install -y build-essential
+sudo apt install -y intel-microcode
+sudo apt install -y xfce4 xfce4-goodies
+sudo apt install -y firefox-esr
+sudo apt install -y dialog mtools acpi acpid gvfs-backends
+sudo apt install -y alsa-utils volumeicon-alsa
+sudo apt install -y neofetch htop
+sudo apt install -y exa
+sudo apt install -y cups
+sudo apt install -y bluez blueman
+sudo apt install -y micro
+sudo apt install -y vim
+sudo apt install fonts-font-awesome fonts-powerline fonts-ubuntu fonts-liberation2 fonts-liberation fonts-terminus
+sudo apt install -y lightdm-gtk-greeter-settings
+---
+install_gdm() {
+install_sddm() {
+install_lxdm() {
+install_slim() {
+install -Dm755 /usr/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm/bspwmrc
+install -Dm644 /usr/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd/sxhkdrc
+---
+

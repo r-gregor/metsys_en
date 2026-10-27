@@ -1,0 +1,32 @@
+Downloads
+2014_pred-prestavitvijo
+2015
+2016
+2017
+2018
+2019
+Favorites
+Contacts
+Brushes
+Cache
+DBOT
+Dropbox
+Frames
+Gradients
+Patterns
+Links
+myprogs
+Saved Games
+Searches
+Shapes
+Styled Lines
+Textures
+Tubes
+_brisi
+AppData/LocalLow
+AppData/Local
+AppData/Roaming
+NTUSER.*
+ntuser.*
+AppData
+Application Data

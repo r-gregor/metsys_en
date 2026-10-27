@@ -1,0 +1,33 @@
+for FFF in $(find $NDOT/ -type f); do diff -q $FFF $(echo $FFF | cut -d'/' -f8-); done 2>/dev/null > ndot_diffs_20230213.txt
+cat ndot_diffs_20230213.txt | cut -d' ' -f2 | cut -d'/' -f8
+for FFF in $(cat ndot_diffs_20230213.txt | cut -d' ' -f2 | cut -d'/' -f8); do echo $FFF; done
+ndot log --oneline
+mkdir en_nvol
+ndot remote -v
+ndot log --oneline --graph
+ndot s
+ndot config --global list
+ndot config --global --get-all
+ndot config --global --list
+ndot config --local --list
+ndot log
+ndot branch
+nvol remote add en-github-nvol git@github.com:r-gregor/en_wallpapers.git
+nvol push en-github-nvol master
+ndot commit -a -m "updated aliases 20230220"
+nvol remote add en-gitlab-nvol git@gitlab.com:r-gregor/en_wallpapers.git
+nvol push en-gitlab-nvol master
+---
+$> nvol remote -v
+en-github-nvol  git@github.com:r-gregor/en_wallpapers.git (fetch)
+en-github-nvol  git@github.com:r-gregor/en_wallpapers.git (push)
+en-gitlab-nvol  git@gitlab.com:r-gregor/en_wallpapers.git (fetch)
+en-gitlab-nvol  git@gitlab.com:r-gregor/en_wallpapers.git (push)
+---
+$> ndot remote -v
+en-github-metsys        git@github.com:r-gregor/en_metsys.git (fetch)
+en-github-metsys        git@github.com:r-gregor/en_metsys.git (push)
+en-gitlab-metsys        git@gitlab.com:r-gregor/en_metsys.git (fetch)
+en-gitlab-metsys        git@gitlab.com:r-gregor/en_metsys.git (push)
+---
+

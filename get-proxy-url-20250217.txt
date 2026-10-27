@@ -1,0 +1,23 @@
+ 2509  2025-02-17 12:40:49 yt-dlp -U
+ 2511  2025-02-17 12:42:04 python3 -m pip install --upgrade pip
+ 2512  2025-02-17 12:42:12 pip install --upgrade yt-dlp
+ 2524  2025-02-17 12:46:55 yt-dlp -x --audio-format mp3 https://www.youtube.com/watch?v=fa3XzXYP-yI
+ 2556  2025-02-17 13:05:06 yt-dlp --proxy http://10.91.8.21:80 -x --audio-format mp3 https://www.youtube.com/watch?v=fa3XzXYP-yI
+ ---
+$> wget http://google.com
+--2025-02-17 13:00:44--  http://google.com/
+Connecting to 10.91.8.21:80... connected.                            ### proxy info !!
+Proxy request sent, awaiting response... 301 Moved Permanently
+Location: http://www.google.com/ [following]
+--2025-02-17 13:00:44--  http://www.google.com/
+Reusing existing connection to 10.91.8.21:80.
+Proxy request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘index.html’
+
+index.html                                                    [ <=>                                                                                                                                ]  18.68K  --.-KB/s    in 0.001s
+
+2025-02-17 13:00:44 (29.2 MB/s) - ‘index.html’ saved [19130]
+---
+
+

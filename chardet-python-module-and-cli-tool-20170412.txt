@@ -1,0 +1,65 @@
+﻿$> gregor.redelonghi@cygwin-en [/home/gregor.redelonghi/_DOWNLOADS]
+$> pip3 install chardet
+...
+
+--------------------------------------------------------------------------------------------------------------
+From documentation [https://pypi.python.org/pypi/chardet]:
+
+chardet 3.0.1
+Universal encoding detector for Python 2 and 3
+
+Chardet: The Universal Character Encoding Detector
+
+Detects
+ASCII, UTF-8, UTF-16 (2 variants), UTF-32 (4 variants)
+Big5, GB2312, EUC-TW, HZ-GB-2312, ISO-2022-CN (Traditional and Simplified Chinese)
+EUC-JP, SHIFT_JIS, CP932, ISO-2022-JP (Japanese)
+EUC-KR, ISO-2022-KR (Korean)
+KOI8-R, MacCyrillic, IBM855, IBM866, ISO-8859-5, windows-1251 (Cyrillic)
+ISO-8859-5, windows-1251 (Bulgarian)
+ISO-8859-1, windows-1252 (Western European languages)
+ISO-8859-7, windows-1253 (Greek)
+ISO-8859-8, windows-1255 (Visual and Logical Hebrew)
+TIS-620 (Thai)
+
+Requires Python 2.6 or later
+
+Installation
+Install from PyPI:
+pip install chardet
+
+Documentation
+For users, docs are now available at http://chardet.readthedocs.org.
+
+**************************************************
+* Command-line Tool                              *
+* chardet comes with a command-line script which *
+* reports on the encodings of one or more files: *
+*                                                *
+* > chardetect somefile someotherfile            *
+* somefile: windows-1252 with confidence 0.5     *
+* someotherfile: ascii with confidence 1.0       *
+**************************************************
+--------------------------------------------------------------------------------------------------------------
+
+$> gregor.redelonghi@cygwin-en [/home/gregor.redelonghi/_DOWNLOADS]
+$> chardetect --help
+usage: chardetect [-h] [--version] [input [input ...]]
+
+Takes one or more file paths and reports their detected encodings
+
+positional arguments:
+  input       File whose encoding we would like to determine. (default: stdin)
+
+optional arguments:
+  -h, --help  show this help message and exit
+  --version   show program's version number and exit
+
+---
+$> gregor.redelonghi@cygwin-en [/home/gregor.redelonghi/_DOWNLOADS]
+$> chardetect "Finding Nemo 720p.srt"
+Finding Nemo 720p.srt: Windows-1252 with confidence 0.73
+
+$> gregor.redelonghi@cygwin-en [/home/gregor.redelonghi/_DOWNLOADS]
+$> chardetect "Finding Nemo 720p slo.srt"
+Finding Nemo 720p slo.srt: utf-8 with confidence 0.99

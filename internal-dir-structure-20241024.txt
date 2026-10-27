@@ -1,0 +1,30 @@
+#! /usr/bin/env bash
+
+# filename: internal_dir_structure_20241024.txt
+
+export START=${HOME}/majstaf_en/brisime_en
+export HR=${START}/majstaf/support
+
+makedirs() {
+	newdir=$HR/$1
+	if [ ! -d ${newdir} ]; then
+		mkdir -p ${newdir}
+	else
+		echo "[INFO] ${newdir} exists -- not created"
+		exit
+	fi
+}
+
+for DIR in chtshts docs downloaded_drivers colors customizations; do
+	makedirs ${DIR}
+done
+
+#	${START}
+#	|-- majstaf
+#	|   `-- support
+#	|       |-- chtshts
+#	|       |-- colors
+#	|       |-- customizations
+#	|       |-- downloaded_drivers
+#	|       `-- docs
+

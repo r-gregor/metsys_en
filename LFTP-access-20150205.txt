@@ -1,0 +1,26 @@
+﻿lftp u813115235:z7m17s11@ftp.rgregor.hostingsiteforfree.com
+
+lftp r-gregor.slohosting.com:z7m17s11@free.slohosting.com
+
+lftp gregorr:zala00@ftp.volja.net
+
+lftp b22_15819044:z7m17s11@ftp.byethost22.com
+
+
+**************************************************************************************************************
+EN:
+/c/Users/gregor.redelonghi/majstaf/r.gregor.en/start.en/dnevno
+	put ./dnevno.html ./dnevno-black.html
+
+/c/Users/gregor.redelonghi/majstaf/r.gregor.en/start.en/
+	put ./index.html ./index-black.html
+
+**************************************************************************************************************
+doma:
+/home/rgregor/mywww/dnevno
+	put ./dnevno.html ./dnevno-black.html
+
+/home/rgregor/mywww/dnevno
+	put ./index.html ./index-black.html
+
+**************************************************************************************************************

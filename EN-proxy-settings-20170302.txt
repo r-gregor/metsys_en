@@ -1,0 +1,4 @@
+###  EN-proxy ...
+export http_proxy=http://172.17.3.64:80/
+export ftp_proxy=ftp://172.17.3.64:8021/
+export https_proxy=http://172.17.3.64:80/

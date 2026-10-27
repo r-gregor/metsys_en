@@ -1,0 +1,111 @@
+" EN: LAST CHANGE 20231120
+
+" ----------------- ABBREVIATIONS ------------------------------
+ab sbng #! /usr/bin/env bash<cr><cr>### Name:<tab>Scriptname ...<cr>### Author:<tab>Author ... <cr>### Date:<tab> <cr>### Decription:<cr>### <cr>### <cr>### <cr> 
+ab pt3 #! /usr/bin/env python3<cr># -*- coding: utf-8 -*-<cr><cr>
+ab sout System.out.println(
+
+nnoremap <space>. :set listchars+=space:⋅ <CR>
+nnoremap <space>, :set listchars-=space:⋅ <CR>
+
+" ----------------- ENCLOSING BRACKETS/SQUARE/CURLY ------------
+inoremap ${ ${}<ESC>hli
+inoremap {  {}<ESC>hli
+inoremap (  ()<ESC>hli
+inoremap [  []<ESC>hli
+
+" ----------------- ADD/REMOVE QUOTES AROUND WORD --------------
+nnoremap <silent> ,dq :call Quote('"')<CR>
+nnoremap <silent> ,sq :call Quote("'")<CR>
+nnoremap <silent> ,uq :call UnQuote()<CR>
+
+" ------------------ TOGGLE NUMBER/RELTIVENUMBER ---------------
+" ,n to toggle between just number and number+relativenumber
+nnoremap ,n :call NumberToggle()<CR>
+
+" ----------------- CUSTOM MAPPINGS ---------------------------------
+let mapleader = " "
+
+" search for [12] or [123] troughout a file 
+" and ask to deete it --> maped to ,d <comma+d> 
+nnoremap ,d :%s/\[\d\+]//gc
+nnoremap ,c i<code><CR></code><CR><ESC>kki
+
+" comment/uncomment visually selected block
+" updated (en) 20221117
+vnoremap ,pt :s@\(^\s*\)\(.*\)@\1# \2@<CR>
+vnoremap ,pu :s@\(^\s*\)# @\1@<CR>
+vnoremap ,jv :s@\(^\s*\)\(.*\)@\1// \2@<CR>
+vnoremap ,ju :s@\(^\s*\)// @\1@<CR>
+" 
+" html comment/uncomment
+vnoremap ,ht :s/\%V\(.*\)\%V/<!-- \1 -->/<CR>
+vnoremap ,hu :s/\%V<!-- \(.*\) -->\%V/\1/<CR>
+
+" --- ???
+vnoremap ,<space> :s@^.\{1,2\} @@<CR>
+vnoremap ,t :s/\(\t\+\) \+/\1/g<CR>
+
+" added 20211101: C-style comment out visual block 
+vnoremap ,cc :s/^/ * /<CR>gv"xdO/*<CR><ESC>0C */<ESC>k"xp<CR>
+vnoremap ,cu :s/^\s*\* //<CR>gv"xdddkdd"xP<CR>
+
+" added 20210629 (d) - enclose visual selection between <code></code> tags
+vnoremap ,cd di<code><CR></code><CR><ESC>kP?<code><CR>:s@.*\(<code>\)@\1@<CR>/</code><CR>:s@.*\(</code>\)@\1@<CR>j
+
+" added 20211105 (en): shift tab and remove spaces 
+vnoremap ,rr >gv:s/\(\t\+\) \+/\1/g<CR>
+
+" 20210813: vim's file explorer (Netrw) in left column of size 30 (close with :bd)
+nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+
+" ranger settings 20210813
+nnoremap <leader>r :Ranger<CR>
+let g:ranger_map_keys = 0
+
+" mapping to replace spaces and semicolon or just spaces at the end of the line:
+" effect: single ; at the end of text remains
+nnoremap <leader>s :s/ *;*$/;/<esc>j
+nnoremap <leader>x vllc/* <ESC>A */<ESC>
+
+" insert word break at 110-th char
+" 0110lbikba
+" nnoremap <leader>b 0110lbi<BS><CR><ESC>
+nnoremap ,b 0110lbi<BS><CR><ESC>
+
+" move entire lines UP an d DOWN
+" to enter instead of Alt key --> SPACE key
+nnoremap <Space>j :m.+1<CR>==
+nnoremap <Space>k :m.-2<CR>==
+vnoremap <Space>j :m'>+1<CR>gv=gv
+vnoremap <Space>k :m'<-2<CR>gv=gv
+"
+nnoremap ,4 :s/^\s*/$> /<CR><CR>
+vnoremap ,4 :s/^\s*/$> /<CR><CR>
+nnoremap <Space>4 :s/^\$ /$> /<CR><CR>
+vnoremap <Space>4 :s/^\$ /$> /<CR><CR>
+
+nnoremap <leader>n :NERDTree<CR>
+nnoremap <leader>f :FZF<CR>
+
+
+" abbreviations fo java 20220830
+iab psvm <TAB>public static void main(String[<Right><Space>args<Right><Space>{<CR><CR><CR><Right><Space>// end main<ESC>kki<CR>
+inoremap sout System.out.println("");<ESC>hhi
+iab inm if __name__ == '__main__':<CR>
+
+" replaces tabs to 4 
+" whole lines -> <shift+v>
+" block       -> <ctrl+v>
+vnoremap <C-t> :s/\%V\t/    /g<CR>
+
+" replace '//text ...' with '// text ...'
+noremap <Space>s :%s/\/\/\(\w.*\)/\/\/ \1/<CR>
+
+" " vim-move plugin
+let g:move_key_modifier = 'C'            " *** 20221121 (d)
+let g:move_key_modifier_visualmode = 'S' " *** 20221121 (d)
+
+" removes lagging when editing .h files
+nnoremap <leader>st :syntax off<CR>:syntax on<CR>
+

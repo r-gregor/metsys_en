@@ -1,0 +1,31 @@
+filename: jupyter-notebook_install_20190220.txt
+
+ 2532  2019-02-20 12:38:43 pip3 install ipython
+ 2539  2019-02-20 12:45:56 apt-cyg install python3-zmq
+ 2540  2019-02-20 12:46:19 python3 -m pip install jupyter
+ 2541  2019-02-20 12:48:25 jupyter notebook --no-browser
+
+==============================================================================================================
+from original: https://www.scivision.co/install-ipython-jupyter-in-cygwin/
+Install IPython / Jupyter in Windows using Cygwin
+Install options for IPython on Windows include:
+
+    Best for most: native Windows Python 3 64-bit install
+    Better for some: from Anaconda Python in Windows Subsystem for Linux
+    OK if needed: on Cygwin, as described below
+
+Install
+
+IPython is best with Python 3. IPython for Python 2.7 stopped development in early 2017.
+
+install prereqs from Windows Command Prompt:
+$> setup-x86_64 -P python3-pip python3-zmq python3-ipython
+
+from Cygwin Terminal:
+$> python3 -m pip install jupyter
+
+Usage: in Cygwin:
+$> jupyter notebook --no-browser
+
+    copy the URL printed to your Windows web browser to use Cygwin Jupyter notebook.
+==============================================================================================================

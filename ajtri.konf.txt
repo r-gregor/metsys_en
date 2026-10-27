@@ -1,0 +1,176 @@
+$> cat BRISI/i3.cinfig | grep "^#\|^bindsym\|^$" | sed 's/^bindsym \([^ ]*\) \(.*\)/\1\t\t\2/' | less > ajtri.konf.txt
+$> vim ajtri.cinfig.txt
+
+...
+
+# font for window titles. ISO 10646 = Unicode
+$mod+Escape         workspace back_and_forth
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+
+# start a terminal
+$mod+Return         exec i3-exec uxterm
+
+# kill focused window
+$mod+Shift+Q        kill
+
+# start dmenu (a program launcher)
+$mod+Shift+P        exec i3-exec dmenu_run
+
+# change focus
+$mod+h              focus left
+$mod+j              focus down
+$mod+k              focus up
+$mod+l              focus right
+
+# alternatively, you can use the cursor keys:
+$mod+Left           focus left
+$mod+Down           focus down
+$mod+Up             focus up
+$mod+Right          focus right
+
+# move focused window
+$mod+Shift+H        move left
+$mod+Shift+J        move down
+$mod+Shift+K        move up
+$mod+Shift+L        move right
+
+# alternatively, you can use the cursor keys:
+$mod+Shift+Left     move left
+$mod+Shift+Down     gmove down
+$mod+Shift+Up       gmove up
+$mod+Shift+Right    gmove right
+
+# split in horizontal orientation
+$mod+x              gsplit h
+
+# split in vertical orientation
+$mod+y              gsplit v
+
+# enter fullscreen mode for the focused container
+$mod+f              gfullscreen
+
+# change container layout (stacked, tabbed, default)
+$mod+s              glayout stacking
+$mod+t              glayout tabbed
+$mod+d              glayout default
+
+# toggle tiling / floating
+$mod+Shift+space    gfloating toggle
+
+# change focus between tiling / floating windows
+$mod+space          gfocus mode_toggle
+
+# focus the parent container
+$mod+a              gfocus parent
+
+# focus the child container
+#bindcode $mod+d focus child
+
+# switch to workspace
+$mod+1              gworkspace 1
+$mod+2              gworkspace 2
+$mod+3              gworkspace 3
+$mod+4              gworkspace 4
+$mod+5              gworkspace 5
+$mod+6              gworkspace 6
+$mod+7              gworkspace 7
+$mod+8              gworkspace 8
+$mod+9              gworkspace 9
+$mod+0              gworkspace 10
+
+# move focused container to workspace
+$mod+Shift+exclam      gmove workspace 1
+$mod+Shift+quotedbl    gmove workspace 2
+$mod+Shift+sterling    gmove workspace 3
+$mod+Shift+dollar      gmove workspace 4
+$mod+Shift+percent     gmove workspace 5
+$mod+Shift+asciicircum gmove workspace 6
+$mod+Shift+ampersand   gmove workspace 7
+$mod+Shift+asterisk    gmove workspace 8
+$mod+Shift+parenleft   gmove workspace 9
+$mod+Shift+parenright  gmove workspace 10
+
+$mod+v              goutput_move LVDS1
+$mod+b              goutput_move VGA1
+
+# Random workspaces
+$mod+i              gworkspace im
+$mod+Shift+I        gmove workspace im
+
+$mod+e              gworkspace email
+$mod+Shift+E        gmove workspace email
+
+$mod+m              gworkspace music
+$mod+Shift+M        gmove workspace music
+
+# SHET commands
+$mod+F1             gexec shet /tom/toggle_desk
+$mod+F2             gexec shet /tom/toggle_bedside
+
+XF86Launch1         gexec xset dpms force off
+
+# Music keys
+XF86AudioPlay       gexec mpc toggle
+XF86AudioStop       gexec mpc stop
+XF86AudioPrev       gexec mpc prev
+XF86AudioNext       gexec mpc next
+
+# Make various things behave
+# reload the configuration file
+$mod+Shift+C        greload
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+$mod+Shift+R        grestart
+
+# exit i3 (logs you out of your X session)
+# bindsym           $mod+Shift+E exit
+
+# resize window (you can also use the mouse for that)
+h                   gresize shrink left 10 px or 10 ppt
+Shift+H             gresize grow   left 10 px or 10 ppt
+
+j                   gresize shrink down 10 px or 10 ppt
+Shift+J i           gresize grow   down 10 px or 10 ppt
+
+k                   gresize shrink up 10 px or 10 ppt
+Shift+K i           gresize grow   up 10 px or 10 ppt
+
+l                   gresize shrink right 10 px or 10 ppt
+Shift+L             gresize grow   right 10 px or 10 ppt
+
+Left                gresize shrink left 10 px or 10 ppt
+Shift+Left          gresize grow   left 10 px or 10 ppt
+
+Down                gresize shrink down 10 px or 10 ppt
+Shift+Down          gresize grow   down 10 px or 10 ppt
+
+Up                  gresize shrink up 10 px or 10 ppt
+Shift+Up gresize grow   up 10 px or 10 ppt
+
+Right               gresize shrink right 10 px or 10 ppt
+Shift+Right         gresize grow   right 10 px or 10 ppt
+
+Return              gmode "default"
+Escape              gmode "default"
+
+$mod+r              gmode "resize"
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+
+...
+
+# vim: record command to insert spaces up tp column 21 between bindsymbol and command:
+# right alignment on symbol (space, =) 
+# qa       - start recording:
+# 0f 30i 21|dwj<cr>
+# '0'      - go to start
+# 'f '     - find next space
+# '30i ^[' - insert 30 spaces followed by escape symbol (Ctrl+v, Exc)
+# '21|'    - move cursor to column 21
+# 'dw'     - remove al spaces between
+# 'j'      - go to nex line
+# '<CR>'   - enter (finish)
+# q        - finish recording
+

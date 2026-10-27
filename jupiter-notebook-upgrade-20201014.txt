@@ -1,0 +1,70 @@
+ 2361  2020-10-14 13:44:43 jptr                                         [---]
+ 2366  2020-10-14 13:46:19 jupyter notebook --no-browser                [---]
+ 2369  2020-10-14 13:47:37 python3 -m pip install --upgrade notebook    [---]
+ 2371  2020-10-14 13:48:32 python3 -m pip install lesscpy               [***]
+ 2388  2020-10-14 13:55:06 less jupyter-notebook_install_20190220.txt   [   ]
+ 2393  2020-10-14 13:57:07 python3 -m pip install jupyter               [---]
+ 2394  2020-10-14 14:02:06 python3 -m pip install python-cffi           [   ]
+ 2395  2020-10-14 14:02:15 python3 -m pip install cffi                  [   ]
+ 2396  2020-10-14 14:02:26 python3 -m pip install wheel                 [***]
+ 2397  2020-10-14 14:02:30 python3 -m pip install cffi                  [   ]
+ 2398  2020-10-14 14:02:47 python3 -m pip install jupyter               [---]
+ 2401  2020-10-14 14:04:44 cygcheck -p libffi                           [   ]
+ 2402  2020-10-14 14:05:16 apt-cyg install libffi-devel                 [***]
+ 2593  2020-10-14 14:11:03 apt-cyg install python38-cffi                [***]
+ 2404  2020-10-14 14:11:43 python3 -m pip install jupyter               [---]
+ 2405  2020-10-14 14:13:16 python3 -m pip install notebook              [---]
+ 2407  2020-10-14 14:15:08 apt-cyg install python3-devel                [***]
+ 2408  2020-10-14 14:15:37 apt-cyg install python3.8-devel              [---]
+ 2409  2020-10-14 14:15:42 apt-cyg install python3.8-dev                [---]
+ 2411  2020-10-14 14:17:23 apt-cyg install python38-devel               [***]
+ 2412  2020-10-14 14:17:34 python3 -m pip install jupyter               [---]
+ 2413  2020-10-14 14:20:35 cygcheck -p libzmq                           [   ]
+ 2414  2020-10-14 14:21:06 apt-cyg install python38-zmq                 [***]
+ 2415  2020-10-14 14:21:22 python3 -m pip install jupyter               [***]
+ 2416  2020-10-14 14:23:04 jupyter notebook --no-browser                [***]
+
+[---] - did NOT work!
+[***] - WORKED!
+[   ] - obtaining info ...
+
+--------------------------------------------------------------------------------------------------------------
+info about erros from python3 -m pip install jupyter output:
+
+previus errors corrected with installs:
+    python3 -m pip install lesscpy               [***]
+    python3 -m pip install wheel                 [***]
+    apt-cyg install libffi-devel                 [***]
+    apt-cyg install python38-cffi                [***]
+--------------------------------------------------------------------------------------------------------------
+...
+    gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -ggdb -O2 -pipe -Wall -Werror=format-security
+    -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector-strong --param=ssp-buffer-size=4 -fdebug-prefix-map=/cygdrive/d/cyg_pub/devel/python/python38/python38-3.8.2-1.x86_64/build=/usr/src/debug/python38-3.8.2-1 -fdebug-prefix-map=/cygdrive/d/cyg_pub/devel/python/python38/python38-3.8.2-1.x86_64/src/Python-3.8.2=/usr/src/debug/python38-3.8.2-1
+    -ggdb -O2 -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector-strong --param=ssp-buffer-size=4 -fdebug-prefix-map=/cygdrive/d/cyg_pub/devel/python/python38/python38-3.8.2-1.x86_64/build=/usr/src/debug/python38-3.8.2-1 -fdebug-prefix-map=/cygdrive/d/cyg_pub/devel/python/python38/python38-3.8.2-1.x86_64/src/Python-3.8.2=/usr/src/debug/python38-3.8.2-1
+    -DUSE__THREAD -DHAVE_SYNC_SYNCHRONIZE -I/usr/include/python3.8 -c c/_cffi_backend.c -o build/temp.cygwin-3.1.5-x86_64-3.8/c/_cffi_backend.o
+    c/_cffi_backend.c:2:10: fatal error: Python.h: No such file or directory
+        2 | #include <Python.h>
+          |          ^~~~~~~~~~
+    compilation terminated.
+    error: command 'gcc' failed with exit status 1
+    
+    *** need to install:  python38-devel !! ***
+    
+--------------------------------------------------------------------------------------------------------------
+...
+Did not find libzmq via pkg-config.
+...
+  gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -ggdb -O2 -pipe -Wall -Werror=format-security
+  -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector-strong --param=ssp-buffer-size=4 -fdebug-prefix-map=/cygdrive/d/cyg_pub/devel/python/python38/python38-3.8.2-1.x86_64/build=/usr/src/debug/python38-3.8.2-1 -fdebug-prefix-map=/cygdrive/d/cyg_pub/devel/python/python38/python38-3.8.2-1.x86_64/src/Python-3.8.2=/usr/src/debug/python38-3.8.2-1
+  -ggdb -O2 -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fstack-protector-strong --param=ssp-buffer-size=4 -fdebug-prefix-map=/cygdrive/d/cyg_pub/devel/python/python38/python38-3.8.2-1.x86_64/build=/usr/src/debug/python38-3.8.2-1 -fdebug-prefix-map=/cygdrive/d/cyg_pub/devel/python/python38/python38-3.8.2-1.x86_64/src/Python-3.8.2=/usr/src/debug/python38-3.8.2-1
+  -I/usr/local/include -Izmq/utils -c build/temp.cygwin-3.1.5-x86_64-3.8/scratch/vers.c -o build/temp.cygwin-3.1.5-x86_64-3.8/scratch/vers.o
+  build/temp.cygwin-3.1.5-x86_64-3.8/scratch/vers.c:4:10: fatal error: zmq.h: No such file or directory
+      4 | #include "zmq.h"
+        |          ^~~~~~~
+  compilation terminated.
+
+  error: command 'gcc' failed with exit status 1
+  
+  *** need to install: python38-zmq !! ***
+--------------------------------------------------------------------------------------------------------------
+    

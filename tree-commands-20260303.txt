@@ -1,0 +1,13 @@
+# tree commands 20260303:
+\tree -nd --charset ASCII --noreport --dirsfirst
+\tree -nd -L 3  --charset ASCII --noreport --dirsfirst
+\tree -nd -L 3  --charset ASCII --noreport --dirsfirst |less
+\tree -nd -L 4  --charset ASCII --noreport --dirsfirst |less
+\tree -nd -L 5  --charset ASCII --noreport --dirsfirst |less
+\tree -nd -L 4  --charset ASCII --noreport --dirsfirst |less
+\tree ~ -nd -L 4  --charset ASCII --noreport --dirsfirst >> $MTSYS/hgr-tree-L-4-20260303.txt
+\tree ~ -nd -L 4  --charset ASCII --noreport --dirsfirst | less
+\tree /c/Users/gregor.redelonghi/ -nd -L 4  --charset ASCII --noreport --dirsfirst | less
+\tree /c/Users/gregor.redelonghi/ -nd -L 4  --charset ASCII --noreport --dirsfirst >> $MTSYS/cugr-tree-L4-20260303.txt
+# ---
+

@@ -1,0 +1,23 @@
+$> sudo apt install python3-pip
+$> sudo -H python3 -m pip install pyqt5
+
+( ???
+$> sudo apt-get install python3-pyqt5
+
+# test:
+# run Python3 interpreter:
+$> Python3
+>>> import PyQt5
+>>> 
+??? )
+
+
+qtex.py:
+
+    import sys
+    from PyQt5.QtWidgetsimport *
+    app = QApplication(sys.argv)
+    button = QPushButton("Hello World!", none)
+    button.show()
+    app.exec_()
+

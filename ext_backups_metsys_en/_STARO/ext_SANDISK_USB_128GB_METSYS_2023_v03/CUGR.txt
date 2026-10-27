@@ -1,0 +1,13 @@
++ bekap_en_all
++ BRISI
++ en_staf
++ PWS_en
++ r.gregor.en
++ winshortcuts
++ bekap_en_all/***
++ BRISI/***
++ en_staf/***
++ PWS_en/***
++ r.gregor.en/***
++ winshortcuts/***
+- *

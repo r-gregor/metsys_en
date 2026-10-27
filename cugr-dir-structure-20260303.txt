@@ -1,0 +1,89 @@
+/c/Users/gregor.redelonghi/_dot_kargo
+/c/Users/gregor.redelonghi/_dot_kargo/bin
+/c/Users/gregor.redelonghi/_dot_kargo/registry
+/c/Users/gregor.redelonghi/2026
+/c/Users/gregor.redelonghi/2026/Tehnicne-zahteve_2026
+/c/Users/gregor.redelonghi/2026/_2026_1_PROJEKTI
+/c/Users/gregor.redelonghi/2026/_2026_2_OSTALO
+/c/Users/gregor.redelonghi/2026/_2026_3_NERAZPOREJENO
+/c/Users/gregor.redelonghi/2026/_2026_4_NASTAVAITVE
+/c/Users/gregor.redelonghi/2026/_2026_5_DOKUMENTI
+/c/Users/gregor.redelonghi/2026/_2026_VARHIVO
+/c/Users/gregor.redelonghi/2026/_PROJDOK_2024-05
+/c/Users/gregor.redelonghi/3D Objects
+/c/Users/gregor.redelonghi/AppData
+/c/Users/gregor.redelonghi/AppData/Local
+/c/Users/gregor.redelonghi/AppData/LocalLow
+/c/Users/gregor.redelonghi/AppData/Roaming
+/c/Users/gregor.redelonghi/Contacts
+/c/Users/gregor.redelonghi/Desktop
+/c/Users/gregor.redelonghi/Downloads
+/c/Users/gregor.redelonghi/Downloads/3-tja_razvojna_os
+/c/Users/gregor.redelonghi/Downloads/bash-bmp-info
+/c/Users/gregor.redelonghi/Downloads/c-20251210
+/c/Users/gregor.redelonghi/Downloads/downloaded-books-2026
+/c/Users/gregor.redelonghi/Downloads/__ARHIVIRAJ
+/c/Users/gregor.redelonghi/Favorites
+/c/Users/gregor.redelonghi/Favorites/Autodesk
+/c/Users/gregor.redelonghi/Favorites/Energetika
+/c/Users/gregor.redelonghi/Favorites/EU
+/c/Users/gregor.redelonghi/Favorites/Glasba
+/c/Users/gregor.redelonghi/Favorites/Iskalniki
+/c/Users/gregor.redelonghi/Favorites/Links
+/c/Users/gregor.redelonghi/Favorites/Microsoft Websites
+/c/Users/gregor.redelonghi/Favorites/Microsoftova spletna mesta
+/c/Users/gregor.redelonghi/Favorites/MoyeaMedia
+/c/Users/gregor.redelonghi/Favorites/MS Windows XP
+/c/Users/gregor.redelonghi/Favorites/PLES
+/c/Users/gregor.redelonghi/Favorites/Povezave
+/c/Users/gregor.redelonghi/Favorites/Project Guttenberg E-books
+/c/Users/gregor.redelonghi/Favorites/RgregoR_2008
+/c/Users/gregor.redelonghi/Favorites/Slovenija
+/c/Users/gregor.redelonghi/Favorites/smucarija 2006
+/c/Users/gregor.redelonghi/Favorites/Strojnistvo
+/c/Users/gregor.redelonghi/Favorites/Trgovine
+/c/Users/gregor.redelonghi/Favorites/Vreme
+/c/Users/gregor.redelonghi/Favorites/WebISO_Projektiranje - POSTOPKI
+/c/Users/gregor.redelonghi/Favorites/Windows Live
+/c/Users/gregor.redelonghi/Favorites/Zavarovalnice
+/c/Users/gregor.redelonghi/Favorites/Zdravje
+/c/Users/gregor.redelonghi/Favorites/Zemljevidi
+/c/Users/gregor.redelonghi/Favorites/_Check Out !!!
+/c/Users/gregor.redelonghi/Favorites/_JPE
+/c/Users/gregor.redelonghi/Favorites/_Razno
+/c/Users/gregor.redelonghi/Favorites/_RgregoR
+/c/Users/gregor.redelonghi/go
+/c/Users/gregor.redelonghi/go/bin
+/c/Users/gregor.redelonghi/go/pkg
+/c/Users/gregor.redelonghi/gredelonghi_acad_support
+/c/Users/gregor.redelonghi/gredelonghi_acad_support/doc
+/c/Users/gregor.redelonghi/gredelonghi_acad_support/files
+/c/Users/gregor.redelonghi/gredelonghi_acad_support/lisp
+/c/Users/gregor.redelonghi/gredelonghi_acad_support/menus
+/c/Users/gregor.redelonghi/gredelonghi_acad_support/scripts
+/c/Users/gregor.redelonghi/gredelonghi_acad_support/test
+/c/Users/gregor.redelonghi/IntelGraphicsProfiles
+/c/Users/gregor.redelonghi/Links
+/c/Users/gregor.redelonghi/majstaf
+/c/Users/gregor.redelonghi/majstaf/majprogs
+/c/Users/gregor.redelonghi/majstaf_en
+/c/Users/gregor.redelonghi/majstaf_en/BRISI
+/c/Users/gregor.redelonghi/majstaf_en/drpbx-en
+/c/Users/gregor.redelonghi/majstaf_en/en_staf
+/c/Users/gregor.redelonghi/majstaf_en/majprogs_en
+/c/Users/gregor.redelonghi/majstaf_en/processing
+/c/Users/gregor.redelonghi/majstaf_en/PS_stuf
+/c/Users/gregor.redelonghi/majstaf_en/PWS_en
+/c/Users/gregor.redelonghi/majstaf_en/r.gregor.en
+/c/Users/gregor.redelonghi/majstaf_en/winshortcuts
+/c/Users/gregor.redelonghi/majstaf_en/__from_Downloads
+/c/Users/gregor.redelonghi/MicrosoftEdgeBackups
+/c/Users/gregor.redelonghi/nimcache
+/c/Users/gregor.redelonghi/nimcache/greetings_d
+/c/Users/gregor.redelonghi/nimcache/t_d
+/c/Users/gregor.redelonghi/Nova mapa
+/c/Users/gregor.redelonghi/PSAppDeployToolkit
+/c/Users/gregor.redelonghi/PSAppDeployToolkit/ExecuteAsUser
+/c/Users/gregor.redelonghi/Saved Games
+/c/Users/gregor.redelonghi/Searches
+/c/Users/gregor.redelonghi/TESTING2022

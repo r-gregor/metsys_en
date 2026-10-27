@@ -1,0 +1,120 @@
+### ABBREVIATIONS #########################################################################################
+ab sbng #! /usr/bin/env bash<cr><tab>
+ab pt3 #! /usr/bin/env python3<cr># -*- coding: utf-8 -*-<cr><cr><esc>:so ~/.vimrc | :set syntax=python
+ab sout System.out.println(
+ab zst const std = @import("std");<cr><cr>pub fn main() !void {<cr>const out = std.io.getStdOut().writer();<cr>const in = std.io.getStdiIn().reader();<cr><cr>try out.print("I'm Alive!\n", .{});<cr><cr>}<cr><esc>:so ~/.vimrc | :set syntax=zig
+
+# --- C ABBREVIATIONS ---
+ab cstv #include <stdio.h><CR>#include <string.h><CR><CR><CR>int main(void)<right> {<CR><CR><CR><CR><CR>return 0;<CR>}<ESC>4ki<TAB>printf("I'm Alive");<ESC>:so ~/.vimrc | :set syntax=c
+ab cst #include <stdio.h><CR>#include <string.h><CR><CR><CR>int main(int argc, char **argv)<right> {<CR><CR><CR><CR><CR>return 0;<CR>}<ESC>4ki<TAB>printf("I'm Alive");<ESC>:so ~/.vimrc | :set syntax=c
+
+# --- JAVA ABBREVIATIONS ---
+iab psvm <TAB>public static void main(String[<Right><Space>args<Right><Space>{<CR><CR><CR><Right><Space>// end main<ESC>kki<CR>
+inoremap sout System.out.println("");<ESC>hhi
+
+# --- PYTHON ABBREVIATIONS ---
+iab inm if __name__ == '__main__':<CR>
+
+### MAPPINGS ##### #########################################################################################
+
+# --- REMOVE TRAILING SPACES ---
+noremap <space>. :set listchars+=space:⋅ <CR>
+nnoremap <space>, :set listchars-=space:⋅ <CR>
+
+# --- SET SYNTAX ---
+noremap ,stb :so ~/.vimrc <bar> :set syntax=bash<CR>
+noremap ,stz :so ~/.vimrc <bar> :set syntax=zig<CR>
+noremap ,stp :so ~/.vimrc <bar> :set syntax=python<CR>
+noremap ,stc :so ~/.vimrc <bar> :set syntax=c<CR>
+noremap ,stj :so ~/.vimrc <bar> :set syntax=java<CR>
+
+
+# --- CLOSING BRACES MAPPINGS ---
+inoremap ${{ ${}<ESC>hli
+inoremap {{ {}<ESC>hli
+inoremap (( ()<ESC>hli
+inoremap [[ []<ESC>hli
+inoremap [[[ [[]]<ESC>hli
+
+# --- CALL FUNCTION TO PUT EORD INSIDE QUOTES ---
+nnoremap <silent> ,dq :call Quote('"')<CR>
+nnoremap <silent> ,sq :call Quote("'")<CR>
+nnoremap <silent> ,uq :call UnQuote()<CR>
+
+# --- TOGGLE NUMBERING LINES ---
+nnoremap ,n :call NumberToggle()<CR>
+
+# CUSTOM MAPPINGS ---
+nnoremap ,d :%s/\[\d\+]//gc                      # ask to remove [234] s
+
+# COMMENTING OUT BLOCK OF CODE ---
+nnoremap ,c i<code><CR></code><CR><ESC>kki       # ???
+vnoremap ,pt :s@\(^\s*\)\(.*\)@\1# \2@<CR>       #
+vnoremap ,pu :s@\(^\s*\)# @\1@<CR>
+vnoremap ,jv :s@\(^\s*\)\(.*\)@\1// \2@<CR>
+vnoremap ,ju :s@\(^\s*\)// @\1@<CR>
+vnoremap ,ht :s/\%V\(.*\)\%V/<!-- \1 -->/<CR>
+vnoremap ,hu :s/\%V<!-- \(.*\) -->\%V/\1/<CR>
+
+vnoremap ,<space> :s@^.\{1,2\} @@<CR>            # ???
+
+# --- CONVERT TABS TO 4 SPACES ---
+vnoremap ,t :s/\(\t\+\) \+/\1/g<CR>
+
+vnoremap ,cc :s/^/ * /<CR>gv"xdO/*<CR><ESC>0C */<ESC>k"xp<CR>   " ???
+vnoremap ,cu :s/^\s*\* //<CR>gv"xdddkdd"xP<CR>    " ???
+
+# --- MOVE CODE BLOCK BETWEEN <code></code> TAGS ---
+vnoremap ,cd di<code><CR></code><CR><ESC>kP?<code><CR>:s@.*\(<code>\)@\1@<CR>/</code><CR>:s@.*\(</code>\)@\1@<CR>j
+
+# --- FORMAT TABS INTO INDENTANTIONS ---
+vnoremap ,rr >gv:s/\(\t\+\) \+/\1/g<CR>
+
+# --- COPY/PYSTE AFTER CURRENT LINE ---
+noremap <leader>c yyp
+vnoremap <leader>c yPgv
+
+nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>    # ???
+
+nnoremap <leader>r :Ranger<CR>
+
+# --- FORMAT CLOSING ';' ---
+nnoremap <leader>s :s/ *;*$/;/<esc>j
+
+nnoremap <leader>x vllc/* <ESC>A */<ESC>    # ???
+
+# --- WRAP LINES TO 110 CHARS ---
+nnoremap ,b 0110lbi<BS><CR><ESC>
+
+# --- ??? ---
+nnoremap <Space>j :m.+1<CR>==
+nnoremap <Space>k :m.-2<CR>==
+vnoremap <Space>j :m'>+1<CR>gv=gv
+vnoremap <Space>k :m'<-2<CR>gv=gv
+
+# --- FORMAT PROMPT CHAR SEQUENCE ---
+nnoremap ,4 :s/^\s*/$> /<CR> :nohl <CR><CR>
+vnoremap ,4 :s/^\s*/$> /<CR> :nohl <CR><CR>
+nnoremap <Space>4 :s/^\$ /$> /<CR> :nohl <CR><CR>
+vnoremap <Space>4 :s/^\$ /$> /<CR> :nohl <CR><CR>
+
+# --- START NEERDTREE FM ---
+nnoremap <leader>n :NERDTree<CR>
+
+# --- START FZF ---
+nnoremap <leader>f :FZF<CR>
+
+# --- CONVERT TABS to 4 SPACES ---
+vnoremap <C-t> :s/\%V\t/    /g<CR>
+
+# --- TOGGLE syntax on/off ---
+nnoremap <leader>st :syntax off<CR>:syntax on<CR>
+
+noremap <Space>s :%s/\/\/\(\w.*\)/\/\/ \1/<CR>    # ???
+
+# --- INSERT FILE LOCATION ---
+inoremap <C-f> <C-x><C-f>
+
+# --- PUT CURRENT LINE BETWEEN [] ---
+noremap ,ss 0vg_xi[<c-r>"]<esc>j<cr>
+

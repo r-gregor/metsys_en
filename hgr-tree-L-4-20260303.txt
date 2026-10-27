@@ -1,0 +1,389 @@
+/home/gregor.redelonghi
+|-- 0a_povezave
+`-- majstaf
+    |-- _NERAZPOREJENO
+    |   |-- __DANES__
+    |   |-- Chris-Titus-Tech_checkout_git_repos_20241022
+    |   |   |-- Debian-titus
+    |   |   `-- mybash
+    |   |-- coding-scripts-20250903
+    |   |-- fzf-nova
+    |   |-- majtest
+    |   |   |-- bm
+    |   |   |-- c_build_and_run_20240530
+    |   |   `-- c_wchar_tolower_test_20240522
+    |   |-- markdown_test
+    |   `-- ncdu_src
+    |       `-- ncdu-1.21
+    |-- coding2
+    |   `-- testing
+    |       |-- c_testing
+    |       |-- go_testing
+    |       |-- java_testing
+    |       |-- ncurses_testing
+    |       |-- python_testing
+    |       |-- rust_testing
+    |       `-- zig_testing
+    |-- dev
+    |   `-- clean-ff-gc-bookmarks
+    |       |-- bin
+    |       |-- src
+    |       `-- testing
+    |-- engit
+    |   |-- dotfiles_en
+    |   |   `-- usr_share_mintty_themes
+    |   |-- knowledgedb
+    |   |   |-- _AWK_SED_GREP_XARGS_CUT_TR
+    |   |   |-- _BASH
+    |   |   |-- _C_and_Cpp
+    |   |   |-- _CODING
+    |   |   |-- _CS_and_other_PL
+    |   |   |-- _Cygwin
+    |   |   |-- _DEBIAN
+    |   |   |-- _DOCKER
+    |   |   |-- _from_energetika_20240426
+    |   |   |-- _FZF
+    |   |   |-- _GIT
+    |   |   |-- _GO
+    |   |   |-- _HTML_CSS_JS
+    |   |   |-- _JAVA
+    |   |   |-- _JS_CSS
+    |   |   |-- _LINUX_SYSTEM
+    |   |   |-- _PDF
+    |   |   |-- _PYTHON
+    |   |   |-- _QEMU_KVM
+    |   |   |-- _RCLONE
+    |   |   |-- _RPi
+    |   |   |-- _RSYNC
+    |   |   |-- _RUST
+    |   |   |-- _TERM_CLI
+    |   |   |-- _TMUX
+    |   |   |-- _TWMs
+    |   |   |-- _TXT
+    |   |   |-- _VIM
+    |   |   |-- _WINDOWS
+    |   |   `-- _ZIG
+    |   |-- majbin_en
+    |   |   |-- bash2bmp
+    |   |   |-- BrthReminder-c
+    |   |   |-- coding-diffs-en
+    |   |   |-- ddbaklog
+    |   |   |-- dirlist
+    |   |   |-- drpbx-rclone
+    |   |   |-- ff-launch-en
+    |   |   |-- ff-personal-launch-en
+    |   |   |-- fname-dname-manipulations-en
+    |   |   |-- fnd
+    |   |   |-- get-fb-mails-en
+    |   |   |-- git-commands
+    |   |   |-- gremdomov
+    |   |   |-- hstl_en
+    |   |   |-- jvfx
+    |   |   |-- kndb-files-from-tmst
+    |   |   |-- lynxdump
+    |   |   |-- new-ls
+    |   |   |-- opn
+    |   |   |-- pnp
+    |   |   |-- python-venv-and-pip-setup
+    |   |   |-- rbekap-meganz
+    |   |   |-- rename
+    |   |   |-- renaming-programming-folders
+    |   |   |-- send-mail-scrts
+    |   |   |-- string-manipulations-en
+    |   |   `-- w3mdump
+    |   |-- majrcs_en
+    |   |   `-- rcs-staro
+    |   |-- metsys_en
+    |   |   |-- bash_colors_and_formatting
+    |   |   |-- Brother_DCP-L3520CDW
+    |   |   |-- coding-scripts-20250903
+    |   |   |-- cygwin_metsys
+    |   |   |-- debian_setup
+    |   |   |-- ext_backups_metsys_en
+    |   |   |-- figlet_fonts
+    |   |   |-- get-playlist-titles
+    |   |   |-- i3_setup
+    |   |   |-- mc_cheat-sheet-s
+    |   |   |-- mintty-color-schemes
+    |   |   |-- mintyfresh_LMDE6-install-script_20241120
+    |   |   |-- pdfjoin-commands
+    |   |   |-- rclone-en
+    |   |   |-- tmx_cheat-sheat-s
+    |   |   |-- urxvt-setup-20251112
+    |   |   |-- vim_metsys
+    |   |   `-- win10setups_20220617
+    |   |-- prenos
+    |   |   |-- _bash_testing_en
+    |   |   |-- _CHECK-OUT
+    |   |   |-- 20260121_c-array-of-structs-sort-test
+    |   |   |-- seznami_potovalni
+    |   |   |-- update_en
+    |   |   |-- update_jbe
+    |   |   `-- update_mdb
+    |   |-- seznami_en
+    |   `-- vlpprs_en
+    |       |-- hooks
+    |       |-- info
+    |       |-- logs
+    |       |-- objects
+    |       `-- refs
+    |-- maj_books_en
+    |   |-- c_books
+    |   `-- cli_text_processing_coreutils
+    |       |-- css
+    |       |-- FontAwesome
+    |       |-- fonts
+    |       `-- images
+    |-- majbin
+    |   |-- bash2bmp
+    |   |   |-- info
+    |   |   |-- lib
+    |   |   |-- output
+    |   |   |-- src
+    |   |   `-- tests
+    |   |-- BrthReminder-c
+    |   |   `-- src
+    |   |-- coding-diffs-en
+    |   |-- ddbaklog
+    |   |-- dirlist
+    |   |-- drpbx-rclone
+    |   |-- ff-launch-en
+    |   |   `-- get-playlist-titles
+    |   |-- ff-personal-launch-en
+    |   |-- fname-dname-manipulations-en
+    |   |-- fnd
+    |   |-- get-fb-mails-en
+    |   |   `-- messages
+    |   |-- git-commands
+    |   |-- gremdomov
+    |   |-- hstl_en
+    |   |-- jvfx
+    |   |-- kndb-files-from-tmst
+    |   |-- lynxdump
+    |   |-- new-ls
+    |   |-- opn
+    |   |-- pnp
+    |   |-- python-venv-and-pip-setup
+    |   |-- rbekap-meganz
+    |   |-- rename
+    |   |-- renaming-programming-folders
+    |   |-- send-mail-scrts
+    |   |   `-- __pycache__
+    |   |-- string-manipulations-en
+    |   |   |-- docs-en
+    |   |   `-- staro-en
+    |   `-- w3mdump
+    |-- majdocumentation
+    |   |-- c_docs
+    |   |-- cpp_docs
+    |   |-- go_docs
+    |   |-- java_docs
+    |   |-- ncurses_docs
+    |   |-- python_docs
+    |   |   |-- jptrs
+    |   |   `-- podloge_pyt
+    |   `-- rust_docs
+    |-- majmuska
+    |-- majprogs
+    |   |-- duf
+    |   |-- duf_20210118
+    |   |   `-- duf
+    |   |-- glow
+    |   |   |-- ui
+    |   |   `-- utils
+    |   `-- ncdu-1.15.1
+    |       |-- deps
+    |       |-- doc
+    |       `-- src
+    |-- majrcs
+    |   `-- rcs-staro
+    |-- majscripts_en
+    |   |-- _bash_testing_en
+    |   |   |-- bash_test_if_piped_to_20240605
+    |   |   |-- bash-redraw-multiline-text-20251023
+    |   |   |-- list_to_fzf_tests_20240925
+    |   |   `-- progress-bar-external-20251029
+    |   |-- 00_ukazi_en
+    |   |   |-- cmpr_local_remote
+    |   |   |-- coding_diffs_d
+    |   |   |-- coding_diffs_en
+    |   |   |-- convert
+    |   |   |-- drpbx_rclone
+    |   |   |-- ext
+    |   |   |-- knowledgebase-by-age
+    |   |   |-- list
+    |   |   |-- new-ls_20220202
+    |   |   |-- renaming_programming_folders
+    |   |   `-- tmx
+    |   |-- 01_ostalo_en
+    |   |   |-- open_c-optimizing-files-in-ff
+    |   |   `-- ukazidiff
+    |   |-- 99_STARO_en
+    |   |-- bash2bmp
+    |   |   |-- info
+    |   |   |-- lib
+    |   |   |-- output
+    |   |   |-- src
+    |   |   `-- tests
+    |   |-- bekap_en
+    |   |   `-- _staro
+    |   |-- coding-optimizations_20230302_en
+    |   |-- ddbaklog_en
+    |   |-- ext_backups_metsys_en
+    |   |   |-- _setup
+    |   |   |-- _STARO
+    |   |   |-- ext_SANDISK_USB_128GB_METSYS_2023_v05
+    |   |   |-- ext_WD_usbHDD_2TB_METSYS_2023_v05
+    |   |   `-- ext_WD_usbHDD_2TB_METSYS_2025_v06
+    |   |-- ff-launch
+    |   |   `-- src
+    |   |-- fnd_en
+    |   |-- git-commands_en
+    |   |   `-- prejsnje-verzije
+    |   |-- gooo_en
+    |   |-- gremdomov_en
+    |   |-- lynxdump_en
+    |   |-- MULTI_en
+    |   |   `-- integer-to-binary_20210308
+    |   |-- oneliners_en
+    |   |   `-- move-EN-srt-files-to-english-subs-dir
+    |   |-- opn_en
+    |   |-- pnp
+    |   |-- pnp_en
+    |   |   |-- _staro
+    |   |   `-- _TEST_wdir-ic-curdir
+    |   |-- python_venv_and_pip_setup_en
+    |   |-- rsync_backup_en
+    |   |-- send_mail_en
+    |   |   |-- _send_mail_staro
+    |   |   `-- _unused
+    |   |-- src_ostalo_en
+    |   |-- testing_en
+    |   |   |-- 20180109
+    |   |   |-- 20190131_softlinking_automatic
+    |   |   |-- 20190902_renaming-cleaning-fnames-dirnames
+    |   |   |-- C_programs
+    |   |   `-- filmi
+    |   |-- toolbox_en
+    |   |-- ukazidiff_en
+    |   |   `-- zadomov
+    |   |-- w3mdump_en
+    |   `-- zze_en
+    |-- majsupport_en
+    |   |-- docs
+    |   |-- go_playground
+    |   |   |-- modules_testing_20191016
+    |   |   `-- modules2_20191016
+    |   |-- java
+    |   |   |-- extlibs
+    |   |   |-- jars
+    |   |   `-- scripts
+    |   |-- jptrs
+    |   |-- majfonts
+    |   |-- support_bash
+    |   |   |-- chtshts
+    |   |   |-- colors
+    |   |   `-- customizations
+    |   `-- support_engit
+    |-- majtesting
+    |-- majtoolbox
+    |   |-- bash_toolbox
+    |   |-- c_toolbox
+    |   |   |-- BrthReminder
+    |   |   |-- cm2feetinch
+    |   |   |-- hex2rgb
+    |   |   |-- horse-race
+    |   |   |-- obletnica-c
+    |   |   |-- rsort-by-acces-date
+    |   |   |-- rsort-by-tmstmp
+    |   |   |-- rsort-by-tmstmp-absp
+    |   |   |-- scales-of-displays
+    |   |   |-- timediff
+    |   |   `-- zp_padec
+    |   |-- cpp_toolbox
+    |   |-- go_toolbox
+    |   |   `-- BrthReminder
+    |   |-- java_toolbox
+    |   |   |-- DateCalculations
+    |   |   |-- datetime
+    |   |   |-- func_list
+    |   |   |-- JAR_s
+    |   |   |-- LeapYearCheck
+    |   |   |-- left_right
+    |   |   |-- PrintOuts
+    |   |   |-- project1
+    |   |   `-- ReadDataFromExtFile
+    |   |-- ncurses_toolbox
+    |   |-- python_toolbox
+    |   |   |-- BrthdReminder
+    |   |   |-- hvar_izracun
+    |   |   |-- rename
+    |   |   `-- subslider-master
+    |   |-- rust_toolbox
+    |   `-- zig_toolbox
+    |       `-- obletnica-z
+    |-- majvideos
+    |-- metsys
+    |   |-- bash_colors_and_formatting
+    |   |   `-- bash_colors_and_formatting_files
+    |   |-- Brother_DCP-L3520CDW
+    |   |   `-- manuals
+    |   |-- coding-scripts-20250903
+    |   |-- cygwin_metsys
+    |   |-- debian_setup
+    |   |   `-- debian12_minimal-install-plus-i3_from-pmcfernandes_20241120
+    |   |-- ext_backups_metsys_en
+    |   |   |-- _setup
+    |   |   |-- _STARO
+    |   |   |-- ext_SANDISK_USB_128GB_METSYS_2025_v06
+    |   |   `-- ext_WD_usbHDD_2TB_METSYS_2025_v06
+    |   |-- figlet_fonts
+    |   |-- get-playlist-titles
+    |   |-- i3_setup
+    |   |-- mc_cheat-sheet-s
+    |   |-- mintty-color-schemes
+    |   |   |-- base16-mintty
+    |   |   |-- dot_git
+    |   |   `-- screenshot
+    |   |-- mintyfresh_LMDE6-install-script_20241120
+    |   |   `-- files
+    |   |-- pdfjoin-commands
+    |   |-- rclone-en
+    |   |-- tmx_cheat-sheat-s
+    |   |-- urxvt-setup-20251112
+    |   |   `-- urxvt-font-size
+    |   |-- vim_metsys
+    |   `-- win10setups_20220617
+    |-- seznami
+    |   |-- bookmarks-en
+    |   `-- seznami_potovalni
+    `-- sorsi
+        |-- dotfiles
+        |-- duf_20210118
+        |   `-- duf
+        |-- imgp
+        |   `-- auto-completion
+        |-- meowfetch
+        |   |-- assets
+        |   |-- build
+        |   |-- cmd
+        |   |-- configs
+        |   `-- internals
+        |-- ncdu-1.12
+        |   |-- deps
+        |   |-- doc
+        |   `-- src
+        |-- neofetch
+        |   `-- dot_git
+        |-- neofetch-master
+        |-- nnn
+        |   |-- misc
+        |   |-- plugins
+        |   `-- src
+        |-- OWM
+        |   `-- owm-japis
+        |-- rust_install_20230609
+        |-- screenFetch-master
+        |-- tinywm-1.3
+        |-- unrar
+        `-- wikipedia2text

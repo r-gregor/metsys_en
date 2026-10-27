@@ -1,0 +1,14 @@
+Add
+Acquire::http::Proxy "http://172.17.3.64:80/";
+
+to /etc/apt/apt.conf.d/05proxy	*create*
+
+
+Add
+
+export http_proxy=http://172.17.3.64:80/
+export https_proxy=http://172.17.3.64:80/
+export HTTP_PROXY=http://172.17.3.64:80/
+export HTTPS_PROXY=http://172.17.3.64:80/
+
+to .bashrc

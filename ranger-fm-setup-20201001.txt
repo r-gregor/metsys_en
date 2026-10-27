@@ -1,0 +1,5 @@
+python3 -m pip install ranger-fm
+cd ~/.config/ranger/
+ll /home/gregor.redelonghi/.local/share/ranger/
+cp /usr/share/doc/ranger/config/rc.conf ~/.config/ranger/
+nano ~/.config/ranger/rc.conf

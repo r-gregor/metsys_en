@@ -1,0 +1,94 @@
+fname: dot-vimrc-mdb-mapped-commands-20260908.txt
+----------------------------------------------------------------------------------------------------------
+mapping type    mapping             description
+----------------------------------------------------------------------------------------------------------
+vnoremap        1q                  put sellection inside single quotes
+vnoremap        2q                  put sellection inside double quotes
+nnoremap        ,b                  break line at position 110 chars
+map             ,bt                 open all buffers into separate tabs
+vnoremap        ,cd                 enclose visual selection between <code></code> tags
+inoremap        <C-f>               insert file search:  <C-x><C-f>
+vnoremap        <C-t>               replaces tabs to 4 spaces in visual block
+vnoremap        ,cc                 C-style comment out visual block
+vnoremap        ,cu                 un-comment C-style visual block
+vnoremap        ,ht                 comment out html visual block
+vnoremap        ,hu                 un-comment html visual block
+vnoremap        ,ju                 un-comment java visual block
+vnoremap        ,jv                 comment out java visual block
+vnoremap        ,pt                 comment out python visual block
+vnoremap        ,pu                 un-comment python visual block
+nnoremap        ,d                  search for [12] or [123] in file and ask to delete
+nnoremap        ,ds                 remove '[...]' in current line
+vnoremap        ,ds                 remove '[...]' in current line
+inoremap        ,dt                 insert datestamp 'YYYYmmdd'
+nnoremap        ,dt                 insert datestamp 'YYYYmmdd'
+vnoremap        ,dt                 insert datestamp 'YYYYmmdd'
+nnoremap        <F5>                :NERDTreeToggle
+inoremap        ${{                 insert enclosing brackets/square/curly
+inoremap        ((                  insert enclosing brackets/square/curly
+inoremap        [[                  insert enclosing brackets/square/curly
+inoremap        [[[                 insert enclosing brackets/square/curly
+inoremap        {{                  insert enclosing brackets/square/curly
+noremap         ,lc                 copy http link into the [number] holder for the link after lyxd-ed document
+nnoremap        <Leader>b           change buffer to file from list
+noremap         <leader>c           clone current line or selection
+vnoremap        <leader>c           clone current line or selection
+nnoremap        <leader>fe          :FZF -e
+nnoremap        <leader>ff          :FZF
+nnoremap        <leader>n           :NERDTree
+nnoremap        <leader>pv          vim´s file explorer (Netrw) in left column of size 30 (close with :bd)
+nnoremap        <leader>r           :ranger
+nnoremap        <leader>s           replace ' ;' or ' ' at zhe end of the line with ';'
+nnoremap        <leader>st          removes lagging when editing .h files
+noremap         ,mf                 change from 'nonmodifiable' to 'modifiable'
+noremap         ,nf                 change from 'modifiable' to 'nonmodifiable'
+nnoremap        ,n                  :call NumberToggle()
+nnoremap        ;;                  put semicolon at the end of the line
+vnoremap        ;;                  put semicolon at the end of the line
+vnoremap        ,rr                 shift tab and remove spaces
+vnoremap        ,rt                 retab visual sellection
+nnoremap        ,sb                 move line under the cursor inside []
+vnoremap        ,sb                 move selected text into []
+nnoremap        <silent>,dq         add single quotes arround the word
+nnoremap        <silent>,sq         add double quotes arround the word
+nnoremap        <silent>,uq         remove quotes arround the word (un-quote)
+inoremap        sout                System.out.println("")
+vnoremap        ,<space>            remove leading chars with space in visual mode
+nnoremap        <space>2t           replace leading 2 spaces to tabs
+vnoremap        <space>2t           replace leading 2 spaces to tabs
+nnoremap        ,4                  replace start of the line with '$> ' prompt
+vnoremap        ,4                  replace start of the line with '$> ' prompt
+nnoremap        <Space>4            replace $ at the start of the line with '$> ' prompt
+vnoremap        <Space>4            replace $ at the start of the line with '$> ' prompt
+nnoremap        <space>4t           replace leading 4 spaces to tabs
+vnoremap        <space>4t           replace leading 4 spaces to tabs
+nnoremap        <space>9            replace ' inside words with ´
+vnoremap        <space>dq           move selected text between ""
+noremap         <space>f            move '{' after 'func() '
+noremap         <space>GRGR         NOT EXISTS
+nnoremap        <Space>j            move entire lines UP an d DOWN
+vnoremap        <Space>j            move entire lines UP an d DOWN
+nnoremap        <Space>k            move entire lines UP an d DOWN
+vnoremap        <Space>k            move entire lines UP an d DOWN
+nnoremap        <space>=            select whole 'main() { ... }' block and formate it with '='
+nnoremap        <space>,            :set listchars-=space:⋅
+nnoremap        <space>.            :set listchars+=space:⋅
+vnoremap        <space>sq           move selected text between ''
+noremap         <space>ssc          :set syntax=c
+noremap         <space>ssg          :set syntax=go
+noremap         <space>ssh          :set syntax=sh
+noremap         <space>ssj          :set syntax=java
+noremap         <space>ssp          :set syntax=python
+noremap         <space>ss           :set syntax=
+noremap         <space>sst          :set syntax=text
+nnoremap        <space>v            :so ~/.vimrc | set syntax=c | :noh
+noremap         ,stb                :so ~/.vimrc | :set syntax=bash
+noremap         ,stc                :so ~/.vimrc | :set syntax=c
+noremap         ,stj                :so ~/.vimrc | :set syntax=java
+noremap         ,stp                :so ~/.vimrc | :set syntax=python
+noremap         ,stz                :so ~/.vimrc | :set syntax=zig
+vnoremap        ,t                  replace multiple <tab>s with trailing <space> with <tab>s only
+noremap         ,tr                 table row dividers
+noremap         ,wd                 write and close buffer
+----------------------------------------------------------------------------------------------------------
+

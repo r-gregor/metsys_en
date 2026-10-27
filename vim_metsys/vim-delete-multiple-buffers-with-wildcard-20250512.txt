@@ -1,0 +1,1 @@
+You can use <C-a> to complete all matches. So if you type :bd *.xml and then hit <C-a>, vim will complete the command to :bd file1.xml file2.xml file3.xml.

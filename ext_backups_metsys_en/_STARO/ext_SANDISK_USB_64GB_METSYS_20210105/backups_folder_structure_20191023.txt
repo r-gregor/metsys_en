@@ -1,0 +1,14 @@
+$> gregor.redelonghi@cygwin-en [/f/ext_SANDISK_USB_64GB]
+$> tree -d -L 2
+.
+|-- bekaps_en
+|   |-- 2019_cugr_en
+|   |-- cugr_en
+|   |-- cygwin_hgr_en
+|   |-- Downloads_cugr_en
+|   |-- h_en_2019_podloge
+|   |-- h_en_energetika
+|   `-- myprogs_cugr_en
+|-- en_METSYS
+|-- ODPRTO_drpbx
+`-- SKUPNI_drpbx

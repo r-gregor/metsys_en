@@ -1,0 +1,5 @@
+Star bash with no bashrc or profile --> new subshell ...
+$> env -i /usr/bin/bash --norc --noprofile
+$> env -i $(which bash) --norc --noprofile
+
+

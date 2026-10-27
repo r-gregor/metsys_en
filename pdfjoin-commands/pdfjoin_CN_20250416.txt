@@ -1,0 +1,6 @@
+
+ pdfjoin T=teksti/pdf/_TEKSTI.pdf R=risbe/pdf/_RISBE.pdf P=popisi/pdf/_POPISI.pdf cat T1-r2 P Tr1-end R output _CN.pdf
+
+# T1-r2   ... from first till second from end (one before last)
+# Tr1     ... first from end (last)
+

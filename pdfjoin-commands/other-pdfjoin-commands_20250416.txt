@@ -1,0 +1,37 @@
+
+alias pdfjoin='java -jar $(cygpath -w "/c/Users/gregor.redelonghi/majstaf_en/majprogs_en/pdftk-all.jar") '
+---
+pdfjoin A-0_Org-shema-gradbiscnega-platoja_tipski.pdf A-1_PO_IC-IG-Draga_VN_situacija-PZI-pregledna.pdf A-2-3_PO_IC-IG-Draga_VN_situacija-PZI-1-2_4.pdf A-4_PO_IC-IG-Draga_VN_situacija-PZI-3_4.pdf A-5_PO_IC-IG-Draga_VN_situacija-PZI-4_4.pdf cat output _RISBE.pdf
+pdfjoin A=teksti/PO_IC-IG-Draga_VN_10-2021_teksti.pdf B=risbe/_RISBE.pdf cat A1-27 B A28-end output _CN.pdf
+pdfjoin A=_RISBE.pdf cat A1-2 A3-endwest output _R2.pdf
+pdfjoin A=teksti/PO_IC-IG-Draga_VN_10-2021_teksti.pdf B=risbe/_RISBE.pdf cat A1-27 B A28-end output _CN.pdf
+pdfjoin stran_1.pdf stran_2-3.pdf cat putput _TR_NPN_Rimska-cesta-14b.pdf
+pdfjoin stran_1.pdf stran_2-3.pdf cat output _TR_NPN_Rimska-cesta-14b.pdf
+pdfjoin A=NPN_Rimska-cesta-14b_TR_obrazec_stran_2-3.pdf B=stran_2.pdf cat B A2 output NPN_Rimska-cesta-14b_TR_obrazec_stran_2-3_02.pdf 
+pdfjoin A=_TR_NPN_Rimska-cesta-14b.pdf B=stran_2.pdf cat A1 B A3-end output _TR_NPN_Rimska-cesta-14b_02.pdf 
+pdfjoin NPN_Rimska-cesta-14b_TR_obrazec_stran_1.pdf NPN_Rimska-cesta-14b_TR_obrazec_stran_2-3.pdf cat output _TR_NPN_Rimska-cesta-14b_02.pdf 
+pdfjoin 00_NPN_Rimska-cesta-14b_SIT_M1-500.pdf 01_NPN_Rimska-cesta-14b_DELNI-TLORIS-P.pdf 02_NPN_Rimska-cesta-14b_DELNI-TLORIS-MNS.pdf 03_NPN_Rimska-cesta-14b_DV.pdf cat output _RISBE.pdf
+pdfjoin teksti/_TR_NPN_Rimska-cesta-14b.pdf risbe/pdf/_RISBE.pdf cat output _TR_NPN_Rimska-cesta-14b.pdf
+pdfjoin A-0_Org-shema-gradbiscnega-platoja_tipski.pdf A-1_PO_Jamova_Lepi-pot-Langusova_VN_10-2023_SIT-PZI.pdf cat iutput _RISBE.pdf
+pdfjoin A-0_Org-shema-gradbiscnega-platoja_tipski.pdf A-1_PO_Jamova_Lepi-pot-Langusova_VN_10-2023_SIT-PZI.pdf cat output _RISBE.pdf
+pdfjoin A=teksti/PO_Jamova_Lepi-pot-Langusova_VN_10-2023_teksti.pdf B=risbe/_RISBE.pdf cat A1-26 B A27-end output _CN.pdf
+pdfjoin A-0_Org-shema-gradbiscnega-platoja_tipski.pdf A-1_PO_Galjevica-vzhodni-del_AGL_3-15_PZI_SIT-2.pdf A-2_PO_Galjevica-vzhodni-del_AGL_3-15_PZI_SIT-6.pdf cat output _RISBE.pdf
+pdfjoin A=_RISBE.pdf cat A1 A2west A3 output _RISBE2.pdf
+pdfjoin A=teksti/PO_Galjevica-vzhodni-del_AGL_3-15_VN_10-2023_teksti.pdf B=risbe/_RISBE.pdf cat A1-25 B A26-end output _CN.pdf
+pdfjoin "DGD RV 18 Zalog.pdf" 01_PREGLEDNA.pdf 02_GRADBENA\ SITUACIJA.pdf 03_SHEMA.pdf 04_PREREZI.pdf cat output _CN.pdf
+pdfjoin 01_PREGLEDNA.pdfwest _T,pdf
+pdfjoin 01_PREGLEDNA.pdf 02_GRADBENA\ SITUACIJA.pdf 03_SHEMA.pdf 04_PREREZI.pdf cat output _risbe-obrnjeno.pdf
+pdfjoin _risbe-obrnjeno.pdf cat 1-endwest output_RISBE.pdf
+pdfjoin _risbe-obrnjeno.pdf cat 1-endwest output _RISBE.pdf
+pdfjoin "DGD RV 18 Zalog.pdf" _RISBE.pdf cat output _CN.pdf
+---
+pdfjoin 001_obn_N-18000_c-v-RD_Bleiweissova_PZI_teksti_VODILNI-NACRT.pdf 002_obn_N-18000_c-v-RD_Bleiweissova_PZI_teksti_NACRT-PLIN.pdf cat output _TEKSTI.pdf
+pdfjoin 01_obn_N-18000_C-v-Rd-Bleiweisova-c_PZI_SIT-P.pdf 02_obn_N-18000_C-v-Rd-Bleiweisova-c_PZI_SKICE-DETAJLI.pdf cat output _RISBE.pdf
+pdfjoin GD_obn_N-18000_c-v-RD_Bleiweissova_PZI.pdf SD_obn_N-18000_c-v-RD_Bleiweissova_PZI.pdf cat output _POPISI.pdf
+cat ~/majstaf/seznami/* | grep '^pdfjoin '
+cat ~/majstaf/seznami/* | grep 'pdfjoin '
+cat ~/majstaf/seznami/* | grep 'pdfjoin ' | grep -i popis
+pdfjoin T=teksti/pdf/_TEKSTI.pdf R=risbe/pdf/_RISBE.pdf P=popisi/pdf/_POPISI.pdf cat T1-r2 P Tr1-end R output _CN.pdf
+pdfjoin T=teksti/pdf/_TEKSTI.pdf R=risbe/pdf/_RISBE.pdf P=popisi/pdf/_POPISI.pdf cat T1-r2 P Tr1 R output _CN2.pdf
+---
+

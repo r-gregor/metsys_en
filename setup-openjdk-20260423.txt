@@ -1,0 +1,59 @@
+filename: majstaf/_NERAZPOREJENO/__DANES__/setup-openjdk-20260423.txt
+
+================================
+1 - COPY PREBUILD BINARIES FROM:
+
+	https://openjdk.org/install/
+		OpenJDK JDK 26.0.1 GA Release
+			Linux / x64:
+				https://download.java.net/java/GA/jdk26.0.1/458fda22e4c54d5ba572ab8d2b22eb83/8/GPL/openjdk-26.0.1_linux-x64_bin.tar.gz (227386332)
+				(sha256) [https://download.java.net/java/GA/jdk26.0.1/458fda22e4c54d5ba572ab8d2b22eb83/8/GPL/openjdk-26.0.1_linux-x64_bin.tar.gz.sha256]
+			Windows / x64:
+				https://download.java.net/java/GA/jdk26.0.1/458fda22e4c54d5ba572ab8d2b22eb83/8/GPL/openjdk-26.0.1_windows-x64_bin.zip
+				(SHA256) [https://download.java.net/java/GA/jdk26.0.1/458fda22e4c54d5ba572ab8d2b22eb83/8/GPL/openjdk-26.0.1_windows-x64_bin.zip]
+
+	https://jdk.java.net/archive/
+		OpenJDK 11 GA Release
+			Windows / 64-bit:
+				https://download.java.net/java/ga/jdk11/openjdk-11_windows-x64_bin.zip (179 MB)
+				(sha256) [https://download.java.net/java/ga/jdk11/openjdk-11_windows-x64_bin.zip.sha256]
+			Linux / x64:
+				https://download.java.net/java/ga/jdk11/openjdk-11_linux-x64_bin.tar.gz
+				(sha256) [https://download.java.net/java/ga/jdk11/openjdk-11_linux-x64_bin.tar.gz.sha256]
+
+	https://gluonhq.com/products/javafx/
+		Openjfx 26.0.1
+			Windows / x64:
+				https://download2.gluonhq.com/openjfx/26.0.1/openjfx-26.0.1_windows-x64_bin-sdk.zip
+				(sha256) [https://download2.gluonhq.com/openjfx/26.0.1/openjfx-26.0.1_windows-x64_bin-sdk.zip.sha256]
+			Linux / x64:
+				https://download2.gluonhq.com/openjfx/26.0.1/openjfx-26.0.1_linux-x64_bin-sdk.zip
+				(sha256) [https://download2.gluonhq.com/openjfx/26.0.1/openjfx-26.0.1_linux-x64_bin-sdk.zip.sha256]
+		Openjfx 17.0.19
+			Windows / x64:
+				https://download2.gluonhq.com/openjfx/17.0.19/openjfx-17.0.19_windows-x64_bin-sdk.zip
+				(sha256) [https://download2.gluonhq.com/openjfx/17.0.19/openjfx-17.0.19_windows-x64_bin-sdk.zip.sha256]
+			Linux / x64:
+				https://download2.gluonhq.com/openjfx/17.0.19/openjfx-17.0.19_linux-x64_bin-sdk.zip
+				(sha256) [https://download2.gluonhq.com/openjfx/17.0.19/openjfx-17.0.19_linux-x64_bin-sdk.zip.sha256]
+		Openjfx 11
+			Windows / x64:
+				https://download2.gluonhq.com/openjfx/11/openjfx-11_windows-x64_bin-sdk.zip
+				(sha256) [https://download2.gluonhq.com/openjfx/11/openjfx-11_windows-x64_bin-sdk.zip.sha256]
+			Linux / x64:
+				https://download2.gluonhq.com/openjfx/11/openjfx-11_linux-x64_bin-sdk.zip
+				(sha256) [https://download2.gluonhq.com/openjfx/11/openjfx-11_linux-x64_bin-sdk.zip.sha256]
+
+
+================================
+2 - setup ENV:
+
+# export ENVs:
+JAVA_HOME=C:\Users\gregor.redelonghi\majstaf_en\majprogs_en\jdk-11
+PATH_TO_FX=C:\Users\gregor.redelonghi\majstaf_en\majprogs_en\javafx-sdk-11.0.2\lib
+JAVA=C:\Users\gregor.redelonghi\majstaf_en\majprogs_en\jdk-11\bin
+
+# add those two paths to WINDOWS system ENVs:
+PATH=${PATH}:/c/Users/gregor.redelonghi/majstaf_en/majprogs_en/jdk-11/bin:/c/Users/gregor.redelonghi/majstaf_en/majprogs_en/jdk-11/bin:
+
+

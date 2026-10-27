@@ -1,0 +1,13 @@
+---
+NDOT=/home/gregor.redelonghi/majstaf/en_metsys_git/en_metsys_source/en_dotfiles
+for FFF in $(find $NDOT/ -type f); do echo diff -q $FFF $(echo $FFF | cut -d'/' -f8-); done
+for FFF in $(find $NDOT/ -type f); do diff -q $FFF $(echo $FFF | cut -d'/' -f8-); done
+for FFF in $(find $NDOT/ -type f); do diff -q $FFF $(echo $FFF | cut -d'/' -f8-); done 2>/dev/null
+for FFF in $(find $NDOT/ -type f); do diff -q $FFF $(echo $FFF | cut -d'/' -f8-); done 2>/dev/null > ndot_diffs_20221205.txt
+---
+cat ndot_diffs_20221205.txt |cut -d '/' -f8- | cut -d ' ' -f1
+for FFF in $(cat ndot_diffs_20221205.txt |cut -d '/' -f8- | cut -d ' ' -f1); do echo $FFF; done
+for FFF in $(cat ndot_diffs_20221205.txt |cut -d '/' -f8- | cut -d ' ' -f1); do echo cp -i $FFF ~/majstaf/en_metsys_git/en_metsys_source/en_dotfiles/$FFF; done
+for FFF in $(cat ndot_diffs_20221205.txt |cut -d '/' -f8- | cut -d ' ' -f1); do cp -i $FFF ~/majstaf/en_metsys_git/en_metsys_source/en_dotfiles/$FFF; done
+---
+

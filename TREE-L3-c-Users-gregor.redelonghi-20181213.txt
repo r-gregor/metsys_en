@@ -1,0 +1,543 @@
+$> gregor.redelonghi@cygwin-en [/c/Users/gregor.redelonghi]
+$> tree -P my* -d -L 3 >> ~/majfajls/TREE_L3_c_Users_gregor.redelonghi_20181213.txt
+
+mypodloge
+├── en_poslano
+├── en_prejeto
+│   ├── en_CNG
+│   ├── en_ENERGETIKA
+│   ├── en_POMEMBNO
+│   ├── en_RGREGOR
+│   └── gredelonghi_energetika
+├── from-d-to-en_20141216
+├── OLD-to-NEW_20141217
+│   └── Acad2102
+│       ├── Plotters
+│       ├── support
+│       └── Template
+└── Thundrbird-En_20141014
+    └── profile_20141014
+        └── Profiles
+myprogs
+├── 7-Zip
+│   └── Lang
+├── 7z-source
+├── cygwin_LPD
+│   ├── ftp%3a%2f%2fmirror.easyname.at%2fcygwin%2f
+│   │   ├── noarch
+│   │   └── x86_64
+│   ├── ftp%3a%2f%2fmirrors.dotsrc.org%2fmirrors%2fcygwin%2f
+│   │   └── x86_64
+│   └── http%3a%2f%2fmirror.clarkson.edu%2fcygwin%2f
+│       └── x86_64
+├── cygwin64
+│   ├── bin
+│   │   └── svn-tools
+│   ├── dev
+│   │   ├── mqueue
+│   │   └── shm
+│   ├── etc
+│   │   ├── alternatives
+│   │   ├── bash_completion.d
+│   │   ├── defaults
+│   │   ├── fish
+│   │   ├── fonts
+│   │   ├── fstab.d
+│   │   ├── joe
+│   │   ├── my.cnf.d
+│   │   ├── pkcs11
+│   │   ├── pki
+│   │   ├── postinstall
+│   │   ├── preremove
+│   │   ├── profile.d
+│   │   ├── sasl2
+│   │   ├── setup
+│   │   ├── skel
+│   │   ├── ssl
+│   │   └── xml
+│   ├── home
+│   │   ├── forallusers
+│   │   └── gregor.redelonghi
+│   ├── lib
+│   │   ├── apr-util-1
+│   │   ├── clang
+│   │   ├── csih
+│   │   ├── debug
+│   │   ├── dri
+│   │   ├── gawk
+│   │   ├── gcc
+│   │   ├── gems
+│   │   ├── gio
+│   │   ├── groff
+│   │   ├── lapack
+│   │   ├── mailutils
+│   │   ├── openssl-1.0.2
+│   │   ├── p7zip
+│   │   ├── perl5
+│   │   ├── pkcs11
+│   │   ├── pkgconfig
+│   │   ├── python2.7
+│   │   ├── python3.6
+│   │   ├── ruby
+│   │   ├── sasl2_3
+│   │   ├── security
+│   │   └── w32api
+│   ├── sbin
+│   ├── tmp
+│   │   ├── _mc_
+│   │   ├── acrocef_low
+│   │   ├── acrord32_sbx
+│   │   ├── cop2D53.tmp
+│   │   ├── cop3B0.tmp
+│   │   ├── cop4803.tmp
+│   │   ├── cop6051.tmp
+│   │   ├── cop6630.tmp
+│   │   ├── cop6A5C.tmp
+│   │   ├── cop8EF2.tmp
+│   │   ├── cop9388.tmp
+│   │   ├── cop9B05.tmp
+│   │   ├── copB665.tmp
+│   │   ├── copC63E.tmp
+│   │   ├── copD114.tmp
+│   │   ├── copD4FD.tmp
+│   │   ├── copD5C4.tmp
+│   │   ├── copED7.tmp
+│   │   ├── copFDF2.tmp
+│   │   ├── dwgdata
+│   │   ├── hsperfdata_gregor.redelonghi
+│   │   ├── Low
+│   │   ├── Microsoft
+│   │   ├── mozilla-temp-files
+│   │   ├── msohtmlclip
+│   │   ├── msohtmlclip1
+│   │   ├── nsf4C6F.tmp
+│   │   ├── ogs25085816
+│   │   ├── pdk-gregor.redelonghi
+│   │   ├── proteinrun
+│   │   ├── scoped_dir3152_11964
+│   │   ├── scoped_dir4316_22787
+│   │   ├── scoped_dir5652_3305
+│   │   ├── scoped_dir7152_6899
+│   │   ├── scoped_dir7456_31089
+│   │   ├── TCD2E7A.tmp
+│   │   ├── TCD2E7B.tmp
+│   │   ├── TCD2E7C.tmp
+│   │   ├── TCD2E7D.tmp
+│   │   ├── TCD2E7E.tmp
+│   │   ├── TCD2E7F.tmp
+│   │   ├── TCD2E80.tmp
+│   │   ├── TCD2E81.tmp
+│   │   ├── TCD2E82.tmp
+│   │   ├── TCD3096.tmp
+│   │   ├── TCD329C.tmp
+│   │   ├── TCD32BD.tmp
+│   │   ├── TCD32BE.tmp
+│   │   ├── TCD8ACB.tmp
+│   │   ├── TCD8ACC.tmp
+│   │   ├── TCD8ACD.tmp
+│   │   ├── TCD8ACE.tmp
+│   │   ├── TCD8AEE.tmp
+│   │   ├── TCD8AEF.tmp
+│   │   ├── TCD8AF0.tmp
+│   │   ├── TCD8AF1.tmp
+│   │   ├── TCD8AF2.tmp
+│   │   ├── TCD8B42.tmp
+│   │   ├── TCD8B54.tmp
+│   │   ├── TCD8B68.tmp
+│   │   ├── TCD8B78.tmp
+│   │   ├── TCD8B8B.tmp
+│   │   ├── TCD8B9B.tmp
+│   │   ├── TCD8B9D.tmp
+│   │   ├── TCD8BAE.tmp
+│   │   ├── TCD8C61.tmp
+│   │   ├── TCD8CA0.tmp
+│   │   ├── TCD8D1E.tmp
+│   │   ├── TCD8D4E.tmp
+│   │   ├── TCD8D8D.tmp
+│   │   ├── TCD8DCC.tmp
+│   │   ├── TCDA403.tmp
+│   │   ├── TCDA404.tmp
+│   │   ├── TCDA427.tmp
+│   │   ├── TCDA428.tmp
+│   │   ├── TCDA4BB.tmp
+│   │   ├── TCDA51B.tmp
+│   │   ├── TCDA54A.tmp
+│   │   ├── TCDA54B.tmp
+│   │   ├── TCDA54C.tmp
+│   │   ├── TCDA55E.tmp
+│   │   ├── TCDA56F.tmp
+│   │   ├── TCDA570.tmp
+│   │   ├── TCDA5AF.tmp
+│   │   ├── tmux-1056210
+│   │   └── VBE
+│   ├── usr
+│   │   ├── include
+│   │   ├── libexec
+│   │   ├── local
+│   │   ├── sbin
+│   │   ├── share
+│   │   ├── src
+│   │   ├── ssl
+│   │   ├── tmp
+│   │   └── x86_64-pc-cygwin
+│   └── var
+│       ├── cache
+│       ├── lib
+│       ├── log
+│       ├── run
+│       └── tmp
+├── DWGTrueView_2017
+│   └── DWGTrueView_2017_Enu_64bit_v2
+│       ├── 3rdParty
+│       ├── CER
+│       ├── en-us
+│       ├── EULA
+│       ├── NLSDL
+│       ├── Setup
+│       ├── SetupRes
+│       └── x64
+├── FireFox_63.0.1
+│   ├── App
+│   │   ├── AppInfo
+│   │   ├── Bin
+│   │   ├── DefaultData
+│   │   ├── Firefox
+│   │   └── Firefox64
+│   ├── Data
+│   │   ├── plugins
+│   │   ├── profile
+│   │   └── settings
+│   └── Other
+│       ├── Help
+│       └── Source
+├── go1.11.2.windows-386
+│   └── go
+│       ├── api
+│       ├── bin
+│       ├── doc
+│       ├── lib
+│       ├── misc
+│       ├── pkg
+│       ├── src
+│       └── test
+├── jdk-10
+│   ├── bin
+│   │   └── server
+│   ├── conf
+│   │   ├── management
+│   │   └── security
+│   ├── include
+│   │   └── win32
+│   ├── legal
+│   │   ├── java.activation
+│   │   ├── java.base
+│   │   ├── java.compiler
+│   │   ├── java.datatransfer
+│   │   ├── java.desktop
+│   │   ├── java.instrument
+│   │   ├── java.logging
+│   │   ├── java.management
+│   │   ├── java.management.rmi
+│   │   ├── java.naming
+│   │   ├── java.prefs
+│   │   ├── java.rmi
+│   │   ├── java.scripting
+│   │   ├── java.se
+│   │   ├── java.security.jgss
+│   │   ├── java.security.sasl
+│   │   ├── java.smartcardio
+│   │   ├── java.sql
+│   │   ├── java.sql.rowset
+│   │   ├── java.transaction
+│   │   ├── java.xml
+│   │   ├── java.xml.bind
+│   │   ├── java.xml.crypto
+│   │   ├── java.xml.ws
+│   │   ├── java.xml.ws.annotation
+│   │   ├── jdk.attach
+│   │   ├── jdk.charsets
+│   │   ├── jdk.compiler
+│   │   ├── jdk.crypto.cryptoki
+│   │   ├── jdk.crypto.ec
+│   │   ├── jdk.crypto.mscapi
+│   │   ├── jdk.dynalink
+│   │   ├── jdk.httpserver
+│   │   ├── jdk.internal.jvmstat
+│   │   ├── jdk.internal.le
+│   │   ├── jdk.internal.opt
+│   │   ├── jdk.internal.vm.ci
+│   │   ├── jdk.internal.vm.compiler
+│   │   ├── jdk.internal.vm.compiler.management
+│   │   ├── jdk.jartool
+│   │   ├── jdk.jcmd
+│   │   ├── jdk.jdi
+│   │   ├── jdk.jdwp.agent
+│   │   ├── jdk.jsobject
+│   │   ├── jdk.jstatd
+│   │   ├── jdk.localedata
+│   │   ├── jdk.management
+│   │   ├── jdk.management.agent
+│   │   ├── jdk.naming.dns
+│   │   ├── jdk.naming.rmi
+│   │   ├── jdk.net
+│   │   ├── jdk.scripting.nashorn
+│   │   ├── jdk.sctp
+│   │   ├── jdk.security.auth
+│   │   ├── jdk.security.jgss
+│   │   ├── jdk.unsupported
+│   │   ├── jdk.xml.bind
+│   │   ├── jdk.xml.dom
+│   │   ├── jdk.xml.ws
+│   │   └── jdk.zipfs
+│   └── lib
+│       ├── fonts
+│       ├── security
+│       └── server
+├── jdk-11
+│   ├── bin
+│   │   └── server
+│   ├── conf
+│   │   ├── management
+│   │   └── security
+│   ├── include
+│   │   └── win32
+│   ├── jmods
+│   ├── legal
+│   │   ├── java.base
+│   │   ├── java.compiler
+│   │   ├── java.datatransfer
+│   │   ├── java.desktop
+│   │   ├── java.instrument
+│   │   ├── java.logging
+│   │   ├── java.management
+│   │   ├── java.management.rmi
+│   │   ├── java.naming
+│   │   ├── java.net.http
+│   │   ├── java.prefs
+│   │   ├── java.rmi
+│   │   ├── java.scripting
+│   │   ├── java.se
+│   │   ├── java.security.jgss
+│   │   ├── java.security.sasl
+│   │   ├── java.smartcardio
+│   │   ├── java.sql
+│   │   ├── java.sql.rowset
+│   │   ├── java.transaction.xa
+│   │   ├── java.xml
+│   │   ├── java.xml.crypto
+│   │   ├── jdk.accessibility
+│   │   ├── jdk.aot
+│   │   ├── jdk.attach
+│   │   ├── jdk.charsets
+│   │   ├── jdk.compiler
+│   │   ├── jdk.crypto.cryptoki
+│   │   ├── jdk.crypto.ec
+│   │   ├── jdk.crypto.mscapi
+│   │   ├── jdk.dynalink
+│   │   ├── jdk.editpad
+│   │   ├── jdk.hotspot.agent
+│   │   ├── jdk.httpserver
+│   │   ├── jdk.internal.ed
+│   │   ├── jdk.internal.jvmstat
+│   │   ├── jdk.internal.le
+│   │   ├── jdk.internal.opt
+│   │   ├── jdk.internal.vm.ci
+│   │   ├── jdk.internal.vm.compiler
+│   │   ├── jdk.internal.vm.compiler.management
+│   │   ├── jdk.jartool
+│   │   ├── jdk.javadoc
+│   │   ├── jdk.jcmd
+│   │   ├── jdk.jconsole
+│   │   ├── jdk.jdeps
+│   │   ├── jdk.jdi
+│   │   ├── jdk.jdwp.agent
+│   │   ├── jdk.jfr
+│   │   ├── jdk.jlink
+│   │   ├── jdk.jshell
+│   │   ├── jdk.jsobject
+│   │   ├── jdk.jstatd
+│   │   ├── jdk.localedata
+│   │   ├── jdk.management
+│   │   ├── jdk.management.agent
+│   │   ├── jdk.management.jfr
+│   │   ├── jdk.naming.dns
+│   │   ├── jdk.naming.rmi
+│   │   ├── jdk.net
+│   │   ├── jdk.pack
+│   │   ├── jdk.rmic
+│   │   ├── jdk.scripting.nashorn
+│   │   ├── jdk.scripting.nashorn.shell
+│   │   ├── jdk.sctp
+│   │   ├── jdk.security.auth
+│   │   ├── jdk.security.jgss
+│   │   ├── jdk.unsupported
+│   │   ├── jdk.unsupported.desktop
+│   │   ├── jdk.xml.dom
+│   │   └── jdk.zipfs
+│   └── lib
+│       ├── jfr
+│       ├── security
+│       └── server
+├── MPlayer
+│   ├── fonts
+│   │   └── conf.d
+│   └── mplayer
+├── mplayer-souces
+│   ├── libfaac-1.28
+│   ├── libfaac-1.28-x64
+│   ├── MPlayer-x86_64-r37368+g52f2adc
+│   │   ├── fonts
+│   │   └── mplayer
+│   └── x86
+├── MultiCommander_X64
+│   ├── Config
+│   │   ├── CfgProfiles
+│   │   ├── Presets
+│   │   ├── Scripts
+│   │   └── TOTD
+│   ├── Extensions
+│   │   ├── FS7Zip
+│   │   ├── FSFTP
+│   │   ├── FSPortable
+│   │   ├── FSRAR
+│   │   ├── FSRegistry
+│   │   ├── MCAudioTools
+│   │   ├── MCLanEditor
+│   │   ├── MCPictureTools
+│   │   ├── MCSpecial
+│   │   ├── MCUtils
+│   │   ├── MCVideoTools
+│   │   ├── MFTools
+│   │   └── MultiFileViewer
+│   └── Languages
+├── Notepad++
+│   ├── backup
+│   ├── localization
+│   ├── plugins
+│   │   ├── APIs
+│   │   ├── Config
+│   │   ├── disabled
+│   │   └── doc
+│   ├── themes
+│   ├── updater
+│   └── user.manual
+│       ├── documentation
+│       ├── Images
+│       ├── misc
+│       ├── modules
+│       ├── sites
+│       └── user
+├── PIS-projektant
+│   ├── arhiv
+│   ├── baza
+│   ├── datoteke
+│   ├── PIS 4_7_0
+│   │   └── PIS 4_7_0
+│   └── tmp
+├── sendEmail-v156
+├── staro_cygwin64
+│   ├── doma
+│   ├── etc
+│   │   ├── alternatives
+│   │   ├── bash_completion.d
+│   │   ├── bash-completion.d
+│   │   ├── bonobo-activation
+│   │   ├── boxes
+│   │   ├── colorgcc
+│   │   ├── dbus-1
+│   │   ├── defaults
+│   │   ├── email
+│   │   ├── fish
+│   │   ├── fonts
+│   │   ├── fstab.d
+│   │   ├── gconf
+│   │   ├── ggi
+│   │   ├── gnome-vfs-2.0
+│   │   ├── gtk
+│   │   ├── gtk-2.0
+│   │   ├── gtk-3.0
+│   │   ├── gtkmathview
+│   │   ├── highlight
+│   │   ├── httpd
+│   │   ├── ImageMagick
+│   │   ├── ImageMagick-6
+│   │   ├── libvirt
+│   │   ├── lighttpd
+│   │   ├── mc
+│   │   ├── my.cnf.d
+│   │   ├── OpenCL
+│   │   ├── openwsman
+│   │   ├── pango
+│   │   ├── pkcs11
+│   │   ├── pki
+│   │   ├── postinstall
+│   │   ├── preremove
+│   │   ├── profile.d
+│   │   ├── rc.d
+│   │   ├── sasl2
+│   │   ├── setup
+│   │   ├── sgml
+│   │   ├── skel
+│   │   ├── sound
+│   │   ├── speech-dispatcher
+│   │   ├── ssl
+│   │   ├── texmf
+│   │   ├── unbound
+│   │   ├── vfu
+│   │   ├── X11
+│   │   ├── xdg
+│   │   ├── xinetd.d
+│   │   └── xml
+│   ├── home
+│   │   ├── forallusers
+│   │   ├── gregor.redelonghi
+│   │   └── seznami
+│   ├── rename_movie_fnames_20180322
+│   │   ├── __pycache__
+│   │   └── FAJLS
+│   └── usr
+│       └── share
+├── winMd5SumPortable
+│   ├── App
+│   │   └── AppInfo
+│   ├── Data
+│   └── Other
+│       ├── Help
+│       └── Source
+├── WinSCP
+│   └── PuTTY
+└── XnView
+    ├── 8bf
+    │   └── Harrys Filter
+    ├── AddOn
+    │   └── Masks
+    ├── Filters
+    ├── language
+    ├── Lut
+    ├── Plugins
+    ├── skins
+    │   ├── crystal-project
+    │   ├── default
+    │   ├── gnome
+    │   └── metro
+    └── WebTemplate
+        ├── _Default - Frame
+        ├── _Default - Simple
+        ├── Compressed [silver]
+        ├── Foo[Silver]
+        ├── Pixnview [black]
+        ├── Simple
+        ├── Simple[Blue]
+        ├── Simple[Green]
+        ├── Simple[Mono]
+        ├── Simple[Red]
+        ├── Simple[XnView]
+        ├── SimpleViewer2
+        ├── Visuddhi - Flash viewer
+        ├── Visuddhi - Flash viewer v1
+        ├── Visuddhi - Lightbox
+        └── Visuddhi - simple
+mywallpapers
+mywallpapers2
+
+534 directories

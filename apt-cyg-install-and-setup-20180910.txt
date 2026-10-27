@@ -1,0 +1,30 @@
+Before instal get following packages:
+wget, bzip2, tar, gawk, subversion
+
+1. Get the apt-cyg bash script:
+	wget https://rawgit.com/transcode-open/apt-cyg/master/apt-cyg
+	
+2 . Make it executable:
+chmod 755 apt-cyg
+
+3. Copying it to executable path:
+cp apt-cyg /usr/local/bin/
+
+4. Repair connection error:
+!! Could not connect to [ip]:[port] error solution !!
+add "--no-passive-ftp" to wget function:
+
+function wget {
+  if command wget -h &>/dev/null
+  then
+	#here# #here# #here #here #here #here#
+    command wget --no-passive-ftp "$@"
+	#here# #here# #here #here #here #here#
+  else
+    warn wget is not installed, using lynx as fallback
+    set "${*: -1}"
+    lynx -source "$1" > "${1##*/}"
+  fi
+}
+
+5. USE!!

@@ -1,0 +1,22 @@
+# filename: ansi-esc-sequence-oneliner-20260309.txt
+# from:     Curling This Website Was a Mistake
+#           https://www.youtube.com/watch?v=H8HhyEQ2cA4
+# ---
+
+$> echo -e '\e' | xxd
+00000000: 1b0a        (1b -> esc seq, 0a -> newline)
+
+$> echo -e '\x1b' | xxd    #hexadecimal
+00000000: 1b0a        (1b -> esc seq, 0a -> newline)
+
+$> echo -en '\x1b' |xxd    #hexadecimal
+00000000: 1b          (1b esc seq)
+
+$> echo -en '\033' |xxd    #octal
+00000000: 1b          (1b esc seq)
+
+# xxd command: make a hexdump of stdin
+
+
+---
+

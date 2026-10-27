@@ -1,0 +1,14 @@
+﻿Kill al mintty windos at once:
+	kill -9 -1
+	
+	
+Explanation:
+kill allows you to send signals to processes you specify. By default, the TERM signal is sent. To send the
+TERM signal to a process with a PID of n use:
+	(sudo) kill n
+
+When you put a - in front of n you tell the system to terminate every process with a PID above n.
+	sudo kill -9 -1
+Will kill every process with a PID above 9 first, then terminate everything with a PID above 1, effectively
+killing all but PID 0, which is initiated by the kernel at boot. This is why you got a black screen.	
+	

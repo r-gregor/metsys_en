@@ -1,0 +1,13 @@
+gregor.redelonghi@cygwin-en /f/ext_WD_usbHDD_2TB/WIN10BCKP_20220630/cugr_myprogs_cygwin64
+ $> du -sh --total * |sort -hr | head
+22G     total
+7.3G    usr
+6.0G    lib
+3.4G    home
+2.6G    dev
+1.3G    tmp
+774M    bin
+110M    etc
+14M     var
+2.0M    sbin
+

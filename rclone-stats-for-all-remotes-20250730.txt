@@ -1,0 +1,22 @@
+$> for RMT in $(rclone listremotes); do echo $RMT; rclone about $RMT; echo "---";done
+dropbox:
+Total:   6.250G
+Used:    2.435G
+Free:    3.815G
+---
+mega_en:
+Total:   20G
+Used:    815.876M
+Free:    19.203G
+---
+mega_gren:
+Total:   20G
+Used:    15.903G
+Free:    4.097G
+---
+meganz:
+Total:   20G
+Used:    642.949M
+Free:    19.372G
+---
+

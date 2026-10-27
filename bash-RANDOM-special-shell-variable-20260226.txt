@@ -1,0 +1,25 @@
+filename: bash-RANDOM-special-shell-variable-20260226.txt
+from: https://www.howtogeek.com/the-test-patterns-that-real-world-bash-scripts-actually-use/
+
+...
+   Another use lets you create a file with a unique name, so you can avoid accidentally overwriting
+   existing data:
+
+while [[ -f $filename ]]; do
+	filename=${filename%.html}$RANDOM.html
+done
+
+...
+
+# Example:
+# $> N=5; while [ $N -ge 1 ]; do echo "$N: filename-$RANDOM.txt"; ((N=N-1)); done
+$> N=5; while [ $N -ge 1 ]; do echo "$N: filename-$RANDOM.txt"; ((N--)); done
+5: filename-30829.txt
+4: filename-4082.txt
+3: filename-1352.txt
+3: filename-12581.txt
+1: filename-29825.txt
+
+
+---
+

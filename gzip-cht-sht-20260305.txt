@@ -1,0 +1,81 @@
+filename: gzip-cht-sht-20260305.txt
+https://linuxize.com/cheatsheet/gzip/
+
+gzip Cheatsheet
+Mar 1, 2026
+
+Quick reference for compressing, listing, testing, and decompressing files with gzip and gunzip in Linux
+
+The `gzip` command compresses files using the DEFLATE algorithm, while `gunzip` restores them. This cheatsheet
+covers common compression and decompression commands, useful flags, streaming patterns, and quick
+troubleshooting checks.
+
+-------------------------------------------------------------------------------------------------------------
+Basic Syntax
+Core command forms for gzip and gunzip.
+-------------------------------------------------------------------------------------------------------------
+gzip FILE        Compress a file and replace it with FILE.gz
+gzip -k FILE     Compress and keep original file
+gzip -d FILE.gz  Decompress a .gz file
+gunzip FILE.gz   Decompress a .gz file
+zcat FILE.gz     Print decompressed content to stdout
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Compression Levels
+Control speed versus compression ratio.
+-------------------------------------------------------------------------------------------------------------
+gzip -1 FILE      Fastest compression, larger output
+gzip -6 FILE      Default compression level
+gzip -9 FILE      Maximum compression, slower
+gzip -k -9 FILE   Max compression while keeping original
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Compress Multiple Files
+Apply gzip to groups of files.
+-------------------------------------------------------------------------------------------------------------
+gzip *.log                                     Compress all matching log files
+gzip -r logs/                                  Recursively compress files in a directory
+find . -name '*.txt' -print0 | xargs -0 gzip   Compress matching files safely
+for f in *.csv; do gzip -k "$f"; done          Compress files and keep originals
+gzip -- *.txt                                  Compress files, safe for dash-prefixed names
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Decompress and Inspect
+Restore and verify compressed files.
+-------------------------------------------------------------------------------------------------------------
+gunzip archive.gz         Decompress and remove .gz file
+gzip -dk archive.gz       Decompress and keep .gz file
+gzip -l archive.gz        Show compressed/uncompressed sizes
+gzip -v FILE              Show compression ratio and details
+gzip -t archive.gz        Test integrity without extracting
+zcat archive.gz | less    View content without writing files
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Streams and Pipelines
+Use gzip without intermediate files.
+-------------------------------------------------------------------------------------------------------------
+mysqldump mydb | gzip > mydb.sql.gz          Compress command output directly
+gzip -c file.txt > file.txt.gz               Write compressed output to stdout
+gunzip -c backup.sql.gz > backup.sql         Decompress to a chosen file
+tar -cf - project/ | gzip > project.tar.gz   Create compressed tar stream
+gzip -dc access.log.gz | grep ERROR          Search content in compressed logs
+-------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+Troubleshooting
+Quick checks for common gzip issues.
+-------------------------------------------------------------------------------------------------------------
+gzip: command not found                        Install gzip package and verify with gzip --version
+Original file disappeared after compression    Use -k to keep source files
+not in gzip format                             Confirm file type with file filename before decompression
+Corrupt archive errors                         Run gzip -t file.gz to validate integrity
+Unexpected overwrite behavior                  Use -k or output redirection with -c to control file writes
+-------------------------------------------------------------------------------------------------------------
+
+
+---
+

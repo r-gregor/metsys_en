@@ -1,0 +1,20 @@
+# in en_dotfiles:
+# dirs to seznam.txt
+ $> find .* -maxdepth 1 -type d >> seznam.txt
+
+# remove .local and only leave .local/share
+# remove .tmp
+ $> vim seznam.txt
+
+# in en_dotfiles
+# files to seznam.txt
+ $> find .* -maxdepth 0 -type f >> seznam.txt 
+
+ $> vim seznam.txt
+
+# test
+ $> while read FILE; do echo cp -rv ~/$FILE ./; done < seznam.txt
+
+# RUN
+ $> while read FILE; do cp -rv ~/$FILE ./; done < seznam.txt
+

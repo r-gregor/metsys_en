@@ -1,0 +1,27 @@
+from: How to install DWM on Debian/Ubuntu/Mint?
+      https://www.youtube.com/watch?v=H5DMPFnbksw
+
+# 1 - Install dependencies:
+$> sudo apt install build-essential libx11-dev libxft-dev libxinerama-dev libfreetype6-dev libfontconfig1-dev
+
+# 2 - Create new xsession:
+Navigate to /usr/share/xsessions/
+Create dwm.desktop file:
+[Desktop Entry]
+Encoding=UTF-8
+Name=Dwm
+Comment=Dynamic window manager
+Exec=/usr/local/bin/dwm
+Icon=dwm
+Type=XSession
+
+# 3 - New launch script in autostart file:
+#! /usr/bin/env bash
+feh --bg-fill ~/Pictures/Wallpapers/5.jpg &
+safeeyes &
+while true; do
+	xsetroot -name "$(date)"
+	sleep 10s
+done &
+dwm
+

@@ -1,2 +1,0 @@
-mount --change-cygdrive-prefix /
-

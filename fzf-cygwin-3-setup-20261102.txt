@@ -1,0 +1,7 @@
+1 - cd into ~/majstaf/majprogs/
+2 - git clone --depth 1 https://github.com/junegunn/fzf.git ./fzf
+3 - cd ./fzf
+4 - ./install --> confirm all
+5 - repair ~/.fzf.bash
+
+

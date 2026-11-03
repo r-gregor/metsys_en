@@ -1,0 +1,170 @@
+filename: git-fetch-vs-git-pull-5pp-20260420.txt
+https://linuxize.com/post/git-fetch-vs-git-pull/
+
+git fetch vs git pull: What Is the Difference?
+Apr 18, 2026
+
+Comparing git fetch and git pull commands in Git
+Sooner or later, every Git user runs into the same question: should you use git fetch or git pull to get
+the latest changes from the remote? The two commands look similar, and both talk to the remote repository,
+but they do very different things to your working branch.
+
+This guide explains the difference between git fetch and git pull, how each command works, and when to
+use one over the other.
+
+Quick Reference
+-------------------------------------------------------------------------------------------------------
+If you want to...                                      Use
+-------------------------------------------------------------------------------------------------------
+Download remote changes without touching your branch   git fetch
+Download and immediately integrate remote changes      git pull
+Preview incoming commits before merging                git fetch + git log HEAD..origin/main --oneline
+Update your branch but refuse merge commits            git pull --ff-only
+Rebase local commits on top of remote changes          git pull --rebase
+-------------------------------------------------------------------------------------------------------
+
+What git fetch Does
+git fetch downloads commits, branches, and tags from a remote repository and stores them locally under
+remote-tracking references such as origin/main or origin/feature-x. It does not touch your working
+$> git fetch origin
+
+output
+remote: Enumerating objects: 12, done.
+remote: Counting objects: 100% (12/12), done.
+From github.com:example/project
+   4a1c2e3..9f7b8d1  main         -> origin/main
+   a6d4c02..1e2f3a4  feature-x    -> origin/feature-x
+
+The output shows which remote branches were updated. After the fetch, the local branch main is still
+pointing to whatever commit it was on before. Only the remote-tracking branch origin/main has moved.
+
+You can then inspect what changed before doing anything with it:
+$> git log main..origin/main
+
+This is the safe way to look at new work without merging or rebasing yet. It gives you a preview of what
+the remote has that your branch does not.
+
+What git pull Does
+git pull is a convenience command. Under the hood, it runs git fetch followed by an integration step
+(a merge by default, or a rebase if configured). In other words:
+$> git pull origin main
+
+is roughly equivalent to:
+$> git fetch origin
+$> git merge origin/main
+
+After git pull, your current branch has moved forward, and your working directory may contain new
+files, updated files, or merge conflicts that need resolving. The change is immediate and affects your
+checked-out branch.
+
+Side-By-Side Comparison
+The difference between the two commands comes down to what they change in your repository.
+---------------------------------------------------------------------------------------
+Aspect                                        git fetch    git pull
+---------------------------------------------------------------------------------------
+Downloads new commits from remote             Yes          Yes
+Updates remote-tracking branches (origin/*)   Yes          Yes
+Updates your current local branch             No           Yes
+Modifies the working directory                No           Yes
+Can create merge conflicts                    No           Yes
+Safe to run at any time                       Yes          Only when ready to integrate
+---------------------------------------------------------------------------------------
+
+git fetch is read-only from your branch´s perspective. git pull actively changes your branch.
+
+When to Use git fetch
+Use git fetch when you want to see what changed on the remote without integrating anything yet. This
+is useful before you start new work, before rebasing a feature branch, or when you want to inspect a
+teammate´s branch safely.
+
+For example, after fetching, you can compare your branch with the remote like this:
+$> git log HEAD..origin/main --oneline
+
+This shows commits that exist on the remote but not in your current branch. Running git fetch often is
+cheap and has no side effects on your work, which is why many developers do it regularly throughout the day.
+
+When to Use git pull
+Use git pull when you are ready to bring remote changes into your current branch and keep working on
+top of them. The common flow looks like this:
+$> git checkout main
+$> git pull origin main
+
+This is the quickest way to sync a branch with its upstream when you know the integration will be
+straightforward, such as on a shared main branch where you rarely have local commits. git pull always
+updates the branch you currently have checked out, so it is worth confirming where you are before you run it.
+
+If you want a cleaner history without merge commits, configure pull to rebase:
+$> git config --global pull.rebase true
+
+From that point on, git pull runs git fetch followed by git rebase instead of git merge. Your local
+commits are replayed on top of the fetched changes, producing a linear history.
+
+Avoiding Merge Surprises
+The biggest reason to prefer git fetch over git pull in day-to-day work is control. A bare git pull on
+a branch where you have local commits can create a merge commit, introduce conflicts, or rewrite history
+during a rebase, all in one step.
+
+A safer pattern is:
+$> git fetch origin
+$> git log HEAD..origin/main --oneline
+$> git merge origin/main
+
+You fetch first, review what is coming, then decide whether to merge, rebase, or defer the integration. For
+active feature branches, this workflow avoids most of the "what just happened to my branch" moments.
+
+If you already ran git pull and need to inspect what happened, start with:
+$> git log --oneline --decorate -n 5
+
+This helps you confirm whether Git created a merge commit, fast-forwarded the branch, or rebased your
+local work.
+
+If the pull created a merge commit that you do not want, ORIG_HEAD often points to the commit your branch
+was on before the pull. In that case, you can reset back to it:
+$> git reset --hard ORIG_HEAD
+
+Warning
+git reset --hard discards uncommitted changes. Use it only when you are sure you do not need the current
+state of your working tree.
+
+Useful Flags
+A few flags make both commands more predictable in real workflows.
+  * git fetch --all    - Fetch from every configured remote, not only origin.
+  * git fetch --prune  - Remove remote-tracking branches that no longer exist on the remote.
+  * git fetch --tags   - Download tags in addition to branches.
+  * git pull --rebase  - Rebase your local commits on top of the fetched changes instead of merging.
+  * git pull --ff-only - Update the branch only if Git can fast-forward it; prevents unexpected merge
+                         commits.
+
+--ff-only is especially useful on shared branches. If your branch cannot move forward by simply advancing
+the pointer, the pull fails and you decide what to do next.
+
+FAQ
+Does git fetch modify any local files?
+No. It only updates remote-tracking references such as origin/main. Your branches, working directory,
+and staging area stay the same.
+
+Is git pull the same as git fetch plus git merge?
+By default, yes. With pull.rebase set to true (or --rebase on the command line), it runs git fetch
+followed by git rebase instead.
+
+Which one should I use daily?
+Prefer git fetch for visibility and git pull --ff-only (or git pull --rebase) for the integration step. A
+bare git pull works, but it hides two operations behind one command.
+
+How do I see what git fetch downloaded?
+Use git log main..origin/main to see commits on the remote that are not yet in your local branch, or
+git diff main origin/main to compare the content directly.
+
+Can git fetch cause conflicts?
+No. Conflicts only happen when you merge or rebase the fetched commits into your branch. Fetching itself
+is conflict-free.
+
+Conclusion
+git fetch lets you inspect remote changes without touching your branch, while git pull fetches and
+integrates those changes in one step. If you want more control and fewer surprises, fetch first, review
+the incoming commits, and then merge or rebase on your own terms. For more Git workflow details, see
+the git log command and git diff command guides.
+
+
+---
+

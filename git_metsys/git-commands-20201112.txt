@@ -1,0 +1,8 @@
+echo "alias ndot='/usr/bin/git --git-dir=$HOME/en_metsys_git/en_metsys --work-tree=$HOME/en_metsys_git/en_metsys_source'" >> /home/forallusers/aliases_forall
+ndot config --local status.showUntrackedFiles no
+ndot add en_dotfiles en_forallusers en_setups 
+ndot commit -m "First commit 20201112"
+ndot remote add origin https://github.com/r-gregor/en_metsys
+# ndot remote set-url origin https://github.com/r-gregor/endot_en.git
+# if prevous attempt fails (vrong remote add origin setup)
+ndot push -u origin master

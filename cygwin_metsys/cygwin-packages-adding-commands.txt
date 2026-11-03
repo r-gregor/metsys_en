@@ -1,0 +1,6 @@
+2038  2026-11-02 16:22:11 apt-cyg --version
+2039  2026-11-02 16:22:20 apt-cyg | less
+---
+2497  2026-11-03 14:50:25 apt-cyg install man-pages-posix
+---
+

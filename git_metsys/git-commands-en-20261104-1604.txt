@@ -1,0 +1,56 @@
+$> [gregor.redelonghi@PC-GREDELONGHI] .../coding2/testing/c_testing (git: main)
+$> git rev-list --count ghctst/main..main
+0
+[cyg3] [2026-11-04] [15:48:28]
+$> [gregor.redelonghi@PC-GREDELONGHI] .../coding2/testing/c_testing (git: main)
+$> git rev-list --count main..ghctst/main
+
+
+ahead=$(git rev-list --count origin/master..master)
+behind=$(git rev-list --count master..origin/master)
+
+
+---
+[cyg3] [2026-11-04] [15:43:04]
+$> [gregor.redelonghi@PC-GREDELONGHI] ~
+$> z c_t
+[cyg3] [2026-11-04] [15:43:56]
+$> [gregor.redelonghi@PC-GREDELONGHI] .../coding2/testing/c_testing (git: main)
+$> git log ghctst/main..main
+[cyg3] [2026-11-04] [15:44:13]
+$> [gregor.redelonghi@PC-GREDELONGHI] .../coding2/testing/c_testing (git: main)
+$> git diff ghctst/main
+[cyg3] [2026-11-04] [15:44:28]
+$> [gregor.redelonghi@PC-GREDELONGHI] .../coding2/testing/c_testing (git: main)
+$> git rev-parse --short refs/heads/main
+11cfe97
+[cyg3] [2026-11-04] [15:46:50]
+$> [gregor.redelonghi@PC-GREDELONGHI] .../coding2/testing/c_testing (git: main)
+$> git rev-list --count ghc^Caster..master
+[cyg3] [2026-11-04] [15:47:45]
+$> [gregor.redelonghi@PC-GREDELONGHI] .../coding2/testing/c_testing (git: main)
+$> gtrmsv
+ghctst  git@github.com:r-gregor/c_testing.git (fetch)
+ghctst  git@github.com:r-gregor/c_testing.git (push)
+glctst  git@gitlab.com:r-gregor/c_testing.git (fetch)
+glctst  git@gitlab.com:r-gregor/c_testing.git (push)
+[cyg3] [2026-11-04] [15:47:55]
+$> [gregor.redelonghi@PC-GREDELONGHI] .../coding2/testing/c_testing (git: main)
+$> git rev-parse --short refs/heads/main^C
+[cyg3] [2026-11-04] [15:48:10]
+$> [gregor.redelonghi@PC-GREDELONGHI] .../coding2/testing/c_testing (git: main)
+$> git rev-list --count ghctst/main..main
+0
+[cyg3] [2026-11-04] [15:48:28]
+$> [gregor.redelonghi@PC-GREDELONGHI] .../coding2/testing/c_testing (git: main)
+$> git rev-list --count main..ghctst/main
+0
+[cyg3] [2026-11-04] [15:48:43]
+$> [gregor.redelonghi@PC-GREDELONGHI] .../coding2/testing/c_testing (git: main)
+$> git ls-remote
+From git@github.com:r-gregor/c_testing.git
+11cfe97675e988808784ab399f179d617d2f12f5        HEAD
+11cfe97675e988808784ab399f179d617d2f12f5        refs/heads/main
+[cyg3] [2026-11-04] [15:50:01]
+$> [gregor.redelonghi@PC-GREDELONGHI] .../coding2/testing/c_testing (git: main)
+
